@@ -1,0 +1,56 @@
+================================================================================
+Naver Theme Cohesion Analysis
+Target Date: 2025-10-27
+================================================================================
+Loading Naver theme database...
+Found 265 themes with >=3 stocks
+Total tickers: 2299
+
+Loading price data for 2299 tickers...
+Loaded: 0, Missing: 2299
+
+================================================================================
+Calculating Rolling Fiedler Values for Each Theme
+================================================================================
+Progress: 20/265 themes...
+Progress: 40/265 themes...
+Progress: 60/265 themes...
+Progress: 80/265 themes...
+Progress: 100/265 themes...
+Progress: 120/265 themes...
+Progress: 140/265 themes...
+Progress: 160/265 themes...
+Progress: 180/265 themes...
+Progress: 200/265 themes...
+Progress: 220/265 themes...
+Progress: 240/265 themes...
+Progress: 260/265 themes...
+
+Analyzed 0 themes with sufficient data
+
+================================================================================
+Saving Theme Timeseries Data
+================================================================================
+Saved 0 theme timeseries files
+
+================================================================================
+Themes with Enhanced Cohesion (as of 2025-10-27)
+================================================================================
+
+No themes found with enhanced cohesion
+
+================================================================================
+Current Theme Cohesion Ranking (as of 2025-10-27)
+================================================================================
+Traceback (most recent call last):
+  File "/mnt/nas/gpt/Naver/three_layers/countryrisk/KRX/analyze_naver_theme_cohesion.py", line 403, in <module>
+    main()
+  File "/mnt/nas/gpt/Naver/three_layers/countryrisk/KRX/analyze_naver_theme_cohesion.py", line 348, in main
+    ranking_df = ranking_df.sort_values('current_fiedler', ascending=False)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas/AutoGluon/ag/lib/python3.11/site-packages/pandas/core/frame.py", line 7196, in sort_values
+    k = self._get_label_or_level_values(by[0], axis=axis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas/AutoGluon/ag/lib/python3.11/site-packages/pandas/core/generic.py", line 1911, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'current_fiedler'

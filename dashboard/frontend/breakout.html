@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Momentum Scanner - Investment Dashboard</title>
+    <!-- Version: 2026.01.30.v1 - KOR/ENG language toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+            padding: 1.5rem 2rem;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #94a3b8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: #334155;
+            color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .data-freshness {
+            background: #334155;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .summary-card.positive {
+            border-left-color: #10b981;
+        }
+
+        .summary-card.negative {
+            border-left-color: #ef4444;
+        }
+
+        .summary-label {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-value {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .section {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #f8fafc;
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .filter-group label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .filter-group select, .filter-group input {
+            background: #334155;
+            border: 1px solid #475569;
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            color: #f8fafc;
+            min-width: 150px;
+        }
+
+        .filter-group select:focus, .filter-group input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .charts-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-container {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+        }
+
+        .chart-container h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #94a3b8;
+        }
+
+        .chart-wrapper {
+            height: 300px;
+            position: relative;
+        }
+
+        /* DataTables dark theme */
+        .dataTables_wrapper {
+            color: #f8fafc;
+        }
+
+        table.dataTable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table.dataTable thead th {
+            background: #334155;
+            color: #f8fafc;
+            padding: 0.75rem;
+            border-bottom: 2px solid #475569;
+            text-align: left;
+        }
+
+        table.dataTable tbody tr {
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+        }
+
+        table.dataTable tbody tr:hover {
+            background: #334155;
+        }
+
+        table.dataTable tbody td {
+            padding: 0.75rem;
+            color: #cbd5e1;
+        }
+
+        .dataTables_filter input {
+            background: #334155;
+            border: 1px solid #475569;
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            color: #f8fafc;
+            margin-left: 0.5rem;
+        }
+
+        .dataTables_length select {
+            background: #334155;
+            border: 1px solid #475569;
+            border-radius: 0.375rem;
+            padding: 0.25rem;
+            color: #f8fafc;
+        }
+
+        .dataTables_info, .dataTables_paginate {
+            margin-top: 1rem;
+            color: #94a3b8;
+        }
+
+        .dataTables_paginate .paginate_button {
+            background: #334155;
+            border: none;
+            border-radius: 0.375rem;
+            padding: 0.25rem 0.75rem;
+            margin: 0 0.25rem;
+            color: #f8fafc !important;
+            cursor: pointer;
+        }
+
+        .dataTables_paginate .paginate_button.current {
+            background: #3b82f6;
+        }
+
+        .dataTables_paginate .paginate_button:hover {
+            background: #475569;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-high {
+            background: #10b981;
+            color: white;
+        }
+
+        .badge-medium {
+            background: #f59e0b;
+            color: black;
+        }
+
+        .badge-low {
+            background: #64748b;
+            color: white;
+        }
+
+        .badge-early {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .badge-super {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .score-bar {
+            background: #334155;
+            border-radius: 0.25rem;
+            height: 8px;
+            width: 100px;
+            display: inline-block;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .score-fill {
+            background: #10b981;
+            height: 100%;
+            border-radius: 0.25rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #94a3b8;
+        }
+
+        /* Language Toggle */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .header-content { flex: 1; }
+        .lang-toggle {
+            display: flex;
+            gap: 0.25rem;
+            background: #334155;
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+            margin-left: 1rem;
+        }
+        .lang-btn {
+            padding: 0.375rem 0.75rem;
+            border: none;
+            background: transparent;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+        .lang-btn:hover { color: #f8fafc; }
+        .lang-btn.active { background: #3b82f6; color: white; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container" style="padding: 0;">
+            <div class="header-top">
+                <div class="header-content">
+                    <h1 data-i18n="title">Momentum Scanner</h1>
+                    <p data-i18n="subtitle">Early Breakout & Momentum Candidates (Q1, Q11, Q13)</p>
+                </div>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" onclick="setLanguage('ko')">KOR</button>
+                    <button class="lang-btn" onclick="setLanguage('en')">ENG</button>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav.overview">Overview</a>
+                <a href="breakout.html" class="active" data-i18n="nav.breakout">Breakout</a>
+                <a href="signals.html" data-i18n="nav.signals">Signals</a>
+                <a href="cohesion.html" data-i18n="nav.comovement">Co-movement</a>
+                <a href="theme-graph.html" data-i18n="nav.network">Network</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="data-freshness" id="dataFreshness"><span data-i18n="dataAsOf">Data as of</span>: Loading...</div>
+
+        <!-- Summary Cards -->
+        <div class="summary-grid" id="summaryGrid">
+            <div class="loading" data-i18n="loading">Loading summary...</div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-row">
+            <div class="chart-container">
+                <h3 data-i18n="chart.stageDistribution">Stage Distribution</h3>
+                <div class="chart-wrapper">
+                    <canvas id="stageChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3 data-i18n="chart.expectedReturns">Expected Returns by Stage (Q13-Q15)</h3>
+                <div class="chart-wrapper">
+                    <canvas id="returnsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="section">
+            <h2 data-i18n="section.candidates">Breakout Candidates</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <label data-i18n="filter.stage">Stage</label>
+                    <select id="filterStage">
+                        <option value="" data-i18n="filter.allStages">All Stages</option>
+                        <option value="Early Breakout" data-i18n="stage.earlyBreakout">Early Breakout</option>
+                        <option value="Super Trend" data-i18n="stage.superTrend">Super Trend</option>
+                        <option value="Burgeoning" data-i18n="stage.burgeoning">Burgeoning</option>
+                        <option value="Healthy Correction" data-i18n="stage.healthyCorrection">Healthy Correction</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label data-i18n="filter.priority">Priority</label>
+                    <select id="filterPriority">
+                        <option value="" data-i18n="filter.all">All</option>
+                        <option value="HIGH" data-i18n="priority.high">HIGH</option>
+                        <option value="MEDIUM" data-i18n="priority.medium">MEDIUM</option>
+                        <option value="LOW" data-i18n="priority.low">LOW</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label data-i18n="filter.minScore">Min Score</label>
+                    <input type="number" id="filterMinScore" min="0" max="100" placeholder="0">
+                </div>
+                <div class="filter-group">
+                    <label data-i18n="filter.theme">Theme</label>
+                    <input type="text" id="filterTheme" placeholder="e.g., 2차전지">
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <table id="breakoutTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th data-i18n="table.ticker">Ticker</th>
+                        <th data-i18n="table.score">Score</th>
+                        <th data-i18n="table.stage">Stage</th>
+                        <th data-i18n="table.priority">Priority</th>
+                        <th data-i18n="table.strategy">Strategy</th>
+                        <th data-i18n="table.themes">Themes</th>
+                    </tr>
+                </thead>
+                <tbody id="breakoutTableBody">
+                    <tr><td colspan="6" class="loading" data-i18n="loading.candidates">Loading candidates...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        const STOCK_CHART_URL = 'http://localhost:3001/stock';
+        let stageChart = null;
+        let returnsChart = null;
+        let dataTable = null;
+        let currentLang = 'ko';
+
+        const translations = {
+            ko: {
+                title: '모멘텀 스캐너',
+                subtitle: '초기 돌파 & 모멘텀 후보 (Q1, Q11, Q13)',
+                'nav.overview': '개요',
+                'nav.breakout': '모멘텀',
+                'nav.signals': '시그널',
+                'nav.comovement': '군집성',
+                'nav.network': '네트워크',
+                'dataAsOf': '현재',
+                'loading': '로딩 중...',
+                'loading.candidates': '관심주 로딩 중...',
+                'chart.stageDistribution': '단계별 분포',
+                'chart.expectedReturns': '단계별 기대수익 (Q13-Q15)',
+                'section.candidates': '관심주',
+                'filter.stage': '단계',
+                'filter.allStages': '전체 단계',
+                'filter.priority': '우선순위',
+                'filter.all': '전체',
+                'filter.minScore': '최소 점수',
+                'filter.theme': '테마',
+                'stage.earlyBreakout': '모멘텀',
+                'stage.superTrend': '슈퍼트렌드',
+                'stage.burgeoning': '성장 초기',
+                'stage.healthyCorrection': '건강한 조정',
+                'priority.high': '눈여겨볼 주식',
+                'priority.medium': '중간',
+                'priority.low': '낮음',
+                'table.ticker': '종목',
+                'table.score': '점수',
+                'table.stage': '단계',
+                'table.priority': '우선순위',
+                'table.strategy': '전략',
+                'table.themes': '테마',
+                'summary.earlyBreakout': '모멘텀',
+                'summary.superTrend': '슈퍼트렌드',
+                'summary.highPriority': '눈여겨볼 주식',
+                'summary.totalCandidates': '종목수'
+            },
+            en: {
+                title: 'Momentum Scanner',
+                subtitle: 'Early Breakout & Momentum Candidates (Q1, Q11, Q13)',
+                'nav.overview': 'Overview',
+                'nav.breakout': 'Breakout',
+                'nav.signals': 'Signals',
+                'nav.comovement': 'Co-movement',
+                'nav.network': 'Network',
+                'dataAsOf': 'Data as of',
+                'loading': 'Loading...',
+                'loading.candidates': 'Loading candidates...',
+                'chart.stageDistribution': 'Stage Distribution',
+                'chart.expectedReturns': 'Expected Returns by Stage (Q13-Q15)',
+                'section.candidates': 'Breakout Candidates',
+                'filter.stage': 'Stage',
+                'filter.allStages': 'All Stages',
+                'filter.priority': 'Priority',
+                'filter.all': 'All',
+                'filter.minScore': 'Min Score',
+                'filter.theme': 'Theme',
+                'stage.earlyBreakout': 'Early Breakout',
+                'stage.superTrend': 'Super Trend',
+                'stage.burgeoning': 'Burgeoning',
+                'stage.healthyCorrection': 'Healthy Correction',
+                'priority.high': 'HIGH',
+                'priority.medium': 'MEDIUM',
+                'priority.low': 'LOW',
+                'table.ticker': 'Ticker',
+                'table.score': 'Score',
+                'table.stage': 'Stage',
+                'table.priority': 'Priority',
+                'table.strategy': 'Strategy',
+                'table.themes': 'Themes',
+                'summary.earlyBreakout': 'Early Breakout',
+                'summary.superTrend': 'Super Trend',
+                'summary.highPriority': 'High Priority',
+                'summary.totalCandidates': 'Total Candidates'
+            }
+        };
+
+        function t(key) {
+            return translations[currentLang][key] || translations['en'][key] || key;
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('krx-dashboard-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === (lang === 'ko' ? 'KOR' : 'ENG'));
+            });
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const text = t(key);
+                if (text) el.innerHTML = text;
+            });
+        }
+
+        function initLanguage() {
+            const saved = localStorage.getItem('krx-dashboard-lang');
+            if (saved) currentLang = saved;
+            setLanguage(currentLang);
+        }
+
+        // Initialize
+        async function init() {
+            await loadSummary();
+            await loadCharts();
+            await loadCandidates();
+            setupFilters();
+        }
+
+        async function loadSummary() {
+            try {
+                const response = await fetch(`${API_BASE}/api/breakout/stages`);
+                const data = await response.json();
+
+                const earlyBreakout = data.stages.find(s => s.name === 'Early Breakout')?.count || 0;
+                const superTrend = data.stages.find(s => s.name === 'Super Trend')?.count || 0;
+                const high = data.priorities.find(p => p.name === 'HIGH')?.count || 0;
+
+                document.getElementById('summaryGrid').innerHTML = `
+                    <div class="summary-card positive">
+                        <div class="summary-label" data-i18n="summary.earlyBreakout">${t('summary.earlyBreakout')}</div>
+                        <div class="summary-value">${earlyBreakout}</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label" data-i18n="summary.superTrend">${t('summary.superTrend')}</div>
+                        <div class="summary-value">${superTrend}</div>
+                    </div>
+                    <div class="summary-card positive">
+                        <div class="summary-label" data-i18n="summary.highPriority">${t('summary.highPriority')}</div>
+                        <div class="summary-value">${high}</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label" data-i18n="summary.totalCandidates">${t('summary.totalCandidates')}</div>
+                        <div class="summary-value">${data.total}</div>
+                    </div>
+                `;
+
+                // Update data freshness
+                const locale = currentLang === 'ko' ? 'ko-KR' : 'en-US';
+                document.getElementById('dataFreshness').innerHTML = `<span data-i18n="dataAsOf">${t('dataAsOf')}</span>: ${new Date().toLocaleDateString(locale)}`;
+            } catch (error) {
+                console.error('Error loading summary:', error);
+            }
+        }
+
+        async function loadCharts() {
+            try {
+                // Stage distribution
+                const stagesRes = await fetch(`${API_BASE}/api/breakout/stages`);
+                const stagesData = await stagesRes.json();
+
+                const stageCtx = document.getElementById('stageChart').getContext('2d');
+                stageChart = new Chart(stageCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: stagesData.stages.map(s => s.name),
+                        datasets: [{
+                            data: stagesData.stages.map(s => s.count),
+                            backgroundColor: ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#64748b']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: { color: '#94a3b8' }
+                            }
+                        }
+                    }
+                });
+
+                // Expected returns
+                const returnsRes = await fetch(`${API_BASE}/api/breakout/expected-returns`);
+                const returnsData = await returnsRes.json();
+
+                const returnsCtx = document.getElementById('returnsChart').getContext('2d');
+                returnsChart = new Chart(returnsCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: returnsData.stages.map(s => s.stage),
+                        datasets: [{
+                            label: '20-Day Return (%)',
+                            data: returnsData.stages.map(s => s.return_20d),
+                            backgroundColor: returnsData.stages.map(s =>
+                                s.return_20d > 0 ? '#10b981' : '#ef4444'
+                            )
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            x: {
+                                ticks: { color: '#94a3b8' },
+                                grid: { color: '#334155' }
+                            },
+                            y: {
+                                ticks: { color: '#94a3b8' },
+                                grid: { display: false }
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading charts:', error);
+            }
+        }
+
+        async function loadCandidates(filters = {}) {
+            try {
+                let url = `${API_BASE}/api/breakout/candidates?limit=500`;
+                if (filters.stage) url += `&stage=${encodeURIComponent(filters.stage)}`;
+                if (filters.priority) url += `&priority=${filters.priority}`;
+                if (filters.minScore) url += `&min_score=${filters.minScore}`;
+                if (filters.theme) url += `&theme=${encodeURIComponent(filters.theme)}`;
+
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // Destroy existing DataTable
+                if (dataTable) {
+                    dataTable.destroy();
+                }
+
+                // Build table body
+                const tbody = document.getElementById('breakoutTableBody');
+                tbody.innerHTML = data.candidates.map(c => `
+                    <tr>
+                        <td>
+                            <strong>${c.ticker}</strong>
+                            <a href="${STOCK_CHART_URL}?name=${encodeURIComponent(c.ticker)}" target="_blank"
+                               style="margin-left: 0.5rem; font-size: 0.75rem; color: #3b82f6;" title="Open Chart">📈</a>
+                        </td>
+                        <td>
+                            ${c.score}
+                            <div class="score-bar"><div class="score-fill" style="width: ${c.score}%"></div></div>
+                        </td>
+                        <td><span class="badge ${c.stage === 'Early Breakout' ? 'badge-early' : 'badge-super'}">${c.stage}</span></td>
+                        <td><span class="badge badge-${c.priority.toLowerCase()}">${c.priority}</span></td>
+                        <td>${c.strategy || '-'}</td>
+                        <td>${c.themes || '-'}</td>
+                    </tr>
+                `).join('');
+
+                // Initialize DataTable
+                dataTable = $('#breakoutTable').DataTable({
+                    pageLength: 25,
+                    order: [[1, 'desc']],
+                    language: {
+                        search: "Search:",
+                        lengthMenu: "Show _MENU_ entries"
+                    }
+                });
+
+            } catch (error) {
+                console.error('Error loading candidates:', error);
+                document.getElementById('breakoutTableBody').innerHTML =
+                    `<tr><td colspan="6" class="loading">Error loading data: ${error.message}</td></tr>`;
+            }
+        }
+
+        function setupFilters() {
+            const applyFilters = () => {
+                loadCandidates({
+                    stage: document.getElementById('filterStage').value,
+                    priority: document.getElementById('filterPriority').value,
+                    minScore: document.getElementById('filterMinScore').value,
+                    theme: document.getElementById('filterTheme').value
+                });
+            };
+
+            document.getElementById('filterStage').addEventListener('change', applyFilters);
+            document.getElementById('filterPriority').addEventListener('change', applyFilters);
+            document.getElementById('filterMinScore').addEventListener('change', applyFilters);
+            document.getElementById('filterTheme').addEventListener('input', debounce(applyFilters, 500));
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        // Initialize on load
+        initLanguage();
+        init();
+    </script>
+
+    <!-- Chat Widget -->
+    <script src="chat-widget.js"></script>
+</body>
+</html>

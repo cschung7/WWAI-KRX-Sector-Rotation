@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Test</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #1e293b; color: white; }
+        #result { background: #334155; padding: 15px; margin: 15px 0; border-radius: 8px; white-space: pre-wrap; }
+        button { background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #2563eb; }
+        .error { color: #ef4444; }
+        .success { color: #10b981; }
+    </style>
+</head>
+<body>
+    <h1>Chat API Test</h1>
+    <button onclick="testChat()">Test Chat API</button>
+    <div id="result">Click button to test...</div>
+
+    <script>
+        async function testChat() {
+            const result = document.getElementById('result');
+            result.textContent = 'Testing...';
+            result.className = '';
+
+            try {
+                const response = await fetch('/api/chat/message', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: 'TIER 1 테마는?',
+                        language: 'ko'
+                    })
+                });
+
+                result.textContent = 'Status: ' + response.status + '\n\n';
+
+                if (!response.ok) {
+                    const err = await response.text();
+                    result.textContent += 'Error: ' + err;
+                    result.className = 'error';
+                    return;
+                }
+
+                const data = await response.json();
+                result.textContent += 'SUCCESS!\n\n';
+                result.textContent += 'Response:\n' + data.response;
+                result.className = 'success';
+
+            } catch (error) {
+                result.textContent = 'FETCH ERROR:\n' + error.name + ': ' + error.message;
+                result.className = 'error';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Signal Quality - Investment Dashboard</title>
+    <!-- Version: 2026.01.30.v1 - KOR/ENG language toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+            padding: 1.5rem 2rem;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #94a3b8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: #334155;
+            color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .summary-card.positive {
+            border-left: 4px solid #10b981;
+        }
+
+        .summary-card.warning {
+            border-left: 4px solid #f59e0b;
+        }
+
+        .summary-label {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .summary-value.positive {
+            color: #10b981;
+        }
+
+        .summary-subtext {
+            color: #64748b;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .charts-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .chart-wrapper {
+            height: 300px;
+            position: relative;
+        }
+
+        /* Gauge Chart */
+        .gauge-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .gauge {
+            width: 200px;
+            height: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gauge-background {
+            width: 200px;
+            height: 100px;
+            border-radius: 100px 100px 0 0;
+            background: linear-gradient(to right, #ef4444 0%, #f59e0b 50%, #10b981 100%);
+        }
+
+        .gauge-center {
+            position: absolute;
+            width: 140px;
+            height: 70px;
+            bottom: 0;
+            left: 30px;
+            background: #1e293b;
+            border-radius: 70px 70px 0 0;
+        }
+
+        .gauge-needle {
+            position: absolute;
+            width: 4px;
+            height: 80px;
+            background: #f8fafc;
+            bottom: 0;
+            left: 98px;
+            transform-origin: bottom center;
+            transition: transform 1s ease-out;
+        }
+
+        .gauge-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #10b981;
+            margin-top: 1rem;
+        }
+
+        .gauge-label {
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        /* Signal Matrix */
+        .signal-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .signal-card {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .signal-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .signal-card.pass {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid #10b981;
+        }
+
+        .signal-card.fail {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid #ef4444;
+        }
+
+        .signal-theme {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .signal-status {
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .signal-status.pass {
+            color: #10b981;
+        }
+
+        .signal-status.fail {
+            color: #ef4444;
+        }
+
+        .signal-confidence {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 0.25rem;
+        }
+
+        /* Funnel Chart */
+        .funnel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 0;
+        }
+
+        .funnel-stage {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .funnel-stage:nth-child(1) {
+            width: 100%;
+            background: #475569;
+        }
+
+        .funnel-stage:nth-child(2) {
+            width: 85%;
+            background: #3b82f6;
+        }
+
+        .funnel-stage:nth-child(3) {
+            width: 60%;
+            background: #10b981;
+        }
+
+        .funnel-label {
+            font-size: 0.875rem;
+        }
+
+        .funnel-count {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .funnel-arrow {
+            color: #64748b;
+            font-size: 1.5rem;
+        }
+
+        /* Model Info */
+        .model-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #334155;
+        }
+
+        .model-stat {
+            text-align: center;
+        }
+
+        .model-stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+
+        .model-stat-label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #94a3b8;
+        }
+
+        /* Language Toggle */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .header-content { flex: 1; }
+        .lang-toggle {
+            display: flex;
+            gap: 0.25rem;
+            background: #334155;
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+            margin-left: 1rem;
+        }
+        .lang-btn {
+            padding: 0.375rem 0.75rem;
+            border: none;
+            background: transparent;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+        .lang-btn:hover { color: #f8fafc; }
+        .lang-btn.active { background: #3b82f6; color: white; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container" style="padding: 0;">
+            <div class="header-top">
+                <div class="header-content">
+                    <h1 data-i18n="title">Signal Quality Matrix</h1>
+                    <p data-i18n="subtitle">Meta-Labeling Quality Assessment (Q8, Q10, Q18)</p>
+                </div>
+                <div class="lang-toggle">
+                    <button class="lang-btn active" onclick="setLanguage('ko')">KOR</button>
+                    <button class="lang-btn" onclick="setLanguage('en')">ENG</button>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav.overview">Overview</a>
+                <a href="breakout.html" data-i18n="nav.breakout">Breakout</a>
+                <a href="signals.html" class="active" data-i18n="nav.signals">Signals</a>
+                <a href="cohesion.html" data-i18n="nav.comovement">Co-movement</a>
+                <a href="theme-graph.html" data-i18n="nav.network">Network</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Summary Cards -->
+        <div class="summary-grid" id="summaryGrid">
+            <div class="loading" data-i18n="loading">Loading summary...</div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-row">
+            <!-- Pass Rate Gauge -->
+            <div class="section">
+                <h2 data-i18n="section.passRate">Pass Rate</h2>
+                <div class="chart-wrapper">
+                    <div class="gauge-container" id="gaugeContainer">
+                        <div class="gauge">
+                            <div class="gauge-background"></div>
+                            <div class="gauge-center"></div>
+                            <div class="gauge-needle" id="gaugeNeedle"></div>
+                        </div>
+                        <div class="gauge-value" id="gaugeValue">--</div>
+                        <div class="gauge-label" data-i18n="gauge.label">Meta-labeling Pass Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Funnel -->
+            <div class="section">
+                <h2 data-i18n="section.filterFunnel">Filter Funnel (Q18)</h2>
+                <div class="chart-wrapper">
+                    <div class="funnel" id="funnelChart">
+                        <div class="loading" data-i18n="loading.funnel">Loading funnel...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Signal Matrix -->
+        <div class="section">
+            <h2 data-i18n="section.signalQuality">Signal Quality by Theme</h2>
+            <p style="color: #94a3b8; margin-bottom: 1rem; font-size: 0.875rem;" data-i18n="section.signalDesc">
+                Q8: Which themes should I focus on? | Q10: Which signals are low quality?
+            </p>
+            <div class="signal-matrix" id="signalMatrix">
+                <div class="loading" data-i18n="loading.signals">Loading signals...</div>
+            </div>
+        </div>
+
+        <!-- Model Performance -->
+        <div class="section">
+            <h2 data-i18n="section.modelPerformance">Meta-Labeling Model Performance</h2>
+            <div class="model-info" id="modelInfo">
+                <div class="loading" data-i18n="loading.model">Loading model info...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let currentLang = 'ko';
+
+        const translations = {
+            ko: {
+                title: '시그널 품질 매트릭스',
+                subtitle: '메타 레이블링 품질 평가 (Q8, Q10, Q18)',
+                'nav.overview': '개요',
+                'nav.breakout': '모멘텀',
+                'nav.signals': '시그널',
+                'nav.comovement': '군집성',
+                'nav.network': '네트워크',
+                'loading': '로딩 중...',
+                'loading.funnel': '필터 로딩 중...',
+                'loading.signals': '시그널 로딩 중...',
+                'loading.model': '모델 정보 로딩 중...',
+                'section.passRate': '통과율',
+                'section.filterFunnel': '필터 퍼널 (Q18)',
+                'section.signalQuality': '테마별 시그널',
+                'section.signalDesc': 'Q8: 어떤 테마에 집중해야 하나? | Q10: 어떤 시그널이 저품질인가?',
+                'section.modelPerformance': '메타 레이블링 모델 성과',
+                'gauge.label': '메타 레이블링 통과율',
+                'summary.totalSignals': '전체 시그널',
+                'summary.totalDesc': '분석된 초기 시그널',
+                'summary.passed': '통과',
+                'summary.passedDesc': '고품질 시그널',
+                'summary.failed': '필터됨',
+                'summary.failedDesc': '제외됨 (회피)',
+                'summary.tier1': 'TIER 1',
+                'summary.tier1Desc': '최고 품질 테마',
+                'model.accuracy': '정확도',
+                'model.precision': '정밀도',
+                'model.recall': '재현율',
+                'model.auc': 'AUC 점수',
+                'model.type': '모델 유형',
+                'model.features': '사용된 특성',
+                'matrix.passed': '통과 시그널',
+                'matrix.failed': '필터 시그널'
+            },
+            en: {
+                title: 'Signal Quality Matrix',
+                subtitle: 'Meta-Labeling Quality Assessment (Q8, Q10, Q18)',
+                'nav.overview': 'Overview',
+                'nav.breakout': 'Breakout',
+                'nav.signals': 'Signals',
+                'nav.comovement': 'Co-movement',
+                'nav.network': 'Network',
+                'loading': 'Loading...',
+                'loading.funnel': 'Loading funnel...',
+                'loading.signals': 'Loading signals...',
+                'loading.model': 'Loading model info...',
+                'section.passRate': 'Pass Rate',
+                'section.filterFunnel': 'Filter Funnel (Q18)',
+                'section.signalQuality': 'Signal Quality by Theme',
+                'section.signalDesc': 'Q8: Which themes should I focus on? | Q10: Which signals are low quality?',
+                'section.modelPerformance': 'Meta-Labeling Model Performance',
+                'gauge.label': 'Meta-labeling Pass Rate',
+                'summary.totalSignals': 'Total Signals',
+                'summary.totalDesc': 'Initial signals analyzed',
+                'summary.passed': 'Passed',
+                'summary.passedDesc': 'High quality signals',
+                'summary.failed': 'Failed',
+                'summary.failedDesc': 'Filtered out (avoid)',
+                'summary.tier1': 'TIER 1',
+                'summary.tier1Desc': 'Highest quality themes',
+                'model.accuracy': 'Accuracy',
+                'model.precision': 'Precision',
+                'model.recall': 'Recall',
+                'model.auc': 'AUC Score',
+                'model.type': 'Model Type',
+                'model.features': 'Features Used',
+                'matrix.passed': 'Passed Signals',
+                'matrix.failed': 'Failed Signals'
+            }
+        };
+
+        function t(key) {
+            return translations[currentLang][key] || translations['en'][key] || key;
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('krx-dashboard-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === (lang === 'ko' ? 'KOR' : 'ENG'));
+            });
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const text = t(key);
+                if (text) el.innerHTML = text;
+            });
+        }
+
+        function initLanguage() {
+            const saved = localStorage.getItem('krx-dashboard-lang');
+            if (saved) currentLang = saved;
+            setLanguage(currentLang);
+        }
+
+        async function init() {
+            try {
+                const response = await fetch(`${API_BASE}/api/meta-labeling/signal-matrix`);
+                const data = await response.json();
+
+                updateSummary(data);
+                updateGauge(data.summary.pass_rate);
+                updateFunnel(data.funnel);
+                updateSignalMatrix(data.passed, data.failed);
+                updateModelInfo(data);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('summaryGrid').innerHTML =
+                    `<div class="loading">Error: ${error.message}</div>`;
+            }
+        }
+
+        function updateSummary(data) {
+            const { summary } = data;
+            document.getElementById('summaryGrid').innerHTML = `
+                <div class="summary-card positive">
+                    <div class="summary-label" data-i18n="summary.totalSignals">${t('summary.totalSignals')}</div>
+                    <div class="summary-value">${summary.total_signals}</div>
+                    <div class="summary-subtext" data-i18n="summary.totalDesc">${t('summary.totalDesc')}</div>
+                </div>
+                <div class="summary-card positive">
+                    <div class="summary-label" data-i18n="summary.passed">${t('summary.passed')}</div>
+                    <div class="summary-value positive">${summary.passed_count}</div>
+                    <div class="summary-subtext" data-i18n="summary.passedDesc">${t('summary.passedDesc')}</div>
+                </div>
+                <div class="summary-card warning">
+                    <div class="summary-label" data-i18n="summary.failed">${t('summary.failed')}</div>
+                    <div class="summary-value" style="color: #ef4444">${summary.failed_count}</div>
+                    <div class="summary-subtext" data-i18n="summary.failedDesc">${t('summary.failedDesc')}</div>
+                </div>
+                <div class="summary-card positive">
+                    <div class="summary-label" data-i18n="summary.tier1">${t('summary.tier1')}</div>
+                    <div class="summary-value">${summary.tier1_count}</div>
+                    <div class="summary-subtext" data-i18n="summary.tier1Desc">${t('summary.tier1Desc')}</div>
+                </div>
+            `;
+        }
+
+        function updateGauge(passRate) {
+            // Needle rotation: 0% = -90deg, 100% = 90deg
+            const rotation = (passRate / 100) * 180 - 90;
+            document.getElementById('gaugeNeedle').style.transform = `rotate(${rotation}deg)`;
+            document.getElementById('gaugeValue').textContent = `${passRate}%`;
+
+            // Color based on pass rate
+            const valueEl = document.getElementById('gaugeValue');
+            if (passRate >= 80) {
+                valueEl.style.color = '#10b981';
+            } else if (passRate >= 60) {
+                valueEl.style.color = '#f59e0b';
+            } else {
+                valueEl.style.color = '#ef4444';
+            }
+        }
+
+        function updateFunnel(funnel) {
+            document.getElementById('funnelChart').innerHTML = funnel.map((stage, i) => `
+                ${i > 0 ? '<div class="funnel-arrow">↓</div>' : ''}
+                <div class="funnel-stage">
+                    <span class="funnel-label">${stage.stage}</span>
+                    <span class="funnel-count">${stage.count}</span>
+                </div>
+            `).join('');
+        }
+
+        function updateSignalMatrix(passed, failed) {
+            const matrix = document.getElementById('signalMatrix');
+
+            const passedHtml = passed.map(s => `
+                <div class="signal-card pass">
+                    <div class="signal-theme">${s.theme}</div>
+                    <div class="signal-status pass">
+                        <span>✓</span> ${s.status}
+                    </div>
+                    <div class="signal-confidence">Confidence: ${s.confidence}%</div>
+                </div>
+            `).join('');
+
+            const failedHtml = failed.map(s => `
+                <div class="signal-card fail">
+                    <div class="signal-theme">${s.theme}</div>
+                    <div class="signal-status fail">
+                        <span>✗</span> ${s.status}
+                    </div>
+                    <div class="signal-confidence">${s.reason}</div>
+                </div>
+            `).join('');
+
+            matrix.innerHTML = passedHtml + failedHtml;
+        }
+
+        function updateModelInfo(data) {
+            document.getElementById('modelInfo').innerHTML = `
+                <div class="model-stat">
+                    <div class="model-stat-value">${data.model_accuracy}%</div>
+                    <div class="model-stat-label" data-i18n="model.accuracy">${t('model.accuracy')}</div>
+                </div>
+                <div class="model-stat">
+                    <div class="model-stat-value">${data.model_auc}</div>
+                    <div class="model-stat-label" data-i18n="model.auc">${t('model.auc')}</div>
+                </div>
+                <div class="model-stat">
+                    <div class="model-stat-value">XGBoost</div>
+                    <div class="model-stat-label" data-i18n="model.type">${t('model.type')}</div>
+                </div>
+                <div class="model-stat">
+                    <div class="model-stat-value">19</div>
+                    <div class="model-stat-label" data-i18n="model.features">${t('model.features')}</div>
+                </div>
+            `;
+        }
+
+        // Initialize
+        initLanguage();
+        init();
+    </script>
+
+    <!-- Chat Widget -->
+    <script src="chat-widget.js"></script>
+</body>
+</html>

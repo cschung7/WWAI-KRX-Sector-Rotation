@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Focus Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+            padding: 1.5rem 2rem;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #94a3b8;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: #10b981;
+            color: white;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        .performance-section {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .performance-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .summary-card {
+            background: #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .summary-label {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .summary-value.positive {
+            color: #10b981;
+        }
+
+        .summary-subvalue {
+            color: #64748b;
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #94a3b8;
+        }
+
+        .error {
+            background: #7f1d1d;
+            color: #fecaca;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container" style="padding: 0;">
+            <h1>Investment Focus Dashboard</h1>
+            <p>Performance Overview & Focused Opportunities</p>
+            <div class="status-badge" id="statusBadge">
+                <span id="statusText">System Active</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="errorContainer"></div>
+
+        <!-- Performance Summary -->
+        <div class="summary-grid" id="summaryGrid">
+            <div class="loading">Loading performance summary...</div>
+        </div>
+
+        <!-- Performance Over Time -->
+        <div class="performance-section">
+            <h2>📈 Performance Over Time</h2>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let performanceChart = null;
+
+        // Load initial data
+        async function loadData() {
+            try {
+                // Load performance summary
+                const perfRes = await fetch(`${API_BASE}/api/meta-labeling/performance`);
+                const performance = await perfRes.json();
+                updateSummary(performance);
+                updatePerformanceChart(performance);
+            } catch (error) {
+                showError('Failed to load data: ' + error.message);
+            }
+        }
+
+        function updateSummary(performance) {
+            const { filtered } = performance;
+            const grid = document.getElementById('summaryGrid');
+
+            const avgReturn = filtered.avg_return || 0;
+            const isPositive = avgReturn > 0;
+
+            grid.innerHTML = `
+                <div class="summary-card">
+                    <div class="summary-label">Average Return</div>
+                    <div class="summary-value ${isPositive ? 'positive' : 'negative'}">
+                        ${avgReturn.toFixed(2)}%
+                    </div>
+                    <div class="summary-subvalue">Filtered portfolio performance</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Active Positions</div>
+                    <div class="summary-value">
+                        ${filtered.n_signals?.toLocaleString() || '0'}
+                    </div>
+                    <div class="summary-subvalue">Focused opportunities</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Performance Status</div>
+                    <div class="summary-value ${isPositive ? 'positive' : 'negative'}">
+                        ${isPositive ? '✓' : '✗'}
+                    </div>
+                    <div class="summary-subvalue">${isPositive ? 'Positive' : 'Negative'} performance</div>
+                </div>
+            `;
+        }
+
+        function updatePerformanceChart(performance) {
+            const ctx = document.getElementById('performanceChart').getContext('2d');
+            
+            if (performanceChart) {
+                performanceChart.destroy();
+            }
+
+            const { baseline, filtered } = performance;
+            const avgReturn = filtered.avg_return || 0;
+            const isPositive = avgReturn > 0;
+
+            // Create simplified comparison chart
+            performanceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Average Return'],
+                    datasets: [
+                        {
+                            label: 'Filtered Portfolio',
+                            data: [filtered.avg_return],
+                            backgroundColor: isPositive ? '#10b981' : '#ef4444'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#1e293b',
+                            borderColor: '#475569',
+                            borderWidth: 1,
+                            titleColor: '#f8fafc',
+                            bodyColor: '#cbd5e1',
+                            padding: 12,
+                            callbacks: {
+                                label: function(context) {
+                                    return `Return: ${context.parsed.y.toFixed(2)}%`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: { 
+                                color: '#94a3b8',
+                                font: { size: 12 },
+                                callback: function(value) {
+                                    return value.toFixed(1) + '%';
+                                }
+                            },
+                            grid: { 
+                                color: '#334155',
+                                drawBorder: false
+                            }
+                        },
+                        x: {
+                            ticks: { 
+                                color: '#94a3b8',
+                                font: { size: 12 }
+                            },
+                            grid: { 
+                                color: '#334155',
+                                drawBorder: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function showError(message) {
+            const container = document.getElementById('errorContainer');
+            container.innerHTML = `<div class="error">${message}</div>`;
+        }
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
