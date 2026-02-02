@@ -412,7 +412,7 @@
                 <span id="bbCrossoverCount" style="font-size: 0.875rem; color: #10b981; margin-left: 0.5rem;"></span>
             </h2>
             <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;" data-i18n="bbCrossover.description">
-                Tickers that crossed above 220-day Bollinger Band upper band (Yesterday: below → Today: above)
+                220-Day Trend Signal (Yesterday: below band → Today: above band)
             </p>
             <table id="bbCrossoverTable" class="display" style="width:100%">
                 <thead>
@@ -420,11 +420,11 @@
                         <th data-i18n="table.ticker">Ticker</th>
                         <th data-i18n="table.themes">Themes</th>
                         <th data-i18n="table.signal">Signal</th>
-                        <th data-i18n="table.bbSetting">BB Setting</th>
+                        <th data-i18n="table.bbSetting">Setting</th>
                     </tr>
                 </thead>
                 <tbody id="bbCrossoverTableBody">
-                    <tr><td colspan="4" class="loading" data-i18n="loading">Loading BB crossover data...</td></tr>
+                    <tr><td colspan="4" class="loading" data-i18n="loading">Loading trend breakout data...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -559,8 +559,8 @@
                 'section.bbCrossover': '📈 장기추세돌파',
                 'bbCrossover.description': '220일 볼린저밴드 상단 돌파 종목 (전일: 하단 → 금일: 상단)',
                 'table.signal': '신호',
-                'table.bbSetting': 'BB 설정',
-                'noBBCrossoverData': 'BB 돌파 신호 없음'
+                'table.bbSetting': '설정',
+                'noBBCrossoverData': '돌파 신호 없음'
             },
             en: {
                 title: 'Momentum Scanner',
@@ -615,8 +615,8 @@
                 'section.bbCrossover': '📈 Long Term Trend Breakout',
                 'bbCrossover.description': 'Tickers that crossed above 220-day Bollinger Band upper band (Yesterday: below → Today: above)',
                 'table.signal': 'Signal',
-                'table.bbSetting': 'BB Setting',
-                'noBBCrossoverData': 'No BB crossover signals'
+                'table.bbSetting': 'Setting',
+                'noBBCrossoverData': 'No trend breakout signals'
             }
         };
 
@@ -924,9 +924,9 @@
                 });
 
             } catch (error) {
-                console.error('Error loading BB crossover data:', error);
+                console.error('Error loading trend breakout data:', error);
                 document.getElementById('bbCrossoverTableBody').innerHTML =
-                    '<tr><td colspan="4" style="text-align:center; color: #ef4444;">Error loading BB crossover data</td></tr>';
+                    '<tr><td colspan="4" style="text-align:center; color: #ef4444;">Error loading trend breakout data</td></tr>';
             }
         }
 
