@@ -18,6 +18,23 @@ from config import DATA_DIR, REPORTS_DIR
 
 router = APIRouter()
 
+# Debug: print DATA_DIR at startup
+print(f"[sector_rotation] DATA_DIR: {DATA_DIR}")
+print(f"[sector_rotation] DATA_DIR exists: {DATA_DIR.exists()}")
+if DATA_DIR.exists():
+    print(f"[sector_rotation] DATA_DIR contents: {list(DATA_DIR.glob('*.csv'))[:5]}")
+
+
+def safe_get(row, *keys, default=0):
+    """Safely get value from pandas row, trying multiple column names"""
+    for key in keys:
+        if key in row.index:
+            val = row[key]
+            if pd.notna(val):
+                return val
+    return default
+
+
 @router.get("/themes")
 async def get_themes(
     date: Optional[str] = Query(None, description="Analysis date (YYYY-MM-DD)")
@@ -30,32 +47,41 @@ async def get_themes(
             cohesion_file = DATA_DIR / f"enhanced_cohesion_themes_{date_str}.csv"
         else:
             # Find latest
-            cohesion_files = sorted(glob.glob(str(DATA_DIR / "enhanced_cohesion_themes_*.csv")))
+            pattern = str(DATA_DIR / "enhanced_cohesion_themes_*.csv")
+            print(f"[themes] Searching with pattern: {pattern}")
+            cohesion_files = sorted(glob.glob(pattern))
+            print(f"[themes] Found files: {cohesion_files}")
             if not cohesion_files:
-                raise HTTPException(status_code=404, detail="No cohesion data found")
+                raise HTTPException(status_code=404, detail=f"No cohesion data found in {DATA_DIR}")
             cohesion_file = Path(cohesion_files[-1])
-        
+
+        print(f"[themes] Loading file: {cohesion_file}")
         df = pd.read_csv(cohesion_file)
+        print(f"[themes] Loaded {len(df)} rows, columns: {list(df.columns)}")
 
         # Format for frontend (handle both column naming conventions)
         themes = []
         for _, row in df.iterrows():
             themes.append({
-                "theme": row.get('theme', row.get('Theme', '')),
-                "current_fiedler": float(row.get('current_fiedler', row.get('Current_Fiedler', 0))),
-                "fiedler_change": float(row.get('fiedler_change', row.get('Change', 0))),
-                "pct_change": float(row.get('pct_change', row.get('Pct_Change', 0))),
-                "n_stocks": int(row.get('n_stocks', row.get('Stocks', 0))),
-                "enhancement_score": float(row.get('enhancement_score', row.get('Enhancement_Score', 0))) if 'enhancement_score' in row or 'Enhancement_Score' in row else 0,
-                "date": str(row.get('current_date', date) if date else row.get('current_date', ''))
+                "theme": safe_get(row, 'theme', 'Theme', default=''),
+                "current_fiedler": float(safe_get(row, 'current_fiedler', 'Current_Fiedler', default=0)),
+                "fiedler_change": float(safe_get(row, 'fiedler_change', 'Change', default=0)),
+                "pct_change": float(safe_get(row, 'pct_change', 'Pct_Change', default=0)),
+                "n_stocks": int(safe_get(row, 'n_stocks', 'Stocks', default=0)),
+                "enhancement_score": float(safe_get(row, 'enhancement_score', 'Enhancement_Score', default=0)),
+                "date": str(safe_get(row, 'current_date', default=date or ''))
             })
-        
+
         return {
             "themes": themes,
             "count": len(themes),
             "date": date or cohesion_file.stem.split('_')[-1]
         }
+    except HTTPException:
+        raise
     except Exception as e:
+        import traceback
+        print(f"[themes] Error: {traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/fiedler-timeseries")
