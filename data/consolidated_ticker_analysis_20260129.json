@@ -1,0 +1,337 @@
+{
+  "date": "2026-01-29T22:34:12.681129",
+  "analysis_summary": {
+    "sector_rotation": {
+      "tier1_passed": 6,
+      "tier1_filtered": 4,
+      "tier2_passed": 16
+    },
+    "super_trend": {
+      "early_breakout_count": 10,
+      "top_pick": "포스코퓨처엠"
+    }
+  },
+  "recommendations": {
+    "early_breakout": [
+      {
+        "Ticker": "포스코퓨처엠",
+        "Total_Score": 90,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 20,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 3.09,
+        "Themes": "['리튬', '2차전지', '2차전지(소재/부품)', '밸류업(24년 기업가치 제고계획 발표)']"
+      },
+      {
+        "Ticker": "강원에너지",
+        "Total_Score": 90,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 20,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 1.21,
+        "Themes": "['2차전지(장비)', '리튬', '2차전지', '2차전지(소재/부품)', '전기차', '원자력발전']"
+      },
+      {
+        "Ticker": "신흥에스이씨",
+        "Total_Score": 80,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 10,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 4.31,
+        "Themes": "['전기차 화재 방지(배터리 열폭주 등)', '2차전지', '2차전지(소재/부품)', '전기차']"
+      },
+      {
+        "Ticker": "에이티넘인베스트",
+        "Total_Score": 75,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 5,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 4.74,
+        "Themes": "['창투사', '두나무(Dunamu)', '가상화폐(비트코인 등)']"
+      },
+      {
+        "Ticker": "현우산업",
+        "Total_Score": 75,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 5,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 4.33,
+        "Themes": "['PCB(FPCB 등)']"
+      },
+      {
+        "Ticker": "공구우먼",
+        "Total_Score": 75,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 5,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 4.04,
+        "Themes": "['패션/의류']"
+      },
+      {
+        "Ticker": "리가켐바이오",
+        "Total_Score": 75,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 5,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 3.58,
+        "Themes": "['면역항암제', '의료기기', '코로나19(치료제/백신 개발 등)', '코로나19(진단/치료제/백신 개발 등)', '슈퍼박테리아']"
+      },
+      {
+        "Ticker": "코메론",
+        "Total_Score": 75,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 5,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 3.22,
+        "Themes": "['철강 중소형']"
+      },
+      {
+        "Ticker": "우정바이오",
+        "Total_Score": 75,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 5,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 1.63,
+        "Themes": "['코로나19(음압병실/음압구급차)', '메르스 코로나 바이러스']"
+      },
+      {
+        "Ticker": "영풍",
+        "Total_Score": 75,
+        "Regime_Score": 40,
+        "Tech_Score": 30,
+        "Theme_Score": 5,
+        "Stage": "Early Breakout",
+        "Dev_BB_Pct": 1.31,
+        "Themes": "['비철금속', '아이폰']"
+      }
+    ],
+    "tier1_key_players": [
+      {
+        "stock": "LG유플러스",
+        "market_cap": 0,
+        "total_pagerank": 0.26432365086643894,
+        "themes": [
+          "통신"
+        ]
+      },
+      {
+        "stock": "SK텔레콤",
+        "market_cap": 0,
+        "total_pagerank": 0.21312818342334547,
+        "themes": [
+          "통신"
+        ]
+      },
+      {
+        "stock": "KT",
+        "market_cap": 0,
+        "total_pagerank": 0.2034104014120304,
+        "themes": [
+          "통신"
+        ]
+      },
+      {
+        "stock": "LG",
+        "market_cap": 0,
+        "total_pagerank": 0.19940128066074334,
+        "themes": [
+          "통신",
+          "스페이스X(SpaceX)"
+        ]
+      },
+      {
+        "stock": "SK",
+        "market_cap": 0,
+        "total_pagerank": 0.19802116825529237,
+        "themes": [
+          "통신",
+          "증권"
+        ]
+      },
+      {
+        "stock": "미래에셋증권",
+        "market_cap": 0,
+        "total_pagerank": 0.12142619071236063,
+        "themes": [
+          "증권",
+          "스페이스X(SpaceX)"
+        ]
+      },
+      {
+        "stock": "우리금융지주",
+        "market_cap": 0,
+        "total_pagerank": 0.11243655005860922,
+        "themes": [
+          "은행"
+        ]
+      },
+      {
+        "stock": "하나금융지주",
+        "market_cap": 0,
+        "total_pagerank": 0.10449267614622709,
+        "themes": [
+          "은행"
+        ]
+      },
+      {
+        "stock": "기업은행",
+        "market_cap": 0,
+        "total_pagerank": 0.10304083285921534,
+        "themes": [
+          "은행"
+        ]
+      },
+      {
+        "stock": "신한지주",
+        "market_cap": 0,
+        "total_pagerank": 0.10111385388364366,
+        "themes": [
+          "은행"
+        ]
+      }
+    ],
+    "meta_label_passed": [
+      {
+        "theme": "통신",
+        "tier": 1,
+        "current_fiedler": 0.7004252723071538,
+        "confidence": 0.6254280805587769
+      },
+      {
+        "theme": "방위산업/전쟁 및 테러",
+        "tier": 1,
+        "current_fiedler": 3.629126877233988,
+        "confidence": 0.6254280805587769
+      },
+      {
+        "theme": "전력설비",
+        "tier": 1,
+        "current_fiedler": 2.7030910239487684,
+        "confidence": 0.6254280805587769
+      },
+      {
+        "theme": "증권",
+        "tier": 1,
+        "current_fiedler": 3.5176866074588005,
+        "confidence": 0.6254280805587769
+      },
+      {
+        "theme": "은행",
+        "tier": 1,
+        "current_fiedler": 3.7282596058483297,
+        "confidence": 0.6254280805587769
+      },
+      {
+        "theme": "스페이스X(SpaceX)",
+        "tier": 1,
+        "current_fiedler": 0.565898174344668,
+        "confidence": 0.6254280805587769
+      },
+      {
+        "theme": "수소차(연료전지/부품/충전소 등)",
+        "tier": 2,
+        "current_fiedler": 4.192317094624278,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "셰일가스(Shale Gas)",
+        "tier": 2,
+        "current_fiedler": 1.129333002002464,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "전기차",
+        "tier": 2,
+        "current_fiedler": 4.953369780474231,
+        "confidence": 0.5350331664085388
+      },
+      {
+        "theme": "카지노",
+        "tier": 2,
+        "current_fiedler": 0.7709174933011232,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "밸류업(25년 기업가치 제고계획 발표)",
+        "tier": 2,
+        "current_fiedler": 5.523046329801894,
+        "confidence": 0.5350331664085388
+      },
+      {
+        "theme": "풍력에너지",
+        "tier": 2,
+        "current_fiedler": 2.383312015754081,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "스마트그리드(지능형전력망)",
+        "tier": 2,
+        "current_fiedler": 1.1158310609783992,
+        "confidence": 0.5350331664085388
+      },
+      {
+        "theme": "온디바이스 AI",
+        "tier": 2,
+        "current_fiedler": 2.131479783707455,
+        "confidence": 0.5350331664085388
+      },
+      {
+        "theme": "리비안(RIVIAN)",
+        "tier": 2,
+        "current_fiedler": 1.4318079849377732,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "통신장비",
+        "tier": 2,
+        "current_fiedler": 2.6000751722801194,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "LNG(액화천연가스)",
+        "tier": 2,
+        "current_fiedler": 1.6868420550590817,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "퓨리오사AI",
+        "tier": 2,
+        "current_fiedler": 1.014130382801702,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "블록체인",
+        "tier": 2,
+        "current_fiedler": 1.4052423536395953,
+        "confidence": 0.5350331664085388
+      },
+      {
+        "theme": "니켈",
+        "tier": 2,
+        "current_fiedler": 0.7040676946188965,
+        "confidence": 0.7702735662460327
+      },
+      {
+        "theme": "편의점",
+        "tier": 2,
+        "current_fiedler": 0.9166548122629304,
+        "confidence": 0.5350331664085388
+      },
+      {
+        "theme": "스테이블코인",
+        "tier": 2,
+        "current_fiedler": 3.504213736591017,
+        "confidence": 0.7702735662460327
+      }
+    ]
+  }
+}
