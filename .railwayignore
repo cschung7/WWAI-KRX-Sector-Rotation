@@ -1,0 +1,45 @@
+# Railway ignore file - allow data/ for dashboard
+# This overrides .gitignore for Railway deployments
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# Large files (keep data/ and *.csv and *.json for dashboard)
+reports/
+*.pkl
+*.pickle
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Node
+node_modules/
+
+# Secrets
+.env
+*.env.local
+dashboard/backend/.env
+
+# Extra development files
+cookies.txt
+create_notebook_task.py
+debug_notebooklm.py
+dashboard/chat-service/

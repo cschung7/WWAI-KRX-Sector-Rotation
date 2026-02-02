@@ -21,8 +21,30 @@ router = APIRouter()
 # Debug: print DATA_DIR at startup
 print(f"[sector_rotation] DATA_DIR: {DATA_DIR}")
 print(f"[sector_rotation] DATA_DIR exists: {DATA_DIR.exists()}")
-if DATA_DIR.exists():
-    print(f"[sector_rotation] DATA_DIR contents: {list(DATA_DIR.glob('*.csv'))[:5]}")
+
+# Check if we have CSV data or need to use cache
+CACHE_FILE = DATA_DIR / "dashboard_cache.json"
+HAS_CSV_DATA = len(list(DATA_DIR.glob("enhanced_cohesion_themes_*.csv"))) > 0
+
+print(f"[sector_rotation] HAS_CSV_DATA: {HAS_CSV_DATA}")
+print(f"[sector_rotation] CACHE_FILE exists: {CACHE_FILE.exists()}")
+
+# Load cache if available
+_dashboard_cache = None
+if CACHE_FILE.exists():
+    try:
+        with open(CACHE_FILE) as f:
+            _dashboard_cache = json.load(f)
+        print(f"[sector_rotation] Loaded dashboard cache with keys: {list(_dashboard_cache.keys())}")
+    except Exception as e:
+        print(f"[sector_rotation] Failed to load cache: {e}")
+
+
+def get_cached_data(key: str) -> Optional[List]:
+    """Get data from cache if available"""
+    if _dashboard_cache and key in _dashboard_cache:
+        return _dashboard_cache[key]
+    return None
 
 
 def safe_get(row, *keys, default=0):
@@ -41,7 +63,32 @@ async def get_themes(
 ):
     """Get themes with Fiedler values"""
     try:
-        # Load latest enhanced cohesion themes
+        # Try to use cache first if CSV data not available
+        if not HAS_CSV_DATA:
+            cached_themes = get_cached_data('themes')
+            if cached_themes:
+                cached_date = _dashboard_cache.get('themes_date', 'cached')
+                print(f"[themes] Using cached data: {len(cached_themes)} themes")
+                # Format cached data for frontend
+                themes = []
+                for t in cached_themes:
+                    themes.append({
+                        "theme": t.get('theme', t.get('Theme', '')),
+                        "current_fiedler": float(t.get('current_fiedler', t.get('Current_Fiedler', 0))),
+                        "fiedler_change": float(t.get('fiedler_change', t.get('Change', 0))),
+                        "pct_change": float(t.get('pct_change', t.get('Pct_Change', 0))),
+                        "n_stocks": int(t.get('n_stocks', t.get('Stocks', 0))),
+                        "enhancement_score": float(t.get('enhancement_score', t.get('Enhancement_Score', 0))),
+                        "date": str(t.get('current_date', date or ''))
+                    })
+                return {
+                    "themes": themes,
+                    "count": len(themes),
+                    "date": cached_date
+                }
+            raise HTTPException(status_code=404, detail="No cohesion data found (no CSV files or cache)")
+
+        # Load from CSV files
         if date:
             date_str = date.replace('-', '')
             cohesion_file = DATA_DIR / f"enhanced_cohesion_themes_{date_str}.csv"
@@ -131,6 +178,28 @@ async def get_tier_classification(
 ):
     """Get 4-tier classification"""
     try:
+        # Try to use cache first if CSV data not available
+        if not HAS_CSV_DATA:
+            tiers = {
+                "tier1": get_cached_data('tier1_buy_now') or [],
+                "tier2": get_cached_data('tier2_accumulate') or [],
+                "tier3": get_cached_data('tier3_research') or [],
+                "tier4": get_cached_data('tier4_monitor') or []
+            }
+            if any(tiers.values()):
+                print(f"[tier-classification] Using cached data")
+                return {
+                    "tiers": tiers,
+                    "summary": {
+                        "tier1_count": len(tiers["tier1"]),
+                        "tier2_count": len(tiers["tier2"]),
+                        "tier3_count": len(tiers["tier3"]),
+                        "tier4_count": len(tiers["tier4"]),
+                        "total": sum(len(t) for t in tiers.values())
+                    },
+                    "date": "cached"
+                }
+
         # Determine date string
         if date:
             date_str = date.replace('-', '')
@@ -142,7 +211,7 @@ async def get_tier_classification(
             # Extract date from latest file
             latest_file = Path(tier1_files[-1])
             date_str = latest_file.stem.split('_')[-1]
-        
+
         # Load individual tier files
         tier_files = {
             1: DATA_DIR / f"tier1_buy_now_{date_str}.csv",
@@ -150,32 +219,32 @@ async def get_tier_classification(
             3: DATA_DIR / f"tier3_research_{date_str}.csv",
             4: DATA_DIR / f"tier4_monitor_{date_str}.csv"
         }
-        
+
         tiers = {
             "tier1": [],
             "tier2": [],
             "tier3": [],
             "tier4": []
         }
-        
+
         # Load each tier file
         for tier_num, tier_file in tier_files.items():
             if not tier_file.exists():
                 continue  # Skip if file doesn't exist
-            
+
             try:
                 df = pd.read_csv(tier_file)
-                
+
                 # Handle different column name variations
                 theme_col = None
                 for col in ['Theme', 'theme', 'Sector', 'sector']:
                     if col in df.columns:
                         theme_col = col
                         break
-                
+
                 if theme_col is None:
                     continue
-                
+
                 # Extract theme data (without sensitive Fiedler values)
                 for _, row in df.iterrows():
                     theme_data = {
@@ -183,14 +252,14 @@ async def get_tier_classification(
                         "tier": tier_num,
                         "n_stocks": row.get('Stocks', row.get('stocks', row.get('n_stocks', 0)))
                     }
-                    
+
                     # Only add if theme name exists
                     if theme_data["theme"]:
                         tiers[f"tier{tier_num}"].append(theme_data)
             except Exception as e:
                 print(f"Warning: Could not load {tier_file}: {e}")
                 continue
-        
+
         return {
             "tiers": tiers,
             "summary": {
