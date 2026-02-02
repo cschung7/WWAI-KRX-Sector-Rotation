@@ -29,15 +29,26 @@ HAS_CSV_DATA = len(list(DATA_DIR.glob("enhanced_cohesion_themes_*.csv"))) > 0
 print(f"[sector_rotation] HAS_CSV_DATA: {HAS_CSV_DATA}")
 print(f"[sector_rotation] CACHE_FILE exists: {CACHE_FILE.exists()}")
 
-# Load cache if available
+# Load cache - try JSON file first, then Python module fallback
 _dashboard_cache = None
+
+# Try loading from JSON file
 if CACHE_FILE.exists():
     try:
         with open(CACHE_FILE) as f:
             _dashboard_cache = json.load(f)
-        print(f"[sector_rotation] Loaded dashboard cache with keys: {list(_dashboard_cache.keys())}")
+        print(f"[sector_rotation] Loaded JSON cache with keys: {list(_dashboard_cache.keys())}")
     except Exception as e:
-        print(f"[sector_rotation] Failed to load cache: {e}")
+        print(f"[sector_rotation] Failed to load JSON cache: {e}")
+
+# Fallback to Python module cache (for cloud deployment)
+if _dashboard_cache is None:
+    try:
+        from routers.cached_data import DASHBOARD_CACHE
+        _dashboard_cache = DASHBOARD_CACHE
+        print(f"[sector_rotation] Loaded Python cache with keys: {list(_dashboard_cache.keys())}")
+    except ImportError as e:
+        print(f"[sector_rotation] No Python cache available: {e}")
 
 
 def get_cached_data(key: str) -> Optional[List]:
