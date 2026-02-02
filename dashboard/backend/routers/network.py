@@ -129,13 +129,28 @@ def parse_themes(themes_str):
 
 
 def safe_float(val, default=0.0):
-    """Convert to float, handling NaN"""
+    """Convert to float, handling NaN and infinity"""
     if pd.isna(val):
         return default
     try:
-        return float(val)
+        result = float(val)
+        # Check for NaN or infinity (not JSON compliant)
+        if pd.isna(result) or result != result or abs(result) == float('inf'):
+            return default
+        return result
     except:
         return default
+
+def safe_round(val, decimals=1, default=0.0):
+    """Round a value, handling NaN"""
+    val = safe_float(val, default)
+    return round(val, decimals)
+
+def safe_str(val, default=''):
+    """Convert to string, handling NaN"""
+    if pd.isna(val):
+        return default
+    return str(val)
 
 
 @router.get("/stock-themes")
@@ -169,7 +184,7 @@ async def get_stock_themes(
             }
             if fiedler_df is not None and theme in fiedler_df.index:
                 fiedler_val = safe_float(fiedler_df.loc[theme, 'fiedler'])
-                detail["fiedler"] = round(fiedler_val, 3)
+                detail["fiedler"] = safe_round(fiedler_val, 3)
                 if fiedler_val > 3.0:
                     detail["cohesion_level"] = "very_strong"
                 elif fiedler_val >= 1.0:
@@ -262,25 +277,30 @@ async def get_theme_stocks(
             else:
                 signal = "avoid"
 
+            # Handle NaN in momentum field
+            momentum = row.get('mmt', '')
+            if pd.isna(momentum):
+                momentum = ''
+
             stocks.append({
                 "name": stock_name,
                 "ticker": str(row.get('tickers', '')),
-                "market": row.get('market', ''),
+                "market": str(row.get('market', '') if not pd.isna(row.get('market', '')) else ''),
                 "signal_probability": {
-                    "sell": round(sell_pct, 1),
-                    "neutral": round(neutral_pct, 1),
-                    "buy": round(buy_pct, 1)
+                    "sell": safe_round(sell_pct, 1),
+                    "neutral": safe_round(neutral_pct, 1),
+                    "buy": safe_round(buy_pct, 1)
                 },
-                "total_score": round(total_score, 3),
-                "momentum": row.get('mmt', ''),
+                "total_score": safe_round(total_score, 3),
+                "momentum": str(momentum),
                 "signal": signal,
-                "buy_pct": round(buy_pct, 1)
+                "buy_pct": safe_round(buy_pct, 1)
             })
 
         return {
             "success": True,
             "theme": theme,
-            "fiedler": round(theme_fiedler, 3),
+            "fiedler": safe_round(theme_fiedler, 3),
             "cohesion_level": cohesion_level,
             "stock_count": len(theme_stocks),
             "stocks": stocks
@@ -337,8 +357,8 @@ async def search_themes(
         for theme in matching[:limit]:
             result = {"theme": theme, "fiedler": 0.0, "cohesion_level": "unknown"}
             if fiedler_df is not None and theme in fiedler_df.index:
-                fiedler_val = float(fiedler_df.loc[theme, 'fiedler'])
-                result["fiedler"] = round(fiedler_val, 3)
+                fiedler_val = safe_float(fiedler_df.loc[theme, 'fiedler'])
+                result["fiedler"] = safe_round(fiedler_val, 3)
                 if fiedler_val > 3.0:
                     result["cohesion_level"] = "very_strong"
                 elif fiedler_val >= 1.0:
@@ -383,7 +403,7 @@ async def search_all(
                 "name": stock_name,
                 "ticker": str(row.get('tickers', '')),
                 "market": row.get('market', ''),
-                "buy_pct": round(buy_pct, 1),
+                "buy_pct": safe_round(buy_pct, 1),
                 "type": "stock"
             })
 
@@ -393,10 +413,10 @@ async def search_all(
         for theme in theme_matches[:limit]:
             fiedler = 0.0
             if fiedler_df is not None and theme in fiedler_df.index:
-                fiedler = float(fiedler_df.loc[theme, 'fiedler'])
+                fiedler = safe_float(fiedler_df.loc[theme, 'fiedler'])
             themes.append({
                 "theme": theme,
-                "fiedler": round(fiedler, 3),
+                "fiedler": safe_round(fiedler, 3),
                 "type": "theme"
             })
 
@@ -478,7 +498,7 @@ async def get_graph_data(
                 "type": "stock",
                 "ticker": str(row.get('tickers', '')),
                 "signal": signal,
-                "score": round(buy_pct, 1),
+                "score": safe_round(buy_pct, 1),
                 "size": 45 if is_center else 30,
                 "color": color,
                 "isCenter": is_center
@@ -491,13 +511,13 @@ async def get_graph_data(
 
             fiedler = 0.0
             if fiedler_df is not None and theme_name in fiedler_df.index:
-                fiedler = float(fiedler_df.loc[theme_name, 'fiedler'])
+                fiedler = safe_float(fiedler_df.loc[theme_name, 'fiedler'])
 
             nodes.append({
                 "id": f"theme_{theme_name}",
                 "label": theme_name,
                 "type": "theme",
-                "fiedler": round(fiedler, 3),
+                "fiedler": safe_round(fiedler, 3),
                 "size": 25,
                 "color": get_cohesion_color(fiedler)
             })

@@ -75,6 +75,7 @@
 
         .search-box {
             margin-bottom: 1rem;
+            position: relative;
         }
 
         .search-box label {
@@ -556,6 +557,44 @@
             background: #3b82f6;
             color: white;
         }
+
+        /* Quick Example Buttons */
+        .quick-examples {
+            margin-top: 0.75rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #334155;
+        }
+
+        .quick-examples-label {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            margin-bottom: 0.375rem;
+        }
+
+        .example-btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.7rem;
+            background: #334155;
+            border: 1px solid #475569;
+            color: #e2e8f0;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .example-btn:hover {
+            background: #475569;
+            border-color: #64748b;
+        }
+
+        .example-btn.theme {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: #8b5cf6;
+        }
+
+        .example-btn.theme:hover {
+            background: rgba(139, 92, 246, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -596,6 +635,28 @@
                 <div id="searchSuggestions" class="search-suggestions hidden"></div>
                 <div id="searchHint" style="font-size: 0.7rem; color: #64748b; margin-top: 0.25rem;" data-i18n="search.hint">
                     Type 2+ chars for suggestions (250+ themes)
+                </div>
+
+                <!-- Quick Examples -->
+                <div class="quick-examples">
+                    <div class="quick-examples-label" data-i18n="examples.stocks">Popular Stocks:</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.375rem; margin-bottom: 0.5rem;">
+                        <button class="example-btn" onclick="quickSearch('stock', '삼성전자')">삼성전자</button>
+                        <button class="example-btn" onclick="quickSearch('stock', 'SK하이닉스')">SK하이닉스</button>
+                        <button class="example-btn" onclick="quickSearch('stock', 'LG에너지솔루션')">LG에너지</button>
+                        <button class="example-btn" onclick="quickSearch('stock', '현대차')">현대차</button>
+                        <button class="example-btn" onclick="quickSearch('stock', 'NAVER')">NAVER</button>
+                        <button class="example-btn" onclick="quickSearch('stock', '카카오')">카카오</button>
+                    </div>
+                    <div class="quick-examples-label" data-i18n="examples.themes">Popular Themes:</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+                        <button class="example-btn theme" onclick="quickSearch('theme', '반도체')">반도체</button>
+                        <button class="example-btn theme" onclick="quickSearch('theme', '2차전지')">2차전지</button>
+                        <button class="example-btn theme" onclick="quickSearch('theme', 'AI')">AI</button>
+                        <button class="example-btn theme" onclick="quickSearch('theme', '방위산업')">방위산업</button>
+                        <button class="example-btn theme" onclick="quickSearch('theme', '로봇')">로봇</button>
+                        <button class="example-btn theme" onclick="quickSearch('theme', '바이오')">바이오</button>
+                    </div>
                 </div>
             </div>
 
@@ -710,11 +771,14 @@
                 'search.placeholder': '예: 반도, 2차전, AI',
                 'search.button': '검색',
                 'search.hint': '2글자 이상 입력하면 자동완성 (250+ 테마)',
+                'examples.stocks': '주요 종목:',
+                'examples.themes': '주요 테마:',
                 'panel.selectedNode': '선택된 노드',
                 'panel.clickNode': '노드를 클릭하면 상세정보 표시',
                 'panel.connectedThemes': '연결된 테마',
                 'panel.connectedStocks': '연결된 종목',
                 'panel.searchToSee': '종목을 검색하면 테마 표시',
+                'panel.backToThemes': '← 테마 목록으로',
                 'loading': '그래프 로딩 중...',
                 'controls.physics': '물리: ON',
                 'controls.physicsOff': '물리: OFF',
@@ -750,11 +814,14 @@
                 'search.placeholder': 'e.g., 반도, 2차전, AI',
                 'search.button': 'Search',
                 'search.hint': 'Type 2+ chars for suggestions (250+ themes)',
+                'examples.stocks': 'Popular Stocks:',
+                'examples.themes': 'Popular Themes:',
                 'panel.selectedNode': 'Selected Node',
                 'panel.clickNode': 'Click a node to see details',
                 'panel.connectedThemes': 'Connected Themes',
                 'panel.connectedStocks': 'Connected Stocks',
                 'panel.searchToSee': 'Search for a stock to see themes',
+                'panel.backToThemes': '← Back to Themes',
                 'loading': 'Loading graph...',
                 'controls.physics': 'Physics: ON',
                 'controls.physicsOff': 'Physics: OFF',
@@ -1173,6 +1240,25 @@
             }
         });
 
+        // Quick search from example buttons
+        function quickSearch(type, query) {
+            // Set search mode
+            searchMode = type;
+            document.querySelectorAll('.tabs .tab').forEach(tab => {
+                tab.classList.toggle('active',
+                    (type === 'stock' && tab.textContent.includes('종목')) ||
+                    (type === 'stock' && tab.textContent.includes('Stock')) ||
+                    (type === 'theme' && tab.textContent.includes('테마')) ||
+                    (type === 'theme' && tab.textContent.includes('Theme'))
+                );
+            });
+
+            // Set search input value and trigger search
+            document.getElementById('searchInput').value = query;
+            hideSuggestions();
+            doSearch();
+        }
+
         async function doSearch() {
             const query = document.getElementById('searchInput').value.trim();
             if (!query) return;
@@ -1283,10 +1369,8 @@
                 expandedThemes.add(themeName);
                 updateStats();
 
-                // Refresh theme list to show expanded state
-                if (currentStockThemes) {
-                    refreshThemeList();
-                }
+                // Note: Don't call refreshThemeList() here as it would overwrite the stock list
+                // The stock list is now displayed in the sidebar via updateStockList()
             } catch (error) {
                 console.error('Error expanding theme:', error);
             }
@@ -1343,9 +1427,19 @@
 
             html += `</div>
                 <div class="expand-hint">Click stock to see its themes</div>
+                <button onclick="backToThemeList()" style="width: 100%; margin-top: 0.75rem; padding: 0.5rem; background: #475569; border: none; border-radius: 0.375rem; color: #e2e8f0; cursor: pointer; font-size: 0.8125rem;">
+                    ${t('panel.backToThemes')}
+                </button>
             `;
 
             list.innerHTML = html;
+        }
+
+        function backToThemeList() {
+            if (currentStockThemes) {
+                document.getElementById('connectionTitle').textContent = 'Connected Themes';
+                refreshThemeList();
+            }
         }
 
         function collapseTheme(themeName) {
