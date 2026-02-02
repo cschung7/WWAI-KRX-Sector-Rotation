@@ -9,13 +9,21 @@ env/
 .venv/
 .env
 
-# Data files (too large for git)
-data/
+# Data files - keep essential dashboard data
+# Large analysis output files
 reports/
-*.csv
-*.json
 *.pkl
 *.pickle
+
+# Keep data/ directory for essential dashboard files
+# Note: Use git add -f for specific data files needed by dashboard
+# Essential files tracked:
+#   data/enhanced_cohesion_themes_*.csv
+#   data/tier*_*.csv
+#   data/actionable_tickers_*.csv
+#   data/consolidated_ticker_analysis_*.json
+#   data/4tier_summary_*.json
+#   data/naver_theme_analysis.json
 
 # IDE
 .idea/
