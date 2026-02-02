@@ -353,7 +353,15 @@ async def get_bb_crossover_tickers(
 
         # Enrich tickers with theme info
         enriched_tickers = []
-        for ticker in tickers:
+        for item in tickers:
+            # Handle both old format (string) and new format (dict with deviation)
+            if isinstance(item, dict):
+                ticker = item.get('ticker', '')
+                deviation_pct = item.get('deviation_pct', 0)
+            else:
+                ticker = item
+                deviation_pct = 0
+
             themes = theme_map.get(ticker, '[]')
             if pd.isna(themes) or themes == 'nan':
                 themes = '[]'
@@ -361,7 +369,7 @@ async def get_bb_crossover_tickers(
                 "ticker": ticker,
                 "themes": themes,
                 "signal": "BB Upper Crossover",
-                "bb_setting": "BB(220, 2.0)"
+                "deviation_pct": deviation_pct
             })
 
         return {

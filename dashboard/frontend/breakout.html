@@ -420,7 +420,7 @@
                         <th data-i18n="table.ticker">Ticker</th>
                         <th data-i18n="table.themes">Themes</th>
                         <th data-i18n="table.signal">Signal</th>
-                        <th data-i18n="table.bbSetting">Setting</th>
+                        <th data-i18n="table.deviation">Deviation</th>
                     </tr>
                 </thead>
                 <tbody id="bbCrossoverTableBody">
@@ -559,7 +559,7 @@
                 'section.bbCrossover': '📈 장기추세돌파',
                 'bbCrossover.description': '220일 볼린저밴드 상단 돌파 종목 (전일: 하단 → 금일: 상단)',
                 'table.signal': '신호',
-                'table.bbSetting': '설정',
+                'table.deviation': '상승률',
                 'noBBCrossoverData': '돌파 신호 없음'
             },
             en: {
@@ -615,7 +615,7 @@
                 'section.bbCrossover': '📈 Long Term Trend Breakout',
                 'bbCrossover.description': 'Tickers that crossed above 220-day Bollinger Band upper band (Yesterday: below → Today: above)',
                 'table.signal': 'Signal',
-                'table.bbSetting': 'Setting',
+                'table.deviation': 'Deviation',
                 'noBBCrossoverData': 'No trend breakout signals'
             }
         };
@@ -893,12 +893,16 @@
                         themesDisplay = t.themes || '-';
                     }
 
+                    const deviationClass = t.deviation_pct >= 0 ? 'color: #10b981;' : 'color: #ef4444;';
+                    const deviationSign = t.deviation_pct >= 0 ? '+' : '';
+                    const deviationValue = t.deviation_pct ? t.deviation_pct.toFixed(2) : '0.00';
+
                     return `
                         <tr>
                             <td><strong style="color: #10b981;">${t.ticker}</strong></td>
                             <td style="font-size: 0.8rem;">${themesDisplay}</td>
                             <td><span class="badge badge-high">${t.signal}</span></td>
-                            <td>${t.bb_setting}</td>
+                            <td style="${deviationClass}">${deviationSign}${deviationValue}%</td>
                         </tr>
                     `;
                 }).join('');
