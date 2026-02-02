@@ -1,0 +1,76 @@
+{
+  "date": "20260130",
+  "data_source_date": "2026-01-28",
+  "total_tickers": 713,
+  "high_priority": 185,
+  "medium_priority": 528,
+  "low_priority": 0,
+  "stage_breakdown": {
+    "Healthy Correction": 300,
+    "Burgeoning": 212,
+    "Super Trend": 174,
+    "Early Breakout": 27
+  },
+  "top_10": [
+    {
+      "ticker": "에코프로에이치엔",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "솔브레인홀딩스",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "롯데케미칼",
+      "score": 82,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "이지바이오",
+      "score": 82,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "신흥에스이씨",
+      "score": 79,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "공구우먼",
+      "score": 79,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "현우산업",
+      "score": 79,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "미래에셋벤처투자",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "스피어",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "코메론",
+      "score": 78,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+[
+  {
+    "sector": "맥신(MXene)",
+    "date": "2025-10-27",
+    "cohesion_info": {
+      "stocks": 10,
+      "week_before": 1.800438388214347,
+      "last_week": 5.829913513373968,
+      "change": 4.02947512515962,
+      "pct_change": 223.8052216358264
+    },
+    "total_stocks": 10,
+    "tickers": [
+      {
+        "tier": "Tier 2 (1-5T)",
+        "ticker": "000240",
+        "name": "한국앤컴퍼니",
+        "market_cap": 22.45218426,
+        "cap_tier": "Mid",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -0.2599999999999999,
+        "momentum": 0.7795698924731184,
+        "composite_score": 0.3908842537547886
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "267320",
+        "name": "나인테크",
+        "market_cap": 2.3897999727,
+        "cap_tier": "Micro",
+        "regime": "Bull Quiet",
+        "bull_pct": 100,
+        "trend": 0.3999999999999999,
+        "momentum": 0.924496644295302,
+        "composite_score": 0.7008842537547886
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "012320",
+        "name": "경동인베스트",
+        "market_cap": 1.326777903,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -1.0,
+        "momentum": -0.3076923076923077,
+        "composite_score": 0.30088425375478856
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "187790",
+        "name": "나노",
+        "market_cap": 0.527378193,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -1.0,
+        "momentum": -0.4086021505376344,
+        "composite_score": 0.30088425375478856
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "347000",
+        "name": "센코",
+        "market_cap": 0.7955503452,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -1.0,
+        "momentum": 0.513235294117647,
+        "composite_score": 0.30088425375478856
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "357580",
+        "name": "아모센스",
+        "market_cap": 0.9152327175,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -0.7,
+        "momentum": -0.2884097035040431,
+        "composite_score": 0.30088425375478856
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "052460",
+        "name": "아이크래프트",
+        "market_cap": 0.3571640352,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -1.0,
+        "momentum": 0.1417910447761193,
+        "composite_score": 0.30088425375478856
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "015890",
+        "name": "태경산업",
+        "market_cap": 1.51404925,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -0.6599999999999999,
+        "momentum": 0.6125,
+        "composite_score": 0.30088425375478856
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "081150",
+        "name": "티플랙스",
+        "market_cap": 0.7426131012,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -1.0,
+        "momentum": 0.2714285714285714,
+        "composite_score": 0.30088425375478856
+      },
+      {
+        "tier": "Tier 3 (<1T)",
+        "ticker": "079980",
+        "name": "휴비스",
+        "market_cap": 0.964275,
+        "cap_tier": "Micro",
+        "regime": "Bear Quiet",
+        "bull_pct": 0,
+        "trend": -1.0,
+        "momentum": 0.1967741935483871,
+        "composite_score": 0.30088425375478856
+      }
+    ]
+  }
+]

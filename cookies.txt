@@ -1,0 +1,8 @@
+# PASTE YOUR NOTEBOOKLM COOKIES HERE
+# Instructions:
+# 1. Login to https://notebooklm.google.com
+# 2. Open DevTools (F12) > Network Tab
+# 3. Refresh page and click any request (e.g. 'batch' or the main doc)
+# 4. Look at 'Request Headers' > 'cookie'
+# 5. Right-click the 'cookie' value -> Copy Value
+# 6. Paste it below and SAVE this file.

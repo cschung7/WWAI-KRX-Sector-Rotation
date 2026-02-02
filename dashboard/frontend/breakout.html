@@ -371,6 +371,15 @@
             <div class="loading" data-i18n="loading">Loading summary...</div>
         </div>
 
+        <!-- Daily Summary Section (AutoML Rankings) -->
+        <div class="section" id="dailySummarySection">
+            <h2>
+                <span data-i18n="section.dailySummary">📊 Daily Top Performers (AutoML)</span>
+                <span id="dailySummaryDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 1rem;"></span>
+            </h2>
+            <div id="dailySummaryContent" class="loading" data-i18n="loading">Loading...</div>
+        </div>
+
         <!-- Charts Row -->
         <div class="charts-row">
             <div class="chart-container">
@@ -484,7 +493,16 @@
                 'summary.earlyBreakout': '모멘텀',
                 'summary.superTrend': '슈퍼트렌드',
                 'summary.highPriority': '눈여겨볼 주식',
-                'summary.totalCandidates': '종목수'
+                'summary.totalCandidates': '종목수',
+                'section.dailySummary': '📊 일일 상위 종목 (AutoML)',
+                'dailySummary.rank': '순위',
+                'dailySummary.ticker': '종목코드',
+                'dailySummary.name': '종목명',
+                'dailySummary.sector': '섹터',
+                'dailySummary.score': '종합점수',
+                'dailySummary.regime': '국면',
+                'dailySummary.signals': '시그널',
+                'dailySummary.noData': '데이터 없음'
             },
             en: {
                 title: 'Momentum Scanner',
@@ -522,7 +540,16 @@
                 'summary.earlyBreakout': 'Early Breakout',
                 'summary.superTrend': 'Super Trend',
                 'summary.highPriority': 'High Priority',
-                'summary.totalCandidates': 'Total Candidates'
+                'summary.totalCandidates': 'Total Candidates',
+                'section.dailySummary': '📊 Daily Top Performers (AutoML)',
+                'dailySummary.rank': 'Rank',
+                'dailySummary.ticker': 'Ticker',
+                'dailySummary.name': 'Name',
+                'dailySummary.sector': 'Sector',
+                'dailySummary.score': 'Score',
+                'dailySummary.regime': 'Regime',
+                'dailySummary.signals': 'Signals',
+                'dailySummary.noData': 'No data available'
             }
         };
 
@@ -552,9 +579,101 @@
         // Initialize
         async function init() {
             await loadSummary();
+            await loadDailySummary();
             await loadCharts();
             await loadCandidates();
             setupFilters();
+        }
+
+        async function loadDailySummary() {
+            try {
+                const response = await fetch(`${API_BASE}/api/breakout/daily-summary`);
+                if (!response.ok) {
+                    throw new Error('Daily summary not available');
+                }
+                const data = await response.json();
+
+                // Update date
+                document.getElementById('dailySummaryDate').textContent = data.date || '';
+
+                // Build table
+                const content = document.getElementById('dailySummaryContent');
+
+                if (!data.top_performers || data.top_performers.length === 0) {
+                    content.innerHTML = `<p style="color: #94a3b8;">${t('dailySummary.noData')}</p>`;
+                    return;
+                }
+
+                const getRegimeBadge = (regime) => {
+                    const colors = {
+                        'Bull Quiet': 'background: #10b981;',
+                        'Bull Volatile': 'background: #22c55e;',
+                        'Transition': 'background: #f59e0b;',
+                        'Ranging': 'background: #64748b;',
+                        'Bear Quiet': 'background: #ef4444;',
+                        'Bear Volatile': 'background: #dc2626;'
+                    };
+                    return `<span class="badge" style="${colors[regime] || 'background: #475569;'} color: white;">${regime}</span>`;
+                };
+
+                const formatSignals = (signals) => {
+                    if (!signals) return '-';
+                    return `
+                        <span style="font-size: 0.7rem; color: #94a3b8;">
+                            M:${signals.model_prediction?.toFixed(1) || '-'}
+                            R:${signals.regime_signal?.toFixed(1) || '-'}
+                            T:${signals.tsf_alignment?.toFixed(1) || '-'}
+                        </span>
+                    `;
+                };
+
+                content.innerHTML = `
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background: #334155; text-align: left;">
+                                    <th style="padding: 0.75rem; border-bottom: 2px solid #475569;">${t('dailySummary.rank')}</th>
+                                    <th style="padding: 0.75rem; border-bottom: 2px solid #475569;">${t('dailySummary.ticker')}</th>
+                                    <th style="padding: 0.75rem; border-bottom: 2px solid #475569;">${t('dailySummary.name')}</th>
+                                    <th style="padding: 0.75rem; border-bottom: 2px solid #475569;">${t('dailySummary.sector')}</th>
+                                    <th style="padding: 0.75rem; border-bottom: 2px solid #475569;">${t('dailySummary.score')}</th>
+                                    <th style="padding: 0.75rem; border-bottom: 2px solid #475569;">${t('dailySummary.regime')}</th>
+                                    <th style="padding: 0.75rem; border-bottom: 2px solid #475569;">${t('dailySummary.signals')}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.top_performers.map((p, idx) => `
+                                    <tr style="border-bottom: 1px solid #334155;">
+                                        <td style="padding: 0.75rem; color: #94a3b8;">${idx + 1}</td>
+                                        <td style="padding: 0.75rem;">
+                                            <strong>${p.ticker}</strong>
+                                            <a href="${STOCK_CHART_URL}?name=${encodeURIComponent(p.name || p.ticker)}" target="_blank"
+                                               style="margin-left: 0.5rem; font-size: 0.75rem; color: #3b82f6;" title="Open Chart">📈</a>
+                                        </td>
+                                        <td style="padding: 0.75rem; color: #cbd5e1;">${p.name || '-'}</td>
+                                        <td style="padding: 0.75rem; color: #94a3b8; font-size: 0.85rem;">${p.sector || '-'}</td>
+                                        <td style="padding: 0.75rem;">
+                                            <span style="color: ${p.composite_score >= 0.5 ? '#10b981' : '#f59e0b'}; font-weight: bold;">
+                                                ${(p.composite_score * 100).toFixed(1)}%
+                                            </span>
+                                        </td>
+                                        <td style="padding: 0.75rem;">${getRegimeBadge(p.regime_type)}</td>
+                                        <td style="padding: 0.75rem;">${formatSignals(p.signals)}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.75rem; color: #64748b;">
+                        ${data.note || ''} | Total: ${data.total_tickers} tickers
+                    </p>
+                `;
+
+            } catch (error) {
+                console.error('Error loading daily summary:', error);
+                document.getElementById('dailySummaryContent').innerHTML =
+                    `<p style="color: #94a3b8;">${t('dailySummary.noData')}</p>`;
+            }
         }
 
         async function loadSummary() {
@@ -678,6 +797,72 @@
                     dataTable.destroy();
                 }
 
+                // Stage badge helper (same style as Daily Summary regime)
+                const getStageBadge = (stage) => {
+                    const colors = {
+                        'Early Breakout': 'background: #8b5cf6;',
+                        'Super Trend': 'background: #3b82f6;',
+                        'Transition': 'background: #f59e0b;',
+                        'Burgeoning': 'background: #10b981;',
+                        'Healthy Correction': 'background: #06b6d4;',
+                        'Super Trend (Bear)': 'background: #f97316;',
+                        'Bear Quiet': 'background: #ef4444;',
+                        'Bear Volatile': 'background: #dc2626;'
+                    };
+                    return `<span class="badge" style="${colors[stage] || 'background: #475569;'} color: white;">${stage}</span>`;
+                };
+
+                // Strategy badge helper
+                const getStrategyBadge = (strategy) => {
+                    if (!strategy || strategy === '-') return '-';
+                    const colors = {
+                        'Transition': 'background: #f59e0b;',
+                        'Bull Quiet': 'background: #10b981;',
+                        'Bull Volatile': 'background: #22c55e;',
+                        'Ranging': 'background: #64748b;'
+                    };
+                    return `<span class="badge" style="${colors[strategy] || 'background: #475569;'} color: white;">${strategy}</span>`;
+                };
+
+                // Format themes like sector (smaller, gray)
+                const formatThemes = (themes) => {
+                    if (!themes || themes === '-' || themes === '[]' || themes === 'null') return '-';
+
+                    let themeList = [];
+
+                    if (typeof themes === 'string') {
+                        // Handle Python list format: ['item1', 'item2']
+                        if (themes.startsWith('[') && themes.includes("'")) {
+                            // Convert Python single quotes to JSON double quotes
+                            const jsonStr = themes.replace(/'/g, '"');
+                            try {
+                                themeList = JSON.parse(jsonStr);
+                            } catch (e) {
+                                // Fallback: extract items manually
+                                const matches = themes.match(/'([^']+)'/g);
+                                if (matches) {
+                                    themeList = matches.map(m => m.replace(/'/g, ''));
+                                }
+                            }
+                        } else if (themes.startsWith('[')) {
+                            // Standard JSON format
+                            try { themeList = JSON.parse(themes); } catch (e) { }
+                        } else {
+                            // Plain string
+                            themeList = [themes];
+                        }
+                    } else if (Array.isArray(themes)) {
+                        themeList = themes;
+                    }
+
+                    if (themeList.length === 0) return '-';
+
+                    // Show max 2 themes with "..." if more
+                    const display = themeList.slice(0, 2).join(', ');
+                    const more = themeList.length > 2 ? ` +${themeList.length - 2}` : '';
+                    return `<span style="font-size: 0.85rem; color: #94a3b8;">${display}${more}</span>`;
+                };
+
                 // Build table body
                 const tbody = document.getElementById('breakoutTableBody');
                 tbody.innerHTML = data.candidates.map(c => `
@@ -688,13 +873,13 @@
                                style="margin-left: 0.5rem; font-size: 0.75rem; color: #3b82f6;" title="Open Chart">📈</a>
                         </td>
                         <td>
-                            ${c.score}
+                            <span style="color: ${c.score >= 50 ? '#10b981' : '#f59e0b'}; font-weight: bold;">${c.score}</span>
                             <div class="score-bar"><div class="score-fill" style="width: ${c.score}%"></div></div>
                         </td>
-                        <td><span class="badge ${c.stage === 'Early Breakout' ? 'badge-early' : 'badge-super'}">${c.stage}</span></td>
+                        <td>${getStageBadge(c.stage)}</td>
                         <td><span class="badge badge-${c.priority.toLowerCase()}">${c.priority}</span></td>
-                        <td>${c.strategy || '-'}</td>
-                        <td>${c.themes || '-'}</td>
+                        <td>${getStrategyBadge(c.strategy)}</td>
+                        <td>${formatThemes(c.themes)}</td>
                     </tr>
                 `).join('');
 

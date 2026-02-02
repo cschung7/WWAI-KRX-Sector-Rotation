@@ -5,7 +5,34 @@
 KRX (Korea Exchange) Sector Rotation Analysis System using Three-Layer Framework:
 - **Cohesion**: Fiedler eigenvalue for theme network connectivity
 - **Regime**: HMM-based Bull/Bear state detection
-- **Trend**: Bollinger Band (220, 2) stage classification
+- **Trend**: Momentum-based stage classification
+
+---
+
+## Stage Classification System
+
+Stages are determined from momentum and regime signals:
+
+| Stage | Criteria | Priority | Action |
+|-------|----------|----------|--------|
+| **Super Trend** | momentum > 0.1 + bull_ratio ≥ 0.5 + in_green | HIGH | BUY |
+| **Early Breakout** | momentum > 0.1 + bull_ratio ≥ 0.5 | HIGH | BUY |
+| **Burgeoning** | momentum > 0.05 | MEDIUM | HOLD |
+| **Building** | momentum > 0 | LOW | HOLD |
+| **Consolidation** | momentum ≈ 0 | LOW | WATCH |
+| **Bear Volatile** | momentum < -0.05 | AVOID | AVOID |
+
+**Stage data is pre-computed and stored in:**
+- `data/actionable_tickers_*.csv` - Daily stage assignments
+
+### TIER Classification (Theme Level)
+
+| Tier | Action | Fiedler Value |
+|------|--------|---------------|
+| **Tier 1** | BUY NOW | > 50 |
+| **Tier 2** | ACCUMULATE | > 20 |
+| **Tier 3** | RESEARCH | > 5 |
+| **Tier 4** | MONITOR | ≤ 5 |
 
 ---
 

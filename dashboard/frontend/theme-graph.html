@@ -1001,7 +1001,7 @@
             if (node.type === 'stock') {
                 return `${node.label}\nTicker: ${node.ticker}\nSignal: ${node.signal}\nScore: ${node.score}`;
             } else {
-                return `${node.label}\nCo-movement: ${node.fiedler}`;
+                return `${node.label}\nCohesion: ${node.fiedler}`;
             }
         }
 
@@ -1074,7 +1074,7 @@
                             <div class="suggestion-item" onclick="selectSuggestion('theme', '${theme.theme.replace(/'/g, "\\'")}')">
                                 <span class="suggestion-name">${theme.theme}</span>
                                 <span class="suggestion-type theme">${t('badge.theme')}</span>
-                                <span class="suggestion-fiedler">F:${theme.fiedler.toFixed(2)}</span>
+                                <span class="suggestion-fiedler">${theme.fiedler.toFixed(2)}</span>
                             </div>
                         `;
                     });
@@ -1086,7 +1086,7 @@
                             <div class="suggestion-item" onclick="selectSuggestion('theme', '${theme.theme.replace(/'/g, "\\'")}')">
                                 <span class="suggestion-name">${theme.theme}</span>
                                 <span class="suggestion-type theme">${t('badge.theme')}</span>
-                                <span class="suggestion-fiedler">F:${theme.fiedler.toFixed(2)}</span>
+                                <span class="suggestion-fiedler">${theme.fiedler.toFixed(2)}</span>
                             </div>
                         `;
                     });
@@ -1315,7 +1315,7 @@
 
             let html = `
                 <div class="theme-header">
-                    <h4>Co-movement: ${data.fiedler.toFixed(2)}</h4>
+                    <h4>Cohesion: ${data.fiedler.toFixed(2)}</h4>
                     <div class="theme-stats">
                         <span style="color: #10b981;">${buyCount} Buy</span> /
                         <span style="color: #ef4444;">${avoidCount} Avoid</span>

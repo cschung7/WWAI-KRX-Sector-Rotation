@@ -1,0 +1,26 @@
+ticker,strategy,score,stage,themes,priority
+포스코퓨처엠,Early Breakout,90.0,Early Breakout,"['리튬', '2차전지', '2차전지(소재/부품)', '밸류업(24년 기업가치 제고계획 발표)']",HIGH
+강원에너지,Early Breakout,90.0,Early Breakout,"['2차전지(장비)', '리튬', '2차전지', '2차전지(소재/부품)', '전기차', '원자력발전']",HIGH
+신흥에스이씨,Early Breakout,80.0,Early Breakout,"['전기차 화재 방지(배터리 열폭주 등)', '2차전지', '2차전지(소재/부품)', '전기차']",HIGH
+에이티넘인베스트,Early Breakout,75.0,Early Breakout,"['창투사', '두나무(Dunamu)', '가상화폐(비트코인 등)']",HIGH
+현우산업,Early Breakout,75.0,Early Breakout,['PCB(FPCB 등)'],HIGH
+공구우먼,Early Breakout,75.0,Early Breakout,['패션/의류'],HIGH
+리가켐바이오,Early Breakout,75.0,Early Breakout,"['면역항암제', '의료기기', '코로나19(치료제/백신 개발 등)', '코로나19(진단/치료제/백신 개발 등)', '슈퍼박테리아']",HIGH
+코메론,Early Breakout,75.0,Early Breakout,['철강 중소형'],HIGH
+우정바이오,Early Breakout,75.0,Early Breakout,"['코로나19(음압병실/음압구급차)', '메르스 코로나 바이러스']",HIGH
+영풍,Early Breakout,75.0,Early Breakout,"['비철금속', '아이폰']",HIGH
+LG유플러스,Sector Rotation (Key Player),26.4,TIER 1,통신,MEDIUM
+SK텔레콤,Sector Rotation (Key Player),21.3,TIER 1,통신,MEDIUM
+KT,Sector Rotation (Key Player),20.3,TIER 1,통신,MEDIUM
+LG,Sector Rotation (Key Player),19.9,TIER 1,"통신, 스페이스X(SpaceX)",MEDIUM
+SK,Sector Rotation (Key Player),19.8,TIER 1,"통신, 증권",MEDIUM
+미래에셋증권,Sector Rotation (Key Player),12.1,TIER 1,"증권, 스페이스X(SpaceX)",MEDIUM
+우리금융지주,Sector Rotation (Key Player),11.2,TIER 1,은행,MEDIUM
+하나금융지주,Sector Rotation (Key Player),10.4,TIER 1,은행,MEDIUM
+기업은행,Sector Rotation (Key Player),10.3,TIER 1,은행,MEDIUM
+신한지주,Sector Rotation (Key Player),10.1,TIER 1,은행,MEDIUM
+iM금융지주,Sector Rotation (Key Player),10.0,TIER 1,은행,MEDIUM
+아주IB투자,Sector Rotation (Key Player),9.9,TIER 1,스페이스X(SpaceX),MEDIUM
+켄코아에어로스페이스,Sector Rotation (Key Player),9.7,TIER 1,"방위산업/전쟁 및 테러, 스페이스X(SpaceX)",MEDIUM
+BNK금융지주,Sector Rotation (Key Player),9.1,TIER 1,은행,MEDIUM
+제주은행,Sector Rotation (Key Player),9.1,TIER 1,은행,MEDIUM

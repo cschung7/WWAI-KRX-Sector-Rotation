@@ -1,0 +1,329 @@
+{
+  "analysis_date": "2026-01-16",
+  "method": "fiedler_velocity",
+  "tier1_threshold": 15.0,
+  "predictions": [
+    {
+      "theme": "해운",
+      "stocks": 6,
+      "current_fiedler": 6.0,
+      "past_fiedler": 2.0,
+      "change": 4.0,
+      "pct_change": 200.0,
+      "status": "GROWING",
+      "estimated_months": 0.4,
+      "confidence": "MEDIUM",
+      "range": [
+        0.3,
+        0.5
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 6.0,
+        "target_fiedler": 15.0,
+        "gap": 9.0,
+        "weekly_velocity": 4.0,
+        "weeks_to_threshold": 2.3
+      }
+    },
+    {
+      "theme": "조림사업",
+      "stocks": 12,
+      "current_fiedler": 7.35,
+      "past_fiedler": 3.78,
+      "change": 3.56,
+      "pct_change": 94.2,
+      "status": "GROWING",
+      "estimated_months": 0.5,
+      "confidence": "MEDIUM",
+      "range": [
+        0.3,
+        0.6
+      ],
+      "acceleration_status": "STEADY",
+      "details": {
+        "current_fiedler": 7.35,
+        "target_fiedler": 15.0,
+        "gap": 7.65,
+        "weekly_velocity": 3.564,
+        "weeks_to_threshold": 2.1
+      }
+    },
+    {
+      "theme": "아스콘(아스팔트 콘크리트)",
+      "stocks": 10,
+      "current_fiedler": 5.0,
+      "past_fiedler": 2.79,
+      "change": 2.21,
+      "pct_change": 79.5,
+      "status": "GROWING",
+      "estimated_months": 0.8,
+      "confidence": "MEDIUM",
+      "range": [
+        0.6,
+        1.1
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 5.0,
+        "target_fiedler": 15.0,
+        "gap": 10.0,
+        "weekly_velocity": 2.214,
+        "weeks_to_threshold": 4.5
+      }
+    },
+    {
+      "theme": "생명보험",
+      "stocks": 7,
+      "current_fiedler": 7.0,
+      "past_fiedler": 4.0,
+      "change": 3.0,
+      "pct_change": 75.0,
+      "status": "GROWING",
+      "estimated_months": 0.6,
+      "confidence": "MEDIUM",
+      "range": [
+        0.4,
+        0.8
+      ],
+      "acceleration_status": "STEADY",
+      "details": {
+        "current_fiedler": 7.0,
+        "target_fiedler": 15.0,
+        "gap": 8.0,
+        "weekly_velocity": 3.0,
+        "weeks_to_threshold": 2.7
+      }
+    },
+    {
+      "theme": "공기청정기",
+      "stocks": 13,
+      "current_fiedler": 6.3,
+      "past_fiedler": 3.75,
+      "change": 2.55,
+      "pct_change": 68.2,
+      "status": "GROWING",
+      "estimated_months": 0.6,
+      "confidence": "MEDIUM",
+      "range": [
+        0.4,
+        0.8
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 6.3,
+        "target_fiedler": 15.0,
+        "gap": 8.7,
+        "weekly_velocity": 2.553,
+        "weeks_to_threshold": 3.4
+      }
+    },
+    {
+      "theme": "편의점",
+      "stocks": 7,
+      "current_fiedler": 5.0,
+      "past_fiedler": 3.0,
+      "change": 2.0,
+      "pct_change": 66.7,
+      "status": "GROWING",
+      "estimated_months": 0.9,
+      "confidence": "MEDIUM",
+      "range": [
+        0.6,
+        1.2
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 5.0,
+        "target_fiedler": 15.0,
+        "gap": 10.0,
+        "weekly_velocity": 2.0,
+        "weeks_to_threshold": 5.0
+      }
+    },
+    {
+      "theme": "화이자(PFIZER)",
+      "stocks": 5,
+      "current_fiedler": 5.0,
+      "past_fiedler": 3.0,
+      "change": 2.0,
+      "pct_change": 66.7,
+      "status": "GROWING",
+      "estimated_months": 0.9,
+      "confidence": "MEDIUM",
+      "range": [
+        0.6,
+        1.2
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 5.0,
+        "target_fiedler": 15.0,
+        "gap": 10.0,
+        "weekly_velocity": 2.0,
+        "weeks_to_threshold": 5.0
+      }
+    },
+    {
+      "theme": "구충제(펜벤다졸, 이버멕틴 등)",
+      "stocks": 11,
+      "current_fiedler": 4.98,
+      "past_fiedler": 3.0,
+      "change": 1.98,
+      "pct_change": 65.9,
+      "status": "GROWING",
+      "estimated_months": 0.9,
+      "confidence": "MEDIUM",
+      "range": [
+        0.7,
+        1.2
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 4.98,
+        "target_fiedler": 15.0,
+        "gap": 10.02,
+        "weekly_velocity": 1.977,
+        "weeks_to_threshold": 5.1
+      }
+    },
+    {
+      "theme": "탈 플라스틱(친환경/생분해성 등)",
+      "stocks": 10,
+      "current_fiedler": 7.0,
+      "past_fiedler": 4.44,
+      "change": 2.56,
+      "pct_change": 57.7,
+      "status": "GROWING",
+      "estimated_months": 0.6,
+      "confidence": "MEDIUM",
+      "range": [
+        0.4,
+        0.8
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 7.0,
+        "target_fiedler": 15.0,
+        "gap": 8.0,
+        "weekly_velocity": 2.562,
+        "weeks_to_threshold": 3.1
+      }
+    },
+    {
+      "theme": "시멘트/레미콘",
+      "stocks": 17,
+      "current_fiedler": 7.51,
+      "past_fiedler": 5.02,
+      "change": 2.49,
+      "pct_change": 49.7,
+      "status": "GROWING",
+      "estimated_months": 0.6,
+      "confidence": "MEDIUM",
+      "range": [
+        0.4,
+        0.7
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 7.51,
+        "target_fiedler": 15.0,
+        "gap": 7.49,
+        "weekly_velocity": 2.494,
+        "weeks_to_threshold": 3.0
+      }
+    },
+    {
+      "theme": "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)",
+      "stocks": 18,
+      "current_fiedler": 9.42,
+      "past_fiedler": 6.34,
+      "change": 3.08,
+      "pct_change": 48.5,
+      "status": "GROWING",
+      "estimated_months": 0.3,
+      "confidence": "MEDIUM",
+      "range": [
+        0.2,
+        0.4
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 9.42,
+        "target_fiedler": 15.0,
+        "gap": 5.58,
+        "weekly_velocity": 3.078,
+        "weeks_to_threshold": 1.8
+      }
+    },
+    {
+      "theme": "모바일솔루션(스마트폰)",
+      "stocks": 24,
+      "current_fiedler": 11.32,
+      "past_fiedler": 7.85,
+      "change": 3.47,
+      "pct_change": 44.2,
+      "status": "GROWING",
+      "estimated_months": 0.2,
+      "confidence": "MEDIUM",
+      "range": [
+        0.2,
+        0.3
+      ],
+      "acceleration_status": "STEADY",
+      "details": {
+        "current_fiedler": 11.32,
+        "target_fiedler": 15.0,
+        "gap": 3.68,
+        "weekly_velocity": 3.469,
+        "weeks_to_threshold": 1.1
+      }
+    },
+    {
+      "theme": "수산",
+      "stocks": 11,
+      "current_fiedler": 6.65,
+      "past_fiedler": 4.88,
+      "change": 1.77,
+      "pct_change": 36.3,
+      "status": "GROWING",
+      "estimated_months": 1.1,
+      "confidence": "MEDIUM",
+      "range": [
+        0.8,
+        1.4
+      ],
+      "acceleration_status": "STEADY",
+      "details": {
+        "current_fiedler": 6.65,
+        "target_fiedler": 15.0,
+        "gap": 8.35,
+        "weekly_velocity": 1.773,
+        "weeks_to_threshold": 4.7
+      }
+    },
+    {
+      "theme": "음원/음반",
+      "stocks": 17,
+      "current_fiedler": 7.22,
+      "past_fiedler": 5.36,
+      "change": 1.85,
+      "pct_change": 34.6,
+      "status": "GROWING",
+      "estimated_months": 0.8,
+      "confidence": "MEDIUM",
+      "range": [
+        0.5,
+        1.0
+      ],
+      "acceleration_status": "ACCELERATING",
+      "details": {
+        "current_fiedler": 7.22,
+        "target_fiedler": 15.0,
+        "gap": 7.78,
+        "weekly_velocity": 1.854,
+        "weeks_to_threshold": 4.2
+      }
+    }
+  ]
+}

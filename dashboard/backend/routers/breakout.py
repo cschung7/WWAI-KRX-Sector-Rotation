@@ -18,6 +18,25 @@ from config import DATA_DIR
 
 router = APIRouter()
 
+# DB path for theme lookup
+DB_FINAL_PATH = Path("/mnt/nas/AutoGluon/AutoML_Krx/DB/db_final.csv")
+
+# Cache for theme mapping
+_theme_cache = None
+
+def get_theme_mapping() -> dict:
+    """Load and cache theme mapping from db_final.csv"""
+    global _theme_cache
+    if _theme_cache is None:
+        try:
+            df = pd.read_csv(DB_FINAL_PATH)
+            # Create mapping: name -> naverTheme
+            _theme_cache = dict(zip(df['name'], df['naverTheme']))
+        except Exception as e:
+            print(f"Error loading theme data: {e}")
+            _theme_cache = {}
+    return _theme_cache
+
 def load_latest_actionable_tickers(date: Optional[str] = None) -> pd.DataFrame:
     """Load actionable tickers data"""
     if date:
@@ -68,15 +87,24 @@ async def get_breakout_candidates(
         # Sort by score descending
         df = df.sort_values('score', ascending=False).head(limit)
 
+        # Get theme mapping
+        theme_map = get_theme_mapping()
+
         # Convert to list of dicts
         candidates = []
         for _, row in df.iterrows():
+            ticker_name = row['ticker']
+            # Look up theme from db_final.csv, fallback to existing themes column
+            themes = theme_map.get(ticker_name, row.get('themes', '[]'))
+            if pd.isna(themes) or themes == '[]' or themes == 'nan':
+                themes = '[]'
+
             candidates.append({
-                "ticker": row['ticker'],
+                "ticker": ticker_name,
                 "strategy": row.get('strategy', ''),
                 "score": int(row['score']),
                 "stage": row['stage'],
-                "themes": row.get('themes', '[]'),
+                "themes": themes,
                 "priority": row['priority']
             })
 
@@ -169,14 +197,22 @@ async def get_top_picks(
         # Filter to Early Breakout only
         early_breakout = df[df['stage'] == 'Early Breakout'].sort_values('score', ascending=False).head(limit)
 
+        # Get theme mapping
+        theme_map = get_theme_mapping()
+
         picks = []
         for rank, (_, row) in enumerate(early_breakout.iterrows(), 1):
+            ticker_name = row['ticker']
+            themes = theme_map.get(ticker_name, row.get('themes', '[]'))
+            if pd.isna(themes) or themes == '[]' or themes == 'nan':
+                themes = '[]'
+
             picks.append({
                 "rank": rank,
-                "ticker": row['ticker'],
+                "ticker": ticker_name,
                 "score": int(row['score']),
                 "strategy": row.get('strategy', ''),
-                "themes": row.get('themes', '[]')
+                "themes": themes
             })
 
         return {
@@ -185,5 +221,47 @@ async def get_top_picks(
             "stage": "Early Breakout",
             "expected_return": "+7.93% (20D avg)"
         }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# Daily Summary from AutoML Rankings
+RANKINGS_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/Backtest/Rankings")
+
+
+@router.get("/daily-summary")
+async def get_daily_summary(
+    date: Optional[str] = Query(None, description="Date (YYYY-MM-DD)")
+):
+    """
+    Get daily summary from AutoML Rankings
+    Includes top performers and hidden gems with composite scores
+    """
+    try:
+        if date:
+            summary_file = RANKINGS_DIR / f"daily_summary_{date}.json"
+        else:
+            # Find latest
+            summary_files = sorted(glob.glob(str(RANKINGS_DIR / "daily_summary_*.json")))
+            if not summary_files:
+                raise HTTPException(status_code=404, detail="No daily summary data found")
+            summary_file = Path(summary_files[-1])
+
+        if not summary_file.exists():
+            raise HTTPException(status_code=404, detail=f"Summary not found: {summary_file.name}")
+
+        with open(summary_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        return {
+            "date": data.get("date"),
+            "generated_at": data.get("generated_at"),
+            "total_tickers": data.get("total_tickers", 0),
+            "top_performers": data.get("top_performers", [])[:10],
+            "hidden_gems": data.get("hidden_gems", [])[:5],
+            "note": data.get("note", "")
+        }
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
