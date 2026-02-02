@@ -380,6 +380,55 @@
             <div id="dailySummaryContent" class="loading" data-i18n="loading">Loading...</div>
         </div>
 
+        <!-- SuperTrend Candidates Section -->
+        <div class="section" id="supertrendSection">
+            <h2>
+                <span data-i18n="section.supertrend">🚀 SuperTrend Candidates</span>
+                <span id="supertrendDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 1rem;"></span>
+                <span id="supertrendCount" style="font-size: 0.875rem; color: #3b82f6; margin-left: 0.5rem;"></span>
+            </h2>
+            <table id="supertrendTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th data-i18n="table.ticker">Ticker</th>
+                        <th data-i18n="table.score">Score</th>
+                        <th data-i18n="table.stage">Stage</th>
+                        <th data-i18n="table.priority">Priority</th>
+                        <th data-i18n="table.strategy">Strategy</th>
+                        <th data-i18n="table.themes">Themes</th>
+                    </tr>
+                </thead>
+                <tbody id="supertrendTableBody">
+                    <tr><td colspan="6" class="loading" data-i18n="loading">Loading SuperTrend candidates...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Long Term Trend Breakout Section -->
+        <div class="section" id="bbCrossoverSection">
+            <h2>
+                <span data-i18n="section.bbCrossover">📈 Long Term Trend Breakout</span>
+                <span id="bbCrossoverDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 1rem;"></span>
+                <span id="bbCrossoverCount" style="font-size: 0.875rem; color: #10b981; margin-left: 0.5rem;"></span>
+            </h2>
+            <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;" data-i18n="bbCrossover.description">
+                Tickers that crossed above 220-day Bollinger Band upper band (Yesterday: below → Today: above)
+            </p>
+            <table id="bbCrossoverTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th data-i18n="table.ticker">Ticker</th>
+                        <th data-i18n="table.themes">Themes</th>
+                        <th data-i18n="table.signal">Signal</th>
+                        <th data-i18n="table.bbSetting">BB Setting</th>
+                    </tr>
+                </thead>
+                <tbody id="bbCrossoverTableBody">
+                    <tr><td colspan="4" class="loading" data-i18n="loading">Loading BB crossover data...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
         <!-- Charts Row -->
         <div class="charts-row">
             <div class="chart-container">
@@ -493,8 +542,12 @@
                 'summary.earlyBreakout': '모멘텀',
                 'summary.superTrend': '슈퍼트렌드',
                 'summary.highPriority': '눈여겨볼 주식',
+                'summary.bbCrossover': '장기추세돌파',
                 'summary.totalCandidates': '종목수',
                 'section.dailySummary': '📊 일일 상위 종목 (AutoML)',
+                'section.supertrend': '🚀 슈퍼트렌드 종목',
+                'table.tickers': '종목',
+                'noSupertrendData': '오늘 슈퍼트렌드 신호 없음',
                 'dailySummary.rank': '순위',
                 'dailySummary.ticker': '종목코드',
                 'dailySummary.name': '종목명',
@@ -502,7 +555,12 @@
                 'dailySummary.score': '종합점수',
                 'dailySummary.regime': '국면',
                 'dailySummary.signals': '시그널',
-                'dailySummary.noData': '데이터 없음'
+                'dailySummary.noData': '데이터 없음',
+                'section.bbCrossover': '📈 장기추세돌파',
+                'bbCrossover.description': '220일 볼린저밴드 상단 돌파 종목 (전일: 하단 → 금일: 상단)',
+                'table.signal': '신호',
+                'table.bbSetting': 'BB 설정',
+                'noBBCrossoverData': 'BB 돌파 신호 없음'
             },
             en: {
                 title: 'Momentum Scanner',
@@ -540,8 +598,12 @@
                 'summary.earlyBreakout': 'Early Breakout',
                 'summary.superTrend': 'Super Trend',
                 'summary.highPriority': 'High Priority',
+                'summary.bbCrossover': 'Long Term Trend Breakout',
                 'summary.totalCandidates': 'Total Candidates',
                 'section.dailySummary': '📊 Daily Top Performers (AutoML)',
+                'section.supertrend': '🚀 SuperTrend Candidates',
+                'table.tickers': 'tickers',
+                'noSupertrendData': 'No SuperTrend signals today',
                 'dailySummary.rank': 'Rank',
                 'dailySummary.ticker': 'Ticker',
                 'dailySummary.name': 'Name',
@@ -549,7 +611,12 @@
                 'dailySummary.score': 'Score',
                 'dailySummary.regime': 'Regime',
                 'dailySummary.signals': 'Signals',
-                'dailySummary.noData': 'No data available'
+                'dailySummary.noData': 'No data available',
+                'section.bbCrossover': '📈 Long Term Trend Breakout',
+                'bbCrossover.description': 'Tickers that crossed above 220-day Bollinger Band upper band (Yesterday: below → Today: above)',
+                'table.signal': 'Signal',
+                'table.bbSetting': 'BB Setting',
+                'noBBCrossoverData': 'No BB crossover signals'
             }
         };
 
@@ -580,6 +647,8 @@
         async function init() {
             await loadSummary();
             await loadDailySummary();
+            await loadSupertrendCandidates();
+            await loadBBCrossover();
             await loadCharts();
             await loadCandidates();
             setupFilters();
@@ -678,12 +747,17 @@
 
         async function loadSummary() {
             try {
-                const response = await fetch(`${API_BASE}/api/breakout/stages`);
-                const data = await response.json();
+                const [stagesResponse, bbResponse] = await Promise.all([
+                    fetch(`${API_BASE}/api/breakout/stages`),
+                    fetch(`${API_BASE}/api/breakout/bb-crossover`)
+                ]);
+                const data = await stagesResponse.json();
+                const bbData = await bbResponse.json();
 
                 const earlyBreakout = data.stages.find(s => s.name === 'Early Breakout')?.count || 0;
                 const superTrend = data.stages.find(s => s.name === 'Super Trend')?.count || 0;
                 const high = data.priorities.find(p => p.name === 'HIGH')?.count || 0;
+                const bbCount = bbData.count || 0;
 
                 document.getElementById('summaryGrid').innerHTML = `
                     <div class="summary-card positive">
@@ -698,6 +772,10 @@
                         <div class="summary-label" data-i18n="summary.highPriority">${t('summary.highPriority')}</div>
                         <div class="summary-value">${high}</div>
                     </div>
+                    <div class="summary-card" style="border-left-color: #f59e0b;">
+                        <div class="summary-label" data-i18n="summary.bbCrossover">${t('summary.bbCrossover')}</div>
+                        <div class="summary-value">${bbCount}</div>
+                    </div>
                     <div class="summary-card">
                         <div class="summary-label" data-i18n="summary.totalCandidates">${t('summary.totalCandidates')}</div>
                         <div class="summary-value">${data.total}</div>
@@ -709,6 +787,146 @@
                 document.getElementById('dataFreshness').innerHTML = `<span data-i18n="dataAsOf">${t('dataAsOf')}</span>: ${new Date().toLocaleDateString(locale)}`;
             } catch (error) {
                 console.error('Error loading summary:', error);
+            }
+        }
+
+        let supertrendTable = null;
+
+        async function loadSupertrendCandidates() {
+            try {
+                const response = await fetch(`${API_BASE}/api/breakout/supertrend-candidates?limit=30`);
+                const data = await response.json();
+
+                document.getElementById('supertrendDate').textContent = data.date || '';
+                document.getElementById('supertrendCount').textContent = data.count ? `(${data.count} ${t('table.tickers')})` : '';
+
+                if (!data.candidates || data.candidates.length === 0) {
+                    document.getElementById('supertrendTableBody').innerHTML =
+                        `<tr><td colspan="6" style="text-align:center; color: #94a3b8;">${t('noSupertrendData')}</td></tr>`;
+                    return;
+                }
+
+                const rowsHtml = data.candidates.map(c => {
+                    const priorityClass = c.priority === 'HIGH' ? 'badge-high' :
+                                         c.priority === 'MEDIUM' ? 'badge-medium' : 'badge-low';
+                    const barWidth = Math.min(c.score, 100);
+                    // Parse themes
+                    let themesDisplay = '-';
+                    try {
+                        const themes = typeof c.themes === 'string' ? JSON.parse(c.themes.replace(/'/g, '"')) : c.themes;
+                        if (Array.isArray(themes) && themes.length > 0) {
+                            themesDisplay = themes.slice(0, 2).join(', ');
+                            if (themes.length > 2) themesDisplay += ` +${themes.length - 2}`;
+                        }
+                    } catch (e) {
+                        themesDisplay = c.themes || '-';
+                    }
+
+                    return `
+                        <tr>
+                            <td><strong style="color: #3b82f6;">${c.ticker}</strong></td>
+                            <td>
+                                ${c.score}
+                                <div class="score-bar"><div class="score-fill" style="width: ${barWidth}%;"></div></div>
+                            </td>
+                            <td>${c.stage}</td>
+                            <td><span class="badge ${priorityClass}">${c.priority}</span></td>
+                            <td>${c.strategy || '-'}</td>
+                            <td style="font-size: 0.8rem;">${themesDisplay}</td>
+                        </tr>
+                    `;
+                }).join('');
+
+                document.getElementById('supertrendTableBody').innerHTML = rowsHtml;
+
+                // Initialize DataTable
+                if (supertrendTable) {
+                    supertrendTable.destroy();
+                }
+                supertrendTable = $('#supertrendTable').DataTable({
+                    pageLength: 10,
+                    order: [[1, 'desc']],
+                    language: currentLang === 'ko' ? {
+                        search: "검색:",
+                        lengthMenu: "_MENU_ 개씩 보기",
+                        info: "_TOTAL_개 중 _START_-_END_",
+                        paginate: { first: "처음", last: "마지막", next: "다음", previous: "이전" }
+                    } : {
+                        search: "Search:",
+                        lengthMenu: "Show _MENU_ entries"
+                    }
+                });
+
+            } catch (error) {
+                console.error('Error loading supertrend candidates:', error);
+                document.getElementById('supertrendTableBody').innerHTML =
+                    '<tr><td colspan="6" style="text-align:center; color: #ef4444;">Error loading SuperTrend data</td></tr>';
+            }
+        }
+
+        let bbCrossoverTable = null;
+
+        async function loadBBCrossover() {
+            try {
+                const response = await fetch(`${API_BASE}/api/breakout/bb-crossover`);
+                const data = await response.json();
+
+                document.getElementById('bbCrossoverDate').textContent = data.date || '';
+                document.getElementById('bbCrossoverCount').textContent = data.count ? `(${data.count} ${t('table.tickers')})` : '';
+
+                if (!data.tickers || data.tickers.length === 0) {
+                    document.getElementById('bbCrossoverTableBody').innerHTML =
+                        `<tr><td colspan="4" style="text-align:center; color: #94a3b8;">${t('noBBCrossoverData')}</td></tr>`;
+                    return;
+                }
+
+                const rowsHtml = data.tickers.map(t => {
+                    // Parse themes
+                    let themesDisplay = '-';
+                    try {
+                        const themes = typeof t.themes === 'string' ? JSON.parse(t.themes.replace(/'/g, '"')) : t.themes;
+                        if (Array.isArray(themes) && themes.length > 0) {
+                            themesDisplay = themes.slice(0, 2).join(', ');
+                            if (themes.length > 2) themesDisplay += ` +${themes.length - 2}`;
+                        }
+                    } catch (e) {
+                        themesDisplay = t.themes || '-';
+                    }
+
+                    return `
+                        <tr>
+                            <td><strong style="color: #10b981;">${t.ticker}</strong></td>
+                            <td style="font-size: 0.8rem;">${themesDisplay}</td>
+                            <td><span class="badge badge-high">${t.signal}</span></td>
+                            <td>${t.bb_setting}</td>
+                        </tr>
+                    `;
+                }).join('');
+
+                document.getElementById('bbCrossoverTableBody').innerHTML = rowsHtml;
+
+                // Initialize DataTable
+                if (bbCrossoverTable) {
+                    bbCrossoverTable.destroy();
+                }
+                bbCrossoverTable = $('#bbCrossoverTable').DataTable({
+                    pageLength: 10,
+                    order: [[0, 'asc']],
+                    language: currentLang === 'ko' ? {
+                        search: "검색:",
+                        lengthMenu: "_MENU_ 개씩 보기",
+                        info: "_TOTAL_개 중 _START_-_END_",
+                        paginate: { first: "처음", last: "마지막", next: "다음", previous: "이전" }
+                    } : {
+                        search: "Search:",
+                        lengthMenu: "Show _MENU_ entries"
+                    }
+                });
+
+            } catch (error) {
+                console.error('Error loading BB crossover data:', error);
+                document.getElementById('bbCrossoverTableBody').innerHTML =
+                    '<tr><td colspan="4" style="text-align:center; color: #ef4444;">Error loading BB crossover data</td></tr>';
             }
         }
 

@@ -225,6 +225,57 @@ async def get_top_picks(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@router.get("/supertrend-candidates")
+async def get_supertrend_candidates(
+    date: Optional[str] = Query(None, description="Analysis date"),
+    limit: int = Query(50, description="Max results")
+):
+    """
+    Get SuperTrend candidates - tickers in Super Trend stage
+    These are stocks showing strong trend momentum in bull regime
+    """
+    try:
+        df = load_latest_actionable_tickers(date)
+
+        # Filter to Super Trend stage only
+        supertrend_df = df[df['stage'].str.contains('Super Trend', case=False, na=False)]
+        supertrend_df = supertrend_df.sort_values('score', ascending=False).head(limit)
+
+        # Get theme mapping
+        theme_map = get_theme_mapping()
+
+        candidates = []
+        for _, row in supertrend_df.iterrows():
+            ticker_name = row['ticker']
+            themes = theme_map.get(ticker_name, row.get('themes', '[]'))
+            if pd.isna(themes) or themes == '[]' or themes == 'nan':
+                themes = '[]'
+
+            candidates.append({
+                "ticker": ticker_name,
+                "score": int(row['score']),
+                "stage": row['stage'],
+                "priority": row['priority'],
+                "strategy": row.get('strategy', ''),
+                "themes": themes
+            })
+
+        # Get date from file
+        ticker_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
+        data_date = Path(ticker_files[-1]).stem.split('_')[-1] if ticker_files else None
+
+        return {
+            "candidates": candidates,
+            "count": len(candidates),
+            "total_supertrend": len(df[df['stage'].str.contains('Super Trend', case=False, na=False)]),
+            "date": data_date,
+            "expected_return": "+2.10% (20D avg)",
+            "note": "Super Trend = Strong momentum in bull regime"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # Daily Summary from AutoML Rankings
 RANKINGS_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/Backtest/Rankings")
 
@@ -260,6 +311,65 @@ async def get_daily_summary(
             "top_performers": data.get("top_performers", [])[:10],
             "hidden_gems": data.get("hidden_gems", [])[:5],
             "note": data.get("note", "")
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# BB Filter Path
+BB_FILTER_PATH = Path("/mnt/nas/AutoGluon/AutoML_Krx/working_filter_BB/Filter/bb_filtered_tickers.json")
+
+
+@router.get("/bb-crossover")
+async def get_bb_crossover_tickers(
+    date: Optional[str] = Query(None, description="Date (YYYY-MM-DD)")
+):
+    """
+    Get BB(220, 2.0) crossover tickers - stocks that crossed above upper Bollinger Band
+    These are momentum breakout signals based on BB upper band crossover
+    """
+    try:
+        if not BB_FILTER_PATH.exists():
+            raise HTTPException(status_code=404, detail="BB filter data not found")
+
+        with open(BB_FILTER_PATH, 'r', encoding='utf-8') as f:
+            bb_data = json.load(f)
+
+        # Get tickers for requested date or latest
+        if date:
+            target_date = date
+        else:
+            # Find latest date in the data
+            if not bb_data:
+                raise HTTPException(status_code=404, detail="No BB crossover data available")
+            target_date = max(bb_data.keys())
+
+        tickers = bb_data.get(target_date, [])
+
+        # Get theme mapping for enrichment
+        theme_map = get_theme_mapping()
+
+        # Enrich tickers with theme info
+        enriched_tickers = []
+        for ticker in tickers:
+            themes = theme_map.get(ticker, '[]')
+            if pd.isna(themes) or themes == 'nan':
+                themes = '[]'
+            enriched_tickers.append({
+                "ticker": ticker,
+                "themes": themes,
+                "signal": "BB Upper Crossover",
+                "bb_setting": "BB(220, 2.0)"
+            })
+
+        return {
+            "date": target_date,
+            "tickers": enriched_tickers,
+            "count": len(enriched_tickers),
+            "description": "Tickers that crossed above BB(220, 2.0) upper band",
+            "note": "Yesterday: below or at upper BB → Today: above upper BB"
         }
     except HTTPException:
         raise
