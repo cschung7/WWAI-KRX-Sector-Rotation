@@ -318,8 +318,16 @@ async def get_daily_summary(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# BB Filter Path
-BB_FILTER_PATH = Path("/mnt/nas/AutoGluon/AutoML_Krx/working_filter_BB/Filter/bb_filtered_tickers.json")
+# BB Filter Paths - try local first (Railway), then NAS (local dev)
+PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
+LOCAL_BB_FILTER_PATH = PROJECT_ROOT / "data" / "bb_filter" / "bb_filtered_tickers.json"
+NAS_BB_FILTER_PATH = Path("/mnt/nas/AutoGluon/AutoML_Krx/working_filter_BB/Filter/bb_filtered_tickers.json")
+
+def get_bb_filter_path():
+    """Get BB filter path - local first, then NAS"""
+    if LOCAL_BB_FILTER_PATH.exists():
+        return LOCAL_BB_FILTER_PATH
+    return NAS_BB_FILTER_PATH
 
 
 @router.get("/bb-crossover")
@@ -331,10 +339,11 @@ async def get_bb_crossover_tickers(
     These are momentum breakout signals based on BB upper band crossover
     """
     try:
-        if not BB_FILTER_PATH.exists():
+        bb_filter_path = get_bb_filter_path()
+        if not bb_filter_path.exists():
             raise HTTPException(status_code=404, detail="BB filter data not found")
 
-        with open(BB_FILTER_PATH, 'r', encoding='utf-8') as f:
+        with open(bb_filter_path, 'r', encoding='utf-8') as f:
             bb_data = json.load(f)
 
         # Get tickers for requested date or latest
