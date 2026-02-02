@@ -173,7 +173,10 @@ async def health_check():
     return {
         "status": "healthy",
         "timestamp": datetime.now().isoformat(),
-        "meta_labeling_available": HAS_META_LABELING
+        "meta_labeling_available": HAS_META_LABELING,
+        "build_id": "20260202-v3-with-cache",
+        "data_dir": str(DATA_DIR),
+        "data_dir_exists": DATA_DIR.exists()
     }
 
 if __name__ == "__main__":
