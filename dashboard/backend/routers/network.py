@@ -246,9 +246,11 @@ async def get_theme_stocks(
             bullish = safe_float(row.get('1', 0))
             total_score = safe_float(row.get('total_score', 0))
 
-            # Get real signal probability
-            signal_prob = get_signal_probability(stock_name)
-            buy_pct = signal_prob["buy"]
+            # Use db_final.csv values directly (more reliable than predictedProbability files)
+            # Convert 0-1 scale to 0-100 percentage
+            buy_pct = bullish * 100
+            sell_pct = bearish * 100
+            neutral_pct = neutral * 100
 
             # Determine signal based on buy probability
             if buy_pct >= 70:
@@ -265,9 +267,9 @@ async def get_theme_stocks(
                 "ticker": str(row.get('tickers', '')),
                 "market": row.get('market', ''),
                 "signal_probability": {
-                    "sell": round(signal_prob["sell"], 1),
-                    "neutral": round(signal_prob["neutral"], 1),
-                    "buy": round(signal_prob["buy"], 1)
+                    "sell": round(sell_pct, 1),
+                    "neutral": round(neutral_pct, 1),
+                    "buy": round(buy_pct, 1)
                 },
                 "total_score": round(total_score, 3),
                 "momentum": row.get('mmt', ''),
@@ -374,12 +376,14 @@ async def search_all(
         stocks = []
         for _, row in stock_matches.head(limit).iterrows():
             stock_name = row['name']
-            signal_prob = get_signal_probability(stock_name)
+            # Use db_final.csv values directly (0-1 scale to 0-100%)
+            bullish = safe_float(row.get('1', 0))
+            buy_pct = bullish * 100
             stocks.append({
                 "name": stock_name,
                 "ticker": str(row.get('tickers', '')),
                 "market": row.get('market', ''),
-                "buy_pct": round(signal_prob["buy"], 1),
+                "buy_pct": round(buy_pct, 1),
                 "type": "stock"
             })
 
@@ -450,8 +454,23 @@ async def get_graph_data(
                 return
 
             row = stock_data.iloc[0]
-            score = safe_float(row.get('1', 0)) - safe_float(row.get('-1', 0))
-            signal = "bullish" if score > 0.3 else "neutral" if score > 0 else "bearish"
+            # Use db_final.csv buy probability (0-1 scale to 0-100%)
+            bullish = safe_float(row.get('1', 0))
+            buy_pct = bullish * 100
+
+            # Determine signal based on buy percentage
+            if buy_pct >= 70:
+                signal = "strong_buy"
+                color = "#059669"  # Dark Green
+            elif buy_pct >= 50:
+                signal = "buy"
+                color = "#10b981"  # Green
+            elif buy_pct >= 30:
+                signal = "neutral"
+                color = "#f59e0b"  # Yellow
+            else:
+                signal = "avoid"
+                color = "#ef4444"  # Red
 
             nodes.append({
                 "id": f"stock_{name}",
@@ -459,9 +478,9 @@ async def get_graph_data(
                 "type": "stock",
                 "ticker": str(row.get('tickers', '')),
                 "signal": signal,
-                "score": round(score, 3),
+                "score": round(buy_pct, 1),
                 "size": 45 if is_center else 30,
-                "color": "#ef4444" if signal == "bullish" else "#3b82f6" if signal == "neutral" else "#64748b",
+                "color": color,
                 "isCenter": is_center
             })
 
