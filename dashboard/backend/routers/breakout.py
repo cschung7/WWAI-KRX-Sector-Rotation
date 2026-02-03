@@ -39,35 +39,36 @@ def get_theme_mapping() -> dict:
 
 def load_latest_actionable_tickers(date: Optional[str] = None) -> pd.DataFrame:
     """Load actionable tickers data from CSV or JSON cache fallback"""
-    print(f"[breakout] load_latest_actionable_tickers called, DATA_DIR={DATA_DIR}")
+    print(f"[breakout] load_latest_actionable_tickers called, DATA_DIR={DATA_DIR}", flush=True)
 
     # Try CSV files first
     if date:
         date_str = date.replace('-', '')
         ticker_file = DATA_DIR / f"actionable_tickers_{date_str}.csv"
-        print(f"[breakout] Looking for dated file: {ticker_file}, exists={ticker_file.exists()}")
+        print(f"[breakout] Looking for dated file: {ticker_file}, exists={ticker_file.exists()}", flush=True)
         if ticker_file.exists():
             return pd.read_csv(ticker_file)
     else:
         ticker_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
-        print(f"[breakout] Found CSV files: {ticker_files}")
+        print(f"[breakout] Found CSV files: {ticker_files}", flush=True)
         if ticker_files:
+            print(f"[breakout] Loading: {ticker_files[-1]}", flush=True)
             return pd.read_csv(ticker_files[-1])
 
     # Fallback to dashboard_cache.json (for Railway deployment)
     cache_file = DATA_DIR / "dashboard_cache.json"
-    print(f"[breakout] Trying cache fallback: {cache_file}, exists={cache_file.exists()}")
+    print(f"[breakout] Trying cache fallback: {cache_file}, exists={cache_file.exists()}", flush=True)
     if cache_file.exists():
         try:
             with open(cache_file) as f:
                 cache_data = json.load(f)
             if 'actionable_tickers' in cache_data and cache_data['actionable_tickers']:
-                print(f"[breakout] Loaded {len(cache_data['actionable_tickers'])} tickers from cache")
+                print(f"[breakout] Loaded {len(cache_data['actionable_tickers'])} tickers from cache", flush=True)
                 return pd.DataFrame(cache_data['actionable_tickers'])
         except Exception as e:
-            print(f"[breakout] Error loading from cache: {e}")
+            print(f"[breakout] Error loading from cache: {e}", flush=True)
 
-    print("[breakout] No data found!")
+    print("[breakout] No data found!", flush=True)
     raise HTTPException(status_code=404, detail="No actionable tickers data found")
 
 
