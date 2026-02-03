@@ -35,6 +35,10 @@ def load_theme_data():
     """Load and cache NaverTheme data - local first, NAS fallback"""
     global _theme_cache
     if _theme_cache is None:
+        print(f"[network] DATA_DIR: {DATA_DIR}")
+        print(f"[network] LOCAL_THEME_CSV: {LOCAL_THEME_CSV}, exists: {LOCAL_THEME_CSV.exists()}")
+        print(f"[network] NAVER_THEME_CSV: {NAVER_THEME_CSV}, exists: {NAVER_THEME_CSV.exists()}")
+
         # Try local file first (for Railway deployment)
         if LOCAL_THEME_CSV.exists():
             print(f"[network] Loading from local: {LOCAL_THEME_CSV}")
@@ -44,7 +48,10 @@ def load_theme_data():
             print(f"[network] Loading from NAS: {NAVER_THEME_CSV}")
             _theme_cache = pd.read_csv(NAVER_THEME_CSV)
         else:
-            raise HTTPException(status_code=404, detail="NaverTheme data not found")
+            raise HTTPException(
+                status_code=404,
+                detail=f"NaverTheme data not found. LOCAL: {LOCAL_THEME_CSV} (exists: {LOCAL_THEME_CSV.exists()}), NAS: {NAVER_THEME_CSV} (exists: {NAVER_THEME_CSV.exists()})"
+            )
     return _theme_cache
 
 
