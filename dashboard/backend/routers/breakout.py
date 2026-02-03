@@ -104,6 +104,13 @@ async def get_breakout_candidates(
     Get breakout candidates with filtering
     Covers Q1: Which stocks have highest breakout potential today?
     """
+    import sys
+    print(f"[candidates] ENDPOINT CALLED, date={date}", file=sys.stderr, flush=True)
+
+    # Direct file check inside endpoint
+    csv_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
+    print(f"[candidates] Direct glob result: {csv_files}", file=sys.stderr, flush=True)
+
     try:
         df = load_latest_actionable_tickers(date)
 
