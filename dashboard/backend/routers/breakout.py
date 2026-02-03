@@ -36,20 +36,31 @@ async def debug_files():
         "cache_exists": cache_exists
     }
 
-# DB path for theme lookup
-DB_FINAL_PATH = Path("/mnt/nas/AutoGluon/AutoML_Krx/DB/db_final.csv")
+# Theme mapping paths - local first (Railway), then NAS (local dev)
+LOCAL_THEME_MAPPING = DATA_DIR / "theme_mapping.csv"
+NAS_DB_FINAL_PATH = Path("/mnt/nas/AutoGluon/AutoML_Krx/DB/db_final.csv")
 
 # Cache for theme mapping
 _theme_cache = None
 
 def get_theme_mapping() -> dict:
-    """Load and cache theme mapping from db_final.csv"""
+    """Load and cache theme mapping - local first, then NAS fallback"""
     global _theme_cache
     if _theme_cache is None:
         try:
-            df = pd.read_csv(DB_FINAL_PATH)
-            # Create mapping: name -> naverTheme
-            _theme_cache = dict(zip(df['name'], df['naverTheme']))
+            # Try local theme_mapping.csv first (for Railway)
+            if LOCAL_THEME_MAPPING.exists():
+                df = pd.read_csv(LOCAL_THEME_MAPPING)
+                _theme_cache = dict(zip(df['name'], df['naverTheme']))
+                print(f"Loaded {len(_theme_cache)} themes from local mapping")
+            # Fallback to NAS db_final.csv (for local dev)
+            elif NAS_DB_FINAL_PATH.exists():
+                df = pd.read_csv(NAS_DB_FINAL_PATH)
+                _theme_cache = dict(zip(df['name'], df['naverTheme']))
+                print(f"Loaded {len(_theme_cache)} themes from NAS db_final")
+            else:
+                print("No theme mapping file found")
+                _theme_cache = {}
         except Exception as e:
             print(f"Error loading theme data: {e}")
             _theme_cache = {}
