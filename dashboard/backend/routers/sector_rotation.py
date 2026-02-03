@@ -18,9 +18,13 @@ from config import DATA_DIR, REPORTS_DIR
 
 router = APIRouter()
 
+# Build timestamp for deployment verification
+BUILD_TIMESTAMP = "2026-02-04_v2"
+
 # Debug: print DATA_DIR at startup
 print(f"[sector_rotation] DATA_DIR: {DATA_DIR}")
 print(f"[sector_rotation] DATA_DIR exists: {DATA_DIR.exists()}")
+print(f"[sector_rotation] BUILD_TIMESTAMP: {BUILD_TIMESTAMP}")
 
 # Check if we have CSV data or need to use cache
 CACHE_FILE = DATA_DIR / "dashboard_cache.json"
@@ -66,6 +70,12 @@ def safe_get(row, *keys, default=0):
             if pd.notna(val):
                 return val
     return default
+
+
+@router.get("/version")
+async def get_version():
+    """Return build version for deployment verification"""
+    return {"build": BUILD_TIMESTAMP, "data_dir": str(DATA_DIR)}
 
 
 @router.get("/themes")
