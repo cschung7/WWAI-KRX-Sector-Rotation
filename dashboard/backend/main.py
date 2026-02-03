@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Build: 20260203-v5-force-restart
 """
 FastAPI Backend for Financial Market Dashboards
 
