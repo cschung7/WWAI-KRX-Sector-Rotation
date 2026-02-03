@@ -183,7 +183,7 @@ async def health_check():
         "status": "healthy",
         "timestamp": datetime.now().isoformat(),
         "meta_labeling_available": HAS_META_LABELING,
-        "build_id": "20260202-v3-with-cache",
+        "build_id": "20260203-v4-debug-fix",
         "data_dir": str(DATA_DIR),
         "data_dir_exists": DATA_DIR.exists()
     }
