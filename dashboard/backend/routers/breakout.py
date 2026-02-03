@@ -24,6 +24,18 @@ print(f"[breakout module] CSV files found at import: {_csv_files}", flush=True)
 
 router = APIRouter()
 
+@router.get("/debug")
+async def debug_files():
+    """Debug endpoint to check file availability"""
+    files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
+    cache_exists = (DATA_DIR / "dashboard_cache.json").exists()
+    return {
+        "data_dir": str(DATA_DIR),
+        "data_dir_exists": DATA_DIR.exists(),
+        "csv_files": files,
+        "cache_exists": cache_exists
+    }
+
 # DB path for theme lookup
 DB_FINAL_PATH = Path("/mnt/nas/AutoGluon/AutoML_Krx/DB/db_final.csv")
 
