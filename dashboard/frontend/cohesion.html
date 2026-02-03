@@ -424,9 +424,12 @@
                     <h1 data-i18n="title">Theme Cohesion Analysis (군집성)</h1>
                     <p data-i18n="subtitle">Gravity - How synchronized are stocks within each theme?</p>
                 </div>
-                <div class="lang-toggle">
-                    <button class="lang-btn active" onclick="setLanguage('ko')">KOR</button>
-                    <button class="lang-btn" onclick="setLanguage('en')">ENG</button>
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+                    <div id="lastUpdate" style="font-size: 0.75rem; color: #94a3b8;"></div>
+                    <div class="lang-toggle">
+                        <button class="lang-btn active" onclick="setLanguage('ko')">KOR</button>
+                        <button class="lang-btn" onclick="setLanguage('en')">ENG</button>
+                    </div>
                 </div>
             </div>
             <nav class="nav-links">
@@ -648,6 +651,15 @@
                 const text = t(key);
                 if (text) el.innerHTML = text;
             });
+            // Update last update label
+            const lastUpdateEl = document.getElementById('lastUpdate');
+            if (lastUpdateEl && lastUpdateEl.textContent) {
+                const dateMatch = lastUpdateEl.textContent.match(/\d{4}-\d{2}-\d{2}/);
+                if (dateMatch) {
+                    const label = lang === 'ko' ? '최종업데이트' : 'Last Update';
+                    lastUpdateEl.textContent = `${label}: ${dateMatch[0]}`;
+                }
+            }
         }
 
         function initLanguage() {
@@ -873,9 +885,25 @@
             }).join('');
         }
 
+        async function fetchLastUpdate() {
+            try {
+                const response = await fetch(`${API_BASE}/api/sector-rotation/themes`);
+                const data = await response.json();
+                const dateStr = data.date || '';
+                if (dateStr && dateStr.length === 8) {
+                    const formatted = `${dateStr.slice(0,4)}-${dateStr.slice(4,6)}-${dateStr.slice(6,8)}`;
+                    const label = currentLang === 'ko' ? '최종업데이트' : 'Last Update';
+                    document.getElementById('lastUpdate').textContent = `${label}: ${formatted}`;
+                }
+            } catch (e) {
+                console.error('Failed to fetch last update:', e);
+            }
+        }
+
         // Initialize
         initLanguage();
         init();
+        fetchLastUpdate();
     </script>
 
     <!-- Chat Widget -->
