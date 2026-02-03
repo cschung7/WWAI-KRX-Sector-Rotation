@@ -243,9 +243,27 @@ async def get_theme_stocks(
         df = load_theme_data()
         fiedler_df = load_fiedler_data()
 
-        # Filter stocks containing theme
+        # First try exact match
         mask = df['naverTheme'].apply(lambda x: theme in parse_themes(x))
         theme_stocks = df[mask].copy()
+        matched_theme = theme
+
+        # If no exact match, try partial match
+        if len(theme_stocks) == 0:
+            # Get all unique themes
+            all_themes = set()
+            for themes_str in df['naverTheme']:
+                for t in parse_themes(themes_str):
+                    all_themes.add(t)
+
+            # Find themes containing the search term
+            matching_themes = [t for t in all_themes if theme.lower() in t.lower()]
+
+            if matching_themes:
+                # Use the first matching theme
+                matched_theme = matching_themes[0]
+                mask = df['naverTheme'].apply(lambda x: matched_theme in parse_themes(x))
+                theme_stocks = df[mask].copy()
 
         if len(theme_stocks) == 0:
             raise HTTPException(status_code=404, detail=f"Theme not found: {theme}")
@@ -254,11 +272,11 @@ async def get_theme_stocks(
         theme_stocks['total_score'] = theme_stocks['1'].fillna(0) - theme_stocks['-1'].fillna(0)
         theme_stocks = theme_stocks.sort_values('total_score', ascending=False)
 
-        # Get Fiedler for this theme
+        # Get Fiedler for this theme (use matched_theme for partial matches)
         theme_fiedler = 0.0
         cohesion_level = "unknown"
-        if fiedler_df is not None and theme in fiedler_df.index:
-            theme_fiedler = safe_float(fiedler_df.loc[theme, 'fiedler'])
+        if fiedler_df is not None and matched_theme in fiedler_df.index:
+            theme_fiedler = safe_float(fiedler_df.loc[matched_theme, 'fiedler'])
             if theme_fiedler > 3.0:
                 cohesion_level = "very_strong"
             elif theme_fiedler >= 1.0:
@@ -314,7 +332,7 @@ async def get_theme_stocks(
 
         return {
             "success": True,
-            "theme": theme,
+            "theme": matched_theme,
             "fiedler": safe_round(theme_fiedler, 3),
             "cohesion_level": cohesion_level,
             "stock_count": len(theme_stocks),
