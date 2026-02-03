@@ -505,7 +505,7 @@ async def get_cohesion_history(
         # Build themes list similar to /themes endpoint
         themes = []
         for _, row in date_data.iterrows():
-            fiedler = row['fiedler']
+            fiedler = float(row['fiedler']) if pd.notna(row['fiedler']) else 0.0
 
             # Categorize cohesion level
             if fiedler > 3.0:
@@ -517,12 +517,18 @@ async def get_cohesion_history(
             else:
                 cohesion_level = "weak"
 
+            # Handle NaN values safely
+            mean_corr = row.get('mean_correlation', 0)
+            mean_corr = float(mean_corr) if pd.notna(mean_corr) else 0.0
+            n_edges = row.get('n_edges', 0)
+            n_edges = int(n_edges) if pd.notna(n_edges) else 0
+
             themes.append({
                 "theme": row['theme'],
                 "fiedler": round(fiedler, 3),
                 "n_stocks": int(row['n_stocks']),
-                "n_edges": int(row.get('n_edges', 0)),
-                "mean_correlation": round(row.get('mean_correlation', 0) or 0, 4),
+                "n_edges": n_edges,
+                "mean_correlation": round(mean_corr, 4),
                 "is_connected": bool(row.get('is_connected', True)),
                 "cohesion_level": cohesion_level
             })
