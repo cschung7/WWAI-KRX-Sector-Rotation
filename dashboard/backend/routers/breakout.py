@@ -38,21 +38,30 @@ def get_theme_mapping() -> dict:
     return _theme_cache
 
 def load_latest_actionable_tickers(date: Optional[str] = None) -> pd.DataFrame:
-    """Load actionable tickers data"""
+    """Load actionable tickers data from CSV or JSON cache fallback"""
+    # Try CSV files first
     if date:
         date_str = date.replace('-', '')
         ticker_file = DATA_DIR / f"actionable_tickers_{date_str}.csv"
+        if ticker_file.exists():
+            return pd.read_csv(ticker_file)
     else:
-        # Find latest
         ticker_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
-        if not ticker_files:
-            raise HTTPException(status_code=404, detail="No actionable tickers data found")
-        ticker_file = Path(ticker_files[-1])
+        if ticker_files:
+            return pd.read_csv(ticker_files[-1])
 
-    if not ticker_file.exists():
-        raise HTTPException(status_code=404, detail=f"File not found: {ticker_file}")
+    # Fallback to dashboard_cache.json (for Railway deployment)
+    cache_file = DATA_DIR / "dashboard_cache.json"
+    if cache_file.exists():
+        try:
+            with open(cache_file) as f:
+                cache_data = json.load(f)
+            if 'actionable_tickers' in cache_data and cache_data['actionable_tickers']:
+                return pd.DataFrame(cache_data['actionable_tickers'])
+        except Exception as e:
+            print(f"Error loading from cache: {e}")
 
-    return pd.read_csv(ticker_file)
+    raise HTTPException(status_code=404, detail="No actionable tickers data found")
 
 
 @router.get("/candidates")
