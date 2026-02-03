@@ -505,33 +505,40 @@ async def get_cohesion_history(
         # Build themes list similar to /themes endpoint
         themes = []
         for _, row in date_data.iterrows():
-            fiedler = float(row['fiedler']) if pd.notna(row['fiedler']) else 0.0
+            try:
+                fiedler = float(row['fiedler']) if pd.notna(row['fiedler']) else 0.0
 
-            # Categorize cohesion level
-            if fiedler > 3.0:
-                cohesion_level = "very_strong"
-            elif fiedler >= 1.0:
-                cohesion_level = "strong"
-            elif fiedler >= 0.5:
-                cohesion_level = "moderate"
-            else:
-                cohesion_level = "weak"
+                # Categorize cohesion level
+                if fiedler > 3.0:
+                    cohesion_level = "very_strong"
+                elif fiedler >= 1.0:
+                    cohesion_level = "strong"
+                elif fiedler >= 0.5:
+                    cohesion_level = "moderate"
+                else:
+                    cohesion_level = "weak"
 
-            # Handle NaN values safely
-            mean_corr = row.get('mean_correlation', 0)
-            mean_corr = float(mean_corr) if pd.notna(mean_corr) else 0.0
-            n_edges = row.get('n_edges', 0)
-            n_edges = int(n_edges) if pd.notna(n_edges) else 0
+                # Handle NaN values safely - use direct column access
+                mean_corr = row['mean_correlation'] if 'mean_correlation' in row.index and pd.notna(row['mean_correlation']) else 0.0
+                n_edges = int(row['n_edges']) if 'n_edges' in row.index and pd.notna(row['n_edges']) else 0
+                is_conn = row['is_connected'] if 'is_connected' in row.index else True
+                # Handle string 'True'/'False' values
+                if isinstance(is_conn, str):
+                    is_conn = is_conn.lower() == 'true'
 
-            themes.append({
-                "theme": row['theme'],
-                "fiedler": round(fiedler, 3),
-                "n_stocks": int(row['n_stocks']),
-                "n_edges": n_edges,
-                "mean_correlation": round(mean_corr, 4),
-                "is_connected": bool(row.get('is_connected', True)),
-                "cohesion_level": cohesion_level
-            })
+                themes.append({
+                    "theme": str(row['theme']),
+                    "fiedler": round(float(fiedler), 3),
+                    "n_stocks": int(row['n_stocks']),
+                    "n_edges": int(n_edges),
+                    "mean_correlation": round(float(mean_corr), 4),
+                    "is_connected": bool(is_conn),
+                    "cohesion_level": cohesion_level
+                })
+            except Exception as row_err:
+                # Skip problematic rows
+                print(f"[cohesion-history] Skipping row: {row_err}")
+                continue
 
         # Sort by Fiedler value (highest first)
         themes_sorted = sorted(themes, key=lambda x: x['fiedler'], reverse=True)
