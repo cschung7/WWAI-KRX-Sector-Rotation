@@ -450,4 +450,108 @@ async def get_fiedler_trends(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+@router.get("/cohesion-dates")
+async def get_cohesion_dates():
+    """
+    Get list of available dates for historical cohesion data.
+    Returns dates from weekly Fiedler database.
+    """
+    try:
+        weekly_file = DATA_DIR / "naver_themes_weekly_fiedler_2025.csv"
+        if not weekly_file.exists():
+            raise HTTPException(status_code=404, detail="Weekly Fiedler database not found")
+
+        df = pd.read_csv(weekly_file)
+        dates = sorted(df['date'].unique(), reverse=True)  # Most recent first
+
+        return {
+            "dates": dates,
+            "count": len(dates),
+            "latest": dates[0] if dates else None,
+            "oldest": dates[-1] if dates else None
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/cohesion-history")
+async def get_cohesion_history(
+    date: str = Query(..., description="Date in YYYY-MM-DD format")
+):
+    """
+    Get cohesion data for a specific historical date.
+    """
+    try:
+        weekly_file = DATA_DIR / "naver_themes_weekly_fiedler_2025.csv"
+        if not weekly_file.exists():
+            raise HTTPException(status_code=404, detail="Weekly Fiedler database not found")
+
+        df = pd.read_csv(weekly_file)
+
+        # Filter for requested date
+        date_data = df[df['date'] == date]
+
+        if date_data.empty:
+            # Try to find closest date
+            available_dates = sorted(df['date'].unique())
+            raise HTTPException(
+                status_code=404,
+                detail=f"No data for {date}. Available dates: {available_dates[-5:]}"
+            )
+
+        # Build themes list similar to /themes endpoint
+        themes = []
+        for _, row in date_data.iterrows():
+            fiedler = row['fiedler']
+
+            # Categorize cohesion level
+            if fiedler > 3.0:
+                cohesion_level = "very_strong"
+            elif fiedler >= 1.0:
+                cohesion_level = "strong"
+            elif fiedler >= 0.5:
+                cohesion_level = "moderate"
+            else:
+                cohesion_level = "weak"
+
+            themes.append({
+                "theme": row['theme'],
+                "fiedler": round(fiedler, 3),
+                "n_stocks": int(row['n_stocks']),
+                "n_edges": int(row.get('n_edges', 0)),
+                "mean_correlation": round(row.get('mean_correlation', 0) or 0, 4),
+                "is_connected": bool(row.get('is_connected', True)),
+                "cohesion_level": cohesion_level
+            })
+
+        # Sort by Fiedler value (highest first)
+        themes_sorted = sorted(themes, key=lambda x: x['fiedler'], reverse=True)
+
+        # Summary stats
+        very_strong = len([t for t in themes if t['cohesion_level'] == 'very_strong'])
+        strong = len([t for t in themes if t['cohesion_level'] == 'strong'])
+        moderate = len([t for t in themes if t['cohesion_level'] == 'moderate'])
+        weak = len([t for t in themes if t['cohesion_level'] == 'weak'])
+
+        return {
+            "date": date,
+            "themes": themes_sorted,
+            "count": len(themes),
+            "summary": {
+                "very_strong": very_strong,
+                "strong": strong,
+                "moderate": moderate,
+                "weak": weak,
+                "avg_fiedler": round(sum(t['fiedler'] for t in themes) / len(themes), 3) if themes else 0
+            }
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # Build timestamp: 1770021855

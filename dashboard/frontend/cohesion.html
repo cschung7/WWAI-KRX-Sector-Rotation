@@ -428,9 +428,22 @@
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
                     <div id="lastUpdate" style="font-size: 0.75rem; color: #94a3b8;"></div>
-                    <div class="lang-toggle">
-                        <button class="lang-btn active" onclick="setLanguage('ko')">KOR</button>
-                        <button class="lang-btn" onclick="setLanguage('en')">ENG</button>
+                    <div style="display: flex; gap: 0.5rem; align-items: center;">
+                        <select id="dateSelector" onchange="loadHistoricalData(this.value)" style="
+                            background: #334155;
+                            color: #f8fafc;
+                            border: 1px solid #475569;
+                            border-radius: 0.375rem;
+                            padding: 0.375rem 0.75rem;
+                            font-size: 0.75rem;
+                            cursor: pointer;
+                        ">
+                            <option value="">Loading dates...</option>
+                        </select>
+                        <div class="lang-toggle">
+                            <button class="lang-btn active" onclick="setLanguage('ko')">KOR</button>
+                            <button class="lang-btn" onclick="setLanguage('en')">ENG</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -949,10 +962,116 @@
             }
         }
 
+        async function loadAvailableDates() {
+            try {
+                const response = await fetch(`${API_BASE}/api/sector-rotation/cohesion-dates`);
+                const data = await response.json();
+                const selector = document.getElementById('dateSelector');
+
+                // Add "Latest" option first
+                const latestLabel = currentLang === 'ko' ? '최신 데이터' : 'Latest Data';
+                let options = `<option value="">${latestLabel}</option>`;
+
+                // Add historical dates (last 20)
+                const dates = data.dates.slice(0, 20);
+                dates.forEach(date => {
+                    options += `<option value="${date}">${date}</option>`;
+                });
+
+                selector.innerHTML = options;
+            } catch (e) {
+                console.error('Failed to load dates:', e);
+                document.getElementById('dateSelector').innerHTML = '<option value="">Error loading dates</option>';
+            }
+        }
+
+        async function loadHistoricalData(date) {
+            if (!date) {
+                // Load latest data
+                init();
+                return;
+            }
+
+            try {
+                document.getElementById('summaryGrid').innerHTML = '<div class="loading">Loading...</div>';
+                document.getElementById('themeGrid').innerHTML = '<div class="loading">Loading...</div>';
+
+                const response = await fetch(`${API_BASE}/api/sector-rotation/cohesion-history?date=${date}`);
+                const data = await response.json();
+
+                // Update summary
+                const summary = data.summary;
+                document.getElementById('summaryGrid').innerHTML = `
+                    <div class="summary-card">
+                        <div class="summary-label">${t('summary.totalThemes')}</div>
+                        <div class="summary-value">${data.count}</div>
+                    </div>
+                    <div class="summary-card" style="border-left: 4px solid #10b981;">
+                        <div class="summary-label">${t('legend.veryStrong')}</div>
+                        <div class="summary-value green">${summary.very_strong}</div>
+                    </div>
+                    <div class="summary-card" style="border-left: 4px solid #3b82f6;">
+                        <div class="summary-label">${t('legend.strong')}</div>
+                        <div class="summary-value blue">${summary.strong}</div>
+                    </div>
+                    <div class="summary-card" style="border-left: 4px solid #f59e0b;">
+                        <div class="summary-label">${t('legend.moderate')}</div>
+                        <div class="summary-value" style="color: #f59e0b;">${summary.moderate}</div>
+                    </div>
+                `;
+
+                // Convert to trend format for rendering
+                const historicalTrends = data.themes.map(t => ({
+                    theme: t.theme,
+                    latest_fiedler: t.fiedler,
+                    cohesion_level: t.cohesion_level,
+                    n_stocks: t.n_stocks,
+                    fiedler_change: 0,  // No delta for historical
+                    pct_change: 0
+                }));
+
+                allTrends = historicalTrends;
+
+                // Update movers (top/bottom by Fiedler value)
+                const sorted = [...historicalTrends].sort((a, b) => b.latest_fiedler - a.latest_fiedler);
+                document.getElementById('increasingList').innerHTML = sorted.slice(0, 5).map(t => `
+                    <li>
+                        <span class="mover-theme">${t.theme}</span>
+                        <span class="mover-slope positive">${t.latest_fiedler.toFixed(2)}</span>
+                    </li>
+                `).join('');
+                document.getElementById('decreasingList').innerHTML = sorted.slice(-5).reverse().map(t => `
+                    <li>
+                        <span class="mover-theme">${t.theme}</span>
+                        <span class="mover-slope negative">${t.latest_fiedler.toFixed(2)}</span>
+                    </li>
+                `).join('');
+
+                // Update section headers for historical view
+                const incHeader = document.querySelector('.movers-grid .section:first-child h2');
+                const decHeader = document.querySelector('.movers-grid .section:last-child h2');
+                if (incHeader) incHeader.textContent = currentLang === 'ko' ? '군집성 TOP 5' : 'Top 5 Cohesion';
+                if (decHeader) decHeader.textContent = currentLang === 'ko' ? '군집성 하위 5' : 'Bottom 5 Cohesion';
+
+                // Render chart and cards
+                renderChart(historicalTrends, 'all');
+                renderThemeCards(historicalTrends);
+
+                // Update last update display
+                const label = currentLang === 'ko' ? '조회 날짜' : 'Viewing Date';
+                document.getElementById('lastUpdate').textContent = `${label}: ${date}`;
+
+            } catch (e) {
+                console.error('Failed to load historical data:', e);
+                document.getElementById('summaryGrid').innerHTML = `<div class="loading">Error: ${e.message}</div>`;
+            }
+        }
+
         // Initialize
         initLanguage();
         init();
         fetchLastUpdate();
+        loadAvailableDates();
     </script>
 
     <!-- Chat Widget -->
