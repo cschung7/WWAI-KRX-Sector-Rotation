@@ -1,0 +1,16 @@
+{
+  "training_date": "2026-02-03T22:56:11.898469",
+  "results_file": "results/signal_performance_20251113.csv",
+  "model_type": "xgboost",
+  "return_threshold": 0.0,
+  "n_samples": 15643,
+  "n_features": 19,
+  "positive_labels": 10586,
+  "negative_labels": 5057,
+  "metrics": {
+    "train_accuracy": 0.7940932046282683,
+    "train_precision": 0.9013791800491214,
+    "train_recall": 0.9013791800491214,
+    "train_auc": 0.8456371687343913
+  }
+}

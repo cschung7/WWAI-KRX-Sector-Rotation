@@ -1,0 +1,16 @@
+{
+  "model_type": "xgboost",
+  "model_params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "n_estimators": 100,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42,
+    "scale_pos_weight": 0.47770640468543357
+  },
+  "feature_names": null,
+  "n_features": 0
+}
