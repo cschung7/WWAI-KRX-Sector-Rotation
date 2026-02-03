@@ -44,6 +44,15 @@ app = FastAPI(
 @app.on_event("startup")
 async def startup_event():
     """Initialize database on startup"""
+    # Debug: List actionable_tickers files
+    import glob
+    from config import DATA_DIR
+    at_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
+    print(f"[startup] DATA_DIR: {DATA_DIR}")
+    print(f"[startup] actionable_tickers CSV files: {at_files}")
+    cache_file = DATA_DIR / "dashboard_cache.json"
+    print(f"[startup] dashboard_cache.json exists: {cache_file.exists()}")
+
     try:
         from db import init_db
         await init_db()
