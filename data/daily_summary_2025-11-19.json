@@ -1,0 +1,195 @@
+{
+  "date": "2025-11-19",
+  "generated_at": "2025-11-19T22:01:40.940309",
+  "total_tickers": 21,
+  "top_performers": [
+    {
+      "ticker": "한국피아이엠",
+      "name": "한국피아이엠",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.8535082170106332,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7133770542526583,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "079160.KS",
+      "name": "CJ CGV",
+      "sector": "영화",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "006360.KS",
+      "name": "GS건설",
+      "sector": "건설 대표주",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "204320.KS",
+      "name": "HL만도",
+      "sector": "리비안(RIVIAN)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "051900.KS",
+      "name": "LG생활건강",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "화학_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "032640.KS",
+      "name": "LG유플러스",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "통신_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "005940.KS",
+      "name": "NH투자증권",
+      "sector": "증권",
+      "industry": "금융_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "950190.KQ",
+      "name": "고스트스튜디오",
+      "sector": "영상콘텐츠",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "006040.KS",
+      "name": "동원산업",
+      "sector": "수산",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "030720.KS",
+      "name": "동원수산",
+      "sector": "수산",
+      "industry": "코스피_소형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "한국피아이엠",
+      "composite_score": 0.7133770542526583,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.8535082170106332,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5101608121072695,
+      "outperformance": 0.39833761692903086
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

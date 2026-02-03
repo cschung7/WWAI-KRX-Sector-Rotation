@@ -1,0 +1,180 @@
+{
+  "date": "2025-12-16",
+  "generated_at": "2025-12-17T03:08:00.368562",
+  "total_tickers": 15,
+  "top_performers": [
+    {
+      "ticker": "267270.KS",
+      "name": "HD현대건설기계",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "010950.KS",
+      "name": "S-Oil",
+      "sector": "정유",
+      "industry": "화학_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "285130.KS",
+      "name": "SK케미칼",
+      "sector": "석유화학",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "140410.KQ",
+      "name": "메지온",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "053030.KQ",
+      "name": "바이넥스",
+      "sector": "바이오시밀러(복제 바이오의약품)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "308430.KQ",
+      "name": "셀비온",
+      "sector": "제약업체",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "068760.KQ",
+      "name": "셀트리온제약",
+      "sector": "바이오시밀러(복제 바이오의약품)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "005800.KS",
+      "name": "신영와코루",
+      "sector": "패션/의류",
+      "industry": "코스피_소형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "293780.KQ",
+      "name": "압타바이오",
+      "sector": "코로나19(치료제/백신 개발 등)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "078520.KS",
+      "name": "에이블씨엔씨",
+      "sector": "화장품",
+      "industry": "코스피_소형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

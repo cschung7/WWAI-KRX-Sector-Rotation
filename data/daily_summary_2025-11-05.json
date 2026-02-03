@@ -1,0 +1,209 @@
+{
+  "date": "2025-11-05",
+  "generated_at": "2025-11-05T22:20:08.584183",
+  "total_tickers": 11,
+  "top_performers": [
+    {
+      "ticker": "현대차우",
+      "name": "현대차우",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.654842765597492,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.663710691399373,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "아모레퍼시픽우",
+      "name": "아모레퍼시픽우",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.63424879865067,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6585621996626675,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "032640.KS",
+      "name": "LG유플러스",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "통신_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "000810.KS",
+      "name": "삼성화재",
+      "sector": "코리아 밸류업 지수(Korea Value-up Index)",
+      "industry": "금융_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "290650.KQ",
+      "name": "엘앤씨바이오",
+      "sector": "코리아 밸류업 지수(Korea Value-up Index)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "066970.KS",
+      "name": "엘앤에프",
+      "sector": "2차전지(소재/부품)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "382150.KQ",
+      "name": "온코크로스",
+      "sector": "의료AI",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "일동홀딩스",
+      "name": "일동홀딩스",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "Bear Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "003690.KS",
+      "name": "코리안리",
+      "sector": "생명보험",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "241710.KQ",
+      "name": "코스메카코리아",
+      "sector": "화장품",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "현대차우",
+      "composite_score": 0.663710691399373,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.654842765597492,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5292975355510946,
+      "outperformance": 0.25394630962777853
+    },
+    {
+      "ticker": "아모레퍼시픽우",
+      "composite_score": 0.6585621996626675,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.63424879865067,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5292975355510946,
+      "outperformance": 0.24421928202817902
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

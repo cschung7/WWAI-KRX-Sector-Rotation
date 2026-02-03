@@ -1,0 +1,180 @@
+{
+  "date": "2025-11-28",
+  "generated_at": "2025-11-28T20:23:56.852475",
+  "total_tickers": 27,
+  "top_performers": [
+    {
+      "ticker": "241520.KQ",
+      "name": "DSC인베스트먼트",
+      "sector": "4차산업 수혜주",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "036620.KQ",
+      "name": "감성코퍼레이션",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "348340.KQ",
+      "name": "뉴로메카",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "235980.KQ",
+      "name": "메드팩토",
+      "sector": "면역항암제",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "086900.KQ",
+      "name": "메디톡스",
+      "sector": "미용기기",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "003230.KS",
+      "name": "삼양식품",
+      "sector": "코리아 밸류업 지수(Korea Value-up Index)",
+      "industry": "음식료·담배_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "252990.KQ",
+      "name": "샘씨엔에스",
+      "sector": "반도체 재료/부품",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "015750.KQ",
+      "name": "성우하이텍",
+      "sector": "2차전지(소재/부품)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "475400.KQ",
+      "name": "씨메스",
+      "sector": "지능형로봇/인공지능(AI)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "317830.KQ",
+      "name": "에스피시스템스",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

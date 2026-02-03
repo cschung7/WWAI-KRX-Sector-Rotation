@@ -1,0 +1,183 @@
+{
+  "date": "2025-10-23",
+  "generated_at": "2025-10-23T21:40:39.891182",
+  "total_tickers": 20,
+  "top_performers": [
+    {
+      "ticker": "한라IMS",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.75,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "HJ중공업",
+      "signals": {
+        "model_prediction": 0.7522272740711285,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6880568185177821,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "대덕전자",
+      "signals": {
+        "model_prediction": 0.9632917080204029,
+        "regime_signal": 0.7667220843821265,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6825034481006323,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "세명전기",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.6301292849957673,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6575323212489418,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "범한퓨얼셀",
+      "signals": {
+        "model_prediction": 0.7501433709578507,
+        "regime_signal": 0.8795108001717089,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.65741354278239,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "코위버",
+      "signals": {
+        "model_prediction": 0.8614186780826847,
+        "regime_signal": 0.6596676347883016,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6302715782177466,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "노바텍",
+      "signals": {
+        "model_prediction": 0.8259291994696994,
+        "regime_signal": 0.6535340266077017,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6198658065193503,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "제일일렉트릭",
+      "signals": {
+        "model_prediction": 0.8871379567119431,
+        "regime_signal": 0.5351996346221156,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6055843978335147,
+      "regime_type": "weak_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "태광",
+      "signals": {
+        "model_prediction": 0.824007399789132,
+        "regime_signal": 0.5933256531808151,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6043332632424867,
+      "regime_type": "weak_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "씨에스베어링",
+      "signals": {
+        "model_prediction": 0.8268335799528377,
+        "regime_signal": 0.5813637476086069,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6020493318903611,
+      "regime_type": "weak_bullish",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "한라IMS",
+      "composite_score": 0.75,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.6088035490723647,
+      "outperformance": 0.23192448720572784
+    },
+    {
+      "ticker": "HJ중공업",
+      "composite_score": 0.6880568185177821,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.7522272740711285,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.6088035490723647,
+      "outperformance": 0.13017872442789769
+    },
+    {
+      "ticker": "대덕전자",
+      "composite_score": 0.6825034481006323,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.9632917080204029,
+        "regime_signal": 0.7667220843821265,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.6088035490723647,
+      "outperformance": 0.12105694709001677
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

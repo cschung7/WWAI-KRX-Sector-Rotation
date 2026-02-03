@@ -1,0 +1,195 @@
+{
+  "date": "2025-11-17",
+  "generated_at": "2025-11-17T22:34:11.398309",
+  "total_tickers": 40,
+  "top_performers": [
+    {
+      "ticker": "한국피아이엠",
+      "name": "한국피아이엠",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.8535082170106332,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7133770542526583,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "큐리옥스바이오시스템즈",
+      "name": "큐리옥스바이오시스템즈",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.4692797739140966,
+        "regime_signal": 0.662222580106894,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5328755885052476,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "282330.KS",
+      "name": "BGF리테일",
+      "sector": "코리아 밸류업 지수(Korea Value-up Index)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "487570.KS",
+      "name": "HS효성",
+      "sector": "수소차(연료전지/부품/충전소 등)",
+      "industry": "코스피_소형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "095340.KQ",
+      "name": "ISC",
+      "sector": "반도체 재료/부품",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "002380.KS",
+      "name": "KCC",
+      "sector": "태양광에너지",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "033530.KS",
+      "name": "SJG세종",
+      "sector": "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)",
+      "industry": "코스피_소형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "000660.KS",
+      "name": "SK하이닉스",
+      "sector": "반도체 대표주(생산)",
+      "industry": "전기전자_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "108380.KQ",
+      "name": "대양전기공업",
+      "sector": "우크라이나 재건",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "086450.KQ",
+      "name": "동국제약",
+      "sector": "마스크",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "한국피아이엠",
+      "composite_score": 0.7133770542526583,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.8535082170106332,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.503142788511516,
+      "outperformance": 0.41784215244959333
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

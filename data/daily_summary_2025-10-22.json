@@ -1,0 +1,211 @@
+{
+  "date": "2025-10-22",
+  "generated_at": "2025-10-22T21:15:50.223997",
+  "total_tickers": 28,
+  "top_performers": [
+    {
+      "ticker": "싸이버원",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.75,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "일승",
+      "signals": {
+        "model_prediction": 0.9553059837203761,
+        "regime_signal": 0.9656073443967075,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7302283320292708,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "이수화학",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.8901101225675029,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7225275306418757,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "TCC스틸",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.6915461523568466,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6728865380892116,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "티에이치엔",
+      "signals": {
+        "model_prediction": 0.6509864837629066,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6627466209407267,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "SK케미칼",
+      "signals": {
+        "model_prediction": 0.9577448803355539,
+        "regime_signal": 0.6452622370396903,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6507517793438111,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "이닉스",
+      "signals": {
+        "model_prediction": 0.941235775110742,
+        "regime_signal": 0.6128052400778176,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6385102537971399,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "OCI홀딩스",
+      "signals": {
+        "model_prediction": 0.8525686948499631,
+        "regime_signal": 0.6969947187972486,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6373908534118029,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "네이처셀",
+      "signals": {
+        "model_prediction": 0.9196383989083883,
+        "regime_signal": 0.5943982654064789,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6285091660787168,
+      "regime_type": "weak_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "HD현대건설기계",
+      "signals": {
+        "model_prediction": 0.8164728099967886,
+        "regime_signal": 0.6406066143567049,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6142698560883734,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "싸이버원",
+      "composite_score": 0.75,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5981845547036218,
+      "outperformance": 0.2537936563266786
+    },
+    {
+      "ticker": "일승",
+      "composite_score": 0.7302283320292708,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.9553059837203761,
+        "regime_signal": 0.9656073443967075,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5981845547036218,
+      "outperformance": 0.22074086715774846
+    },
+    {
+      "ticker": "이수화학",
+      "composite_score": 0.7225275306418757,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.8901101225675029,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5981845547036218,
+      "outperformance": 0.20786724592021816
+    },
+    {
+      "ticker": "TCC스틸",
+      "composite_score": 0.6728865380892116,
+      "sector": "unknown",
+      "regime": "moderate_bullish",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.6915461523568466,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5981845547036218,
+      "outperformance": 0.12488116384516469
+    },
+    {
+      "ticker": "티에이치엔",
+      "composite_score": 0.6627466209407267,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.6509864837629066,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5981845547036218,
+      "outperformance": 0.10793001211656665
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

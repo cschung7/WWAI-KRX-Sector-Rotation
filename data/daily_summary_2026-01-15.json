@@ -1,0 +1,251 @@
+{
+  "date": "2026-01-15",
+  "generated_at": "2026-01-16T10:22:35.483872",
+  "total_tickers": 38,
+  "top_performers": [
+    {
+      "ticker": "041920.KQ",
+      "name": "메디아나",
+      "sector": "의료AI",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.875,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0
+      },
+      "composite_score": 0.96875,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "232680.KQ",
+      "name": "라온테크",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "composite_score": 0.9185984846473925,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "277810.KQ",
+      "name": "레인보우로보틱스",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "composite_score": 0.9029734846473925,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "264850.KQ",
+      "name": "이랜시스",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "composite_score": 0.9029734846473925,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "117730.KQ",
+      "name": "티로보틱스",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "composite_score": 0.9029734846473925,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "080220.KQ",
+      "name": "제주반도체",
+      "sector": "온디바이스 AI",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8393784408720546
+      },
+      "composite_score": 0.8973446102180136,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "314130.KQ",
+      "name": "지놈앤컴퍼니",
+      "sector": "유전자 치료제/분석",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.625,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.875,
+        "sector_momentum": 1.0
+      },
+      "composite_score": 0.875,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "030530.KQ",
+      "name": "원익홀딩스",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.875,
+        "sector_momentum": 0.8618939385895699
+      },
+      "composite_score": 0.8717234846473925,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "249420.KS",
+      "name": "일동제약",
+      "sector": "비만치료제",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5625,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.875,
+        "sector_momentum": 0.8723404255319149
+      },
+      "composite_score": 0.8274601063829787,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "466100.KQ",
+      "name": "클로봇",
+      "sector": "로봇(산업용/협동로봇 등)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5625,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.875,
+        "sector_momentum": 0.8618939385895699
+      },
+      "composite_score": 0.8248484846473925,
+      "regime_type": "Bull Volatile",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "041920.KQ",
+      "composite_score": 0.96875,
+      "sector": "unknown",
+      "regime": "Bull Volatile",
+      "signals": {
+        "model_prediction": 0.875,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0
+      },
+      "sector_avg": 0.6477094095946558,
+      "outperformance": 0.49565528252284485
+    },
+    {
+      "ticker": "232680.KQ",
+      "composite_score": 0.9185984846473925,
+      "sector": "unknown",
+      "regime": "Bull Volatile",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "sector_avg": 0.6477094095946558,
+      "outperformance": 0.41822624627649335
+    },
+    {
+      "ticker": "277810.KQ",
+      "composite_score": 0.9029734846473925,
+      "sector": "unknown",
+      "regime": "Bull Volatile",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "sector_avg": 0.6477094095946558,
+      "outperformance": 0.3941027739777378
+    },
+    {
+      "ticker": "264850.KQ",
+      "composite_score": 0.9029734846473925,
+      "sector": "unknown",
+      "regime": "Bull Volatile",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "sector_avg": 0.6477094095946558,
+      "outperformance": 0.3941027739777378
+    },
+    {
+      "ticker": "117730.KQ",
+      "composite_score": 0.9029734846473925,
+      "sector": "unknown",
+      "regime": "Bull Volatile",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8618939385895699
+      },
+      "sector_avg": 0.6477094095946558,
+      "outperformance": 0.3941027739777378
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

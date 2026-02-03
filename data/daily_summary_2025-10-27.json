@@ -1,0 +1,211 @@
+{
+  "date": "2025-10-27",
+  "generated_at": "2025-10-28T00:13:39.939667",
+  "total_tickers": 40,
+  "top_performers": [
+    {
+      "ticker": "HJ중공업",
+      "signals": {
+        "model_prediction": 0.9927361580890284,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7481840395222571,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "SK바이오팜",
+      "signals": {
+        "model_prediction": 0.9070731688635405,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7267682922158851,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "세진중공업",
+      "signals": {
+        "model_prediction": 0.8835034235236539,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7208758558809134,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "HK이노엔",
+      "signals": {
+        "model_prediction": 0.8630888877393519,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7157722219348379,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "아난티",
+      "signals": {
+        "model_prediction": 0.8482928546286519,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.712073213657163,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "나이벡",
+      "signals": {
+        "model_prediction": 0.818075340714389,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7045188351785973,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "클로봇",
+      "signals": {
+        "model_prediction": 0.7729526067644517,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6932381516911129,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "유일로보틱스",
+      "signals": {
+        "model_prediction": 0.705319828036261,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6763299570090653,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "제이브이엠",
+      "signals": {
+        "model_prediction": 0.6673343696635198,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6668335924158799,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "태광",
+      "signals": {
+        "model_prediction": 0.6602795621756596,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.665069890543915,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "HJ중공업",
+      "composite_score": 0.7481840395222571,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.9927361580890284,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5442105323695556,
+      "outperformance": 0.37480624688496417
+    },
+    {
+      "ticker": "SK바이오팜",
+      "composite_score": 0.7267682922158851,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.9070731688635405,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5442105323695556,
+      "outperformance": 0.33545429385839315
+    },
+    {
+      "ticker": "세진중공업",
+      "composite_score": 0.7208758558809134,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8835034235236539,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5442105323695556,
+      "outperformance": 0.32462679974629766
+    },
+    {
+      "ticker": "HK이노엔",
+      "composite_score": 0.7157722219348379,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8630888877393519,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5442105323695556,
+      "outperformance": 0.31524874907929995
+    },
+    {
+      "ticker": "아난티",
+      "composite_score": 0.712073213657163,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8482928546286519,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5442105323695556,
+      "outperformance": 0.30845173201024584
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

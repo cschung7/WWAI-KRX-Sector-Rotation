@@ -1,0 +1,211 @@
+{
+  "date": "2025-11-03",
+  "generated_at": "2025-11-03T21:26:22.275616",
+  "total_tickers": 36,
+  "top_performers": [
+    {
+      "ticker": "HD현대",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.75,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "포스코DX",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.75,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "하이젠알앤엠",
+      "signals": {
+        "model_prediction": 0.8896717857554359,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7224179464388589,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "NHN",
+      "signals": {
+        "model_prediction": 0.8582429810212142,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7145607452553036,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한국항공우주",
+      "signals": {
+        "model_prediction": 0.796116626084785,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6990291565211962,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "마음AI",
+      "signals": {
+        "model_prediction": 0.7714420315730408,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6928605078932601,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "엔씨소프트",
+      "signals": {
+        "model_prediction": 0.7543150885666002,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6885787721416501,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "OCI",
+      "signals": {
+        "model_prediction": 0.7498832886717477,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6874708221679369,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "씨에스윈드",
+      "signals": {
+        "model_prediction": 0.7436381806154486,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6859095451538622,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "이수스페셜티케미컬",
+      "signals": {
+        "model_prediction": 0.6724483884666883,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6681120971166721,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "HD현대",
+      "composite_score": 0.75,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.592382743801078,
+      "outperformance": 0.26607334168371694
+    },
+    {
+      "ticker": "포스코DX",
+      "composite_score": 0.75,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.592382743801078,
+      "outperformance": 0.26607334168371694
+    },
+    {
+      "ticker": "하이젠알앤엠",
+      "composite_score": 0.7224179464388589,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.8896717857554359,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.592382743801078,
+      "outperformance": 0.21951213805351272
+    },
+    {
+      "ticker": "NHN",
+      "composite_score": 0.7145607452553036,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8582429810212142,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.592382743801078,
+      "outperformance": 0.20624841410851913
+    },
+    {
+      "ticker": "한국항공우주",
+      "composite_score": 0.6990291565211962,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.796116626084785,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.592382743801078,
+      "outperformance": 0.18002957350818788
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

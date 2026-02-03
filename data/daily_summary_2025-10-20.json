@@ -1,0 +1,589 @@
+{
+  "date": "2025-10-20",
+  "generated_at": "2025-10-21T05:06:31.340305",
+  "total_tickers": 29,
+  "top_performers": [
+    {
+      "ticker": "현대무벡스",
+      "date": "2025-10-20",
+      "sector": "others",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.3999999999999999,
+          "volatility_percentile": 66.10169491525424,
+          "momentum_score": 0.7954990215264188,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.8935
+    },
+    {
+      "ticker": "피에스케이",
+      "date": "2025-10-20",
+      "sector": "semiconductor",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.5199999999999998,
+          "volatility_percentile": 66.10169491525424,
+          "momentum_score": 0.3318965517241379,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.8935
+    },
+    {
+      "ticker": "제이준코스메틱",
+      "date": "2025-10-20",
+      "sector": "others",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.3999999999999999,
+          "volatility_percentile": 59.32203389830508,
+          "momentum_score": 0.8892834086507424,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.8935
+    },
+    {
+      "ticker": "코윈테크",
+      "date": "2025-10-20",
+      "sector": "battery_ess",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.92834008097166,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.28,
+          "volatility_percentile": 50.847457627118644,
+          "momentum_score": 0.780952380952381,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.879168016194332
+    },
+    {
+      "ticker": "키움증권",
+      "date": "2025-10-20",
+      "sector": "others",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8830845771144278,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.33999999999999986,
+          "volatility_percentile": 64.40677966101694,
+          "momentum_score": 0.25462962962962965,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.8701169154228856
+    },
+    {
+      "ticker": "미래에셋증권",
+      "date": "2025-10-20",
+      "sector": "others",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8488247863247863,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.33999999999999986,
+          "volatility_percentile": 66.10169491525424,
+          "momentum_score": 0.8333333333333333,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.8632649572649573
+    },
+    {
+      "ticker": "넥스틴",
+      "date": "2025-10-20",
+      "sector": "semiconductor",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.846987951807229,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.6399999999999999,
+          "volatility_percentile": 66.10169491525424,
+          "momentum_score": 0.8300653594771242,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.8628975903614458
+    },
+    {
+      "ticker": "티움바이오",
+      "date": "2025-10-20",
+      "sector": "bio_pharma",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.7553191489361701,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.3999999999999999,
+          "volatility_percentile": 66.10169491525424,
+          "momentum_score": 0.8317972350230414,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.844563829787234
+    },
+    {
+      "ticker": "SJG세종",
+      "date": "2025-10-20",
+      "sector": "others",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.754180602006689,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.45999999999999996,
+          "volatility_percentile": 66.10169491525424,
+          "momentum_score": 0.8240469208211144,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.8443361204013378
+    },
+    {
+      "ticker": "삼성전기",
+      "date": "2025-10-20",
+      "sector": "it_electronics",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.7507357268981754,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "regime_type": "Bull Quiet",
+      "regime_metadata": {
+        "source": "GRPO_trained_model",
+        "regime_confidence": 0.5,
+        "indicators": {
+          "trend_strength": 0.45999999999999996,
+          "volatility_percentile": 50.847457627118644,
+          "momentum_score": 0.28205128205128205,
+          "market_breadth": 1.0,
+          "regime_stability": 0.5
+        }
+      },
+      "status": "success",
+      "composite_score": 0.843647145379635
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "티움바이오",
+      "composite_score": 0.844563829787234,
+      "sector": "bio_pharma",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.7553191489361701,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "sector_avg": 0.6616585992204108,
+      "outperformance": 0.2764344494008367
+    },
+    {
+      "ticker": "현대무벡스",
+      "composite_score": 0.8935,
+      "sector": "others",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "sector_avg": 0.7110979421325619,
+      "outperformance": 0.2565076441093608
+    },
+    {
+      "ticker": "제이준코스메틱",
+      "composite_score": 0.8935,
+      "sector": "others",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "sector_avg": 0.7110979421325619,
+      "outperformance": 0.2565076441093608
+    },
+    {
+      "ticker": "키움증권",
+      "composite_score": 0.8701169154228856,
+      "sector": "others",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8830845771144278,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "sector_avg": 0.7110979421325619,
+      "outperformance": 0.22362457246526465
+    },
+    {
+      "ticker": "미코",
+      "composite_score": 0.8056814791796147,
+      "sector": "bio_pharma",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.5609073958980734,
+        "netbuy_score": 0.5,
+        "regime_signal": 0.79
+      },
+      "sector_avg": 0.6616585992204108,
+      "outperformance": 0.21766947505692014
+    }
+  ],
+  "smart_money_divergences": [
+    {
+      "ticker": "코나아이",
+      "netbuy_rank": 9,
+      "composite_rank": 29,
+      "divergence": 20,
+      "composite_score": 0.33391708542713566,
+      "netbuy_score": 0.5,
+      "sector": "others",
+      "regime": "Bear Quiet"
+    },
+    {
+      "ticker": "NH투자증권",
+      "netbuy_rank": 7,
+      "composite_rank": 24,
+      "divergence": 17,
+      "composite_score": 0.7170080831291952,
+      "netbuy_score": 0.5,
+      "sector": "others",
+      "regime": "Bull Quiet"
+    },
+    {
+      "ticker": "씨아이에스",
+      "netbuy_rank": 8,
+      "composite_rank": 22,
+      "divergence": 14,
+      "composite_score": 0.7508898050974512,
+      "netbuy_score": 0.5,
+      "sector": "battery_ess",
+      "regime": "Bear Quiet"
+    },
+    {
+      "ticker": "이노스페이스",
+      "netbuy_rank": 6,
+      "composite_rank": 19,
+      "divergence": 13,
+      "composite_score": 0.7890704225352112,
+      "netbuy_score": 0.5,
+      "sector": "others",
+      "regime": "Transition"
+    },
+    {
+      "ticker": "미코",
+      "netbuy_rank": 5,
+      "composite_rank": 16,
+      "divergence": 11,
+      "composite_score": 0.8056814791796147,
+      "netbuy_score": 0.5,
+      "sector": "bio_pharma",
+      "regime": "Bull Quiet"
+    }
+  ],
+  "sector_rotation": {
+    "date": "2025-10-20",
+    "generated_at": "2025-10-21T05:06:31.300337",
+    "total_tickers": 29,
+    "total_sectors": 6,
+    "excluded_stocks": [
+      "아모레퍼시픽우",
+      "현대차우"
+    ],
+    "sector_rankings": [
+      {
+        "rank": 1,
+        "sector": "semiconductor",
+        "stats": {
+          "ticker_count": 3,
+          "avg_composite_score": 0.8621254878669609,
+          "avg_model_prediction": 1.0,
+          "avg_sector_momentum": 0.843127439334804,
+          "avg_regime_signal": 0.79,
+          "regime_distribution": {
+            "Bull Quiet": 3
+          },
+          "top_tickers": [
+            {
+              "ticker": "피에스케이",
+              "composite_score": 0.8935,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "넥스틴",
+              "composite_score": 0.8628975903614458,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "고영",
+              "composite_score": 0.8299788732394366,
+              "regime": "Bull Quiet"
+            }
+          ],
+          "dominant_regime": "Bull Quiet"
+        }
+      },
+      {
+        "rank": 2,
+        "sector": "it_electronics",
+        "stats": {
+          "ticker_count": 2,
+          "avg_composite_score": 0.830568181854238,
+          "avg_model_prediction": 1.0,
+          "avg_sector_momentum": 0.6853409092711902,
+          "avg_regime_signal": 0.79,
+          "regime_distribution": {
+            "Bull Quiet": 2
+          },
+          "top_tickers": [
+            {
+              "ticker": "삼성전기",
+              "composite_score": 0.843647145379635,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "인탑스",
+              "composite_score": 0.8174892183288409,
+              "regime": "Bull Quiet"
+            }
+          ],
+          "dominant_regime": "Bull Quiet"
+        }
+      },
+      {
+        "rank": 3,
+        "sector": "display",
+        "stats": {
+          "ticker_count": 1,
+          "avg_composite_score": 0.8047449799196786,
+          "avg_model_prediction": 1.0,
+          "avg_sector_momentum": 0.5562248995983936,
+          "avg_regime_signal": 0.79,
+          "regime_distribution": {
+            "Bull Quiet": 1
+          },
+          "top_tickers": [
+            {
+              "ticker": "유티아이",
+              "composite_score": 0.8047449799196786,
+              "regime": "Bull Quiet"
+            }
+          ],
+          "dominant_regime": "Bull Quiet"
+        }
+      },
+      {
+        "rank": 4,
+        "sector": "battery_ess",
+        "stats": {
+          "ticker_count": 3,
+          "avg_composite_score": 0.7979231667079666,
+          "avg_model_prediction": 1.0,
+          "avg_sector_momentum": 0.7321158335398334,
+          "avg_regime_signal": 0.51,
+          "regime_distribution": {
+            "Bear Quiet": 2,
+            "Bull Quiet": 1
+          },
+          "top_tickers": [
+            {
+              "ticker": "코윈테크",
+              "composite_score": 0.879168016194332,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "LS ELECTRIC",
+              "composite_score": 0.7637116788321168,
+              "regime": "Bear Quiet"
+            },
+            {
+              "ticker": "씨아이에스",
+              "composite_score": 0.7508898050974512,
+              "regime": "Bear Quiet"
+            }
+          ],
+          "dominant_regime": "Bear Quiet"
+        }
+      },
+      {
+        "rank": 5,
+        "sector": "others",
+        "stats": {
+          "ticker_count": 17,
+          "avg_composite_score": 0.7110979421325618,
+          "avg_model_prediction": 0.7321490972627169,
+          "avg_sector_momentum": 0.6921190059452041,
+          "avg_regime_signal": 0.6770588235294117,
+          "regime_distribution": {
+            "Bull Quiet": 12,
+            "Transition": 2,
+            "Bear Quiet": 3
+          },
+          "top_tickers": [
+            {
+              "ticker": "현대무벡스",
+              "composite_score": 0.8935,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "제이준코스메틱",
+              "composite_score": 0.8935,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "키움증권",
+              "composite_score": 0.8701169154228856,
+              "regime": "Bull Quiet"
+            }
+          ],
+          "dominant_regime": "Bull Quiet"
+        }
+      },
+      {
+        "rank": 6,
+        "sector": "bio_pharma",
+        "stats": {
+          "ticker_count": 3,
+          "avg_composite_score": 0.6616585992204108,
+          "avg_model_prediction": 0.6666666666666666,
+          "avg_sector_momentum": 0.6124596627687207,
+          "avg_regime_signal": 0.65,
+          "regime_distribution": {
+            "Bull Quiet": 2,
+            "Bear Quiet": 1
+          },
+          "top_tickers": [
+            {
+              "ticker": "티움바이오",
+              "composite_score": 0.844563829787234,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "미코",
+              "composite_score": 0.8056814791796147,
+              "regime": "Bull Quiet"
+            },
+            {
+              "ticker": "대웅제약",
+              "composite_score": 0.33473048869438365,
+              "regime": "Bear Quiet"
+            }
+          ],
+          "dominant_regime": "Bull Quiet"
+        }
+      }
+    ]
+  }
+}

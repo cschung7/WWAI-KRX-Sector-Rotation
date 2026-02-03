@@ -1,0 +1,251 @@
+{
+  "date": "2026-01-29",
+  "generated_at": "2026-01-30T00:13:12.370495",
+  "total_tickers": 48,
+  "top_performers": [
+    {
+      "ticker": "005380.KS",
+      "name": "현대차",
+      "sector": "자동차 대표주",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.875,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0
+      },
+      "composite_score": 0.96875,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "285490.KQ",
+      "name": "노바텍",
+      "sector": "스마트폰",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.875,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.883132530120482
+      },
+      "composite_score": 0.9395331325301205,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "005385.KS",
+      "name": "현대차우",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8995037220843672
+      },
+      "composite_score": 0.9280009305210918,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "307950.KS",
+      "name": "현대오토에버",
+      "sector": "SI(시스템통합)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.875,
+        "sector_momentum": 1.0
+      },
+      "composite_score": 0.921875,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "365270.KQ",
+      "name": "큐라클",
+      "sector": "면역항암제",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8266680674230751
+      },
+      "composite_score": 0.8941670168557687,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "052690.KS",
+      "name": "한전기술",
+      "sector": "풍력에너지",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.7560476612923963
+      },
+      "composite_score": 0.8921369153230991,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "190510.KQ",
+      "name": "나무가",
+      "sector": "휴대폰부품",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.875,
+        "sector_momentum": 0.934634974533107
+      },
+      "composite_score": 0.8899087436332768,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "004560.KS",
+      "name": "현대비앤지스틸",
+      "sector": "니켈",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.7190045248868778
+      },
+      "composite_score": 0.8828761312217195,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "086280.KS",
+      "name": "현대글로비스",
+      "sector": "코리아 밸류업 지수(Korea Value-up Index)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.6103640347306583
+      },
+      "composite_score": 0.8557160086826645,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "019990.KQ",
+      "name": "에너토크",
+      "sector": "수자원(양적/질적 개선)",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.6655450874831763
+      },
+      "composite_score": 0.853886271870794,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "005380.KS",
+      "composite_score": 0.96875,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.875,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 1.0
+      },
+      "sector_avg": 0.6359238353280495,
+      "outperformance": 0.5233742567618302
+    },
+    {
+      "ticker": "285490.KQ",
+      "composite_score": 0.9395331325301205,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.875,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.883132530120482
+      },
+      "sector_avg": 0.6359238353280495,
+      "outperformance": 0.47743028384122477
+    },
+    {
+      "ticker": "005385.KS",
+      "composite_score": 0.9280009305210918,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8995037220843672
+      },
+      "sector_avg": 0.6359238353280495,
+      "outperformance": 0.45929571902643107
+    },
+    {
+      "ticker": "307950.KS",
+      "composite_score": 0.921875,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8125,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.875,
+        "sector_momentum": 1.0
+      },
+      "sector_avg": 0.6359238353280495,
+      "outperformance": 0.4496625991765804
+    },
+    {
+      "ticker": "365270.KQ",
+      "composite_score": 0.8941670168557687,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.75,
+        "regime_signal": 1.0,
+        "tsf_alignment": 1.0,
+        "sector_momentum": 0.8266680674230751
+      },
+      "sector_avg": 0.6359238353280495,
+      "outperformance": 0.40609137003726414
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

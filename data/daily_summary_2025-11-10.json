@@ -1,0 +1,209 @@
+{
+  "date": "2025-11-10",
+  "generated_at": "2025-11-10T19:40:06.157584",
+  "total_tickers": 68,
+  "top_performers": [
+    {
+      "ticker": "삼성SDI우",
+      "name": "삼성SDI우",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.6567869579394259,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6641967394848565,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한화3우B",
+      "name": "한화3우B",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.7346309936906849,
+        "regime_signal": 0.488,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5556577484226712,
+      "regime_type": "Transition",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "000990.KS",
+      "name": "DB하이텍",
+      "sector": "반도체 대표주(생산)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "000210.KS",
+      "name": "DL",
+      "sector": "건설 대표주",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "006360.KS",
+      "name": "GS건설",
+      "sector": "건설 대표주",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "443060.KS",
+      "name": "HD현대마린솔루션",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "일반서비스_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "267260.KS",
+      "name": "HD현대일렉트릭",
+      "sector": "전력저장장치(ESS)",
+      "industry": "전기전자_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "204320.KS",
+      "name": "HL만도",
+      "sector": "리비안(RIVIAN)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "175330.KS",
+      "name": "JB금융지주",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "금융_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "002380.KS",
+      "name": "KCC",
+      "sector": "태양광에너지",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "삼성SDI우",
+      "composite_score": 0.6641967394848565,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.6567869579394259,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5017801307681007,
+      "outperformance": 0.3236808290279177
+    },
+    {
+      "ticker": "한화3우B",
+      "composite_score": 0.5556577484226712,
+      "sector": "unknown",
+      "regime": "Transition",
+      "signals": {
+        "model_prediction": 0.7346309936906849,
+        "regime_signal": 0.488,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5017801307681007,
+      "outperformance": 0.10737295949143565
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

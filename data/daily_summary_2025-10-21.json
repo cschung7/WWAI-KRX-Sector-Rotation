@@ -1,0 +1,197 @@
+{
+  "date": "2025-10-21",
+  "generated_at": "2025-10-21T21:15:44.351748",
+  "total_tickers": 17,
+  "top_performers": [
+    {
+      "ticker": "나이벡",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.75,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "오리엔탈정공",
+      "signals": {
+        "model_prediction": 0.9705435815063364,
+        "regime_signal": 0.9743806519373279,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7362310583609161,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "아스테라시스",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.9117245590718057,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7279311397679514,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "세진중공업",
+      "signals": {
+        "model_prediction": 0.8604172325578834,
+        "regime_signal": 0.9315607498092063,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6979944955917724,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "HLB",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.6401786349551126,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6600446587387782,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "덕산테코피아",
+      "signals": {
+        "model_prediction": 0.9014332257031861,
+        "regime_signal": 0.674917881417127,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6440877767800783,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한국타이어앤테크놀로지",
+      "signals": {
+        "model_prediction": 0.9915239858456459,
+        "regime_signal": 0.5845670317822619,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.644022754406977,
+      "regime_type": "weak_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "파미셀",
+      "signals": {
+        "model_prediction": 0.8345632761378157,
+        "regime_signal": 0.6772104748966673,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6279434377586207,
+      "regime_type": "moderate_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "HLB제약",
+      "signals": {
+        "model_prediction": 0.8150164912501838,
+        "regime_signal": 0.5531722417432978,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5920471832483705,
+      "regime_type": "weak_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "올릭스",
+      "signals": {
+        "model_prediction": 0.40800339320976464,
+        "regime_signal": 0.9167418184619639,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5811863029179322,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "나이벡",
+      "composite_score": 0.75,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.62417319541311,
+      "outperformance": 0.20158956762571537
+    },
+    {
+      "ticker": "오리엔탈정공",
+      "composite_score": 0.7362310583609161,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.9705435815063364,
+        "regime_signal": 0.9743806519373279,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.62417319541311,
+      "outperformance": 0.17953007878468794
+    },
+    {
+      "ticker": "아스테라시스",
+      "composite_score": 0.7279311397679514,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.9117245590718057,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.62417319541311,
+      "outperformance": 0.1662326179934226
+    },
+    {
+      "ticker": "세진중공업",
+      "composite_score": 0.6979944955917724,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.8604172325578834,
+        "regime_signal": 0.9315607498092063,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.62417319541311,
+      "outperformance": 0.11827053888432947
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

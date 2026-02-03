@@ -1,0 +1,211 @@
+{
+  "date": "2025-10-28",
+  "generated_at": "2025-10-28T19:54:24.614577",
+  "total_tickers": 17,
+  "top_performers": [
+    {
+      "ticker": "에스퓨얼셀",
+      "signals": {
+        "model_prediction": 0.849732893130348,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.712433223282587,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "포스코인터내셔널",
+      "signals": {
+        "model_prediction": 0.8374395189332936,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7093598797333234,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "현대차우",
+      "signals": {
+        "model_prediction": 0.654842765597492,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.663710691399373,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "아모레퍼시픽우",
+      "signals": {
+        "model_prediction": 0.63424879865067,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6585621996626675,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "비나텍",
+      "signals": {
+        "model_prediction": 0.979475525537056,
+        "regime_signal": 0.488,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.616868881384264,
+      "regime_type": "Transition",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "LS마린솔루션",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "Ranging",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "미래나노텍",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "Bear Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한진칼",
+      "signals": {
+        "model_prediction": 0.9572587525400593,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.48931468813501483,
+      "regime_type": "Bear Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "DL",
+      "signals": {
+        "model_prediction": 0.9261766877726978,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.48154417194317445,
+      "regime_type": "Ranging",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "SK가스",
+      "signals": {
+        "model_prediction": 0.8332884952361184,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.4583221238090296,
+      "regime_type": "Bear Quiet",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "에스퓨얼셀",
+      "composite_score": 0.712433223282587,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.849732893130348,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5134090825999322,
+      "outperformance": 0.38765216165398825
+    },
+    {
+      "ticker": "포스코인터내셔널",
+      "composite_score": 0.7093598797333234,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8374395189332936,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5134090825999322,
+      "outperformance": 0.38166601210302975
+    },
+    {
+      "ticker": "현대차우",
+      "composite_score": 0.663710691399373,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.654842765597492,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5134090825999322,
+      "outperformance": 0.29275214228448204
+    },
+    {
+      "ticker": "아모레퍼시픽우",
+      "composite_score": 0.6585621996626675,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.63424879865067,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5134090825999322,
+      "outperformance": 0.282724092701422
+    },
+    {
+      "ticker": "비나텍",
+      "composite_score": 0.616868881384264,
+      "sector": "unknown",
+      "regime": "Transition",
+      "signals": {
+        "model_prediction": 0.979475525537056,
+        "regime_signal": 0.488,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5134090825999322,
+      "outperformance": 0.20151532625875174
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

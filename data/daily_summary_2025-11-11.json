@@ -1,0 +1,209 @@
+{
+  "date": "2025-11-11",
+  "generated_at": "2025-11-11T21:07:14.856037",
+  "total_tickers": 37,
+  "top_performers": [
+    {
+      "ticker": "삼성SDI우",
+      "name": "삼성SDI우",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.6567869579394259,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6641967394848565,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한화3우B",
+      "name": "한화3우B",
+      "sector": "Unknown",
+      "industry": "Unknown",
+      "exchange": "Korea Exchange",
+      "signals": {
+        "model_prediction": 0.7346309936906849,
+        "regime_signal": 0.488,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5556577484226712,
+      "regime_type": "Transition",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "383220.KS",
+      "name": "F&F",
+      "sector": "코리아 밸류업 지수(Korea Value-up Index)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "373220.KS",
+      "name": "LG에너지솔루션",
+      "sector": "리튬",
+      "industry": "전기전자_x",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "181710.KS",
+      "name": "NHN",
+      "sector": "애플페이",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "139130.KS",
+      "name": "iM금융지주",
+      "sector": "밸류업(24년 기업가치 제고계획 발표)",
+      "industry": "코스피_중형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "077360.KQ",
+      "name": "덕산하이메탈",
+      "sector": "반도체 재료/부품",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "092200.KS",
+      "name": "디아이씨",
+      "sector": "2차전지(나트륨이온)",
+      "industry": "코스피_소형주",
+      "exchange": "Korea Exchange (KOSPI)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "347850.KQ",
+      "name": "디앤디파마텍",
+      "sector": "비만치료제",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "105740.KQ",
+      "name": "디케이락",
+      "sector": "원자력발전",
+      "industry": "코스닥",
+      "exchange": "Korea Exchange (KOSDAQ)",
+      "signals": {
+        "model_prediction": 0.5,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "unknown",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "삼성SDI우",
+      "composite_score": 0.6641967394848565,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.6567869579394259,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5032715916819146,
+      "outperformance": 0.3197580599873244
+    },
+    {
+      "ticker": "한화3우B",
+      "composite_score": 0.5556577484226712,
+      "sector": "unknown",
+      "regime": "Transition",
+      "signals": {
+        "model_prediction": 0.7346309936906849,
+        "regime_signal": 0.488,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5032715916819146,
+      "outperformance": 0.10409122550645883
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}

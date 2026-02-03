@@ -1,0 +1,211 @@
+{
+  "date": "2025-10-30",
+  "generated_at": "2025-10-30T19:25:13.921977",
+  "total_tickers": 13,
+  "top_performers": [
+    {
+      "ticker": "디앤디파마텍",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.75,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "SJG세종",
+      "signals": {
+        "model_prediction": 0.954206855305773,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7385517138264432,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한미반도체",
+      "signals": {
+        "model_prediction": 0.8176184646341645,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.7044046161585411,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "클로봇",
+      "signals": {
+        "model_prediction": 0.7342869810264592,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6835717452566148,
+      "regime_type": "strong_bullish",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "현대차우",
+      "signals": {
+        "model_prediction": 0.654842765597492,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.663710691399373,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "아모레퍼시픽우",
+      "signals": {
+        "model_prediction": 0.63424879865067,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.6585621996626675,
+      "regime_type": "Bull Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한화시스템",
+      "signals": {
+        "model_prediction": 0.8851730007517793,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5962932501879448,
+      "regime_type": "Transition",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "와이씨",
+      "signals": {
+        "model_prediction": 0.566732219848632,
+        "regime_signal": 0.5,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5166830549621579,
+      "regime_type": "Transition",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "한국화장품",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.5,
+      "regime_type": "Bear Quiet",
+      "in_green": false,
+      "in_tstop": true
+    },
+    {
+      "ticker": "삼영",
+      "signals": {
+        "model_prediction": 0.8445735778278387,
+        "regime_signal": 0.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "composite_score": 0.4611433944569597,
+      "regime_type": "Bear Quiet",
+      "in_green": false,
+      "in_tstop": true
+    }
+  ],
+  "hidden_gems": [
+    {
+      "ticker": "디앤디파마텍",
+      "composite_score": 0.75,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 1.0,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5762261678205358,
+      "outperformance": 0.3015722677724445
+    },
+    {
+      "ticker": "SJG세종",
+      "composite_score": 0.7385517138264432,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.954206855305773,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5762261678205358,
+      "outperformance": 0.2817045720430789
+    },
+    {
+      "ticker": "한미반도체",
+      "composite_score": 0.7044046161585411,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.8176184646341645,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5762261678205358,
+      "outperformance": 0.22244468491046757
+    },
+    {
+      "ticker": "클로봇",
+      "composite_score": 0.6835717452566148,
+      "sector": "unknown",
+      "regime": "strong_bullish",
+      "signals": {
+        "model_prediction": 0.7342869810264592,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5762261678205358,
+      "outperformance": 0.1862907022117598
+    },
+    {
+      "ticker": "현대차우",
+      "composite_score": 0.663710691399373,
+      "sector": "unknown",
+      "regime": "Bull Quiet",
+      "signals": {
+        "model_prediction": 0.654842765597492,
+        "regime_signal": 1.0,
+        "tsf_alignment": 0.5,
+        "sector_momentum": 0.5
+      },
+      "sector_avg": 0.5762261678205358,
+      "outperformance": 0.15182323966599867
+    }
+  ],
+  "sector_rotation": null,
+  "note": "Japan markets: 4-signal system (no institutional netbuy data)"
+}
