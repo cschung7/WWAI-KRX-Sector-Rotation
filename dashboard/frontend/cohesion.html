@@ -266,10 +266,12 @@
             color: #f8fafc;
         }
 
-        .stat-value.very-strong { color: #10b981; }
+        .stat-value.very-strong, .stat-value.very_strong { color: #10b981; }
         .stat-value.strong { color: #3b82f6; }
         .stat-value.moderate { color: #f59e0b; }
         .stat-value.weak { color: #ef4444; }
+        .stat-value.green { color: #10b981; }
+        .stat-value.red { color: #ef4444; }
 
         .stat-label {
             font-size: 0.65rem;
@@ -555,6 +557,7 @@
         const API_BASE = window.location.origin;
         let cohesionChart = null;
         let allTrends = [];
+        let allThemes = [];  // From themes API with fiedler_change
         let currentView = 'all';
         let currentFilter = 'all';
         let currentLang = 'ko';
@@ -670,14 +673,37 @@
 
         async function init() {
             try {
-                const response = await fetch(`${API_BASE}/api/sector-rotation/fiedler-trends?weeks=8`);
-                const data = await response.json();
+                // Fetch both APIs in parallel
+                const [trendsResponse, themesResponse] = await Promise.all([
+                    fetch(`${API_BASE}/api/sector-rotation/fiedler-trends?weeks=8`),
+                    fetch(`${API_BASE}/api/sector-rotation/themes`)
+                ]);
 
-                allTrends = data.trends;
-                updateSummary(data.summary);
-                updateMovers(data.trends);
-                renderChart(data.trends, 'all');
-                renderThemeCards(data.trends);
+                const trendsData = await trendsResponse.json();
+                const themesData = await themesResponse.json();
+
+                allTrends = trendsData.trends;
+                allThemes = themesData.themes || [];
+
+                // Merge fiedler_change into trends data
+                const themeChangeMap = {};
+                allThemes.forEach(t => {
+                    themeChangeMap[t.theme] = {
+                        fiedler_change: t.fiedler_change || 0,
+                        pct_change: t.pct_change || 0
+                    };
+                });
+                allTrends.forEach(t => {
+                    if (themeChangeMap[t.theme]) {
+                        t.fiedler_change = themeChangeMap[t.theme].fiedler_change;
+                        t.pct_change = themeChangeMap[t.theme].pct_change;
+                    }
+                });
+
+                updateSummary(trendsData.summary, allThemes);
+                updateMovers(allThemes);  // Use themes data for fiedler_change
+                renderChart(allTrends, 'all');
+                renderThemeCards(allTrends);
             } catch (error) {
                 console.error('Error loading trends:', error);
                 document.getElementById('summaryGrid').innerHTML =
@@ -685,44 +711,49 @@
             }
         }
 
-        function updateSummary(summary) {
+        function updateSummary(summary, themes) {
+            // Calculate increasing/decreasing from fiedler_change
+            const increasing = themes.filter(t => (t.fiedler_change || 0) > 0.1).length;
+            const decreasing = themes.filter(t => (t.fiedler_change || 0) < -0.1).length;
+            const stable = themes.length - increasing - decreasing;
+
             document.getElementById('summaryGrid').innerHTML = `
                 <div class="summary-card">
                     <div class="summary-label" data-i18n="summary.totalThemes">${t('summary.totalThemes')}</div>
-                    <div class="summary-value">${summary.total_themes}</div>
+                    <div class="summary-value">${themes.length || summary.total_themes}</div>
                 </div>
                 <div class="summary-card increasing">
                     <div class="summary-label" data-i18n="summary.increasing">${t('summary.increasing')}</div>
-                    <div class="summary-value green">${summary.increasing}</div>
+                    <div class="summary-value green">${increasing}</div>
                 </div>
                 <div class="summary-card decreasing">
                     <div class="summary-label" data-i18n="summary.decreasing">${t('summary.decreasing')}</div>
-                    <div class="summary-value red">${summary.decreasing}</div>
+                    <div class="summary-value red">${decreasing}</div>
                 </div>
                 <div class="summary-card stable">
                     <div class="summary-label" data-i18n="summary.stable">${t('summary.stable')}</div>
-                    <div class="summary-value blue">${summary.stable}</div>
+                    <div class="summary-value blue">${stable}</div>
                 </div>
             `;
         }
 
-        function updateMovers(trends) {
-            const increasing = trends.filter(t => t.trend_direction === 'increasing')
-                .sort((a, b) => b.slope - a.slope).slice(0, 5);
-            const decreasing = trends.filter(t => t.trend_direction === 'decreasing')
-                .sort((a, b) => a.slope - b.slope).slice(0, 5);
+        function updateMovers(themes) {
+            // Sort by fiedler_change (delta) from themes API
+            const sorted = [...themes].sort((a, b) => (b.fiedler_change || 0) - (a.fiedler_change || 0));
+            const increasing = sorted.filter(t => (t.fiedler_change || 0) > 0).slice(0, 5);
+            const decreasing = sorted.filter(t => (t.fiedler_change || 0) < 0).slice(-5).reverse();
 
             document.getElementById('increasingList').innerHTML = increasing.map(t => `
                 <li>
                     <span class="mover-theme">${t.theme}</span>
-                    <span class="mover-slope positive">+${t.slope.toFixed(3)}/wk</span>
+                    <span class="mover-slope positive">+${(t.fiedler_change || 0).toFixed(2)} (${(t.pct_change || 0) > 0 ? '+' : ''}${(t.pct_change || 0).toFixed(0)}%)</span>
                 </li>
             `).join('');
 
             document.getElementById('decreasingList').innerHTML = decreasing.map(t => `
                 <li>
                     <span class="mover-theme">${t.theme}</span>
-                    <span class="mover-slope negative">${t.slope.toFixed(3)}/wk</span>
+                    <span class="mover-slope negative">${(t.fiedler_change || 0).toFixed(2)} (${(t.pct_change || 0).toFixed(0)}%)</span>
                 </li>
             `).join('');
         }
@@ -755,18 +786,21 @@
 
             switch(view) {
                 case 'increasing':
-                    filtered = trends.filter(t => t.trend_direction === 'increasing');
+                    filtered = trends.filter(t => (t.fiedler_change || 0) > 0.1);
+                    filtered.sort((a, b) => (b.fiedler_change || 0) - (a.fiedler_change || 0));
                     break;
                 case 'decreasing':
-                    filtered = trends.filter(t => t.trend_direction === 'decreasing');
+                    filtered = trends.filter(t => (t.fiedler_change || 0) < -0.1);
+                    filtered.sort((a, b) => (a.fiedler_change || 0) - (b.fiedler_change || 0));
                     break;
                 case 'top20':
-                    filtered = trends.slice(0, 20);
+                    filtered.sort((a, b) => (b.fiedler_change || 0) - (a.fiedler_change || 0));
+                    filtered = filtered.slice(0, 20);
                     break;
+                default:
+                    // Sort by Fiedler value for 'all' view
+                    filtered.sort((a, b) => b.latest_fiedler - a.latest_fiedler);
             }
-
-            // Sort by Fiedler value
-            filtered.sort((a, b) => b.latest_fiedler - a.latest_fiedler);
 
             // Limit to 30 for readability
             if (filtered.length > 30) {
@@ -805,8 +839,10 @@
                             callbacks: {
                                 afterLabel: function(context) {
                                     const t = filtered[context.dataIndex];
-                                    const arrow = t.slope > 0 ? '↑' : t.slope < 0 ? '↓' : '→';
-                                    return `Trend: ${arrow} ${t.slope.toFixed(3)}/wk | Stocks: ${t.n_stocks}`;
+                                    const change = t.fiedler_change || 0;
+                                    const pct = t.pct_change || 0;
+                                    const arrow = change > 0 ? '↑' : change < 0 ? '↓' : '→';
+                                    return `Delta: ${arrow} ${change > 0 ? '+' : ''}${change.toFixed(2)} (${pct > 0 ? '+' : ''}${pct.toFixed(0)}%) | Stocks: ${t.n_stocks}`;
                                 }
                             }
                         }
@@ -835,50 +871,49 @@
 
             switch(currentFilter) {
                 case 'increasing':
-                    filtered = trends.filter(t => t.trend_direction === 'increasing');
+                    filtered = trends.filter(t => (t.fiedler_change || 0) > 0.1);
                     break;
                 case 'decreasing':
-                    filtered = trends.filter(t => t.trend_direction === 'decreasing');
+                    filtered = trends.filter(t => (t.fiedler_change || 0) < -0.1);
                     break;
                 case 'very_strong':
                     filtered = trends.filter(t => t.cohesion_level === 'very_strong');
                     break;
             }
 
-            // Sort by Fiedler
-            filtered.sort((a, b) => b.latest_fiedler - a.latest_fiedler);
+            // Sort by fiedler_change (delta) for investment signal
+            filtered.sort((a, b) => (b.fiedler_change || 0) - (a.fiedler_change || 0));
 
             const grid = document.getElementById('themeGrid');
             grid.innerHTML = filtered.slice(0, 50).map(t => {
-                const trendArrow = t.trend_direction === 'increasing' ? '↑' :
-                                   t.trend_direction === 'decreasing' ? '↓' : '→';
-                const volatilityPct = Math.min(t.volatility / 5 * 100, 100);
+                const change = t.fiedler_change || 0;
+                const pctChange = t.pct_change || 0;
+                const trendArrow = change > 0.1 ? '↑' : change < -0.1 ? '↓' : '→';
+                const trendClass = change > 0.1 ? 'increasing' : change < -0.1 ? 'decreasing' : 'stable';
+                const changeColor = change > 0 ? 'green' : change < 0 ? 'red' : '';
 
                 return `
                     <div class="theme-card ${t.cohesion_level}">
                         <div class="theme-header">
                             <div class="theme-name">${t.theme}</div>
-                            <div class="trend-indicator ${t.trend_direction}">
+                            <div class="trend-indicator ${trendClass}">
                                 <span class="trend-arrow">${trendArrow}</span>
-                                <span>${t.slope > 0 ? '+' : ''}${t.slope.toFixed(3)}</span>
+                                <span>${change > 0 ? '+' : ''}${change.toFixed(2)} (${pctChange > 0 ? '+' : ''}${pctChange.toFixed(0)}%)</span>
                             </div>
                         </div>
                         <div class="theme-stats">
                             <div class="stat-item">
                                 <div class="stat-value ${t.cohesion_level}">${t.latest_fiedler.toFixed(2)}</div>
-                                <div class="stat-label">Gravity</div>
+                                <div class="stat-label">Level</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value ${changeColor}">${change > 0 ? '+' : ''}${change.toFixed(2)}</div>
+                                <div class="stat-label">Delta</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-value">${t.n_stocks}</div>
                                 <div class="stat-label">Stocks</div>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-value">${t.volatility.toFixed(2)}</div>
-                                <div class="stat-label">Volatility</div>
-                            </div>
-                        </div>
-                        <div class="volatility-bar">
-                            <div class="volatility-fill" style="width: ${volatilityPct}%"></div>
                         </div>
                     </div>
                 `;
