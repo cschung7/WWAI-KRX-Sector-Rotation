@@ -1,0 +1,695 @@
+ticker,strategy,score,stage,themes,priority,regime,dev_bb_pct,trend_strength,momentum
+코오롱,Early Breakout (Transition),85,Early Breakout,[],HIGH,Transition,10.4,0.04,0.9546925566343042
+대모,Early Breakout (Transition),85,Early Breakout,[],HIGH,Transition,15.23,-0.0799999999999999,0.9231707317073172
+아주IB투자,Super Trend (Bull Quiet),79,Super Trend,[],HIGH,Bull Quiet,49.3,0.5199999999999998,0.9153094462540716
+미래에셋벤처투자,Super Trend (Bull Quiet),78,Super Trend,[],HIGH,Bull Quiet,52.81,0.3399999999999998,0.8899188876013905
+스피어,Super Trend (Bull Quiet),78,Super Trend,[],HIGH,Bull Quiet,52.66,0.4599999999999999,0.9450966850828728
+유신,Early Breakout (Transition),78,Early Breakout,[],HIGH,Transition,3.11,-0.0799999999999999,0.9444444444444444
+켄코아에어로스페이스,Super Trend (Bull Quiet),77,Super Trend,[],HIGH,Bull Quiet,37.23,0.4599999999999999,0.8908474576271186
+미래에셋증권,Super Trend (Bull Quiet),77,Super Trend,[],HIGH,Bull Quiet,50.24,0.4599999999999999,0.9037593984962408
+나노팀,Super Trend (Bull Quiet),77,Super Trend,[],HIGH,Bull Quiet,43.98,0.3999999999999999,0.9034564958283672
+GS리테일,Early Breakout (Transition),76,Early Breakout,[],HIGH,Transition,1.88,-0.0799999999999999,0.8882978723404256
+대한전선,Super Trend (Bull Quiet),73,Super Trend,[],HIGH,Bull Quiet,10.55,0.5199999999999998,0.8286604361370716
+SK,Super Trend (Bull Quiet),73,Super Trend,[],HIGH,Bull Quiet,3.01,0.4599999999999999,0.8041825095057035
+한화시스템,Super Trend (Bull Quiet),72,Super Trend,[],HIGH,Bull Quiet,46.94,0.3999999999999999,0.8899821109123435
+하나금융지주,Super Trend (Bull Quiet),71,Super Trend,[],HIGH,Bull Quiet,1.47,0.6399999999999999,0.8800738007380073
+AJ네트웍스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,10.05,0.4599999999999999,0.9427312775330396
+에코프로에이치엔,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,22.99,0.5199999999999998,0.8862847222222222
+에쓰씨엔지니어링,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,27.03,0.6399999999999999,0.8745689655172414
+미래에셋증권우,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,35.14,0.4599999999999999,0.8711297071129707
+아이쓰리시스템,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.01,0.3999999999999999,0.8561236623067776
+아이티센글로벌,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,32.74,0.5799999999999998,0.8625654450261779
+에이치이엠파마,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,56.12,0.5799999999999998,0.9394785847299814
+에이프릴바이오,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,15.88,0.4599999999999999,0.9065656565656566
+에이플러스에셋,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,25.15,0.6399999999999999,0.9044117647058824
+주성엔지니어링,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,15.49,0.3999999999999999,0.9215116279069768
+코오롱생명과학,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,26.73,0.6399999999999999,0.935251798561151
+하나머티리얼즈,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,17.72,0.5799999999999998,0.8329048843187661
+바이오스마트,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,42.58,0.4599999999999999,0.9085072231139648
+에스제이그룹,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,44.95,0.5199999999999998,0.8817829457364341
+에스에이엠티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,13.46,0.4599999999999999,0.888
+엘앤씨바이오,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,18.48,0.4599999999999999,0.9259634888438134
+영우디에스피,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,14.74,0.3399999999999998,0.8898809523809524
+와이투솔루션,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,22.35,0.5199999999999998,0.8813694267515924
+육일씨엔에쓰,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,36.68,0.4599999999999999,0.8455497382198953
+이오테크닉스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,16.74,0.4599999999999999,0.867816091954023
+전진건설로봇,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,15.27,0.3399999999999998,0.8958677685950414
+인텔리안테크,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,46.63,0.4599999999999999,0.9125636672325976
+제이에스링크,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.1,0.4599999999999999,0.8722079037800687
+지엠비코리아,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,15.87,0.5799999999999998,0.896186440677966
+코오롱티슈진,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,24.57,0.6399999999999999,0.9282655246252676
+하나마이크론,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,12.97,0.3999999999999999,0.8663793103448276
+나래나노텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,22.99,0.3999999999999999,0.9079903147699756
+다우데이타,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,17.5,0.3999999999999999,0.8836605080831409
+동진쎄미켐,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,20.18,0.4599999999999999,0.8865313653136531
+두산테스나,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,10.61,0.4599999999999999,0.875
+메디포스트,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,25.54,0.4599999999999999,0.93717277486911
+삼양엔씨켐,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,18.25,0.6399999999999999,0.8340336134453781
+삼표시멘트,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,140.5,0.4599999999999999,0.957231040564374
+시지메드텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,20.09,0.5199999999999998,0.8627450980392157
+씨아이에스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,29.9,0.5799999999999998,0.9018264840182648
+쎄트렉아이,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,80.11,0.5799999999999998,0.9242779078844652
+에스엠코어,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,28.71,0.5199999999999998,0.8623388581952118
+에스티아이,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.6,0.3999999999999999,0.8390625
+오킨스전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,19.37,0.4599999999999999,0.8714285714285714
+원바이오젠,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,10.54,0.3999999999999999,0.8918918918918919
+제주반도체,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,38.25,0.4599999999999999,0.8757763975155279
+코오롱인더,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,13.61,0.4599999999999999,0.876940133037694
+피에스케이,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,31.82,0.4599999999999999,0.8698910081743869
+한미반도체,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,15.87,0.4599999999999999,0.808487486398259
+한양이엔지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,24.45,0.4599999999999999,0.855072463768116
+한양디지텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.13,0.3999999999999999,0.8282312925170068
+대덕전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,14.01,0.5799999999999998,0.8945371775417299
+뉴프렉스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,12.34,0.4599999999999999,0.883587786259542
+대성산업,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,12.49,-0.1399999999999999,0.8268398268398268
+대주산업,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,51.04,0.5199999999999998,0.8841463414634146
+동아엘텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,37.45,0.4599999999999999,0.9716981132075472
+디아이티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,19.21,0.4599999999999999,0.8767833981841764
+라온테크,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,50.64,0.3399999999999998,0.8745476477683957
+롯데쇼핑,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,10.74,0.5799999999999998,0.915686274509804
+리노공업,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,29.02,0.7,0.8893728222996515
+메디아나,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,96.16,0.5799999999999998,0.9239798770262716
+삼성전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,18.84,0.4599999999999999,0.8637123745819398
+삼지전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,29.3,0.5799999999999998,0.8732057416267942
+성호전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,76.23,0.4599999999999999,0.8542986425339367
+에스티팜,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,19.11,0.5199999999999998,0.8697135061391542
+에스피지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,58.72,0.5199999999999998,0.889967637540453
+에이엘티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,15.37,0.3399999999999998,0.8987566607460036
+에코프로,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,40.97,0.5199999999999998,0.929657794676806
+웨이비스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,25.09,0.6399999999999999,0.9207650273224044
+자화전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,26.84,0.3399999999999998,0.9590747330960854
+조이시티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,20.34,0.4599999999999999,0.8685897435897436
+키움증권,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,22.82,0.5799999999999998,0.8949671772428884
+하림지주,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,22.64,0.4599999999999999,0.906055900621118
+네오셈,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,43.12,0.3399999999999998,0.9122734761120264
+넥스틴,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.9,0.5799999999999998,0.8286004056795131
+노바텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,18.8,0.4599999999999999,0.8674033149171271
+더코디,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,37.71,0.4599999999999999,0.9303921568627452
+드림텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.5,0.5199999999999998,0.8662420382165605
+디아이,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,13.17,0.4599999999999999,0.7746113989637305
+루미르,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,60.82,0.5799999999999998,0.925179211469534
+베뉴지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,25.49,0.6399999999999999,0.8227360308285163
+비나텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,28.64,0.3399999999999998,0.8596802841918294
+센서뷰,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,53.76,0.5799999999999998,0.5465608465608466
+신세계,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,16.59,0.6399999999999999,0.8452380952380951
+아이텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,20.79,0.5799999999999998,0.8764367816091954
+액트로,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,60.62,0.5799999999999998,0.8134978229317852
+앱클론,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,24.45,0.3399999999999998,0.8364705882352941
+엘티씨,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,12.11,0.5799999999999998,0.8304794520547945
+와이씨,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,19.92,0.28,0.8547957371225577
+제노코,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,21.61,0.3399999999999998,0.3728448275862068
+제테마,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,19.97,0.5199999999999998,0.8562259306803595
+제우스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,15.57,0.4599999999999999,0.8759025270758123
+제이티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,13.95,0.3999999999999999,0.9004329004329004
+큐라클,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,46.43,0.5799999999999998,0.8544007490636705
+프로텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,33.8,0.3399999999999998,0.9466666666666668
+피엔티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,12.18,0.4599999999999999,0.915506958250497
+경방,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,14.44,0.5199999999999998,0.913235294117647
+두올,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,13.8,0.5199999999999998,0.8581267217630854
+율촌,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,28.2,0.3999999999999999,0.88339222614841
+웹스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.86,0.3399999999999998,0.5309541697971449
+태성,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,40.13,0.5799999999999998,0.9813895781637716
+테스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,21.99,0.3999999999999999,0.870757180156658
+HDC현대EP,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,12.63,0.4599999999999999,0.8709150326797386
+HD현대건설기계,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,13.33,0.28,0.8071847507331378
+HPSP,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,21.0,0.5799999999999998,0.8711832061068703
+ISC,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,25.37,0.3399999999999998,0.8689809630459127
+JW중외제약,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,16.61,0.5199999999999998,0.8540268456375839
+KX하이텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,26.13,0.5799999999999998,0.9402985074626866
+NHN벅스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,34.51,0.7,0.8089887640449438
+NHN KCP,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.54,0.3999999999999999,0.8806509945750453
+RF시스템즈,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,42.91,0.4599999999999999,0.9197002141327624
+RF머트리얼즈,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,35.44,0.5799999999999998,0.905952380952381
+원익QnC,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,10.25,0.4599999999999999,0.8560311284046693
+RFHIC,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,21.09,0.4599999999999999,0.8904255319148936
+SFA반도체,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,34.98,0.4599999999999999,0.8647186147186148
+SK스퀘어,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,25.27,0.3999999999999999,0.8413223140495868
+SK하이닉스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,18.27,0.6399999999999999,0.8452655889145497
+백금T&A,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,11.74,0.5199999999999998,0.7210031347962382
+서부T&D,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,22.83,0.6399999999999999,0.9524207011686144
+TPC,Super Trend (Bull Quiet),70,Super Trend,[],HIGH,Bull Quiet,31.32,0.28,0.81875
+포스코인터내셔널,Super Trend (Bull Quiet),69,Super Trend,[],HIGH,Bull Quiet,9.43,0.5199999999999998,0.8858695652173914
+와토스코리아,Super Trend (Bull Quiet),69,Super Trend,[],HIGH,Bull Quiet,9.46,0.5199999999999998,0.3320000000000001
+이지바이오,Super Trend (Bull Quiet),69,Super Trend,[],HIGH,Bull Quiet,9.14,0.7,0.8900862068965517
+대우건설,Super Trend (Bull Quiet),69,Super Trend,[],HIGH,Bull Quiet,9.8,0.4599999999999999,0.8454692556634305
+클래시스,Super Trend (Bull Quiet),69,Super Trend,[],HIGH,Bull Quiet,9.97,0.5799999999999998,0.8937282229965157
+뷰웍스,Super Trend (Bull Quiet),69,Super Trend,[],HIGH,Bull Quiet,9.75,0.4599999999999999,0.84376427592508
+LS ELECTRIC,Super Trend (Bull Quiet),69,Super Trend,[],HIGH,Bull Quiet,9.54,0.3999999999999999,0.811864406779661
+한국금융지주,Super Trend (Bull Quiet),68,Super Trend,[],HIGH,Bull Quiet,4.11,0.5799999999999998,0.8648648648648648
+세아홀딩스,Super Trend (Bull Quiet),68,Super Trend,[],HIGH,Bull Quiet,8.07,0.3399999999999998,0.818242343541944
+진성티이씨,Super Trend (Bull Quiet),68,Super Trend,[],HIGH,Bull Quiet,8.61,0.28,0.8428835489833642
+하이즈항공,Super Trend (Bull Quiet),68,Super Trend,[],HIGH,Bull Quiet,8.02,0.4599999999999999,0.8862815884476535
+삼성물산,Super Trend (Bull Quiet),68,Super Trend,[],HIGH,Bull Quiet,8.74,0.5799999999999998,0.3529411764705883
+다산네트웍스,Super Trend (Bull Quiet),67,Super Trend,[],HIGH,Bull Quiet,7.04,0.3999999999999999,0.8524590163934426
+성도이엔지,Super Trend (Bull Quiet),67,Super Trend,[],HIGH,Bull Quiet,7.99,0.5199999999999998,0.8551020408163266
+유진기업,Super Trend (Bull Quiet),67,Super Trend,[],HIGH,Bull Quiet,7.11,0.6399999999999999,0.912280701754386
+케이씨,Super Trend (Bull Quiet),67,Super Trend,[],HIGH,Bull Quiet,7.03,0.4599999999999999,0.8561643835616438
+코메론,Super Trend (Bull Quiet),67,Super Trend,[],HIGH,Bull Quiet,7.34,0.5799999999999998,0.8835078534031413
+비에이치아이,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.07,0.6399999999999999,0.8604060913705583
+와이즈버즈,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.15,0.4599999999999999,0.913554633471646
+디바이스,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.1,0.4599999999999999,0.9569377990430622
+우리로,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.96,0.3999999999999999,0.8542345276872964
+DB증권,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.28,0.3999999999999999,0.876391982182628
+나우IB,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.68,0.3999999999999999,0.9016666666666666
+INVENI,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.6,0.3399999999999998,0.8875598086124402
+삼성SDI,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.49,0.5199999999999998,0.8580097087378641
+SK증권우,Super Trend (Bull Quiet),66,Super Trend,[],HIGH,Bull Quiet,6.57,0.28,0.8141592920353983
+하이비젼시스템,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.3,0.3399999999999998,0.8403614457831325
+신성델타테크,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.32,0.5199999999999998,0.8678571428571429
+흥국에프엔비,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.22,0.3399999999999998,0.9406451612903226
+유안타증권,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,1.73,0.6399999999999999,0.8475073313782991
+해성디에스,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.25,0.5799999999999998,0.84593837535014
+삼성제약,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.34,0.3999999999999999,0.9132911392405064
+슈프리마,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.91,0.28,0.8143382352941176
+아이앤씨,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.83,0.3999999999999999,0.8503787878787878
+케이씨텍,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.32,0.3399999999999998,0.8461538461538461
+한화리츠,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.35,0.3999999999999999,0.9294871794871796
+예스티,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.02,0.3399999999999998,0.9009962640099628
+TYM,Super Trend (Bull Quiet),65,Super Trend,[],HIGH,Bull Quiet,5.44,0.5799999999999998,0.8740458015267175
+큐리옥스바이오시스템즈,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.86,0.4599999999999999,0.4043956043956044
+다올투자증권,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,0.56,0.5199999999999998,0.861328125
+신흥에스이씨,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.21,0.5199999999999998,0.8491525423728814
+엠디바이스,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.06,0.4599999999999999,0.9213793103448276
+이지홀딩스,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.02,0.5799999999999998,0.8459715639810427
+교보증권,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.26,0.4599999999999999,0.875
+한세실업,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.13,0.5199999999999998,0.7959183673469388
+한컴위드,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,5.0,0.3399999999999998,0.8324715615305067
+화신정공,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.93,0.3399999999999998,0.8206106870229007
+라온텍,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.14,0.5799999999999998,0.9087779690189328
+머큐리,Super Trend (Bull Quiet),64,Super Trend,[],HIGH,Bull Quiet,4.04,0.5799999999999998,0.9333333333333332
+씨앤지하이테크,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.73,0.28,0.8220779220779221
+한올바이오파마,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.41,0.3999999999999999,0.8109756097560976
+헥토이노베이션,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.63,0.3399999999999998,0.8423005565862709
+셀트리온제약,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.09,0.4599999999999999,0.8340336134453781
+지오엘리먼트,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.63,0.4599999999999999,0.8617511520737328
+나노신소재,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.98,0.4599999999999999,0.8983739837398373
+에이스침대,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.65,0.3399999999999998,0.8650306748466258
+삼성전기,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.97,0.4599999999999999,0.8309859154929577
+티이엠씨,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.5,0.5199999999999998,0.9148264984227128
+쏠리드,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.97,0.6399999999999999,0.897872340425532
+DB,Super Trend (Bull Quiet),63,Super Trend,[],HIGH,Bull Quiet,3.6,0.4599999999999999,0.853356890459364
+CJ대한통운,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.24,0.3999999999999999,0.7752808988764045
+까뮤이앤씨,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.64,0.5199999999999998,0.8595505617977528
+엠케이전자,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.07,0.4599999999999999,0.8490813648293963
+유니테크노,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.52,0.4599999999999999,0.8197026022304833
+공구우먼,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.14,0.5199999999999998,0.7725409836065573
+네오위즈,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.86,0.4599999999999999,0.8034188034188035
+롯데리츠,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.37,0.5199999999999998,0.8288770053475936
+큐리언트,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.12,0.3999999999999999,0.8261363636363636
+우리넷,Super Trend (Bull Quiet),62,Super Trend,[],HIGH,Bull Quiet,2.35,0.5199999999999998,0.8267045454545454
+솔브레인홀딩스,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.85,0.5199999999999998,0.8543247344461306
+우리손에프앤지,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.68,0.5199999999999998,0.8502747252747253
+사피엔반도체,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.84,0.28,0.8376811594202899
+인지디스플레,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.23,0.3399999999999998,0.7904564315352697
+코아시아씨엠,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.91,0.28,0.8715341959334566
+디와이파워,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.05,0.28,0.8093645484949833
+시그네틱스,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.36,0.3999999999999999,0.8679245283018868
+원익피앤이,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.59,0.5199999999999998,0.8294460641399417
+대림제지,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.24,0.3999999999999999,0.8608695652173913
+로보티즈,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.64,0.5199999999999998,0.8353080568720379
+샘표식품,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.43,0.3399999999999998,0.7150537634408602
+DRB동일,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.06,0.28,0.8592964824120604
+삼성E&A,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.29,0.4599999999999999,0.8739669421487604
+HL D&I,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.15,0.3999999999999999,0.7923976608187134
+세이브존I&C,Super Trend (Bull Quiet),61,Super Trend,[],HIGH,Bull Quiet,1.72,0.5199999999999998,0.8441176470588235
+AP시스템,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.06,0.3399999999999998,0.8537735849056604
+아모레퍼시픽우,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.85,0.28,0.8604240282685512
+영원무역홀딩스,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.84,0.4599999999999999,0.8143656716417911
+롯데칠성우,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.92,0.4599999999999999,0.8486238532110092
+서울반도체,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.44,0.28,0.8604651162790697
+케이피에프,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.93,0.5799999999999998,0.5177777777777778
+대창단조,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.08,0.3999999999999999,0.8639240506329113
+유진테크,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.36,0.28,0.8322422258592471
+필에너지,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.6,0.4599999999999999,0.8789954337899544
+한미약품,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.11,0.3999999999999999,0.8271119842829078
+화천기계,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.62,0.6399999999999999,0.8658367911479945
+신라젠,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.68,0.4599999999999999,0.8065522620904837
+큐로셀,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.9,0.3399999999999998,0.6039215686274509
+큐알티,Super Trend (Bull Quiet),60,Super Trend,[],HIGH,Bull Quiet,0.42,0.3999999999999999,0.8681318681318682
+유화증권,Burgeoning (Transition),69,Burgeoning,[],MEDIUM,Transition,-4.22,-0.0199999999999999,0.8666666666666667
+BYC,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-7.65,-0.0799999999999999,0.8048780487804879
+지란지교시큐리티,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-5.82,-0.0199999999999999,0.8103448275862069
+메리츠금융지주,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-5.12,-0.0199999999999999,0.9237668161434978
+아이티엠반도체,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-28.2,-0.0799999999999999,0.8296089385474861
+유니온머티리얼,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-27.25,-0.0599999999999999,0.0599118942731277
+인카금융서비스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-16.0,-0.0199999999999999,0.8001222493887531
+한스바이오메드,Early Breakout (Ranging),65,Early Breakout,[],MEDIUM,Ranging,20.65,-0.1999999999999999,0.9655172413793104
+경동도시가스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-6.04,-0.0799999999999999,0.8552631578947368
+대주전자재료,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-15.86,-0.0799999999999999,0.8811074918566775
+롯데정밀화학,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-4.89,-0.0799999999999999,0.8522167487684729
+리가켐바이오,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-2.72,-0.0799999999999999,0.8228571428571428
+세아제강지주,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-50.94,-0.0799999999999999,0.8477011494252873
+오리온홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-11.98,-0.0199999999999999,0.8058823529411765
+윤성에프앤씨,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-8.45,-0.0799999999999999,0.8199513381995134
+진원생명과학,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-32.59,-0.0799999999999999,0.8488538681948424
+한국자산신탁,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-1.64,-0.0199999999999999,0.8283582089552239
+한중엔시에스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-11.38,-0.0799999999999999,0.7961538461538461
+동국홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-13.96,0.04,0.8090909090909091
+듀켐바이오,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-17.82,-0.0799999999999999,0.8327272727272728
+레드캡투어,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-2.6,0.04,0.9342723004694836
+에코앤드림,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-22.89,-0.0199999999999999,0.8553719008264463
+우신시스템,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-18.04,-0.0199999999999999,0.8828125
+일진다이아,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-8.06,-0.0799999999999999,0.8540609137055838
+일진홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-9.11,0.04,0.8091216216216216
+파라다이스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-20.29,-0.0799999999999999,0.8357894736842105
+현대홈쇼핑,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-2.38,-0.0799999999999999,0.8773584905660377
+대성창투,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-29.52,-0.0799999999999999,0.8420398009950248
+동국제강,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-23.73,-0.0799999999999999,0.7715827338129496
+레이저쎌,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-35.14,-0.0799999999999999,0.935513169845595
+롯데칠성,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-3.79,-0.0799999999999999,0.8471337579617834
+부광약품,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-4.06,-0.0199999999999999,0.8008658008658008
+상신전자,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-6.12,0.0,0.533695652173913
+성신양회,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-10.42,-0.0199999999999999,0.8266331658291457
+솔트룩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-37.65,-0.0799999999999999,0.8082437275985663
+영원무역,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-3.18,-0.0199999999999999,0.7680115273775217
+이화공영,Early Breakout (Ranging),65,Early Breakout,[],MEDIUM,Ranging,17.73,-0.1400000000000001,1.0
+인터로조,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-8.26,-0.0799999999999999,0.8774289985052317
+코오롱우,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-2.66,0.04,0.9386503067484662
+태광산업,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-17.13,-0.0799999999999999,0.9413919413919414
+태양금속,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-31.37,-0.0199999999999999,0.8453237410071942
+푸드나무,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-11.52,-0.0799999999999999,0.851145038167939
+한국알콜,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-0.72,-0.0199999999999999,0.8393665158371041
+듀오백,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-52.4,-0.0799999999999999,0.8038990825688074
+매커스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-20.92,-0.0799999999999999,0.8537414965986394
+예림당,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-20.97,-0.0799999999999999,0.8200000000000001
+옵티팜,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-2.27,-0.0199999999999999,0.8323170731707317
+올릭스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-13.38,0.0,0.060392609699769
+유니온,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-21.59,0.0,0.0727272727272727
+젬백스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-34.82,-0.0799999999999999,0.9076335877862596
+펩트론,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-22.7,-0.0199999999999999,0.8190045248868778
+대웅,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-7.64,0.04,0.8814814814814815
+백산,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-15.04,-0.0799999999999999,0.8361344537815126
+영풍,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-6.37,-0.0199999999999999,0.8404423380726698
+톱텍,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-4.0,-0.0199999999999999,0.8816964285714286
+한샘,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-6.13,-0.0799999999999999,0.8091397849462365
+DL,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-16.17,-0.0199999999999999,0.8902439024390244
+DSR,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-5.24,-0.0199999999999999,0.7875
+F&F,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-12.89,-0.0199999999999999,0.84472049689441
+HDC,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-13.31,-0.0199999999999999,0.9401408450704224
+HK이노엔,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-2.14,-0.0199999999999999,0.6875838926174497
+HS효성,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-20.78,-0.0199999999999999,0.8325688073394495
+KG스틸,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-16.74,0.04,0.8016528925619835
+KPX홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-3.94,-0.0199999999999999,0.8505154639175259
+KTis,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-9.0,-0.0799999999999999,0.9473684210526316
+LF,Burgeoning (Transition),65,Burgeoning,[],MEDIUM,Transition,-6.86,-0.0799999999999999,0.876984126984127
+인터플렉스,Early Breakout (Ranging),63,Early Breakout,[],MEDIUM,Ranging,8.74,-0.1399999999999999,0.8875
+에이티넘인베스트,Early Breakout (Ranging),62,Early Breakout,[],MEDIUM,Ranging,7.05,-0.1399999999999999,0.8547400611620796
+마크로젠,Early Breakout (Ranging),62,Early Breakout,[],MEDIUM,Ranging,7.32,-0.1399999999999999,0.8410404624277457
+현우산업,Early Breakout (Ranging),60,Early Breakout,[],MEDIUM,Ranging,5.36,-0.1999999999999999,0.8667883211678832
+한섬,Early Breakout (Ranging),58,Early Breakout,[],MEDIUM,Ranging,3.92,-0.1399999999999999,0.9234913793103448
+스톤브릿지벤처스,Early Breakout (Ranging),56,Early Breakout,[],MEDIUM,Ranging,1.52,-0.1999999999999999,0.8189300411522633
+에프엔에스테크,Early Breakout (Ranging),56,Early Breakout,[],MEDIUM,Ranging,1.12,-0.1399999999999999,0.967741935483871
+현대에버다임,Early Breakout (Ranging),56,Early Breakout,[],MEDIUM,Ranging,1.03,-0.1399999999999999,0.8566037735849057
+신도리코,Early Breakout (Ranging),56,Early Breakout,[],MEDIUM,Ranging,1.36,-0.1399999999999999,0.9184549356223176
+기업은행,Healthy Correction (Bull Quiet),55,Healthy Correction,[],MEDIUM,Bull Quiet,-3.82,0.4599999999999999,0.8676470588235294
+동화기업,Early Breakout (Ranging),55,Early Breakout,[],MEDIUM,Ranging,0.64,-0.1399999999999999,0.8898305084745762
+신한지주,Healthy Correction (Bull Quiet),55,Healthy Correction,[],MEDIUM,Bull Quiet,-1.34,0.4599999999999999,0.8354430379746836
+잉크테크,Early Breakout (Ranging),55,Early Breakout,[],MEDIUM,Ranging,0.08,0.1599999999999999,0.8788343558282209
+KT,Healthy Correction (Bull Quiet),55,Healthy Correction,[],MEDIUM,Bull Quiet,-1.3,0.5199999999999998,0.8383838383838383
+BNK금융지주,Healthy Correction (Bull Quiet),54,Healthy Correction,[],MEDIUM,Bull Quiet,-1.99,0.3999999999999999,0.9140845070422536
+제주은행,Healthy Correction (Bull Quiet),54,Healthy Correction,[],MEDIUM,Bull Quiet,-5.98,0.3399999999999998,0.8524096385542169
+JB금융지주,Burgeoning (Ranging),53,Burgeoning,[],MEDIUM,Ranging,-4.29,-0.1999999999999999,0.8211678832116789
+KB금융,Healthy Correction (Bull Quiet),52,Healthy Correction,[],MEDIUM,Bull Quiet,-3.33,0.3999999999999999,0.819327731092437
+카카오뱅크,Healthy Correction (Bull Quiet),51,Healthy Correction,[],MEDIUM,Bull Quiet,-23.83,0.3999999999999999,0.8098591549295775
+유진투자증권,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM,Bull Quiet,-0.63,0.4599999999999999,0.8594202898550725
+제일일렉트릭,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM,Bull Quiet,-14.08,0.4599999999999999,0.8009259259259259
+한화투자증권,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM,Bull Quiet,-6.34,0.5199999999999998,0.8690789473684211
+현대차증권,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM,Bull Quiet,-5.81,0.5799999999999998,0.8580060422960725
+대신증권,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM,Bull Quiet,-4.73,0.4599999999999999,0.858
+LS증권,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM,Bull Quiet,-8.23,0.5199999999999998,0.8428927680798004
+세명전기,Healthy Correction (Bull Quiet),48,Healthy Correction,[],MEDIUM,Bull Quiet,-17.57,0.5799999999999998,0.5177710843373494
+지투파워,Healthy Correction (Bull Quiet),48,Healthy Correction,[],MEDIUM,Bull Quiet,-15.53,0.28,0.8183229813664596
+스페코,Healthy Correction (Bull Quiet),47,Healthy Correction,[],MEDIUM,Bull Quiet,-28.6,0.4599999999999999,0.8010204081632653
+카페24,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-32.05,0.4599999999999999,0.8344748858447488
+현대ADM,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.13,0.5199999999999998,0.8581081081081081
+셀바스AI,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-17.11,-0.1399999999999999,0.8226256983240223
+비큐AI,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-37.95,0.3399999999999998,0.8041117145073701
+BGF,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-9.86,-0.1399999999999999,0.8181818181818181
+CJ우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-6.5,0.4599999999999999,0.8440860215053763
+CJ씨푸드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.5,-0.12,0.0402597402597402
+CJ ENM,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.59,0.6399999999999999,0.8179824561403509
+코람코라이프인프라리츠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.28,0.5799999999999998,0.8421052631578947
+한국타이어앤테크놀로지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.56,0.3999999999999999,0.0181818181818181
+신한서부티엔디리츠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.26,0.4599999999999999,0.83125
+이엔에프테크놀로지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.88,0.4599999999999999,0.8561507936507937
+코리아에셋투자증권,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.14,0.3399999999999998,0.8311688311688312
+제이에스코퍼레이션,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.64,-0.1999999999999999,0.8602150537634409
+갤럭시아머니트리,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.0,0.4599999999999999,0.8442088091353996
+선진뷰티사이언스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-33.79,0.3399999999999998,0.8086124401913876
+아이스크림미디어,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-29.55,-0.1999999999999999,0.9494773519163764
+씨앤씨인터내셔널,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-22.43,0.4599999999999999,0.8426573426573427
+슈프리마에이치큐,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.67,0.28,0.7853881278538812
+스틱인베스트먼트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-4.27,-0.1999999999999999,0.8584474885844748
+신세계인터내셔날,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.92,0.3999999999999999,0.8538011695906432
+아이티센씨티에스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.78,0.3399999999999998,0.7735294117647059
+오로스테크놀로지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.08,0.3999999999999999,0.6548387096774193
+엔지스테크널러지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-27.74,0.3399999999999998,0.913978494623656
+인피니트헬스케어,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.21,0.1599999999999999,0.8590308370044053
+티이엠씨씨엔에스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.12,0.5199999999999998,0.8613636363636364
+티엔엔터테인먼트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-30.39,0.5799999999999998,0.8220640569395017
+한진중공업홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-18.49,0.3399999999999998,0.7916666666666667
+현대지에프홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.59,0.5199999999999998,0.8705035971223022
+감성코퍼레이션,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.63,-0.1399999999999999,0.9216589861751152
+갤럭시아에스엠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-26.3,0.28,0.783410138248848
+글로벌텍스프리,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-31.86,-0.1399999999999999,0.8917910447761195
+네오위즈홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-8.26,-0.1399999999999999,0.8104265402843602
+동우팜투테이블,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-6.36,-0.1999999999999999,0.8404255319148937
+디와이피엔에프,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-24.3,0.3399999999999998,0.8387978142076503
+롯데이노베이트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.45,0.3399999999999998,0.8546099290780143
+메가스터디교육,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-14.52,-0.1999999999999999,0.8450520833333334
+마이크로컨텍솔,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-23.58,-0.1999999999999999,0.8927477017364658
+서울바이오시스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-21.62,0.5199999999999998,0.8160621761658031
+솔루스첨단소재,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-17.73,-0.1999999999999999,0.8125
+성안머티리얼스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-33.03,0.4599999999999999,0.8
+아이언디바이스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.64,0.3399999999999998,0.8087121212121212
+에스지헬스케어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.0,0.28,0.80859375
+에스와이스틸텍,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-37.65,-0.1999999999999999,0.8924242424242425
+우진아이엔에스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.11,0.3399999999999998,0.0427536231884058
+유바이오로직스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-3.18,-0.1999999999999999,0.9144385026737968
+유비쿼스홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.27,0.3399999999999998,0.4675585284280936
+제이준코스메틱,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-17.71,-0.1399999999999999,0.826605504587156
+퀄리타스반도체,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-17.41,-0.1999999999999999,0.7821428571428571
+콜마비앤에이치,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-10.59,-0.1399999999999999,0.878125
+포스코스틸리온,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.53,0.3999999999999999,0.8250773993808049
+한국금융지주우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.76,0.5199999999999998,0.8238866396761133
+현대엘리베이터,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.42,0.5199999999999998,0.8709677419354839
+한화투자증권우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-12.31,0.3399999999999998,0.8354978354978355
+현대코퍼레이션,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-12.82,-0.1399999999999999,0.8448275862068966
+교촌에프앤비,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-28.71,-0.1999999999999999,0.7993197278911565
+경동인베스트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-6.13,0.4599999999999999,0.8372881355932204
+금화피에스시,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.59,0.5799999999999998,0.8128834355828221
+대상홀딩스우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-35.86,-0.1399999999999999,0.7713675213675213
+대양전기공업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-12.12,-0.1999999999999999,0.8013392857142857
+덕산네오룩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-21.61,-0.1999999999999999,0.8205128205128205
+덕산테코피아,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-16.63,-0.1399999999999999,0.8734671125975474
+동원시스템즈,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-20.89,-0.1999999999999999,0.8598726114649682
+동일고무벨트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.58,0.5199999999999998,0.8238636363636365
+롯데관광개발,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.34,0.3999999999999999,0.823076923076923
+린드먼아시아,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-19.65,-0.1999999999999999,0.5872340425531914
+미래아이앤지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.48,0.4599999999999999,0.5230337078651686
+미래에셋생명,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.11,0.28,0.7866666666666666
+상아프론테크,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-10.41,-0.1999999999999999,0.835559265442404
+수산세보틱스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-8.97,-0.1999999999999999,0.8134328358208955
+아스테라시스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-6.0,0.3999999999999999,0.8534338358458962
+아모레퍼시픽,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.86,0.3399999999999998,0.8952095808383234
+아이씨티케이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.32,0.3399999999999998,0.8508883248730965
+아이에스티이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.81,0.4599999999999999,0.922740524781341
+아세아시멘트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-8.63,-0.1999999999999999,0.8568702290076335
+아이티아이즈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-29.77,0.2199999999999999,0.8043478260869565
+아이티센엔텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.18,0.3999999999999999,0.8355263157894737
+어보브반도체,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.44,0.3399999999999998,0.8097949886104784
+에코프로머티,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.0,0.3399999999999998,0.8224719101123595
+우리기술투자,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-28.25,-0.1999999999999999,0.8034398034398034
+제이아이테크,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.7,0.3999999999999999,0.8069306930693069
+일성아이에스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-16.29,-0.1999999999999999,0.8636363636363635
+종근당홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-9.07,-0.1399999999999999,0.8701923076923077
+카카오게임즈,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-14.22,-0.1399999999999999,0.8076335877862595
+코데즈컴바인,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.92,0.3399999999999998,0.2862068965517241
+코스모신소재,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-8.92,-0.1399999999999999,0.8373253493013972
+코오롱인더우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.54,0.3399999999999998,0.8108108108108109
+탑엔지니어링,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.11,0.4599999999999999,0.7853982300884955
+티사이언티픽,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-42.2,0.28,0.7528089887640449
+티케이케미칼,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.1,0.6399999999999999,0.9148745519713262
+파크시스템스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.37,0.3999999999999999,0.8356890459363957
+포스코퓨처엠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.03,0.3999999999999999,0.8366425992779782
+푸른저축은행,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.71,-0.1399999999999999,0.821608040201005
+하이드로리튬,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-16.92,0.4599999999999999,0.8288912579957356
+하이록코리아,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-11.96,-0.1999999999999999,0.7852564102564102
+한국정보인증,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-23.91,0.3999999999999999,0.8326693227091634
+한글과컴퓨터,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-17.51,0.4599999999999999,0.8252688172043011
+한미사이언스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.33,0.4599999999999999,0.8393854748603352
+한솔테크닉스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-15.75,-0.1999999999999999,0.8024193548387096
+한화손해보험,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.45,0.28,0.8523809523809525
+헥토파이낸셜,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.87,0.28,0.8747769185008922
+지앤비에스 에코,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-23.26,0.5199999999999998,0.8039999999999999
+고바이오랩,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.8,0.28,0.6012820512820513
+광주신세계,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.21,-0.1399999999999999,0.875
+국영지앤엠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.18,0.28,0.8689024390243902
+기산텔레콤,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-12.85,0.3999999999999999,0.821256038647343
+넥슨게임즈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.44,0.4599999999999999,0.7605633802816901
+녹십자웰빙,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.83,0.4599999999999999,0.7593582887700534
+누리플렉스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-17.83,-0.1999999999999999,0.8705673758865248
+대성하이텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.21,0.2199999999999999,0.8243831640058056
+더존비즈온,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.02,0.3399999999999998,-0.0507204610951008
+동아에스티,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-0.68,-0.1399999999999999,0.8134615384615385
+디지털대성,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.54,0.7,0.86875
+레이저옵텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-38.59,0.4599999999999999,0.6451776649746193
+롯데웰푸드,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-6.01,-0.1999999999999999,0.8972972972972972
+롯데케미칼,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.12,0.5199999999999998,0.8283333333333333
+미래반도체,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.19,0.5199999999999998,0.8557971014492753
+미래컴퍼니,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.75,-0.1399999999999999,0.8620426829268293
+미원홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-13.27,-0.1399999999999999,0.8214285714285714
+바이오니아,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-22.13,-0.1399999999999999,0.8080168776371308
+비트컴퓨터,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-5.53,-0.1399999999999999,0.8771551724137931
+사조씨푸드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.12,0.3399999999999998,0.2542613636363636
+삼아알미늄,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.73,0.4599999999999999,0.8216957605985037
+삼화페인트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.48,0.28,0.8241379310344827
+상상인증권,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.98,0.2199999999999999,0.8291316526610645
+세보엠이씨,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-5.66,-0.1399999999999999,0.8121951219512195
+소프트센우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.9,0.28,0.2947368421052632
+신성에스티,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-17.08,-0.1399999999999999,0.8391812865497076
+신성이엔지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.6,0.4599999999999999,0.829443447037702
+신영와코루,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.73,-0.1399999999999999,0.8725490196078431
+아모그린텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.38,0.5199999999999998,0.9272300469483568
+아비코전자,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.19,0.3999999999999999,0.86
+아이비김영,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-18.75,0.5199999999999998,0.8926767676767677
+애경케미칼,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-24.19,-0.1399999999999999,0.83984375
+에스트래픽,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.75,0.3999999999999999,0.7455357142857142
+에스티큐브,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-8.58,0.28,0.5405913978494623
+에이직랜드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-6.25,0.3999999999999999,0.8269896193771626
+에치에프알,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-37.19,0.3999999999999999,0.6121019108280255
+엑스페릭스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-42.6,-0.1999999999999999,0.8008658008658008
+엘오티베큠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.17,0.3399999999999998,0.8472622478386167
+위세아이텍,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-43.05,-0.1999999999999999,0.8439849624060151
+유니테스트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-27.88,-0.1999999999999999,0.8419642857142857
+유니퀘스트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.65,0.3399999999999998,0.8067010309278351
+이수앱지스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.82,0.3399999999999998,0.8076923076923077
+이엠앤아이,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-28.83,-0.1999999999999999,0.7876254180602007
+인텍플러스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.01,0.4599999999999999,0.865265760197775
+제이앤티씨,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.69,0.4599999999999999,0.8620836891545687
+제이엘케이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.3,0.4599999999999999,0.8686708860759493
+제이엠아이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.07,0.3999999999999999,0.7784810126582279
+조일알미늄,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-23.66,0.3999999999999999,0.5568093385214008
+진바이오텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.35,0.7,0.9263157894736842
+컴퍼니케이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.01,0.5199999999999998,0.7889125799573561
+케이바이오,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.63,0.3399999999999998,0.866412213740458
+코스텍시스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.13,0.3399999999999998,0.7909774436090226
+코스모화학,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-15.07,-0.1399999999999999,0.8364485981308412
+탑머티리얼,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-22.4,-0.1999999999999999,0.8311359026369168
+큐에스아이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.34,0.3399999999999998,0.8317901234567902
+펌텍코리아,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-8.88,0.3999999999999999,0.8181818181818181
+한국캐피탈,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-13.24,-0.1399999999999999,0.7894736842105263
+한미글로벌,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-12.78,0.4599999999999999,0.8308823529411765
+한국화장품,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.24,0.2199999999999999,0.0622549019607842
+한빛소프트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.59,0.28,0.875
+한솔홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-12.7,-0.1399999999999999,0.8571428571428572
+한온시스템,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-18.12,-0.1399999999999999,0.8191964285714286
+현대백화점,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.67,0.5199999999999998,0.7718631178707224
+황금에스티,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-6.06,-0.1399999999999999,0.8235294117647058
+계룡건설,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.81,0.4599999999999999,0.8697318007662835
+광동제약,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-6.21,-0.1399999999999999,0.794392523364486
+국도화학,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.9,0.4599999999999999,0.8101045296167247
+국제약품,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.12,0.3999999999999999,0.8571428571428572
+남광토건,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.24,0.3999999999999999,0.8194444444444444
+남해화학,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.29,0.3999999999999999,0.7788461538461539
+넥스트칩,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-51.56,0.3999999999999999,0.8132780082987552
+노바렉스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-37.22,-0.1399999999999999,0.814878892733564
+다보링크,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.82,0.2199999999999999,0.8086592178770949
+대동기어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.08,0.3999999999999999,0.8898891966759003
+대한방직,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-12.58,-0.1399999999999999,0.7910447761194029
+대한약품,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-11.66,-0.1999999999999999,0.8258426966292135
+동국제약,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-9.15,-0.1399999999999999,0.8541666666666666
+동방선기,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.54,0.4599999999999999,0.8218623481781377
+동아지질,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.26,0.5799999999999998,0.8240740740740741
+동양생명,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-18.41,0.3399999999999998,0.8405405405405405
+동인기연,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-14.36,-0.1399999999999999,0.8574879227053139
+두산밥캣,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-0.13,0.1599999999999999,0.8153409090909091
+디이엔티,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-24.48,-0.1999999999999999,0.8207317073170732
+디케이락,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.51,0.28,0.2849056603773585
+마녀공장,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-29.3,0.3999999999999999,0.0486772486772486
+메가터치,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-6.95,0.2199999999999999,0.8290816326530612
+매일유업,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-8.04,-0.1399999999999999,0.8666666666666667
+메쎄이상,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.29,0.28,0.809931506849315
+메디톡스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-27.0,0.4599999999999999,0.8275862068965517
+메타랩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.13,0.3399999999999998,0.7921006944444444
+모두투어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.61,0.7,0.9157706093189965
+비씨엔씨,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.53,0.3999999999999999,0.5968503937007874
+브리지텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-6.61,0.5799999999999998,0.8992537313432836
+비아트론,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-9.41,-0.1999999999999999,0.8494423791821561
+비에이치,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-8.44,-0.1399999999999999,0.8475103734439834
+빛샘전자,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.7,0.1599999999999999,0.2431192660550458
+사조산업,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.32,0.5199999999999998,0.8665048543689321
+삼보판지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.85,-0.1999999999999999,0.8658536585365854
+삼성증권,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.61,0.4599999999999999,0.8293650793650793
+삼성카드,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-5.28,-0.1399999999999999,0.859375
+삼양통상,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.21,0.3999999999999999,0.8134328358208955
+삼일제약,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-13.76,-0.1999999999999999,0.8551532033426184
+삼정펄프,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-3.06,-0.1399999999999999,0.8
+삼호개발,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.51,0.5799999999999998,0.2644628099173554
+새로닉스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-16.44,-0.1999999999999999,0.7865013774104683
+서울가스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.97,-0.1399999999999999,0.8316326530612245
+서울옥션,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-16.99,0.28,0.7972222222222222
+성우전자,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.86,0.28,0.8233333333333334
+아나패스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-15.03,-0.1399999999999999,0.6184713375796178
+아이엠티,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.61,0.28,0.8214285714285714
+아이센스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-12.92,-0.1399999999999999,0.8786127167630058
+알파녹스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-46.08,0.5199999999999998,0.882303132938188
+에스씨디,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-13.7,-0.1999999999999999,0.8282828282828283
+에어부산,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-21.44,0.4599999999999999,0.7806691449814127
+에이피알,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.84,0.5199999999999998,0.8560606060606061
+에이프로,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-21.14,-0.1999999999999999,0.8267441860465117
+엑스큐어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-33.91,0.4599999999999999,0.8456614509246088
+엠플러스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-19.67,-0.1399999999999999,0.8538062283737025
+엠에스씨,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-28.63,-0.1399999999999999,0.8230088495575221
+와이씨켐,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-8.63,0.3399999999999998,0.856670341786108
+와이즈넛,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-21.49,-0.1999999999999999,0.8940217391304348
+와이엠티,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-16.7,-0.1999999999999999,0.8155339805825244
+웨이버스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-24.43,-0.1999999999999999,0.607843137254902
+원일특강,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-3.65,-0.1399999999999999,0.8144654088050314
+유비케어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.04,0.4599999999999999,0.8055555555555556
+유아이엘,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.26,0.3399999999999998,0.8877551020408163
+유티아이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.9,-0.1999999999999999,0.8184523809523809
+이건산업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-21.7,-0.1999999999999999,0.8891752577319587
+인크로스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-21.13,-0.1399999999999999,0.8454545454545455
+일신방직,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-2.83,-0.1999999999999999,0.8518518518518519
+일진전기,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.93,0.5199999999999998,0.269090909090909
+젝시믹스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-17.28,0.5199999999999998,0.8830645161290323
+조선선재,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.31,0.76,0.9152542372881356
+지아이텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.86,0.5199999999999998,0.8681318681318682
+진시스템,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-51.78,0.3999999999999999,0.8138185654008439
+진흥기업,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.87,0.28,0.8466666666666667
+케이웨더,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.77,0.3399999999999998,0.8102189781021898
+케이엔솔,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.88,0.4599999999999999,0.9011627906976744
+코나아이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.3,0.3399999999999998,0.8688760806916427
+코리안리,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-8.76,-0.1999999999999999,0.6608247422680412
+코아시아,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-18.41,0.3399999999999998,0.8438914027149321
+테이팩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-10.53,-0.1999999999999999,0.8168202764976958
+토니모리,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-24.09,0.3399999999999998,0.7888446215139442
+특수건설,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.01,0.5199999999999998,0.8677248677248677
+파인엠텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-22.99,0.28,0.5942857142857143
+풍원정밀,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.21,0.2199999999999999,0.2523885350318472
+피코그램,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-30.41,-0.1999999999999999,0.8
+피델릭스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-16.01,-0.1399999999999999,0.8121387283236994
+한국콜마,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-31.57,0.5799999999999998,0.853448275862069
+한솔제지,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.31,-0.1399999999999999,0.8368421052631578
+한양증권,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.09,0.4599999999999999,0.8330645161290322
+한화비전,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.66,0.3399999999999998,0.8367952522255193
+한전산업,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.11,0.4599999999999999,0.8269736842105263
+한화생명,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.65,0.2199999999999999,0.7984496124031008
+호텔신라,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.95,0.5199999999999998,0.7675438596491229
+홈캐스트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-26.16,-0.1999999999999999,0.8376524390243902
+휴메딕스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-36.88,-0.1399999999999999,0.7561983471074379
+흥아해운,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.19,0.5199999999999998,0.7553444180522565
+광전자,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.76,0.4599999999999999,0.8365853658536585
+네이블,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.88,0.28,0.0983870967741936
+네패스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.28,0.3999999999999999,0.8397932816537468
+넷마블,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-23.95,0.4599999999999999,0.7582781456953642
+넥써쓰,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-42.43,0.3399999999999998,0.7230392156862745
+디어유,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-39.12,0.28,0.7919463087248322
+링크드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-19.93,0.3999999999999999,0.8274231678486997
+마니커,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-21.79,-0.1999999999999999,0.7578125
+메카로,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.0,0.3399999999999998,0.5660944206008585
+모헨즈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-16.39,0.3399999999999998,0.8131067961165048
+미투온,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-37.93,0.4599999999999999,0.828006088280061
+바른손,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-28.72,-0.1399999999999999,0.8122171945701357
+브이엠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.17,0.3399999999999998,0.5913165266106443
+비투엔,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-25.15,0.3999999999999999,0.740234375
+비엠티,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-9.06,-0.1999999999999999,0.7446483180428134
+빙그레,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-23.18,0.3999999999999999,-0.0741935483870967
+샌즈랩,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-23.79,-0.1399999999999999,0.7967625899280576
+새빗켐,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.57,0.4599999999999999,0.8382352941176471
+셀비온,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.9,0.4599999999999999,0.8448275862068966
+삼천리,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.1,0.5799999999999998,0.8702770780856424
+아바코,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-6.02,-0.1999999999999999,0.9360313315926893
+아스트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.25,0.28,-0.0181818181818181
+앤씨앤,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.97,0.3999999999999999,0.8641025641025641
+에스원,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.39,0.5799999999999998,0.8200934579439252
+엔텔스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-8.03,0.3999999999999999,0.8739130434782608
+와이솔,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.58,0.3999999999999999,0.5489583333333334
+월덱스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.06,0.3999999999999999,0.8841463414634146
+위지트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.27,0.3399999999999998,0.8133971291866029
+유니드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.97,0.6399999999999999,0.886255924170616
+유니셈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.7,0.28,0.8021505376344087
+이엔셀,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.13,0.3999999999999999,0.8296432964329644
+이마트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.43,0.5799999999999998,0.8828125
+제닉스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-18.56,-0.1999999999999999,0.4881944444444444
+제이오,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.44,0.4599999999999999,0.8461538461538461
+지씨셀,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-1.18,-0.1399999999999999,0.8264840182648402
+케이엠,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-1.77,-0.18,0.2341269841269841
+코웨이,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-24.29,-0.1399999999999999,0.8466257668711656
+테크윙,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-26.32,0.3399999999999998,0.536963190184049
+티엘비,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-20.76,-0.1399999999999999,0.8023255813953488
+파워넷,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.7,0.3999999999999999,0.88125
+파라텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.65,0.3999999999999999,0.9458333333333332
+팜스코,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.03,0.3999999999999999,0.8622950819672132
+퍼스텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.71,0.3999999999999999,0.8470066518847007
+휴니드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.53,0.3999999999999999,0.817741935483871
+휴비츠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.27,0.2199999999999999,0.7966507177033493
+휴스틸,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-25.05,0.5199999999999998,0.8401639344262295
+닷밀,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-20.55,0.4599999999999999,0.7993827160493827
+다날,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-15.8,0.3999999999999999,0.862862010221465
+대덕,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.27,-0.1399999999999999,0.8822222222222222
+대동,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-7.28,0.4599999999999999,0.8130699088145896
+동양,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.09,0.3999999999999999,0.8454935622317596
+두산,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.14,0.4599999999999999,0.7790973871733967
+바텍,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-14.25,-0.1399999999999999,0.8203463203463204
+미코,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.37,0.4599999999999999,0.931496062992126
+삼일,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-33.87,-0.1999999999999999,0.8148148148148148
+성우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-18.17,0.2199999999999999,0.8728070175438597
+선광,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.99,-0.1399999999999999,0.8411633109619687
+솔본,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.92,0.4599999999999999,0.7982456140350878
+심텍,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-4.6,-0.1399999999999999,0.8636363636363635
+씨젠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-17.35,0.5199999999999998,0.8567567567567568
+아톤,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-24.1,0.3999999999999999,0.8368794326241136
+엔켐,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-8.0,0.4599999999999999,0.8394736842105263
+안랩,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-20.66,0.3999999999999999,0.8071895424836601
+엠로,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-29.7,0.3399999999999998,0.8501577287066246
+워트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-13.02,0.3399999999999998,0.8289473684210527
+우성,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-6.98,-0.1999999999999999,0.8803680981595092
+원준,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.12,0.3999999999999999,0.8689138576779026
+원텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-27.08,0.5199999999999998,0.8195187165775402
+윈팩,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.52,0.4599999999999999,0.7967032967032968
+제닉,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-45.64,-0.1399999999999999,0.8546473302570863
+캐프,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-3.06,0.3999999999999999,0.8916666666666666
+쿠콘,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-22.77,0.2199999999999999,0.8209876543209876
+퓨릿,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.13,0.4599999999999999,0.8044117647058824
+핑거,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-15.17,-0.1399999999999999,0.8117206982543641
+하림,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.64,0.4599999999999999,0.8555555555555556
+후성,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.13,-0.1999999999999999,0.8283582089552239
+DL이앤씨,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.37,0.3999999999999999,0.8478260869565217
+DSC인베스트먼트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.28,0.28,0.832409972299169
+E1,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-4.65,-0.1399999999999999,0.8607843137254902
+F&F홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-14.96,-0.1999999999999999,0.8207207207207208
+GS피앤엘,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-11.75,-0.1999999999999999,0.8488120950323974
+HDC현대산업개발,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-17.09,0.28,0.7849462365591398
+GST,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-2.39,0.3999999999999999,0.7854166666666667
+HB테크놀러지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.14,0.3399999999999998,0.8602430555555556
+신세계 I&C,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-10.3,0.5199999999999998,0.8608786610878661
+JW홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-0.68,-0.1999999999999999,0.8717948717948718
+KCC글라스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-22.33,-0.1999999999999999,0.8188405797101449
+KCTC,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-4.69,0.28,0.7827715355805244
+KEC,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-9.36,0.3399999999999998,0.8231292517006803
+KG모빌리언스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-6.97,-0.1399999999999999,0.8900602409638554
+KG에코솔루션,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.21,-0.1399999999999999,0.8554502369668247
+KG이니시스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-2.68,-0.1999999999999999,0.9129692832764504
+KSS해운,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.49,-0.1399999999999999,0.8814432989690721
+KT&G,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-0.58,0.4599999999999999,0.8624161073825504
+LB인베스트먼트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-1.0,-0.1999999999999999,0.8654708520179372
+LK삼양,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-30.44,0.4599999999999999,0.8769968051118211
+LX홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-12.48,0.6399999999999999,0.8535031847133758
+LX세미콘,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-16.64,0.5199999999999998,0.8130434782608695
+NAVER,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-6.72,0.3999999999999999,0.771689497716895
+NE능률,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-50.46,0.3999999999999999,0.7733537519142419
+NEW,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-14.24,0.4599999999999999,0.7927927927927928
+NHN,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-11.03,0.3399999999999998,0.7440476190476191
+PI첨단소재,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-12.34,-0.1399999999999999,0.8471177944862156
+PKC,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-7.56,-0.1399999999999999,0.8325991189427313
+SBI인베스트먼트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-8.35,0.3399999999999998,0.8159203980099503
+SG&G,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-9.95,-0.1999999999999999,0.8223140495867769
+SKC,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-5.64,0.4599999999999999,0.823943661971831
+SK이노베이션,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-16.3,-0.1999999999999999,0.7825581395348837
+SNT에너지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM,Bull Quiet,-24.17,0.3399999999999998,0.8098455598455598
+SOOP,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-24.16,-0.1399999999999999,0.821917808219178
+STX그린로지스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-38.61,-0.1999999999999999,0.7662037037037037
+TCC스틸,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-29.88,-0.1399999999999999,0.8393939393939394
+TS인베스트먼트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM,Ranging,-26.86,-0.1399999999999999,0.8172147001934236

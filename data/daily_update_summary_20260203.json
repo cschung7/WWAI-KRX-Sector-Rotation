@@ -1,0 +1,76 @@
+{
+  "date": "20260203",
+  "data_source_date": "2026-02-03",
+  "total_tickers": 694,
+  "high_priority": 227,
+  "medium_priority": 467,
+  "low_priority": 0,
+  "stage_breakdown": {
+    "Healthy Correction": 273,
+    "Super Trend": 223,
+    "Burgeoning": 181,
+    "Early Breakout": 17
+  },
+  "top_10": [
+    {
+      "ticker": "코오롱",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "대모",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "아주IB투자",
+      "score": 79,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "미래에셋벤처투자",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "스피어",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "유신",
+      "score": 78,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "켄코아에어로스페이스",
+      "score": 77,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "미래에셋증권",
+      "score": 77,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "나노팀",
+      "score": 77,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "GS리테일",
+      "score": 76,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    }
+  ]
+}
