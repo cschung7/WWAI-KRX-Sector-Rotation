@@ -319,8 +319,20 @@ async def get_supertrend_candidates(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# Daily Summary from AutoML Rankings
-RANKINGS_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/Backtest/Rankings")
+# Daily Summary - try local data/ first (Railway), then NAS (local dev)
+LOCAL_RANKINGS_DIR = Path(__file__).parent.parent.parent.parent / "data"
+NAS_RANKINGS_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/Backtest/Rankings")
+
+
+def get_daily_summary_files():
+    """Find daily summary files, checking local first then NAS"""
+    # Try local data/ folder first (Railway deployment)
+    local_files = sorted(glob.glob(str(LOCAL_RANKINGS_DIR / "daily_summary_*.json")))
+    if local_files:
+        return local_files
+    # Fallback to NAS (local development)
+    nas_files = sorted(glob.glob(str(NAS_RANKINGS_DIR / "daily_summary_*.json")))
+    return nas_files
 
 
 @router.get("/daily-summary")
@@ -333,10 +345,13 @@ async def get_daily_summary(
     """
     try:
         if date:
-            summary_file = RANKINGS_DIR / f"daily_summary_{date}.json"
+            # Check local first, then NAS
+            summary_file = LOCAL_RANKINGS_DIR / f"daily_summary_{date}.json"
+            if not summary_file.exists():
+                summary_file = NAS_RANKINGS_DIR / f"daily_summary_{date}.json"
         else:
             # Find latest
-            summary_files = sorted(glob.glob(str(RANKINGS_DIR / "daily_summary_*.json")))
+            summary_files = get_daily_summary_files()
             if not summary_files:
                 raise HTTPException(status_code=404, detail="No daily summary data found")
             summary_file = Path(summary_files[-1])
