@@ -16,6 +16,12 @@ import json
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 from config import DATA_DIR
 
+# Debug: Print DATA_DIR at module load time
+print(f"[breakout module] DATA_DIR at import: {DATA_DIR}", flush=True)
+print(f"[breakout module] DATA_DIR exists: {DATA_DIR.exists()}", flush=True)
+_csv_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
+print(f"[breakout module] CSV files found at import: {_csv_files}", flush=True)
+
 router = APIRouter()
 
 # DB path for theme lookup
