@@ -18,7 +18,8 @@ from config import DATA_DIR
 
 router = APIRouter()
 
-# Data paths
+# Data paths - local first, NAS fallback
+LOCAL_THEME_CSV = DATA_DIR / "network_theme_data.csv"
 NAVER_THEME_CSV = Path("/mnt/nas/WWAI/NaverTheme/webapp/backend/data/db_final.csv")
 FIEDLER_WEEKLY_CSV = DATA_DIR / "naver_themes_weekly_fiedler_2025.csv"
 SIGNAL_PROB_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/predictedProbability")
@@ -31,12 +32,19 @@ _all_themes_cache = None
 
 
 def load_theme_data():
-    """Load and cache NaverTheme data"""
+    """Load and cache NaverTheme data - local first, NAS fallback"""
     global _theme_cache
     if _theme_cache is None:
-        if not NAVER_THEME_CSV.exists():
+        # Try local file first (for Railway deployment)
+        if LOCAL_THEME_CSV.exists():
+            print(f"[network] Loading from local: {LOCAL_THEME_CSV}")
+            _theme_cache = pd.read_csv(LOCAL_THEME_CSV)
+        # Fallback to NAS
+        elif NAVER_THEME_CSV.exists():
+            print(f"[network] Loading from NAS: {NAVER_THEME_CSV}")
+            _theme_cache = pd.read_csv(NAVER_THEME_CSV)
+        else:
             raise HTTPException(status_code=404, detail="NaverTheme data not found")
-        _theme_cache = pd.read_csv(NAVER_THEME_CSV)
     return _theme_cache
 
 
