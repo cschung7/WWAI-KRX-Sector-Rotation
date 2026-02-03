@@ -743,10 +743,6 @@
             const increasing = sorted.slice(0, 5);  // Top 5
             const decreasing = sorted.filter(t => (t.fiedler_change || 0) < 0);
 
-            // If no negative changes, show bottom 5 (lowest positive)
-            const bottom5 = decreasing.length > 0 ? decreasing.slice(0, 5) : sorted.slice(-5).reverse();
-            const bottomLabel = decreasing.length > 0 ? '' : ' (최소 상승)';
-
             document.getElementById('increasingList').innerHTML = increasing.map(t => `
                 <li>
                     <span class="mover-theme">${t.theme}</span>
@@ -754,24 +750,26 @@
                 </li>
             `).join('');
 
-            // Update decreasing section header if no negatives
-            const decreasingHeader = document.querySelector('.movers-grid .section:last-child h2');
-            if (decreasingHeader && decreasing.length === 0) {
-                decreasingHeader.innerHTML = currentLang === 'ko' ? '군집성 최소 상승 TOP 5' : 'Top 5 Lowest Increase';
-            }
-
-            document.getElementById('decreasingList').innerHTML = bottom5.map(t => {
-                const change = t.fiedler_change || 0;
-                const pct = t.pct_change || 0;
-                const colorClass = change < 0 ? 'negative' : 'positive';
-                const sign = change >= 0 ? '+' : '';
-                return `
-                    <li>
-                        <span class="mover-theme">${t.theme}</span>
-                        <span class="mover-slope ${colorClass}">${sign}${change.toFixed(2)} (${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%)</span>
+            // Show "No data" if no declining themes exist
+            if (decreasing.length === 0) {
+                const noDataMsg = currentLang === 'ko' ? '해당 사항 없음' : 'No data';
+                document.getElementById('decreasingList').innerHTML = `
+                    <li style="color: #94a3b8; font-style: italic; justify-content: center;">
+                        ${noDataMsg}
                     </li>
                 `;
-            }).join('');
+            } else {
+                document.getElementById('decreasingList').innerHTML = decreasing.slice(0, 5).map(t => {
+                    const change = t.fiedler_change || 0;
+                    const pct = t.pct_change || 0;
+                    return `
+                        <li>
+                            <span class="mover-theme">${t.theme}</span>
+                            <span class="mover-slope negative">${change.toFixed(2)} (${pct.toFixed(0)}%)</span>
+                        </li>
+                    `;
+                }).join('');
+            }
         }
 
         function setView(view) {
