@@ -202,7 +202,27 @@ Candidates: 694 tickers
 
 ---
 
-## 8. Fix: Cohesion Page - Empty Declining Themes Section
+## 8. Fix: Network Graph Page - NaverTheme Data Not Found
+
+**Problem**: theme-graph.html showed "NaverTheme data not found" error on Railway because it looked for `/mnt/nas/WWAI/NaverTheme/webapp/backend/data/db_final.csv` which doesn't exist on Railway.
+
+**Solution**: Created local data file and added local-first fallback logic.
+
+**Files Changed**:
+- Created `data/network_theme_data.csv` (2,924 tickers with themes, signals)
+- `dashboard/backend/routers/network.py`
+  - Added `LOCAL_THEME_CSV` path
+  - Updated `load_theme_data()` with local-first, NAS fallback
+
+**Data Columns**: `tickers`, `market`, `name`, `naverTheme`, `-1`, `0`, `1`, `mmt`
+
+**Commits**:
+- `Fix network graph: add local theme data for Railway`
+- `Add debug info to network data loading`
+
+---
+
+## 9. Fix: Cohesion Page - Empty Declining Themes Section
 
 **Problem**: "군집성 하락 TOP 5" section showed "최소 상승" when all themes had positive fiedler_change.
 
