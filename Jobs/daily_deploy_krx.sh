@@ -167,7 +167,7 @@ Auto-deployed via daily_deploy_krx.sh
         log ""
         log "Railway is now building and deploying..."
         log "⏱  Build time: ~2-3 minutes"
-        log "🌐 URL: https://wwai-krx-sector-rotation-production.up.railway.app"
+        log "🌐 URL: https://web-production-e5d7.up.railway.app"
     fi
 else
     log_section "⏭️  Phase 4: Skipped (--skip-deploy)"
@@ -193,5 +193,5 @@ fi
 
 log ""
 log "${YELLOW}Verify deployment:${NC}"
-log "  curl https://wwai-krx-sector-rotation-production.up.railway.app/api/overview/summary"
+log "  curl https://web-production-e5d7.up.railway.app/api/sector-rotation/themes"
 log ""
