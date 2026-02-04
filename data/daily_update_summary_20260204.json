@@ -1,0 +1,76 @@
+{
+  "date": "20260204",
+  "data_source_date": "2026-02-04",
+  "total_tickers": 735,
+  "high_priority": 236,
+  "medium_priority": 499,
+  "low_priority": 0,
+  "stage_breakdown": {
+    "Healthy Correction": 244,
+    "Burgeoning": 238,
+    "Super Trend": 225,
+    "Early Breakout": 28
+  },
+  "top_10": [
+    {
+      "ticker": "대성산업",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "대모",
+      "score": 81,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "코오롱",
+      "score": 80,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "나노",
+      "score": 79,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "아주IB투자",
+      "score": 79,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "미래에셋벤처투자",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "신영와코루",
+      "score": 78,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "스피어",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "미래에셋증권",
+      "score": 77,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "이화산업",
+      "score": 77,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    }
+  ]
+}
