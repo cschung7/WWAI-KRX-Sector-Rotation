@@ -161,6 +161,14 @@ async def cohesion_page():
         return FileResponse(file_path)
     raise HTTPException(status_code=404, detail="Page not found")
 
+@app.get("/chat.html")
+async def chat_page():
+    """Serve AI chat page"""
+    file_path = FRONTEND_DIR / "chat.html"
+    if file_path.exists():
+        return FileResponse(file_path)
+    raise HTTPException(status_code=404, detail="Page not found")
+
 @app.get("/chat-widget.js")
 async def chat_widget_js():
     """Serve chat widget JavaScript"""
