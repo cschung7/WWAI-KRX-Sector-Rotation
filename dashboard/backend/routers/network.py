@@ -294,11 +294,16 @@ async def get_theme_stocks(
             bullish = safe_float(row.get('1', 0))
             total_score = safe_float(row.get('total_score', 0))
 
-            # Use db_final.csv values directly (more reliable than predictedProbability files)
-            # Convert 0-1 scale to 0-100 percentage
-            buy_pct = bullish * 100
-            sell_pct = bearish * 100
-            neutral_pct = neutral * 100
+            # Check for placeholder (0,0,1) in db_final.csv → use _pp.csv instead
+            if bearish == 0 and neutral == 0 and bullish == 1.0:
+                pp = get_signal_probability(stock_name)
+                buy_pct = pp["buy"]
+                sell_pct = pp["sell"]
+                neutral_pct = pp["neutral"]
+            else:
+                buy_pct = bullish * 100
+                sell_pct = bearish * 100
+                neutral_pct = neutral * 100
 
             # Determine signal based on buy probability
             if buy_pct >= 70:
@@ -429,9 +434,14 @@ async def search_all(
         stocks = []
         for _, row in stock_matches.head(limit).iterrows():
             stock_name = row['name']
-            # Use db_final.csv values directly (0-1 scale to 0-100%)
+            bearish = safe_float(row.get('-1', 0))
+            neutral_val = safe_float(row.get('0', 0))
             bullish = safe_float(row.get('1', 0))
-            buy_pct = bullish * 100
+            if bearish == 0 and neutral_val == 0 and bullish == 1.0:
+                pp = get_signal_probability(stock_name)
+                buy_pct = pp["buy"]
+            else:
+                buy_pct = bullish * 100
             stocks.append({
                 "name": stock_name,
                 "ticker": str(row.get('tickers', '')),
@@ -507,9 +517,14 @@ async def get_graph_data(
                 return
 
             row = stock_data.iloc[0]
-            # Use db_final.csv buy probability (0-1 scale to 0-100%)
+            bearish = safe_float(row.get('-1', 0))
+            neutral_val = safe_float(row.get('0', 0))
             bullish = safe_float(row.get('1', 0))
-            buy_pct = bullish * 100
+            if bearish == 0 and neutral_val == 0 and bullish == 1.0:
+                pp = get_signal_probability(name)
+                buy_pct = pp["buy"]
+            else:
+                buy_pct = bullish * 100
 
             # Determine signal based on buy percentage
             if buy_pct >= 70:
