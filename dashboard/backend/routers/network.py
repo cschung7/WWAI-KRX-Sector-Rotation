@@ -23,11 +23,13 @@ LOCAL_THEME_CSV = DATA_DIR / "network_theme_data.csv"
 NAVER_THEME_CSV = Path("/mnt/nas/WWAI/NaverTheme/webapp/backend/data/db_final.csv")
 FIEDLER_WEEKLY_CSV = DATA_DIR / "naver_themes_weekly_fiedler_2025.csv"
 SIGNAL_PROB_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/predictedProbability")
+PRICE_DATA_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/KRXNOTTRAINED")
 
 # Cache for performance
 _theme_cache = None
 _fiedler_cache = None
 _signal_prob_cache = {}
+_signal_score_cache = {}
 _all_themes_cache = None
 
 
@@ -95,6 +97,63 @@ def get_signal_probability(stock_name: str) -> dict:
         pass
 
     return result
+
+
+def compute_signal_score(stock_name: str) -> dict:
+    """Compute signal score matching stock chart app formula (cached)"""
+    global _signal_score_cache
+
+    if stock_name in _signal_score_cache:
+        return _signal_score_cache[stock_name]
+
+    default = {"momentum": 0, "trend": 0, "volatility": 0, "overall": 0}
+    try:
+        price_file = PRICE_DATA_DIR / f"{stock_name}.csv"
+        if not price_file.exists():
+            _signal_score_cache[stock_name] = default
+            return default
+
+        df = pd.read_csv(price_file)
+        if len(df) < 15:
+            _signal_score_cache[stock_name] = default
+            return default
+
+        closes = df['close'].values
+
+        # RSI(14) - simple SMA method (same as stock chart)
+        period = 14
+        changes = np.diff(closes[-(period + 1):])
+        gains = np.sum(np.maximum(changes, 0)) / period
+        losses = np.sum(np.maximum(-changes, 0)) / period
+        rs = gains / losses if losses > 0 else 100
+        rsi = 100 - 100 / (1 + rs)
+
+        # 52-week high/low (last 252 trading days)
+        recent = df.tail(252)
+        high_52w = recent['high'].max()
+        low_52w = recent['low'].min()
+        current_price = closes[-1]
+
+        from_high = ((current_price - high_52w) / high_52w) * 100
+        from_low = ((current_price - low_52w) / low_52w) * 100
+
+        # Signal scores (exact same formula as stock chart)
+        momentum = min(100, max(0, rsi))
+        trend = min(100, max(0, 50 + from_high + from_low / 2))
+        volatility = min(100, max(0, 100 - abs(from_high)))
+        overall = round((momentum + trend + volatility) / 3)
+
+        result = {
+            "momentum": round(momentum),
+            "trend": round(trend),
+            "volatility": round(volatility),
+            "overall": overall
+        }
+        _signal_score_cache[stock_name] = result
+        return result
+    except Exception:
+        _signal_score_cache[stock_name] = default
+        return default
 
 
 def get_all_themes():
@@ -289,28 +348,18 @@ async def get_theme_stocks(
         stocks = []
         for _, row in theme_stocks.head(limit).iterrows():
             stock_name = row['name']
-            bearish = safe_float(row.get('-1', 0))
-            neutral = safe_float(row.get('0', 0))
-            bullish = safe_float(row.get('1', 0))
             total_score = safe_float(row.get('total_score', 0))
 
-            # Check for placeholder (0,0,1) in db_final.csv → use _pp.csv instead
-            if bearish == 0 and neutral == 0 and bullish == 1.0:
-                pp = get_signal_probability(stock_name)
-                buy_pct = pp["buy"]
-                sell_pct = pp["sell"]
-                neutral_pct = pp["neutral"]
-            else:
-                buy_pct = bullish * 100
-                sell_pct = bearish * 100
-                neutral_pct = neutral * 100
+            # Compute signal score (same formula as stock chart app)
+            ss = compute_signal_score(stock_name)
+            score = ss["overall"]
 
-            # Determine signal based on buy probability
-            if buy_pct >= 70:
+            # Determine signal based on overall score
+            if score >= 70:
                 signal = "strong_buy"
-            elif buy_pct >= 50:
+            elif score >= 50:
                 signal = "buy"
-            elif buy_pct >= 30:
+            elif score >= 30:
                 signal = "neutral"
             else:
                 signal = "avoid"
@@ -324,15 +373,11 @@ async def get_theme_stocks(
                 "name": stock_name,
                 "ticker": str(row.get('tickers', '')),
                 "market": str(row.get('market', '') if not pd.isna(row.get('market', '')) else ''),
-                "signal_probability": {
-                    "sell": safe_round(sell_pct, 1),
-                    "neutral": safe_round(neutral_pct, 1),
-                    "buy": safe_round(buy_pct, 1)
-                },
+                "signal_score": ss,
                 "total_score": safe_round(total_score, 3),
                 "momentum": str(momentum),
                 "signal": signal,
-                "buy_pct": safe_round(buy_pct, 1)
+                "buy_pct": score
             })
 
         return {
@@ -434,19 +479,12 @@ async def search_all(
         stocks = []
         for _, row in stock_matches.head(limit).iterrows():
             stock_name = row['name']
-            bearish = safe_float(row.get('-1', 0))
-            neutral_val = safe_float(row.get('0', 0))
-            bullish = safe_float(row.get('1', 0))
-            if bearish == 0 and neutral_val == 0 and bullish == 1.0:
-                pp = get_signal_probability(stock_name)
-                buy_pct = pp["buy"]
-            else:
-                buy_pct = bullish * 100
+            ss = compute_signal_score(stock_name)
             stocks.append({
                 "name": stock_name,
                 "ticker": str(row.get('tickers', '')),
                 "market": row.get('market', ''),
-                "buy_pct": safe_round(buy_pct, 1),
+                "buy_pct": ss["overall"],
                 "type": "stock"
             })
 
@@ -517,23 +555,17 @@ async def get_graph_data(
                 return
 
             row = stock_data.iloc[0]
-            bearish = safe_float(row.get('-1', 0))
-            neutral_val = safe_float(row.get('0', 0))
-            bullish = safe_float(row.get('1', 0))
-            if bearish == 0 and neutral_val == 0 and bullish == 1.0:
-                pp = get_signal_probability(name)
-                buy_pct = pp["buy"]
-            else:
-                buy_pct = bullish * 100
+            ss = compute_signal_score(name)
+            score = ss["overall"]
 
-            # Determine signal based on buy percentage
-            if buy_pct >= 70:
+            # Determine signal based on overall score
+            if score >= 70:
                 signal = "strong_buy"
                 color = "#059669"  # Dark Green
-            elif buy_pct >= 50:
+            elif score >= 50:
                 signal = "buy"
                 color = "#10b981"  # Green
-            elif buy_pct >= 30:
+            elif score >= 30:
                 signal = "neutral"
                 color = "#f59e0b"  # Yellow
             else:
@@ -546,7 +578,8 @@ async def get_graph_data(
                 "type": "stock",
                 "ticker": str(row.get('tickers', '')),
                 "signal": signal,
-                "score": safe_round(buy_pct, 1),
+                "score": score,
+                "signal_score": ss,
                 "size": 45 if is_center else 30,
                 "color": color,
                 "isCenter": is_center

@@ -735,22 +735,22 @@
                     <div class="legend-color" style="background: #ef4444"></div>
                     <span data-i18n="legend.weak">Weak (<0.5)</span>
                 </div>
-                <div class="legend-title" style="margin-top: 0.75rem;" data-i18n="legend.stockSignal">Stock Signal (Buy%)</div>
+                <div class="legend-title" style="margin-top: 0.75rem;" data-i18n="legend.stockSignal">Signal Score</div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #059669; border-radius: 50%;"></div>
-                    <span data-i18n="legend.strongBuy">Strong Buy (≥70%)</span>
+                    <span data-i18n="legend.strongBuy">Strong (≥70)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #10b981; border-radius: 50%;"></div>
-                    <span data-i18n="legend.buy">Buy (50-70%)</span>
+                    <span data-i18n="legend.buy">Good (50-70)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #f59e0b; border-radius: 50%;"></div>
-                    <span data-i18n="legend.neutral">Neutral (30-50%)</span>
+                    <span data-i18n="legend.neutral">Neutral (30-50)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background: #ef4444; border-radius: 50%;"></div>
-                    <span data-i18n="legend.avoid">Avoid (<30%)</span>
+                    <span data-i18n="legend.avoid">Weak (&lt;30)</span>
                 </div>
             </div>
         </div>
@@ -805,11 +805,11 @@
                 'legend.strong': '강함 (1-3)',
                 'legend.moderate': '보통 (0.5-1)',
                 'legend.weak': '약함 (<0.5)',
-                'legend.stockSignal': '매수 시그널 (Buy%)',
-                'legend.strongBuy': '적극 매수 (≥70%)',
-                'legend.buy': '매수 (50-70%)',
-                'legend.neutral': '중립 (30-50%)',
-                'legend.avoid': '회피 (<30%)',
+                'legend.stockSignal': '시그널 스코어',
+                'legend.strongBuy': '강함 (≥70)',
+                'legend.buy': '양호 (50-70)',
+                'legend.neutral': '중립 (30-50)',
+                'legend.avoid': '약함 (<30)',
                 'badge.stock': '종목',
                 'badge.theme': '테마'
             },
@@ -849,11 +849,11 @@
                 'legend.strong': 'Strong (1-3)',
                 'legend.moderate': 'Moderate (0.5-1)',
                 'legend.weak': 'Weak (<0.5)',
-                'legend.stockSignal': 'Stock Signal (Buy%)',
-                'legend.strongBuy': 'Strong Buy (≥70%)',
-                'legend.buy': 'Buy (50-70%)',
-                'legend.neutral': 'Neutral (30-50%)',
-                'legend.avoid': 'Avoid (<30%)',
+                'legend.stockSignal': 'Signal Score',
+                'legend.strongBuy': 'Strong (≥70)',
+                'legend.buy': 'Good (50-70)',
+                'legend.neutral': 'Neutral (30-50)',
+                'legend.avoid': 'Weak (<30)',
                 'badge.stock': 'Stock',
                 'badge.theme': 'Theme'
             }
@@ -995,12 +995,12 @@
             return 'avoid';
         }
 
-        function getSignalText(signal, buyPct) {
-            const pct = buyPct || 0;
-            if (signal === 'strong_buy' || pct >= 70) return `BUY ${pct.toFixed(0)}%`;
-            if (signal === 'buy' || pct >= 50) return `BUY ${pct.toFixed(0)}%`;
-            if (signal === 'neutral' || pct >= 30) return `HOLD ${pct.toFixed(0)}%`;
-            return `AVOID ${pct.toFixed(0)}%`;
+        function getSignalText(signal, score) {
+            const s = score || 0;
+            if (signal === 'strong_buy' || s >= 70) return `STRONG ${s}`;
+            if (signal === 'buy' || s >= 50) return `GOOD ${s}`;
+            if (signal === 'neutral' || s >= 30) return `NEUTRAL ${s}`;
+            return `WEAK ${s}`;
         }
 
         function renderGraph(data) {
@@ -1144,7 +1144,7 @@
                             <div class="suggestion-item" onclick="selectSuggestion('stock', '${stock.name.replace(/'/g, "\\'")}')">
                                 <span class="suggestion-name">${stock.name}</span>
                                 <span class="suggestion-type stock">${t('badge.stock')}</span>
-                                <span class="suggestion-buy-pct ${buyClass}">${stock.buy_pct.toFixed(0)}%</span>
+                                <span class="suggestion-buy-pct ${buyClass}">${stock.buy_pct}</span>
                             </div>
                         `;
                     });
@@ -1179,7 +1179,7 @@
                             <div class="suggestion-item" onclick="selectSuggestion('stock', '${stock.name.replace(/'/g, "\\'")}')">
                                 <span class="suggestion-name">${stock.name}</span>
                                 <span class="suggestion-type stock">${t('badge.stock')}</span>
-                                <span class="suggestion-buy-pct ${buyClass}">${stock.buy_pct.toFixed(0)}%</span>
+                                <span class="suggestion-buy-pct ${buyClass}">${stock.buy_pct}</span>
                             </div>
                         `;
                     });
@@ -1350,15 +1350,14 @@
                 data.stocks.forEach(stock => {
                     const nodeId = `stock_${stock.name}`;
                     if (!nodes.get(nodeId)) {
-                        const buyPct = stock.buy_pct || 0;
-                        const colors = getStockColor(stock.signal, buyPct);
-                        const signalLabel = getSignalLabel(stock.signal, buyPct);
-                        const signalText = getSignalText(stock.signal, buyPct);
+                        const score = stock.buy_pct || 0;
+                        const colors = getStockColor(stock.signal, score);
+                        const signalLabel = getSignalLabel(stock.signal, score);
 
                         nodes.add({
                             id: nodeId,
                             label: stock.name,
-                            title: `${stock.name}\nTicker: ${stock.ticker}\nBuy: ${buyPct.toFixed(1)}%\nSignal: ${signalText}`,
+                            title: `${stock.name}\nTicker: ${stock.ticker}\nScore: ${score}\nSignal: ${signalLabel}`,
                             shape: 'dot',
                             color: {
                                 background: colors.bg,
@@ -1369,7 +1368,7 @@
                                 }
                             },
                             size: 20,
-                            nodeData: { type: 'stock', ...stock, signalLabel, buyPct }
+                            nodeData: { type: 'stock', ...stock, signalLabel, score }
                         });
 
                         edges.add({
@@ -1408,24 +1407,24 @@
             document.getElementById('connectionTitle').textContent = `${themeName} 종목`;
             const list = document.getElementById('connectionList');
 
-            const buyCount = data.stocks.filter(s => (s.buy_pct || 0) >= 50).length;
-            const avoidCount = data.stocks.filter(s => (s.buy_pct || 0) < 30).length;
+            const strongCount = data.stocks.filter(s => (s.buy_pct || 0) >= 50).length;
+            const weakCount = data.stocks.filter(s => (s.buy_pct || 0) < 30).length;
 
             let html = `
                 <div class="theme-header">
                     <h4>Cohesion: ${data.fiedler.toFixed(2)}</h4>
                     <div class="theme-stats">
-                        <span style="color: #10b981;">${buyCount} Buy</span> /
-                        <span style="color: #ef4444;">${avoidCount} Avoid</span>
+                        <span style="color: #10b981;">${strongCount} Strong</span> /
+                        <span style="color: #ef4444;">${weakCount} Weak</span>
                     </div>
                 </div>
                 <div class="stock-list">
             `;
 
             data.stocks.forEach(stock => {
-                const buyPct = stock.buy_pct || 0;
-                const signalLabel = getSignalLabel(stock.signal, buyPct);
-                const signalText = getSignalText(stock.signal, buyPct);
+                const score = stock.buy_pct || 0;
+                const signalLabel = getSignalLabel(stock.signal, score);
+                const scoreColor = score >= 70 ? '#059669' : score >= 50 ? '#10b981' : score >= 30 ? '#f59e0b' : '#ef4444';
                 html += `
                     <div class="stock-item ${signalLabel}">
                         <div class="stock-info" onclick="loadStock('${stock.name}')" style="cursor: pointer;">
@@ -1433,7 +1432,7 @@
                             <div class="stock-ticker">${stock.ticker} · ${stock.market}</div>
                         </div>
                         <div class="stock-signal">
-                            <span class="signal-badge ${signalLabel}" onclick="window.open('${STOCK_CHART_URL}?name=${encodeURIComponent(stock.name)}', '_blank')" style="cursor: pointer;" title="Open Chart">${signalText}</span>
+                            <span class="signal-badge ${signalLabel}" onclick="window.open('${STOCK_CHART_URL}?name=${encodeURIComponent(stock.name)}', '_blank')" style="cursor: pointer; color: ${scoreColor}; font-weight: bold;" title="Open Chart">${score}</span>
                         </div>
                     </div>
                 `;
@@ -1505,11 +1504,10 @@
             const details = document.getElementById('nodeDetails');
 
             if (data.type === 'stock') {
-                const buyPct = data.buyPct || data.buy_pct || 0;
-                const signalLabel = data.signalLabel || getSignalLabel(data.signal, buyPct);
-                const signalText = getSignalText(data.signal, buyPct);
+                const score = data.score || 0;
+                const ss = data.signal_score || {};
                 const stockName = data.label || data.name;
-                const buyClass = buyPct >= 50 ? 'color: #10b981' : buyPct >= 30 ? 'color: #f59e0b' : 'color: #ef4444';
+                const scoreColor = score >= 70 ? '#059669' : score >= 50 ? '#10b981' : score >= 30 ? '#f59e0b' : '#ef4444';
                 details.innerHTML = `
                     <div class="info-item">
                         <span class="info-label">Name</span>
@@ -1520,15 +1518,13 @@
                         <span class="info-value">${data.ticker || '-'}</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Buy Signal</span>
-                        <span class="info-value" style="${buyClass}; font-weight: bold;">${signalText}</span>
+                        <span class="info-label">Signal Score</span>
+                        <span class="info-value" style="color: ${scoreColor}; font-weight: bold; font-size: 1.25rem;">${score}</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">Signal Prob</span>
+                        <span class="info-label">Breakdown</span>
                         <span class="info-value" style="font-size: 0.75rem;">
-                            ▲${(data.signal_probability?.buy || buyPct).toFixed(1)}%
-                            ●${(data.signal_probability?.neutral || 0).toFixed(1)}%
-                            ▼${(data.signal_probability?.sell || 0).toFixed(1)}%
+                            Momentum ${ss.momentum || 0} &middot; Trend ${ss.trend || 0} &middot; Vol ${ss.volatility || 0}
                         </span>
                     </div>
                     <button onclick="window.open('${STOCK_CHART_URL}?name=${encodeURIComponent(stockName)}', '_blank')"
