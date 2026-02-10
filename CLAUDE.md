@@ -34,12 +34,67 @@ Stages are determined from momentum and regime signals:
 | **Tier 3** | RESEARCH | > 5 |
 | **Tier 4** | MONITOR | ≤ 5 |
 
+### Market Regime Classification (Decomposed Fiedler)
+
+**Key insight from 504-day empirical analysis**: High sector synchronization = healthy momentum (positive forward returns), NOT danger. Stress is coincident, not leading. The only useful leading signal is **divergence** (cross-sector rising while within-sector falling).
+
+#### Regime States
+
+| Regime | Condition | Meaning | Color |
+|--------|-----------|---------|-------|
+| **STRESS_EVENT** | stress > 5 | Active crisis, forced correlation | Red |
+| **CAUTION** | stress 2-5 OR divergence > 0.2 | Transition: stress building or sector fragmentation | Amber |
+| **MOMENTUM** | within > 0.8, stress < 2, divergence <= 0.2 | Factor-driven bull, healthy sector momentum | Blue |
+| **DIFFERENTIATED** | within <= 0.8, stress < 2 | Low correlation, stock-picking environment | Emerald |
+
+#### Risk Score Formula
+
+`risk_score = stress_pct*0.60 + divergence_pct*0.25 + stress_accel_pct*0.15`
+
+- `stress_pct = min(stress/10*100, 100)` — stress dominates risk
+- `divergence_pct = min(max(divergence,0)/0.5*100, 100)` — cross rising while within falling
+- `stress_accel_pct = min(max(stress_5d_chg,0)/3*100, 100)` — rapid stress rise
+
+#### Alert Thresholds
+
+| Level | Trigger | Message |
+|-------|---------|---------|
+| CRITICAL | stress > 10 | "Crisis in progress — forced correlation across all sectors" |
+| WARNING | stress > 5 | "Stress event detected — portfolio at risk of correlated drawdown" |
+| CAUTION | stress 2-5 | "Connection fragility rising — review hedge positions" |
+| DIVERGENCE | divergence > 0.2 | "Sectors fragmenting — historically weak forward returns" |
+| INFO | within > 1.5 | "Strong sector momentum — factor-driven market" (not danger) |
+
+#### Key Metrics
+
+- **within_sector**: Average Fiedler across themes (sector momentum indicator)
+- **cross_sector**: Std dev of Fiedler across themes (dispersion measure)
+- **stress_index**: Rolling volatility of cross-sector changes * 5 (stress events)
+- **divergence**: Smoothed (cross_change - within_change); positive = fragmentation
+- **stress_accel**: 5-period change in stress index (acceleration)
+
+#### Divergence Signal (Leading Indicator)
+
+When divergence > 0.3: fwd 20d return = **-1.26%** (bearish)
+When divergence < -0.3: fwd 20d return = **+2.63%** (bullish)
+
+This is the only empirically validated leading signal from the Fiedler decomposition.
+
+#### Data Files
+
+- `data/sector_fiedler_timeseries.csv` — Historical decomposition (within, cross, stress, divergence)
+- `data/market_stress_index_daily.csv` — Stress index and acceleration
+- `data/decomposed_latest.json` — Latest computation result with regime/alerts
+
 ---
 
 ## Directory Structure
 
 ```
 Sector-Rotation-KRX/
+├── api/                         # Decomposed Fiedler regime analysis
+│   ├── compute_decomposed.py   # Core computation (stress, divergence, regime)
+│   └── server.py               # FastAPI router for /api/regime/*
 ├── analysis/                    # Analysis reports and Q&A
 │   └── QA_investment_questions_*.md  # AI chat context data
 ├── backtest/                    # Meta-labeling models and backtest
@@ -508,6 +563,14 @@ const toggleLang = () => {
 ---
 
 ## Backend API Reference
+
+### Regime Router (`/api/regime/`)
+
+| Endpoint | Method | Parameters | Response |
+|----------|--------|------------|----------|
+| `/current` | GET | - | `{regime, risk_score, metrics: {within_sector, cross_sector, stress_index, divergence, stress_accel}, alerts: [{level, message}], regime_description}` |
+| `/timeseries` | GET | `limit`, `start_date` | `{timeseries: [{date, within_sector, cross_sector, stress_index, divergence, regime}], count}` |
+| `/compute` | POST | - | `{status, result}` (triggers recomputation) |
 
 ### Overview Router (`/api/overview/`)
 

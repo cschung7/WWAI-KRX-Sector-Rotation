@@ -73,6 +73,112 @@
             padding: 2rem;
         }
 
+        /* Regime Banner */
+        .regime-banner {
+            border-radius: 1rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .regime-banner.regime-red {
+            background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+            border: 1px solid #dc2626;
+        }
+        .regime-banner.regime-amber {
+            background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+            border: 1px solid #f59e0b;
+        }
+        .regime-banner.regime-blue {
+            background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+            border: 1px solid #3b82f6;
+        }
+        .regime-banner.regime-emerald {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+            border: 1px solid #10b981;
+        }
+        .regime-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+        }
+        .regime-badge {
+            padding: 0.375rem 0.875rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        .regime-badge.red { background: #dc2626; color: white; }
+        .regime-badge.amber { background: #f59e0b; color: #1e293b; }
+        .regime-badge.blue { background: #3b82f6; color: white; }
+        .regime-badge.emerald { background: #10b981; color: white; }
+        .regime-desc {
+            font-size: 0.875rem;
+            color: #e2e8f0;
+        }
+        .regime-action {
+            font-size: 0.75rem;
+            color: #cbd5e1;
+            margin-top: 0.25rem;
+        }
+        .regime-metrics {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+        }
+        .regime-metric {
+            text-align: center;
+        }
+        .regime-metric-value {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #f8fafc;
+        }
+        .regime-metric-label {
+            font-size: 0.625rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .risk-gauge {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+        }
+        .risk-gauge.low { background: conic-gradient(#10b981 var(--pct), #334155 var(--pct)); }
+        .risk-gauge.medium { background: conic-gradient(#f59e0b var(--pct), #334155 var(--pct)); }
+        .risk-gauge.high { background: conic-gradient(#ef4444 var(--pct), #334155 var(--pct)); }
+
+        /* Alert pills */
+        .alert-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+        .alert-pill {
+            padding: 0.25rem 0.625rem;
+            border-radius: 1rem;
+            font-size: 0.6875rem;
+            font-weight: 500;
+        }
+        .alert-pill.CRITICAL { background: #dc2626; color: white; }
+        .alert-pill.WARNING { background: #f59e0b; color: #1e293b; }
+        .alert-pill.CAUTION { background: #d97706; color: white; }
+        .alert-pill.DIVERGENCE { background: #8b5cf6; color: white; }
+        .alert-pill.INFO { background: #3b82f6; color: white; }
+
         /* Today's Summary Banner */
         .today-banner {
             background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
@@ -466,6 +572,38 @@
     </div>
 
     <div class="container">
+        <!-- Regime Banner -->
+        <div id="regimeBanner" class="regime-banner regime-blue" style="display:none;">
+            <div class="regime-left">
+                <span id="regimeBadge" class="regime-badge blue">MOMENTUM</span>
+                <div>
+                    <div id="regimeAlerts" class="alert-pills"></div>
+                    <div id="regimeDesc" class="regime-desc">Factor momentum — healthy sector synchronization</div>
+                    <div id="regimeAction" class="regime-action"></div>
+                </div>
+            </div>
+            <div class="regime-metrics">
+                <div class="regime-metric">
+                    <div class="regime-metric-value" id="metricWithin">--</div>
+                    <div class="regime-metric-label" data-i18n="regime.within">Within</div>
+                </div>
+                <div class="regime-metric">
+                    <div class="regime-metric-value" id="metricStress">--</div>
+                    <div class="regime-metric-label" data-i18n="regime.stress">Stress</div>
+                </div>
+                <div class="regime-metric">
+                    <div class="regime-metric-value" id="metricDivergence">--</div>
+                    <div class="regime-metric-label" data-i18n="regime.divergence">Diverg.</div>
+                </div>
+                <div class="regime-metric">
+                    <div id="riskGauge" class="risk-gauge low" style="--pct: 0%;">
+                        <span id="riskScore">--</span>
+                    </div>
+                    <div class="regime-metric-label" data-i18n="regime.risk">Risk</div>
+                </div>
+            </div>
+        </div>
+
         <!-- Today's Summary Banner -->
         <div class="today-banner">
             <div class="today-info">
@@ -683,6 +821,10 @@
                 'quick.themeDesc': '종목-테마 관계',
                 'quick.stockChart': '주식 차트',
                 'quick.chartDesc': '차트, 펀더멘털, 테마',
+                'regime.within': '모멘텀',
+                'regime.stress': '스트레스',
+                'regime.divergence': '괴리',
+                'regime.risk': '리스크',
                 'loading': '로딩 중...',
                 'loading.themes': '테마 로딩 중...',
                 'noBreakout': '오늘 모멘텀 종목 없음',
@@ -734,6 +876,10 @@
                 'quick.themeDesc': 'Stock-theme relationships',
                 'quick.stockChart': 'Stock Chart',
                 'quick.chartDesc': 'Chart, fundamentals, themes',
+                'regime.within': 'Within',
+                'regime.stress': 'Stress',
+                'regime.divergence': 'Diverg.',
+                'regime.risk': 'Risk',
                 'loading': 'Loading...',
                 'loading.themes': 'Loading themes...',
                 'noBreakout': 'No breakout candidates today',
@@ -764,6 +910,9 @@
 
             // Update date format
             updateDate();
+
+            // Refresh regime banner with new language
+            loadRegime();
         }
 
         function updateDate() {
@@ -792,11 +941,72 @@
 
             // Load all data in parallel
             await Promise.all([
+                loadRegime(),
                 loadSignalQuality(),
                 loadBreakoutCandidates(),
                 loadThemeHealth(),
                 loadFocusThemes()
             ]);
+        }
+
+        async function loadRegime() {
+            try {
+                const response = await fetch(`${API_BASE}/api/regime/current`);
+                if (!response.ok) { console.warn('Regime API not available'); return; }
+                const data = await response.json();
+
+                const banner = document.getElementById('regimeBanner');
+                banner.style.display = 'flex';
+
+                const colorMap = {
+                    STRESS_EVENT: 'red', CAUTION: 'amber',
+                    MOMENTUM: 'blue', DIFFERENTIATED: 'emerald'
+                };
+                const color = colorMap[data.regime] || 'blue';
+
+                // Update banner color
+                banner.className = `regime-banner regime-${color}`;
+
+                // Badge
+                const badge = document.getElementById('regimeBadge');
+                badge.className = `regime-badge ${color}`;
+                badge.textContent = data.regime.replace('_', ' ');
+
+                // Description
+                const desc = data.regime_description || {};
+                const descText = currentLang === 'ko' ? desc.ko : desc.en;
+                const actionText = currentLang === 'ko' ? desc.action_ko : desc.action_en;
+                document.getElementById('regimeDesc').textContent = descText || '';
+                document.getElementById('regimeAction').textContent = actionText || '';
+
+                // Metrics
+                const m = data.metrics || {};
+                document.getElementById('metricWithin').textContent = (m.within_sector || 0).toFixed(2);
+                document.getElementById('metricStress').textContent = (m.stress_index || 0).toFixed(1);
+                document.getElementById('metricDivergence').textContent = (m.divergence || 0).toFixed(2);
+
+                // Risk gauge
+                const riskScore = data.risk_score || 0;
+                const gauge = document.getElementById('riskGauge');
+                const pct = Math.min(riskScore, 100);
+                gauge.style.setProperty('--pct', `${pct * 3.6}deg`);
+                gauge.className = `risk-gauge ${pct < 30 ? 'low' : pct < 60 ? 'medium' : 'high'}`;
+                document.getElementById('riskScore').textContent = Math.round(riskScore);
+
+                // Alerts (skip if level matches regime badge to avoid duplication)
+                const alertsEl = document.getElementById('regimeAlerts');
+                const alerts = (data.alerts || []).filter(a => a.level !== data.regime);
+                if (alerts.length > 0) {
+                    alertsEl.innerHTML = alerts.map(a => {
+                        const msg = currentLang === 'ko' ? (a.message_ko || a.message) : a.message;
+                        return `<span class="alert-pill ${a.level}" title="${msg}">${a.level}</span>`;
+                    }).join('');
+                } else {
+                    alertsEl.innerHTML = '';
+                }
+            } catch (error) {
+                console.warn('Error loading regime:', error);
+            }
         }
 
         async function loadSignalQuality() {

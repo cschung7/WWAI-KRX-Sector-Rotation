@@ -1,0 +1,76 @@
+{
+  "date": "20260209",
+  "data_source_date": "2026-02-09",
+  "total_tickers": 615,
+  "high_priority": 195,
+  "medium_priority": 420,
+  "low_priority": 0,
+  "stage_breakdown": {
+    "Healthy Correction": 235,
+    "Super Trend": 187,
+    "Burgeoning": 180,
+    "Early Breakout": 13
+  },
+  "top_10": [
+    {
+      "ticker": "파두",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "SGC에너지",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "나노",
+      "score": 84,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "유니테스트",
+      "score": 81,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "SK텔레콤",
+      "score": 80,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "아주IB투자",
+      "score": 79,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "한국알콜",
+      "score": 78,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "하나금융지주",
+      "score": 77,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "인바디",
+      "score": 77,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "광주신세계",
+      "score": 75,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    }
+  ]
+}

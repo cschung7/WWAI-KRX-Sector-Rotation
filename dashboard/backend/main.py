@@ -90,6 +90,14 @@ app.include_router(breakout.router, prefix="/api/breakout", tags=["Breakout"])
 app.include_router(network.router, prefix="/api/network", tags=["Network"])
 app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
 
+# Decomposed Fiedler regime router
+try:
+    from api.server import router as regime_router
+    app.include_router(regime_router, prefix="/api/regime", tags=["Regime"])
+    print("[startup] Regime router loaded successfully")
+except ImportError as e:
+    print(f"[startup] Warning: Regime router not available: {e}")
+
 # Frontend directory
 FRONTEND_DIR = Path(__file__).parent.parent / "frontend"
 

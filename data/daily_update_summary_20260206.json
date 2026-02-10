@@ -1,0 +1,76 @@
+{
+  "date": "20260206",
+  "data_source_date": "2026-02-06",
+  "total_tickers": 366,
+  "high_priority": 121,
+  "medium_priority": 245,
+  "low_priority": 0,
+  "stage_breakdown": {
+    "Burgeoning": 126,
+    "Super Trend": 115,
+    "Healthy Correction": 115,
+    "Early Breakout": 10
+  },
+  "top_10": [
+    {
+      "ticker": "파두",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "JB금융지주",
+      "score": 84,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "SGC에너지",
+      "score": 83,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "아주IB투자",
+      "score": 79,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "미래에셋벤처투자",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "나노",
+      "score": 78,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "삼영",
+      "score": 76,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "한국알콜",
+      "score": 75,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "하나금융지주",
+      "score": 74,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "신한지주",
+      "score": 73,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    }
+  ]
+}

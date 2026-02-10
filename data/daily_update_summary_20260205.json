@@ -1,0 +1,76 @@
+{
+  "date": "20260205",
+  "data_source_date": "2026-02-05",
+  "total_tickers": 517,
+  "high_priority": 165,
+  "medium_priority": 352,
+  "low_priority": 0,
+  "stage_breakdown": {
+    "Burgeoning": 185,
+    "Healthy Correction": 159,
+    "Super Trend": 154,
+    "Early Breakout": 19
+  },
+  "top_10": [
+    {
+      "ticker": "대성산업",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "신도리코",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "일신방직",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "파두",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "JB금융지주",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "SG세계물산",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "SGC에너지",
+      "score": 83,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "이화산업",
+      "score": 81,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "아주IB투자",
+      "score": 79,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "미래에셋벤처투자",
+      "score": 78,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    }
+  ]
+}
