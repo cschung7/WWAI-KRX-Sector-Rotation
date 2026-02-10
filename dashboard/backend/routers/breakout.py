@@ -350,15 +350,27 @@ def get_daily_summary_files():
 async def get_ranking_dates():
     """Get available dates for breakout data (daily summary files)"""
     try:
+        dates = set()
+        # Scan daily_summary files (primary source, YYYY-MM-DD format)
         summary_files = get_daily_summary_files()
-        dates = []
         for f in summary_files:
             fname = Path(f).stem
             date_str = fname.replace('daily_summary_', '')
-            if date_str:
-                dates.append(date_str)
-        dates.sort(reverse=True)
-        return {"dates": dates[:30]}
+            if date_str and len(date_str) == 10:
+                dates.add(date_str)
+        # Also scan actionable_tickers_*.csv (YYYYMMDD format)
+        data_dir = Path(__file__).parent.parent.parent.parent / "data"
+        for f in data_dir.glob("actionable_tickers_*.csv"):
+            date_str = f.stem.replace('actionable_tickers_', '')
+            if date_str and len(date_str) == 8:
+                dates.add(f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:]}")
+        # Also scan consolidated_ticker_analysis_*.json (YYYYMMDD format)
+        for f in data_dir.glob("consolidated_ticker_analysis_*.json"):
+            date_str = f.stem.replace('consolidated_ticker_analysis_', '')
+            if date_str and len(date_str) == 8:
+                dates.add(f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:]}")
+        sorted_dates = sorted(dates, reverse=True)
+        return {"dates": sorted_dates}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
