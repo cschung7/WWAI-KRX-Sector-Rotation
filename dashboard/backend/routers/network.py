@@ -25,17 +25,35 @@ FIEDLER_WEEKLY_CSV = DATA_DIR / "naver_themes_weekly_fiedler_2025.csv"
 SIGNAL_PROB_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/predictedProbability")
 PRICE_DATA_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/KRXNOTTRAINED")
 
-# Cache for performance
+# Cache for performance (daily TTL)
 _theme_cache = None
 _fiedler_cache = None
 _signal_prob_cache = {}
 _signal_score_cache = {}
 _all_themes_cache = None
+_cache_date = None  # tracks which date caches were built for
+
+
+def _check_cache_freshness():
+    """Invalidate all caches when date changes (new trading day data)"""
+    global _theme_cache, _fiedler_cache, _signal_prob_cache, _signal_score_cache
+    global _all_themes_cache, _cache_date
+    from datetime import date
+    today = date.today().isoformat()
+    if _cache_date != today:
+        _theme_cache = None
+        _fiedler_cache = None
+        _signal_prob_cache = {}
+        _signal_score_cache = {}
+        _all_themes_cache = None
+        _cache_date = today
+        print(f"[network] Cache invalidated for new date: {today}")
 
 
 def load_theme_data():
     """Load and cache NaverTheme data - local first, NAS fallback"""
     global _theme_cache
+    _check_cache_freshness()
     if _theme_cache is None:
         print(f"[network] DATA_DIR: {DATA_DIR}")
         print(f"[network] LOCAL_THEME_CSV: {LOCAL_THEME_CSV}, exists: {LOCAL_THEME_CSV.exists()}")
@@ -60,6 +78,7 @@ def load_theme_data():
 def load_fiedler_data():
     """Load and cache Fiedler data"""
     global _fiedler_cache
+    _check_cache_freshness()
     if _fiedler_cache is None:
         if FIEDLER_WEEKLY_CSV.exists():
             df = pd.read_csv(FIEDLER_WEEKLY_CSV)
@@ -71,9 +90,9 @@ def load_fiedler_data():
 
 
 def get_signal_probability(stock_name: str) -> dict:
-    """Load signal probability for a stock (cached)"""
+    """Load signal probability for a stock (daily cache)"""
     global _signal_prob_cache
-
+    _check_cache_freshness()
     if stock_name in _signal_prob_cache:
         return _signal_prob_cache[stock_name]
 
@@ -100,9 +119,9 @@ def get_signal_probability(stock_name: str) -> dict:
 
 
 def compute_signal_score(stock_name: str) -> dict:
-    """Compute signal score matching stock chart app formula (cached)"""
+    """Compute signal score matching stock chart app formula (daily cache)"""
     global _signal_score_cache
-
+    _check_cache_freshness()
     if stock_name in _signal_score_cache:
         return _signal_score_cache[stock_name]
 
