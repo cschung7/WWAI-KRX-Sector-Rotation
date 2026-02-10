@@ -387,7 +387,10 @@
         <div class="section" id="dailySummarySection">
             <h2>
                 <span data-i18n="section.dailySummary">📊 Daily Top Performers (AutoML)</span>
-                <span id="dailySummaryDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 1rem;"></span>
+                <select id="dailySummaryDateFilter" onchange="loadDailySummary()" style="margin-left: 1rem; padding: 0.25rem 0.5rem; background: #1e293b; color: #e2e8f0; border: 1px solid #475569; border-radius: 0.375rem; font-size: 0.8rem; cursor: pointer;">
+                    <option value="">Latest</option>
+                </select>
+                <span id="dailySummaryDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 0.5rem;"></span>
             </h2>
             <div id="dailySummaryContent" class="loading" data-i18n="loading">Loading...</div>
         </div>
@@ -396,7 +399,10 @@
         <div class="section" id="supertrendSection">
             <h2>
                 <span data-i18n="section.supertrend">🚀 SuperTrend Candidates</span>
-                <span id="supertrendDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 1rem;"></span>
+                <select id="supertrendDateFilter" onchange="loadSupertrendCandidates()" style="margin-left: 1rem; padding: 0.25rem 0.5rem; background: #1e293b; color: #e2e8f0; border: 1px solid #475569; border-radius: 0.375rem; font-size: 0.8rem; cursor: pointer;">
+                    <option value="">Latest</option>
+                </select>
+                <span id="supertrendDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 0.5rem;"></span>
                 <span id="supertrendCount" style="font-size: 0.875rem; color: #3b82f6; margin-left: 0.5rem;"></span>
             </h2>
             <table id="supertrendTable" class="display" style="width:100%">
@@ -420,7 +426,10 @@
         <div class="section" id="bbCrossoverSection">
             <h2>
                 <span data-i18n="section.bbCrossover">📈 Long Term Trend Breakout</span>
-                <span id="bbCrossoverDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 1rem;"></span>
+                <select id="bbCrossoverDateFilter" onchange="loadBBCrossover()" style="margin-left: 1rem; padding: 0.25rem 0.5rem; background: #1e293b; color: #e2e8f0; border: 1px solid #475569; border-radius: 0.375rem; font-size: 0.8rem; cursor: pointer;">
+                    <option value="">Latest</option>
+                </select>
+                <span id="bbCrossoverDate" style="font-size: 0.75rem; color: #94a3b8; margin-left: 0.5rem;"></span>
                 <span id="bbCrossoverCount" style="font-size: 0.875rem; color: #10b981; margin-left: 0.5rem;"></span>
             </h2>
             <p style="color: #94a3b8; font-size: 0.875rem; margin-bottom: 1rem;" data-i18n="bbCrossover.description">
@@ -657,8 +666,36 @@
             setLanguage(currentLang);
         }
 
+        // Load available dates for dropdowns
+        async function loadAvailableDates() {
+            try {
+                const response = await fetch(`${API_BASE}/api/breakout/ranking-dates`);
+                const data = await response.json();
+                if (data.dates && data.dates.length > 0) {
+                    const selectors = ['dailySummaryDateFilter', 'supertrendDateFilter', 'bbCrossoverDateFilter'];
+                    selectors.forEach(id => {
+                        const select = document.getElementById(id);
+                        if (select) {
+                            const currentVal = select.value;
+                            select.innerHTML = '<option value="">Latest</option>';
+                            data.dates.forEach(d => {
+                                const opt = document.createElement('option');
+                                opt.value = d;
+                                opt.textContent = d;
+                                select.appendChild(opt);
+                            });
+                            if (currentVal) select.value = currentVal;
+                        }
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading available dates:', error);
+            }
+        }
+
         // Initialize
         async function init() {
+            await loadAvailableDates();
             await loadSummary();
             await loadDailySummary();
             await loadSupertrendCandidates();
@@ -670,7 +707,9 @@
 
         async function loadDailySummary() {
             try {
-                const response = await fetch(`${API_BASE}/api/breakout/daily-summary`);
+                const selectedDate = document.getElementById('dailySummaryDateFilter')?.value || '';
+                const dateParam = selectedDate ? `?date=${selectedDate}` : '';
+                const response = await fetch(`${API_BASE}/api/breakout/daily-summary${dateParam}`);
                 if (!response.ok) {
                     throw new Error('Daily summary not available');
                 }
@@ -808,7 +847,9 @@
 
         async function loadSupertrendCandidates() {
             try {
-                const response = await fetch(`${API_BASE}/api/breakout/supertrend-candidates?limit=30`);
+                const selectedDate = document.getElementById('supertrendDateFilter')?.value || '';
+                const dateParam = selectedDate ? `&date=${selectedDate}` : '';
+                const response = await fetch(`${API_BASE}/api/breakout/supertrend-candidates?limit=30${dateParam}`);
                 const data = await response.json();
 
                 document.getElementById('supertrendDate').textContent = data.date || '';
@@ -882,7 +923,9 @@
 
         async function loadBBCrossover() {
             try {
-                const response = await fetch(`${API_BASE}/api/breakout/bb-crossover`);
+                const selectedDate = document.getElementById('bbCrossoverDateFilter')?.value || '';
+                const dateParam = selectedDate ? `?date=${selectedDate}` : '';
+                const response = await fetch(`${API_BASE}/api/breakout/bb-crossover${dateParam}`);
                 const data = await response.json();
 
                 document.getElementById('bbCrossoverDate').textContent = data.date || '';

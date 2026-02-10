@@ -346,6 +346,23 @@ def get_daily_summary_files():
     return nas_files
 
 
+@router.get("/ranking-dates")
+async def get_ranking_dates():
+    """Get available dates for breakout data (daily summary files)"""
+    try:
+        summary_files = get_daily_summary_files()
+        dates = []
+        for f in summary_files:
+            fname = Path(f).stem
+            date_str = fname.replace('daily_summary_', '')
+            if date_str:
+                dates.append(date_str)
+        dates.sort(reverse=True)
+        return {"dates": dates[:30]}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @router.get("/daily-summary")
 async def get_daily_summary(
     date: Optional[str] = Query(None, description="Date (YYYY-MM-DD)")
