@@ -1,0 +1,673 @@
+ticker,strategy,score,stage,themes,priority
+아이컴포넌트,Early Breakout (Transition),85,Early Breakout,[],HIGH
+플레이그램,Early Breakout (Transition),85,Early Breakout,[],HIGH
+파두,Early Breakout (Transition),85,Early Breakout,[],HIGH
+나노,Early Breakout (Transition),82,Early Breakout,[],HIGH
+하나금융지주,Super Trend (Bull Quiet),80,Super Trend,[],HIGH
+SK텔레콤,Super Trend (Bull Quiet),80,Super Trend,[],HIGH
+인바디,Early Breakout (Transition),79,Early Breakout,[],HIGH
+아주IB투자,Super Trend (Bull Quiet),79,Super Trend,[],HIGH
+영원무역,Early Breakout (Transition),78,Early Breakout,[],HIGH
+이화산업,Early Breakout (Transition),78,Early Breakout,[],HIGH
+신한지주,Super Trend (Bull Quiet),77,Super Trend,[],HIGH
+세이브존I&C,Early Breakout (Transition),77,Early Breakout,[],HIGH
+동운아나텍,Early Breakout (Transition),76,Early Breakout,[],HIGH
+현대해상,Early Breakout (Transition),76,Early Breakout,[],HIGH
+DN오토모티브,Early Breakout (Transition),76,Early Breakout,[],HIGH
+KT,Super Trend (Bull Quiet),75,Super Trend,[],HIGH
+한국금융지주,Super Trend (Bull Quiet),73,Super Trend,[],HIGH
+비츠로시스,Super Trend (Bull Quiet),73,Super Trend,[],HIGH
+JB금융지주,Super Trend (Bull Quiet),73,Super Trend,[],HIGH
+KB금융,Super Trend (Bull Quiet),73,Super Trend,[],HIGH
+SK,Super Trend (Bull Quiet),72,Super Trend,[],HIGH
+현대ADM,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+BYC,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+한국타이어앤테크놀로지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+롯데에너지머티리얼즈,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+오픈엣지테크놀로지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+에이플러스에셋,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+하이비젼시스템,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+한스바이오메드,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+아이로보틱스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+아이에스동서,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+영우디에스피,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+와토스코리아,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+웰킵스하이텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+인텔리안테크,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+지엠비코리아,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+코데즈컴바인,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+골드앤에스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+금호타이어,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+넥센타이어,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+다우데이타,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+누리플렉스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+삼양엔씨켐,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+삼화페인트,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+선익시스템,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+신성이엔지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+아세아제지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+유투바이오,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+한온시스템,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+한화솔루션,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+고려제강,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+기가비스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+나무기술,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+대동금속,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+대동기어,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+대우건설,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+성호전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+슈프리마,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+아이엠티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+엘케이켐,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+유진로봇,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+자화전자,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+조이시티,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+키움증권,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+플루토스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+한신공영,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+한전산업,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+디아이,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+루미르,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+비나텍,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+빅솔론,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+셀비온,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+큐라클,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+하이딥,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+두올,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+알멕,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+알톤,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+웹스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+DSC인베스트먼트,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+DXVX,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+HD현대에너지솔루션,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+나우IB,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+LS머트리얼즈,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+OCI,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+OCI홀딩스,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+SG,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+SG세계물산,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+SGC에너지,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+서부T&D,Super Trend (Bull Quiet),70,Super Trend,[],HIGH
+대신증권,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+대한해운,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+신화콘텍,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+얼라인드,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+경방,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+HDC현대EP,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+LB인베스트먼트,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+LS ELECTRIC,Super Trend (Bull Quiet),69,Super Trend,[],HIGH
+한국피아이엠,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+에스티아이,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+컴퍼니케이,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+교보증권,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+대성산업,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+큐리언트,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+아스트,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+이엘피,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+야스,Super Trend (Bull Quiet),68,Super Trend,[],HIGH
+케이비아이동국실업,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+에스지헬스케어,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+영원무역홀딩스,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+대주전자재료,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+제이에스링크,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+셀트리온,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+아스타,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+KT&G,Super Trend (Bull Quiet),67,Super Trend,[],HIGH
+스톤브릿지벤처스,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+다올투자증권,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+에스에이엠티,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+나노신소재,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+성도이엔지,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+유안타증권,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+금호건설,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+다우기술,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+미원화학,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+삼성물산,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+일지테크,Super Trend (Bull Quiet),66,Super Trend,[],HIGH
+에이티넘인베스트,Super Trend (Bull Quiet),65,Super Trend,[],HIGH
+디와이파워,Super Trend (Bull Quiet),65,Super Trend,[],HIGH
+부광약품,Super Trend (Bull Quiet),65,Super Trend,[],HIGH
+한화생명,Super Trend (Bull Quiet),65,Super Trend,[],HIGH
+코미팜,Super Trend (Bull Quiet),65,Super Trend,[],HIGH
+HD현대건설기계,Super Trend (Bull Quiet),65,Super Trend,[],HIGH
+포커스에이아이,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+현대엘리베이터,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+화승코퍼레이션,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+비씨월드제약,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+유진투자증권,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+롯데칠성우,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+현대백화점,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+롯데리츠,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+마크로젠,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+세원정공,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+풍원정밀,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+에스원,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+종근당,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+DSR제강,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+삼성FN리츠,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+NH투자증권우,Super Trend (Bull Quiet),64,Super Trend,[],HIGH
+씨어스테크놀로지,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+한화손해보험,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+광주신세계,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+대성하이텍,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+우정바이오,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+삼성전기,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+삼호개발,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+신영증권,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+대동,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+DB증권,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+POSCO홀딩스,Super Trend (Bull Quiet),63,Super Trend,[],HIGH
+솔브레인홀딩스,Super Trend (Bull Quiet),62,Super Trend,[],HIGH
+한국금융지주우,Super Trend (Bull Quiet),62,Super Trend,[],HIGH
+한솔아이원스,Super Trend (Bull Quiet),62,Super Trend,[],HIGH
+상신이디피,Super Trend (Bull Quiet),62,Super Trend,[],HIGH
+유니테스트,Super Trend (Bull Quiet),62,Super Trend,[],HIGH
+빛샘전자,Super Trend (Bull Quiet),62,Super Trend,[],HIGH
+KG모빌리티,Super Trend (Bull Quiet),62,Super Trend,[],HIGH
+신한서부티엔디리츠,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+한올바이오파마,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+인지디스플레,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+화승알앤에이,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+대신증권우,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+디지털대성,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+한솔케미칼,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+삼성증권,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+샘표식품,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+신도리코,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+와이엠씨,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+원일특강,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+큐캐피탈,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+큐알티,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+보령,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+KCTC,Super Trend (Bull Quiet),61,Super Trend,[],HIGH
+롯데관광개발,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+전진건설로봇,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+코오롱인더우,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+한국앤컴퍼니,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+옵투스제약,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+한양디지텍,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+비씨엔씨,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+무학,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+코텍,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+DL이앤씨2우(전환),Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+KCC건설,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+PI첨단소재,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+SK증권우,Super Trend (Bull Quiet),60,Super Trend,[],HIGH
+제이에스코퍼레이션,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+바이오에프디엔씨,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+시너지이노베이션,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+에이치엘사이언스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+엘브이엠씨홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+셀바이오휴먼텍,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+아이디스홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+에프엔에스테크,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+에이텍모빌리티,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+인카금융서비스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+한솔로지스틱스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+현대바이오랜드,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+교촌에프앤비,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+나노씨엠에스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+박셀바이오,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+미래생명자원,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+바이오플러스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+인천도시가스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+제일테크노스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+코오롱글로벌,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+푸른저축은행,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+한국토지신탁,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+남양유업우,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+동방메디컬,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+롯데웰푸드,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+메가스터디,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+바디텍메드,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+신영와코루,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+제일바이오,Early Breakout (Ranging),65,Early Breakout,[],MEDIUM
+조광페인트,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+진양홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+쿠쿠홈시스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+콜마홀딩스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+한국캐피탈,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+황금에스티,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+경인전자,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+광동제약,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+노바렉스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+대림바스,Early Breakout (Ranging),65,Early Breakout,[],MEDIUM
+대성창투,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+대정화금,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+대한약품,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+동국제강,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+동국제약,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+동원수산,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+롯데렌탈,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+삼아제약,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+삼양사우,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+삼일제약,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+신라교역,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+아나패스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+애경산업,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+에이비온,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+엠에프씨,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+엠에스씨,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+온타이드,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+이건산업,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+인터지스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+태양금속,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+티에프이,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+하나투어,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+한국내화,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+한솔제지,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+가비아,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+덴티움,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+리메드,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+링네트,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+사람인,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+삼양사,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+세방우,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+양지사,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+예림당,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+옵티팜,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+유엔젤,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+인터엠,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+지씨셀,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+코웨이,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+파트론,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+대덕,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+대현,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+방림,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+삼영,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+서한,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+서흥,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+세방,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+신풍,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+영풍,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+전방,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+태양,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+DL우,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+ESR켄달스퀘어리츠,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+FSN,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+GS리테일,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+GS글로벌,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+HB인베스트먼트,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+HK이노엔,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+효성ITX,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+KPX케미칼,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+KSS해운,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+LG생활건강우,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+LG헬로비전,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+LX하우시스,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+NPC,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+SIMPAC,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+TS인베스트먼트,Burgeoning (Transition),65,Burgeoning,[],MEDIUM
+한국알콜,Early Breakout (Ranging),60,Early Breakout,[],MEDIUM
+한진,Early Breakout (Ranging),57,Early Breakout,[],MEDIUM
+진성티이씨,Early Breakout (Ranging),56,Early Breakout,[],MEDIUM
+LG유플러스,Healthy Correction (Bull Quiet),55,Healthy Correction,[],MEDIUM
+와이제이링크,Healthy Correction (Bull Quiet),52,Healthy Correction,[],MEDIUM
+카카오뱅크,Healthy Correction (Bull Quiet),51,Healthy Correction,[],MEDIUM
+현대차증권,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM
+LS증권,Healthy Correction (Bull Quiet),49,Healthy Correction,[],MEDIUM
+지투파워,Healthy Correction (Bull Quiet),48,Healthy Correction,[],MEDIUM
+한전KPS,Healthy Correction (Bull Quiet),48,Healthy Correction,[],MEDIUM
+비큐AI,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+APS,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+BGF,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+BYC우,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+CJ제일제당 우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+CJ씨푸드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+CJ제일제당,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+CJ우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+CS홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+프레스티지바이오파마,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+현대코퍼레이션홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+아모레퍼시픽홀딩스우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+엔브이에이치코리아,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+팬스타엔터프라이즈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+이엔에프테크놀로지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+선진뷰티사이언스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+씨앤씨인터내셔널,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아이티센씨티에스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+신세계인터내셔날,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에스디바이오센서,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+제이엔케이글로벌,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+크라운해태홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+코스맥스비티아이,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+화승엔터프라이즈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한진중공업홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+글로벌텍스프리,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+나이스정보통신,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+도화엔지니어링,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+동우팜투테이블,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+롯데이노베이트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+마이크로컨텍솔,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+비아이매트릭스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+솔루스첨단소재,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아이마켓코리아,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에스와이스틸텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+위지윅스튜디오,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+유나이티드제약,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+유비쿼스홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+캡스톤파트너스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+크리스에프앤씨,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+콜마비앤에이치,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+피엔에이치테크,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한국전자홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+현대코퍼레이션,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+금양그린파워,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+골프존홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대상홀딩스우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동일고무벨트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+디앤씨미디어,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+로체시스템즈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+롯데하이마트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+바이오솔루션,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+세경하이테크,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+성창기업지주,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+시지트로닉스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+슈피겐코리아,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+씨에스베어링,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+신한알파리츠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아이씨에이치,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+오리온홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+오성첨단소재,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+오션인더블유,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+우주일렉트로,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+제이아이테크,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+일성아이에스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+제이씨케미칼,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+제이에스티나,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+중앙에너비스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+종근당바이오,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+초록뱀미디어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+코아시아씨엠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+토마토시스템,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+피에이치에이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한국가스공사,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+한국전자인증,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한국정보인증,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한국정보통신,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한미사이언스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한화솔루션우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+현대그린푸드,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+해태제과식품,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+현대에버다임,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+지앤비에스 에코,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+바이오다인,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+경동나비엔,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+그래디언트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+국영지앤엠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+노루페인트,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+농심홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+노루홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대명에너지,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대상홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대성파인텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대성홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대아티아이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대한항공우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동국홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+동아에스티,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+동성케미컬,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+라온시큐어,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+미래나노텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+사조동아원,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+삼목에스폼,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+삼성전기우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+삼성화재우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+삼화콘덴서,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+서연탑메탈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+성신양회우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+성창오토텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+세보엠이씨,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+시그네틱스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+신대양제지,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+아모그린텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아비코전자,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아시아종묘,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+아이즈비전,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+애경케미칼,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+에스트래픽,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에스티큐브,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에치에프알,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+엑스페릭스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+엑스플러스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+엠디바이스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+오스테오닉,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+옴니시스템,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+유니퀘스트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+유비벨록스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+인스웨이브,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+잉글우드랩,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+제이브이엠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+좋은사람들,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+참좋은여행,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+코스텍시스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+코스모화학,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+태경비케이,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+태웅로직스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+태양금속우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+티웨이항공,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+파라다이스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+피제이메탈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+핑거스토리,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+한미글로벌,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한양증권우,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+한울반도체,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+한일시멘트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+현대리바트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+현대이지웰,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+현대퓨처넷,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+효성오앤비,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+고려산업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+국제약품,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+극동유화,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+금강철강,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+나라셀라,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+나인테크,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+남양유업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+남광토건,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+남해화학,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+노랑풍선,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대륙제관,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대동스틸,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대양금속,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대웅제약,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대창스틸,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대창단조,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대한방직,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대한항공,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동국씨엠,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대한화섬,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+동국산업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+동방선기,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동부건설,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동아지질,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동양생명,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동원산업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+메쎄이상,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+모나용평,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+미래산업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+보광산업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+보라티알,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+부산산업,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+비아트론,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+비에이치,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+산일전기,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+삼보판지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+삼성생명,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+삼성화재,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+삼양통상,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+서울옥션,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+서울리거,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+선바이오,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+세아제강,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+세원물산,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+세방전지,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+송원산업,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+신라섬유,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+시공테크,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+신일전자,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+씨싸이트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+써니전자,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아이디피,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아세아텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아이디스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아이씨디,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에스씨디,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+에어부산,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에이피알,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에이엔피,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+엔에프씨,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+엑스큐어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+오르비텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+오파스넷,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+오스코텍,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+와이즈넛,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+와이엠티,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+와이엔텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+웨이버스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+윈하이텍,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+유비케어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+이연제약,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+인크로스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+인포바인,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+일진전기,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+잇츠한불,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+젝시믹스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+제이스텍,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+제주항공,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+조광피혁,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+진시스템,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+진흥기업,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+컬러레이,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+케이옥션,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+코나아이,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+코리아나,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+코리안리,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+코스맥스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+태림포장,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+토모큐브,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+텔코웨어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+토니모리,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+특수건설,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+티플랙스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+포바이포,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+피델릭스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+하나기술,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+하이스틸,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한국석유,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한국파마,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+한국콜마,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+한일사료,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+한일철강,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+한일화학,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+호텔신라,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+홈캐스트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+흥국화재,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+흥아해운,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+흥구석유,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+골프존,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+네이블,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+넥센우,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+넷마블,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대상우,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+디어유,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+링크드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+민테크,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+브이엠,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+브이티,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+빙그레,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+소마젠,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+솔루엠,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+쇼박스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+쎄니트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+아난티,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+에이텀,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+엠투엔,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+오뚜기,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+와이솔,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+웰크론,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+위드텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+윙스풋,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+유니셈,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+유니켐,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+이노션,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+이랜텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+이퓨쳐,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+제이오,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+체시스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+진에어,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+캠시스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+클리오,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+테크엘,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+파세코,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+풀무원,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+휴니드,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+휴온스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+휴맥스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+휴스틸,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+광무,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+넥센,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+농심,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+대모,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+대상,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+덕성,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+동양,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+동방,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+동서,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+디오,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+배럴,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+벽산,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+바텍,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+백산,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+샘표,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+서산,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+선광,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+센코,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+솔본,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+씨젠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+우성,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+웅진,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+유신,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+윈팩,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+제닉,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+조비,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+태광,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+하림,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+흥국,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+DL이앤씨,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+DI동일,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+DS단석,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+DSR,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+E1,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+EG,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+F&F홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+GS피앤엘,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+HDC현대산업개발,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+GS건설,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+HB테크놀러지,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+HD현대일렉트릭,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+HS화성,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+KB스타리츠,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+KCC글라스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+KCC,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+KG스틸,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+KPX홀딩스,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+KTcs,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+LB세미콘,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+LG생활건강,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+LK삼양,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+LX세미콘,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+NEW,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+NHN,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+NICE평가정보,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+NI스틸,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+SBI인베스트먼트,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+SDN,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+SGC E&C,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+SG&G,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+SK이터닉스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+SK이노베이션,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+SNT홀딩스,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
+TCC스틸,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+TP,Healthy Correction (Bull Quiet),45,Healthy Correction,[],MEDIUM
+YW,Burgeoning (Ranging),45,Burgeoning,[],MEDIUM
