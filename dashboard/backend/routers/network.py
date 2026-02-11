@@ -24,12 +24,17 @@ NAVER_THEME_CSV = Path("/mnt/nas/WWAI/NaverTheme/webapp/backend/data/db_final.cs
 FIEDLER_WEEKLY_CSV = DATA_DIR / "naver_themes_weekly_fiedler_2025.csv"
 SIGNAL_PROB_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/predictedProbability")
 PRICE_DATA_DIR = Path("/mnt/nas/AutoGluon/AutoML_Krx/KRXNOTTRAINED")
+SIGNAL_SCORES_JSON = DATA_DIR / "signal_scores.json"
+
+# Cloud detection
+IS_CLOUD = not PRICE_DATA_DIR.exists()
 
 # Cache for performance (daily TTL)
 _theme_cache = None
 _fiedler_cache = None
 _signal_prob_cache = {}
 _signal_score_cache = {}
+_baked_signal_scores = None  # pre-computed scores for Railway
 _all_themes_cache = None
 _cache_date = None  # tracks which date caches were built for
 
@@ -118,14 +123,47 @@ def get_signal_probability(stock_name: str) -> dict:
     return result
 
 
+def _load_baked_signal_scores():
+    """Load pre-computed signal scores from JSON (Railway cloud fallback)"""
+    global _baked_signal_scores
+    if _baked_signal_scores is None:
+        import json
+        if SIGNAL_SCORES_JSON.exists():
+            with open(SIGNAL_SCORES_JSON, 'r', encoding='utf-8') as f:
+                _baked_signal_scores = json.load(f)
+            print(f"[network] Loaded {len(_baked_signal_scores)} baked signal scores")
+        else:
+            _baked_signal_scores = {}
+            print(f"[network] WARNING: signal_scores.json not found at {SIGNAL_SCORES_JSON}")
+    return _baked_signal_scores
+
+
 def compute_signal_score(stock_name: str) -> dict:
-    """Compute signal score matching stock chart app formula (daily cache)"""
+    """Compute signal score matching stock chart app formula (daily cache).
+    On Railway (IS_CLOUD), uses pre-computed signal_scores.json instead."""
     global _signal_score_cache
     _check_cache_freshness()
     if stock_name in _signal_score_cache:
         return _signal_score_cache[stock_name]
 
     default = {"momentum": 0, "trend": 0, "volatility": 0, "overall": 0}
+
+    # Cloud fallback: use pre-computed scores from signal_scores.json
+    if IS_CLOUD:
+        baked = _load_baked_signal_scores()
+        entry = baked.get(stock_name, None)
+        if entry:
+            result = {
+                "momentum": entry.get("m", 0),
+                "trend": entry.get("t", 0),
+                "volatility": entry.get("v", 0),
+                "overall": entry.get("o", 0)
+            }
+        else:
+            result = default
+        _signal_score_cache[stock_name] = result
+        return result
+
     try:
         price_file = PRICE_DATA_DIR / f"{stock_name}.csv"
         if not price_file.exists():
