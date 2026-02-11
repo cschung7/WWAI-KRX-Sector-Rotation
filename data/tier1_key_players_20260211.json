@@ -1,0 +1,576 @@
+{
+  "date": "2026-02-11T11:13:05.411995",
+  "tier1_themes_analyzed": [
+    "통신",
+    "방위산업/전쟁 및 테러",
+    "전력설비",
+    "증권",
+    "은행",
+    "스페이스X(SpaceX)"
+  ],
+  "theme_results": {
+    "통신": [
+      {
+        "stock": "LG유플러스",
+        "market_cap": 0,
+        "pagerank": 0.26432365086643894,
+        "eigenvector": 0.5751736992008307,
+        "degree": 1.9754162045592865
+      },
+      {
+        "stock": "SK텔레콤",
+        "market_cap": 0,
+        "pagerank": 0.21312818342334547,
+        "eigenvector": 0.5046974966153367,
+        "degree": 1.5648135237289815
+      },
+      {
+        "stock": "KT",
+        "market_cap": 0,
+        "pagerank": 0.2034104014120304,
+        "eigenvector": 0.48098256877460877,
+        "degree": 1.4831818424722385
+      },
+      {
+        "stock": "SK",
+        "market_cap": 0,
+        "pagerank": 0.16141433148380452,
+        "eigenvector": 0.304594396655987,
+        "degree": 1.0954008866058125
+      },
+      {
+        "stock": "LG",
+        "market_cap": 0,
+        "pagerank": 0.15772343281438062,
+        "eigenvector": 0.30055561002682796,
+        "degree": 1.0670458434922558
+      }
+    ],
+    "방위산업/전쟁 및 테러": [
+      {
+        "stock": "빅텍",
+        "market_cap": 0,
+        "pagerank": 0.027482654589260296,
+        "eigenvector": 0.2263330585887642,
+        "degree": 16.918470611124818
+      },
+      {
+        "stock": "한국항공우주",
+        "market_cap": 0,
+        "pagerank": 0.025649872118397983,
+        "eigenvector": 0.20660393944574543,
+        "degree": 15.61953178003413
+      },
+      {
+        "stock": "한화에어로스페이스",
+        "market_cap": 0,
+        "pagerank": 0.02470290065082298,
+        "eigenvector": 0.20161935572395845,
+        "degree": 15.043403886363574
+      },
+      {
+        "stock": "LIG넥스원",
+        "market_cap": 0,
+        "pagerank": 0.023916562503235428,
+        "eigenvector": 0.192568303386555,
+        "degree": 14.567341477902776
+      },
+      {
+        "stock": "스페코",
+        "market_cap": 0,
+        "pagerank": 0.023751342187055845,
+        "eigenvector": 0.20770801145727985,
+        "degree": 14.573331079283275
+      },
+      {
+        "stock": "한화시스템",
+        "market_cap": 0,
+        "pagerank": 0.023500338431609216,
+        "eigenvector": 0.20496745943881128,
+        "degree": 14.327632583103908
+      },
+      {
+        "stock": "코콤",
+        "market_cap": 0,
+        "pagerank": 0.02307036914504125,
+        "eigenvector": 0.13880267391029047,
+        "degree": 13.377454577479712
+      },
+      {
+        "stock": "풍산",
+        "market_cap": 0,
+        "pagerank": 0.023035643594891284,
+        "eigenvector": 0.21574474078708658,
+        "degree": 14.281824219017166
+      },
+      {
+        "stock": "현대로템",
+        "market_cap": 0,
+        "pagerank": 0.02253063147587179,
+        "eigenvector": 0.1811854035497468,
+        "degree": 13.610912633490587
+      },
+      {
+        "stock": "풍산홀딩스",
+        "market_cap": 0,
+        "pagerank": 0.02238128068324434,
+        "eigenvector": 0.20230020726267237,
+        "degree": 13.737706817942202
+      }
+    ],
+    "전력설비": [
+      {
+        "stock": "티씨머티리얼즈",
+        "market_cap": 0,
+        "pagerank": 0.0496322122734912,
+        "eigenvector": 0.30467410205136597,
+        "degree": 13.358925954366587
+      },
+      {
+        "stock": "제일일렉트릭",
+        "market_cap": 0,
+        "pagerank": 0.04465955411349445,
+        "eigenvector": 0.2652616725253756,
+        "degree": 11.84266051278576
+      },
+      {
+        "stock": "제룡전기",
+        "market_cap": 0,
+        "pagerank": 0.042838810517219154,
+        "eigenvector": 0.26665640769422766,
+        "degree": 11.385601817966561
+      },
+      {
+        "stock": "한전KPS",
+        "market_cap": 0,
+        "pagerank": 0.039204147926972605,
+        "eigenvector": 0.22508929684415496,
+        "degree": 10.278783002377265
+      },
+      {
+        "stock": "대원전선",
+        "market_cap": 0,
+        "pagerank": 0.038525021491520886,
+        "eigenvector": 0.24554865678527057,
+        "degree": 10.193368851175821
+      },
+      {
+        "stock": "지투파워",
+        "market_cap": 0,
+        "pagerank": 0.038429784269586084,
+        "eigenvector": 0.2296408958382027,
+        "degree": 10.057066617118698
+      },
+      {
+        "stock": "세명전기",
+        "market_cap": 0,
+        "pagerank": 0.036984049745226705,
+        "eigenvector": 0.21294058896532983,
+        "degree": 9.528386055869746
+      },
+      {
+        "stock": "대한전선",
+        "market_cap": 0,
+        "pagerank": 0.03230019785853965,
+        "eigenvector": 0.19785798247483338,
+        "degree": 8.294022147826105
+      },
+      {
+        "stock": "비츠로시스",
+        "market_cap": 0,
+        "pagerank": 0.03168677084948758,
+        "eigenvector": 0.208208796028683,
+        "degree": 8.248903363605553
+      },
+      {
+        "stock": "LS에코에너지",
+        "market_cap": 0,
+        "pagerank": 0.0316717795611099,
+        "eigenvector": 0.18533417080311798,
+        "degree": 8.077310939333426
+      }
+    ],
+    "증권": [
+      {
+        "stock": "다올투자증권",
+        "market_cap": 0,
+        "pagerank": 0.04677201551249335,
+        "eigenvector": 0.23788827214198613,
+        "degree": 18.04705486149822
+      },
+      {
+        "stock": "유진투자증권",
+        "market_cap": 0,
+        "pagerank": 0.0467299769167611,
+        "eigenvector": 0.23697238397613843,
+        "degree": 18.01487790999541
+      },
+      {
+        "stock": "LS증권",
+        "market_cap": 0,
+        "pagerank": 0.04552252257803477,
+        "eigenvector": 0.23586127765612042,
+        "degree": 17.62253649179557
+      },
+      {
+        "stock": "대신증권",
+        "market_cap": 0,
+        "pagerank": 0.045482729156151515,
+        "eigenvector": 0.22520389924669615,
+        "degree": 17.320857108750374
+      },
+      {
+        "stock": "유안타증권",
+        "market_cap": 0,
+        "pagerank": 0.04488444962977718,
+        "eigenvector": 0.22738326710948048,
+        "degree": 17.229056673298835
+      },
+      {
+        "stock": "유화증권",
+        "market_cap": 0,
+        "pagerank": 0.0440526065024218,
+        "eigenvector": 0.22112032361424933,
+        "degree": 16.814532027949078
+      },
+      {
+        "stock": "NH투자증권",
+        "market_cap": 0,
+        "pagerank": 0.043890313493221304,
+        "eigenvector": 0.2196879086152363,
+        "degree": 16.72880907473933
+      },
+      {
+        "stock": "한국금융지주",
+        "market_cap": 0,
+        "pagerank": 0.043493373999452606,
+        "eigenvector": 0.22259893643404394,
+        "degree": 16.70745127364603
+      },
+      {
+        "stock": "현대차증권",
+        "market_cap": 0,
+        "pagerank": 0.04323697805181192,
+        "eigenvector": 0.2229020142361653,
+        "degree": 16.61111778499377
+      },
+      {
+        "stock": "한화투자증권",
+        "market_cap": 0,
+        "pagerank": 0.04311232064429277,
+        "eigenvector": 0.2121407368316335,
+        "degree": 16.27601310433874
+      }
+    ],
+    "은행": [
+      {
+        "stock": "우리금융지주",
+        "market_cap": 0,
+        "pagerank": 0.11243655005860922,
+        "eigenvector": 0.365747029728702,
+        "degree": 6.947227104684858
+      },
+      {
+        "stock": "하나금융지주",
+        "market_cap": 0,
+        "pagerank": 0.10449267614622709,
+        "eigenvector": 0.3442956192086493,
+        "degree": 6.4070674229685824
+      },
+      {
+        "stock": "기업은행",
+        "market_cap": 0,
+        "pagerank": 0.10304083285921534,
+        "eigenvector": 0.34242519368215524,
+        "degree": 6.315871211083272
+      },
+      {
+        "stock": "신한지주",
+        "market_cap": 0,
+        "pagerank": 0.10111385388364366,
+        "eigenvector": 0.3308729096375348,
+        "degree": 6.1657472893114
+      },
+      {
+        "stock": "iM금융지주",
+        "market_cap": 0,
+        "pagerank": 0.10034552850979299,
+        "eigenvector": 0.3326494731534244,
+        "degree": 6.126773566959494
+      },
+      {
+        "stock": "BNK금융지주",
+        "market_cap": 0,
+        "pagerank": 0.0913569599855252,
+        "eigenvector": 0.29718548440461307,
+        "degree": 5.483375005652326
+      },
+      {
+        "stock": "제주은행",
+        "market_cap": 0,
+        "pagerank": 0.09097608658457253,
+        "eigenvector": 0.2976126361282539,
+        "degree": 5.463302255934425
+      },
+      {
+        "stock": "JB금융지주",
+        "market_cap": 0,
+        "pagerank": 0.08490112370218808,
+        "eigenvector": 0.2847128531122278,
+        "degree": 5.065436014960289
+      },
+      {
+        "stock": "KB금융",
+        "market_cap": 0,
+        "pagerank": 0.07256873784200672,
+        "eigenvector": 0.24643586735343725,
+        "degree": 4.220798813922108
+      },
+      {
+        "stock": "카카오뱅크",
+        "market_cap": 0,
+        "pagerank": 0.06969681073938098,
+        "eigenvector": 0.21289461136052348,
+        "degree": 3.953009234326053
+      }
+    ],
+    "스페이스X(SpaceX)": [
+      {
+        "stock": "아주IB투자",
+        "market_cap": 0,
+        "pagerank": 0.09908910362049134,
+        "eigenvector": 0.40407986203834795,
+        "degree": 6.193178076557678
+      },
+      {
+        "stock": "미래에셋벤처투자",
+        "market_cap": 0,
+        "pagerank": 0.08976231113801827,
+        "eigenvector": 0.3741235210606674,
+        "degree": 5.549630013115222
+      },
+      {
+        "stock": "스피어",
+        "market_cap": 0,
+        "pagerank": 0.08576080688573356,
+        "eigenvector": 0.35195346020658047,
+        "degree": 5.299955497308017
+      },
+      {
+        "stock": "켄코아에어로스페이스",
+        "market_cap": 0,
+        "pagerank": 0.0798527784707978,
+        "eigenvector": 0.3329773327983865,
+        "degree": 4.8344803064802475
+      },
+      {
+        "stock": "와이제이링크",
+        "market_cap": 0,
+        "pagerank": 0.0796206091097324,
+        "eigenvector": 0.32537151371752415,
+        "degree": 4.857119411918308
+      },
+      {
+        "stock": "미래에셋증권",
+        "market_cap": 0,
+        "pagerank": 0.07934866049644393,
+        "eigenvector": 0.2844407006440177,
+        "degree": 4.579869142809941
+      },
+      {
+        "stock": "이녹스첨단소재",
+        "market_cap": 0,
+        "pagerank": 0.07673362775006892,
+        "eigenvector": 0.2409666324559789,
+        "degree": 4.385165021795844
+      },
+      {
+        "stock": "나노팀",
+        "market_cap": 0,
+        "pagerank": 0.07113991687768662,
+        "eigenvector": 0.28281134202018854,
+        "degree": 4.214968427248813
+      },
+      {
+        "stock": "에이치브이엠",
+        "market_cap": 0,
+        "pagerank": 0.055706165582960945,
+        "eigenvector": 0.22734917808756203,
+        "degree": 3.2628332722968807
+      },
+      {
+        "stock": "LG에너지솔루션",
+        "market_cap": 0,
+        "pagerank": 0.05374165619902116,
+        "eigenvector": 0.13444054145822285,
+        "degree": 2.713279393239591
+      }
+    ]
+  },
+  "top_key_players": [
+    {
+      "stock": "LG유플러스",
+      "market_cap": 0,
+      "total_pagerank": 0.26432365086643894,
+      "themes": [
+        "통신"
+      ]
+    },
+    {
+      "stock": "SK텔레콤",
+      "market_cap": 0,
+      "total_pagerank": 0.21312818342334547,
+      "themes": [
+        "통신"
+      ]
+    },
+    {
+      "stock": "KT",
+      "market_cap": 0,
+      "total_pagerank": 0.2034104014120304,
+      "themes": [
+        "통신"
+      ]
+    },
+    {
+      "stock": "LG",
+      "market_cap": 0,
+      "total_pagerank": 0.19940128066074334,
+      "themes": [
+        "통신",
+        "스페이스X(SpaceX)"
+      ]
+    },
+    {
+      "stock": "SK",
+      "market_cap": 0,
+      "total_pagerank": 0.19802116825529237,
+      "themes": [
+        "통신",
+        "증권"
+      ]
+    },
+    {
+      "stock": "미래에셋증권",
+      "market_cap": 0,
+      "total_pagerank": 0.12142619071236063,
+      "themes": [
+        "증권",
+        "스페이스X(SpaceX)"
+      ]
+    },
+    {
+      "stock": "우리금융지주",
+      "market_cap": 0,
+      "total_pagerank": 0.11243655005860922,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "하나금융지주",
+      "market_cap": 0,
+      "total_pagerank": 0.10449267614622709,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "기업은행",
+      "market_cap": 0,
+      "total_pagerank": 0.10304083285921534,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "신한지주",
+      "market_cap": 0,
+      "total_pagerank": 0.10111385388364366,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "iM금융지주",
+      "market_cap": 0,
+      "total_pagerank": 0.10034552850979299,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "아주IB투자",
+      "market_cap": 0,
+      "total_pagerank": 0.09908910362049134,
+      "themes": [
+        "스페이스X(SpaceX)"
+      ]
+    },
+    {
+      "stock": "켄코아에어로스페이스",
+      "market_cap": 0,
+      "total_pagerank": 0.09749808059083838,
+      "themes": [
+        "방위산업/전쟁 및 테러",
+        "스페이스X(SpaceX)"
+      ]
+    },
+    {
+      "stock": "BNK금융지주",
+      "market_cap": 0,
+      "total_pagerank": 0.0913569599855252,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "제주은행",
+      "market_cap": 0,
+      "total_pagerank": 0.09097608658457253,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "미래에셋벤처투자",
+      "market_cap": 0,
+      "total_pagerank": 0.08976231113801827,
+      "themes": [
+        "스페이스X(SpaceX)"
+      ]
+    },
+    {
+      "stock": "스피어",
+      "market_cap": 0,
+      "total_pagerank": 0.08576080688573356,
+      "themes": [
+        "스페이스X(SpaceX)"
+      ]
+    },
+    {
+      "stock": "JB금융지주",
+      "market_cap": 0,
+      "total_pagerank": 0.08490112370218808,
+      "themes": [
+        "은행"
+      ]
+    },
+    {
+      "stock": "와이제이링크",
+      "market_cap": 0,
+      "total_pagerank": 0.0796206091097324,
+      "themes": [
+        "스페이스X(SpaceX)"
+      ]
+    },
+    {
+      "stock": "이녹스첨단소재",
+      "market_cap": 0,
+      "total_pagerank": 0.07673362775006892,
+      "themes": [
+        "스페이스X(SpaceX)"
+      ]
+    }
+  ]
+}
