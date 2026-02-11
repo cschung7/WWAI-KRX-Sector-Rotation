@@ -146,7 +146,7 @@ def compute_signal_score(stock_name: str) -> dict:
     if stock_name in _signal_score_cache:
         return _signal_score_cache[stock_name]
 
-    default = {"momentum": 0, "trend": 0, "volatility": 0, "overall": 0}
+    default = {"momentum": 0, "trend": 0, "volatility": 0, "overall": 0, "ucs": None}
 
     # Cloud fallback: use pre-computed scores from signal_scores.json
     if IS_CLOUD:
@@ -157,7 +157,8 @@ def compute_signal_score(stock_name: str) -> dict:
                 "momentum": entry.get("m", 0),
                 "trend": entry.get("t", 0),
                 "volatility": entry.get("v", 0),
-                "overall": entry.get("o", 0)
+                "overall": entry.get("o", 0),
+                "ucs": entry.get("u", None)
             }
         else:
             result = default
@@ -200,11 +201,18 @@ def compute_signal_score(stock_name: str) -> dict:
         volatility = min(100, max(0, 100 - abs(from_high)))
         overall = round((momentum + trend + volatility) / 3)
 
+        # Get UCS score from signal_scores.json (available on both local and cloud)
+        ucs_score = None
+        baked = _load_baked_signal_scores()
+        if baked and stock_name in baked:
+            ucs_score = baked[stock_name].get("u", None)
+
         result = {
             "momentum": round(momentum),
             "trend": round(trend),
             "volatility": round(volatility),
-            "overall": overall
+            "overall": overall,
+            "ucs": ucs_score
         }
         _signal_score_cache[stock_name] = result
         return result

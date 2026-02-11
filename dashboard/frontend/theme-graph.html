@@ -1080,7 +1080,8 @@
 
         function getNodeTooltip(node) {
             if (node.type === 'stock') {
-                return `${node.label}\nTicker: ${node.ticker}\nSignal: ${node.signal}\nScore: ${node.score}`;
+                const ucsText = node.signal_score && node.signal_score.ucs != null ? `\n당사추정치(*): ${node.signal_score.ucs}` : '';
+                return `${node.label}\nTicker: ${node.ticker}\nSignal: ${node.signal}\nScore: ${node.score}${ucsText}`;
             } else {
                 return `${node.label}\nCohesion: ${node.fiedler}`;
             }
@@ -1431,8 +1432,9 @@
                             <div class="stock-name">${stock.name}</div>
                             <div class="stock-ticker">${stock.ticker} · ${stock.market}</div>
                         </div>
-                        <div class="stock-signal">
+                        <div class="stock-signal" style="display: flex; align-items: center; gap: 0.375rem;">
                             <span class="signal-badge ${signalLabel}" onclick="window.open('${STOCK_CHART_URL}?name=${encodeURIComponent(stock.name)}', '_blank')" style="cursor: pointer; color: ${scoreColor}; font-weight: bold;" title="Open Chart">${score}</span>
+                            ${stock.signal_score && stock.signal_score.ucs != null ? `<span style="color: ${stock.signal_score.ucs >= 70 ? '#059669' : stock.signal_score.ucs >= 50 ? '#f59e0b' : '#ef4444'}; font-size: 0.7rem; opacity: 0.85;" title="당사추정치">(*${stock.signal_score.ucs})</span>` : ''}
                         </div>
                     </div>
                 `;
@@ -1527,6 +1529,11 @@
                             Momentum ${ss.momentum || 0} &middot; Trend ${ss.trend || 0} &middot; Vol ${ss.volatility || 0}
                         </span>
                     </div>
+                    ${ss.ucs != null ? `
+                    <div class="info-item">
+                        <span class="info-label">당사추정치 (*)</span>
+                        <span class="info-value" style="color: ${ss.ucs >= 70 ? '#059669' : ss.ucs >= 50 ? '#f59e0b' : '#ef4444'}; font-weight: bold; font-size: 1.1rem;">${ss.ucs}</span>
+                    </div>` : ''}
                     <button onclick="window.open('${STOCK_CHART_URL}?name=${encodeURIComponent(stockName)}', '_blank')"
                             style="width: 100%; margin-top: 0.75rem; padding: 0.5rem; background: #3b82f6; border: none; border-radius: 0.375rem; color: white; cursor: pointer; font-size: 0.875rem;">
                         📈 Open Chart
