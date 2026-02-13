@@ -314,9 +314,12 @@ async def get_supertrend_candidates(
                 "themes": themes
             })
 
-        # Get date from file
-        ticker_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
-        data_date = Path(ticker_files[-1]).stem.split('_')[-1] if ticker_files else None
+        # Get date from selected date or latest file
+        if date:
+            data_date = date
+        else:
+            ticker_files = sorted(glob.glob(str(DATA_DIR / "actionable_tickers_*.csv")))
+            data_date = Path(ticker_files[-1]).stem.split('_')[-1] if ticker_files else None
 
         return {
             "candidates": candidates,

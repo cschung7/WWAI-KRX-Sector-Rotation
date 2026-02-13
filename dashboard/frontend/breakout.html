@@ -917,12 +917,14 @@
                     `;
                 }).join('');
 
-                document.getElementById('supertrendTableBody').innerHTML = rowsHtml;
-
-                // Initialize DataTable
+                // Destroy DataTable BEFORE writing new innerHTML
                 if (supertrendTable) {
                     supertrendTable.destroy();
+                    supertrendTable = null;
                 }
+                document.getElementById('supertrendTableBody').innerHTML = rowsHtml;
+
+                // Re-initialize DataTable
                 supertrendTable = $('#supertrendTable').DataTable({
                     pageLength: 10,
                     order: [[1, 'desc']],
@@ -989,12 +991,14 @@
                     `;
                 }).join('');
 
-                document.getElementById('bbCrossoverTableBody').innerHTML = rowsHtml;
-
-                // Initialize DataTable
+                // Destroy DataTable BEFORE writing new innerHTML
                 if (bbCrossoverTable) {
                     bbCrossoverTable.destroy();
+                    bbCrossoverTable = null;
                 }
+                document.getElementById('bbCrossoverTableBody').innerHTML = rowsHtml;
+
+                // Re-initialize DataTable
                 bbCrossoverTable = $('#bbCrossoverTable').DataTable({
                     pageLength: 10,
                     order: [[0, 'asc']],
