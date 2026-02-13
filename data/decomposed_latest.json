@@ -1,23 +1,23 @@
 {
-  "date": "2026-02-04",
-  "computed_at": "2026-02-12T06:11:31.316518",
+  "date": "2026-02-11",
+  "computed_at": "2026-02-13T23:32:10.146765",
   "regime": "CAUTION",
-  "risk_score": 20.1,
+  "risk_score": 23.5,
   "metrics": {
-    "within_sector": 1.3125,
-    "cross_sector": 1.3399,
-    "stress_index": 2.7719,
-    "stress_accel": 0.5706,
-    "divergence": 0.013,
-    "n_themes": 262,
-    "mean_correlation": 0.0
+    "within_sector": 1.8525,
+    "cross_sector": 1.558,
+    "stress_index": 2.522,
+    "stress_accel": 1.6739,
+    "divergence": -0.1165,
+    "n_themes": 158,
+    "mean_correlation": 0.2589
   },
   "alerts": [
     {
       "level": "CAUTION",
       "message": "Connection fragility rising — review hedge positions",
       "message_ko": "연결 취약성 상승 — 헤지 포지션 검토 필요",
-      "value": 2.77,
+      "value": 2.52,
       "metric": "stress_index"
     }
   ],
@@ -28,5 +28,5 @@
     "action_en": "Review hedge positions, reduce concentration",
     "action_ko": "헤지 포지션 검토, 집중도 축소"
   },
-  "timeseries_rows": 54
+  "timeseries_rows": 55
 }
