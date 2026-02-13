@@ -870,15 +870,28 @@
 
         let supertrendTable = null;
 
+        function destroySupertrendTable() {
+            if ($.fn.DataTable.isDataTable('#supertrendTable')) {
+                $('#supertrendTable').DataTable().clear().destroy();
+            }
+            supertrendTable = null;
+        }
+
         async function loadSupertrendCandidates() {
+            console.log('[SuperTrend] loadSupertrendCandidates called');
             try {
                 const selectedDate = document.getElementById('supertrendDateFilter')?.value || '';
                 const dateParam = selectedDate ? `&date=${selectedDate}` : '';
+                console.log('[SuperTrend] fetching date:', selectedDate || 'latest');
                 const response = await fetch(`${API_BASE}/api/breakout/supertrend-candidates?limit=30${dateParam}`);
                 const data = await response.json();
+                console.log('[SuperTrend] got response, date:', data.date, 'count:', data.count);
 
                 document.getElementById('supertrendDate').textContent = data.date || '';
                 document.getElementById('supertrendCount').textContent = data.count ? `(${data.count} ${t('table.tickers')})` : '';
+
+                // Always destroy DataTable first before any DOM changes
+                destroySupertrendTable();
 
                 if (!data.candidates || data.candidates.length === 0) {
                     document.getElementById('supertrendTableBody').innerHTML =
@@ -890,7 +903,6 @@
                     const priorityClass = c.priority === 'HIGH' ? 'badge-high' :
                                          c.priority === 'MEDIUM' ? 'badge-medium' : 'badge-low';
                     const barWidth = Math.min(c.score, 100);
-                    // Parse themes
                     let themesDisplay = '-';
                     try {
                         const themes = typeof c.themes === 'string' ? JSON.parse(c.themes.replace(/'/g, '"')) : c.themes;
@@ -917,17 +929,12 @@
                     `;
                 }).join('');
 
-                // Destroy DataTable BEFORE writing new innerHTML
-                if (supertrendTable) {
-                    supertrendTable.destroy();
-                    supertrendTable = null;
-                }
                 document.getElementById('supertrendTableBody').innerHTML = rowsHtml;
 
-                // Re-initialize DataTable
                 supertrendTable = $('#supertrendTable').DataTable({
                     pageLength: 10,
                     order: [[1, 'desc']],
+                    destroy: true,
                     language: currentLang === 'ko' ? {
                         search: "검색:",
                         lengthMenu: "_MENU_ 개씩 보기",
@@ -940,7 +947,8 @@
                 });
 
             } catch (error) {
-                console.error('Error loading supertrend candidates:', error);
+                console.error('[SuperTrend] Error:', error);
+                destroySupertrendTable();
                 document.getElementById('supertrendTableBody').innerHTML =
                     '<tr><td colspan="6" style="text-align:center; color: #ef4444;">Error loading SuperTrend data</td></tr>';
             }
@@ -948,15 +956,28 @@
 
         let bbCrossoverTable = null;
 
+        function destroyBBCrossoverTable() {
+            if ($.fn.DataTable.isDataTable('#bbCrossoverTable')) {
+                $('#bbCrossoverTable').DataTable().clear().destroy();
+            }
+            bbCrossoverTable = null;
+        }
+
         async function loadBBCrossover() {
+            console.log('[BBCrossover] loadBBCrossover called');
             try {
                 const selectedDate = document.getElementById('bbCrossoverDateFilter')?.value || '';
                 const dateParam = selectedDate ? `?date=${selectedDate}` : '';
+                console.log('[BBCrossover] fetching date:', selectedDate || 'latest');
                 const response = await fetch(`${API_BASE}/api/breakout/bb-crossover${dateParam}`);
                 const data = await response.json();
+                console.log('[BBCrossover] got response, date:', data.date, 'count:', data.count);
 
                 document.getElementById('bbCrossoverDate').textContent = data.date || '';
                 document.getElementById('bbCrossoverCount').textContent = data.count ? `(${data.count} ${t('table.tickers')})` : '';
+
+                // Always destroy DataTable first before any DOM changes
+                destroyBBCrossoverTable();
 
                 if (!data.tickers || data.tickers.length === 0) {
                     document.getElementById('bbCrossoverTableBody').innerHTML =
@@ -964,44 +985,38 @@
                     return;
                 }
 
-                const rowsHtml = data.tickers.map(t => {
-                    // Parse themes
+                const rowsHtml = data.tickers.map(ticker => {
                     let themesDisplay = '-';
                     try {
-                        const themes = typeof t.themes === 'string' ? JSON.parse(t.themes.replace(/'/g, '"')) : t.themes;
+                        const themes = typeof ticker.themes === 'string' ? JSON.parse(ticker.themes.replace(/'/g, '"')) : ticker.themes;
                         if (Array.isArray(themes) && themes.length > 0) {
                             themesDisplay = themes.slice(0, 2).join(', ');
                             if (themes.length > 2) themesDisplay += ` +${themes.length - 2}`;
                         }
                     } catch (e) {
-                        themesDisplay = t.themes || '-';
+                        themesDisplay = ticker.themes || '-';
                     }
 
-                    const deviationClass = t.deviation_pct >= 0 ? 'color: #10b981;' : 'color: #ef4444;';
-                    const deviationSign = t.deviation_pct >= 0 ? '+' : '';
-                    const deviationValue = t.deviation_pct ? t.deviation_pct.toFixed(2) : '0.00';
+                    const deviationClass = ticker.deviation_pct >= 0 ? 'color: #10b981;' : 'color: #ef4444;';
+                    const deviationSign = ticker.deviation_pct >= 0 ? '+' : '';
+                    const deviationValue = ticker.deviation_pct ? ticker.deviation_pct.toFixed(2) : '0.00';
 
                     return `
                         <tr>
-                            <td><strong style="color: #10b981;">${t.ticker}</strong></td>
+                            <td><strong style="color: #10b981;">${ticker.ticker}</strong></td>
                             <td style="font-size: 0.8rem;">${themesDisplay}</td>
-                            <td><span class="badge badge-high">${t.signal}</span></td>
+                            <td><span class="badge badge-high">${ticker.signal}</span></td>
                             <td style="${deviationClass}">${deviationSign}${deviationValue}%</td>
                         </tr>
                     `;
                 }).join('');
 
-                // Destroy DataTable BEFORE writing new innerHTML
-                if (bbCrossoverTable) {
-                    bbCrossoverTable.destroy();
-                    bbCrossoverTable = null;
-                }
                 document.getElementById('bbCrossoverTableBody').innerHTML = rowsHtml;
 
-                // Re-initialize DataTable
                 bbCrossoverTable = $('#bbCrossoverTable').DataTable({
                     pageLength: 10,
                     order: [[0, 'asc']],
+                    destroy: true,
                     language: currentLang === 'ko' ? {
                         search: "검색:",
                         lengthMenu: "_MENU_ 개씩 보기",
@@ -1014,7 +1029,8 @@
                 });
 
             } catch (error) {
-                console.error('Error loading trend breakout data:', error);
+                console.error('[BBCrossover] Error:', error);
+                destroyBBCrossoverTable();
                 document.getElementById('bbCrossoverTableBody').innerHTML =
                     '<tr><td colspan="4" style="text-align:center; color: #ef4444;">Error loading trend breakout data</td></tr>';
             }

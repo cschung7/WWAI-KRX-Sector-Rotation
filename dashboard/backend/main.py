@@ -82,13 +82,14 @@ app.add_middleware(
 )
 
 # Include routers
-from routers import meta_labeling, sector_rotation, portfolio, breakout, network, chat
+from routers import meta_labeling, sector_rotation, portfolio, breakout, network, chat, freshness
 app.include_router(meta_labeling.router, prefix="/api/meta-labeling", tags=["Meta-Labeling"])
 app.include_router(sector_rotation.router, prefix="/api/sector-rotation", tags=["Sector-Rotation"])
 app.include_router(portfolio.router, prefix="/api/portfolio", tags=["Portfolio"])
 app.include_router(breakout.router, prefix="/api/breakout", tags=["Breakout"])
 app.include_router(network.router, prefix="/api/network", tags=["Network"])
 app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
+app.include_router(freshness.router, prefix="/api/freshness", tags=["Freshness"])
 
 # Decomposed Fiedler regime router
 try:
@@ -138,8 +139,15 @@ async def theme_graph():
 
 @app.get("/breakout.html")
 async def breakout_page():
-    """Serve breakout page"""
-    return FileResponse(FRONTEND_DIR / "breakout.html")
+    """Serve breakout page with no-cache headers"""
+    return FileResponse(
+        FRONTEND_DIR / "breakout.html",
+        headers={
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "0"
+        }
+    )
 
 @app.get("/index.html")
 async def index_page():
@@ -155,42 +163,78 @@ async def index_page():
 
 @app.get("/signals.html")
 async def signals_page():
-    """Serve signals page"""
+    """Serve signals page with no-cache headers"""
     file_path = FRONTEND_DIR / "signals.html"
     if file_path.exists():
-        return FileResponse(file_path)
+        return FileResponse(
+            file_path,
+            headers={
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0"
+            }
+        )
     raise HTTPException(status_code=404, detail="Page not found")
 
 @app.get("/cohesion.html")
 async def cohesion_page():
-    """Serve cohesion page"""
+    """Serve cohesion page with no-cache headers"""
     file_path = FRONTEND_DIR / "cohesion.html"
     if file_path.exists():
-        return FileResponse(file_path)
+        return FileResponse(
+            file_path,
+            headers={
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0"
+            }
+        )
     raise HTTPException(status_code=404, detail="Page not found")
 
 @app.get("/theme-network.html")
 async def theme_network_page():
-    """Serve InfraNodus theme network visualization"""
+    """Serve InfraNodus theme network visualization with no-cache headers"""
     file_path = FRONTEND_DIR / "theme-network.html"
     if file_path.exists():
-        return FileResponse(file_path)
+        return FileResponse(
+            file_path,
+            headers={
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0"
+            }
+        )
     raise HTTPException(status_code=404, detail="Page not found")
 
 @app.get("/chat.html")
 async def chat_page():
-    """Serve AI chat page"""
+    """Serve AI chat page with no-cache headers"""
     file_path = FRONTEND_DIR / "chat.html"
     if file_path.exists():
-        return FileResponse(file_path)
+        return FileResponse(
+            file_path,
+            headers={
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0"
+            }
+        )
     raise HTTPException(status_code=404, detail="Page not found")
 
 @app.get("/chat-widget.js")
 async def chat_widget_js():
-    """Serve chat widget JavaScript"""
+    """Serve chat widget JavaScript with no-cache headers"""
     file_path = FRONTEND_DIR / "chat-widget.js"
     if file_path.exists():
-        return FileResponse(file_path, media_type="application/javascript")
+        return FileResponse(
+            file_path,
+            media_type="application/javascript",
+            headers={
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0"
+            }
+        )
     raise HTTPException(status_code=404, detail="Chat widget not found")
 
 @app.get("/chat-test.html")
