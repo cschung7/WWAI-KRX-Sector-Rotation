@@ -42,7 +42,7 @@ _cache_date = None  # tracks which date caches were built for
 def _check_cache_freshness():
     """Invalidate all caches when date changes (new trading day data)"""
     global _theme_cache, _fiedler_cache, _signal_prob_cache, _signal_score_cache
-    global _all_themes_cache, _cache_date
+    global _all_themes_cache, _cache_date, _theme_ucs_cache
     from datetime import date
     today = date.today().isoformat()
     if _cache_date != today:
@@ -51,6 +51,7 @@ def _check_cache_freshness():
         _signal_prob_cache = {}
         _signal_score_cache = {}
         _all_themes_cache = None
+        _theme_ucs_cache = None
         _cache_date = today
         print(f"[network] Cache invalidated for new date: {today}")
 
@@ -752,6 +753,7 @@ async def get_graph_data(
 # Theme Co-occurrence Network (InfraNodus visualization data)
 # ---------------------------------------------------------------------------
 _cooccurrence_cache = None
+_theme_ucs_cache = None
 
 @router.get("/theme-cooccurrence")
 async def theme_cooccurrence(
@@ -844,3 +846,23 @@ async def theme_cooccurrence(
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ---------------------------------------------------------------------------
+# Theme UCS Composite Scores
+# ---------------------------------------------------------------------------
+
+@router.get("/theme-ucs")
+async def get_theme_ucs_scores():
+    """Return pre-computed per-theme UCS composite scores."""
+    global _theme_ucs_cache
+    _check_cache_freshness()
+    if _theme_ucs_cache is None:
+        import json as _json
+        ucs_file = DATA_DIR / "theme_ucs_scores.json"
+        if not ucs_file.exists():
+            raise HTTPException(404, "theme_ucs_scores.json not found — run scripts/compute_theme_ucs.py first")
+        with open(ucs_file, "r", encoding="utf-8") as f:
+            _theme_ucs_cache = _json.load(f)
+        print(f"[network] Loaded theme UCS scores: {_theme_ucs_cache.get('total_themes', 0)} themes")
+    return _theme_ucs_cache
