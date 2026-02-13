@@ -1,282 +1,340 @@
 # Investment Questions & Answers (투자 Q&A)
-**Based on Analysis Date**: 2026-01-29
+**Based on Analysis Date**: 2026-02-13
 
 ---
 
 ## Terminology / 용어 가이드
 | English | Korean | Description |
 |---------|--------|-------------|
-| Cohesion | 군집성 | 테마 내 종목 동조화 강도 |
-| Breakout | 모멘텀 | 상승 추세 + 매수 조건 충족 종목 |
+| Cohesion | 군집성 | 테마 내 종목 동조화 강도 (Fiedler eigenvalue 기반) |
+| Momentum | 모멘텀 | 상승 추세 + 매수 조건 충족 종목 |
 | Signal | 시그널 | 분석 시스템 품질 필터 통과 신호 |
 | Key Player | 핵심 종목 | 테마 내 중심성이 높은 종목 |
-| TIER | 티어 | 테마 품질 등급 |
+| TIER | 티어 | 테마 품질 등급 (1=BUY NOW ~ 4=AVOID) |
+| Super Trend | 슈퍼트렌드 | 강한 상승 추세 지속 중인 종목 |
+| Early Breakout | 초기 모멘텀 | 추세 전환 초기 단계 종목 |
 
 ---
 
-## Stock Selection Questions
+## 현재 시장 현황
 
-### Q1: Which stocks have the highest momentum potential today? (오늘 모멘텀 상위 종목은?)
-**Answer**: 분석 시스템 기준 모멘텀 상위 종목
+### Q1: 현재 시장 국면은 어떤가요? (What's the current market regime?)
+**Answer**: 현재 시장 국면은 **CAUTION (경계)** 입니다.
 
-| Rank | Ticker | Key Themes |
-|------|--------|------------|
-| 1 | 포스코퓨처엠 | 리튬, 2차전지, 밸류업 |
-| 2 | 강원에너지 | 2차전지, 리튬, 전기차, 원자력 |
-| 3 | 신흥에스이씨 | 전기차 화재방지, 2차전지 |
-| 4 | 에이티넘인베스트 | 창투사, 두나무, 가상화폐 |
-| 5 | 현우산업 | PCB(FPCB 등) |
+| 지표 | 값 | 해석 |
+|------|-----|------|
+| 리스크 점수 | 20.1/100 | 낮은 편 |
+| 스트레스 지수 | 2.77 | 경계 수준 (2~5 구간) |
+| 다이버전스 | 0.01 | 낮음 (양호) |
+| 분석 테마 수 | 262개 | - |
 
----
+**시사점**: 스트레스가 경계 수준이므로 헤지 포지션 검토가 필요하며, 집중도를 축소하는 것이 바람직합니다. 다이버전스가 낮아 섹터 분열 위험은 제한적입니다.
 
-### Q2: What are the top picks in 2차전지/EV battery sector?
-**Answer**: 2차전지/배터리 관련 상위 종목
-
-| Rank | Ticker | Key Themes |
-|------|--------|------------|
-| 1 | 포스코퓨처엠 | 리튬, 2차전지, 2차전지(소재/부품) |
-| 2 | 강원에너지 | 2차전지(장비), 리튬, 전기차 |
-| 3 | 신흥에스이씨 | 전기차 화재 방지, 2차전지(소재/부품) |
+**대시보드**: 개요 페이지(/index.html)에서 국면 배너를 확인하실 수 있습니다.
 
 ---
 
-### Q3: Which stocks are central players in currently trending themes?
-**Answer**: TIER 1 테마 내 핵심 종목 Top 10
+## 종목 선정
 
-| Rank | Ticker | Theme | Role |
-|------|--------|-------|------|
-| 1 | LG유플러스 | 통신 | Theme leader |
-| 2 | SK텔레콤 | 통신 | Major player |
-| 3 | KT | 통신 | Major player |
-| 4 | LG | 통신, 스페이스X | Multi-theme hub |
-| 5 | SK | 통신, 증권 | Multi-theme hub |
-| 6 | 미래에셋증권 | 증권, 스페이스X | Cross-sector |
-| 7 | 우리금융지주 | 은행 | Sector leader |
-| 8 | 하나금융지주 | 은행 | Major player |
-| 9 | 기업은행 | 은행 | Major player |
-| 10 | 신한지주 | 은행 | Major player |
+### Q2: 오늘 모멘텀 상위 종목은? (Which stocks have highest momentum?)
+**Answer**: 분석 시스템 기준 모멘텀 상위 종목 (2026-02-12 데이터)
 
----
+| 순위 | 종목 | 점수 | 단계 | 주요 테마 |
+|------|------|------|------|-----------|
+| 1 | 아이컴포넌트 | 85 | Early Breakout | 플렉서블 디스플레이, OLED |
+| 2 | 플레이그램 | 85 | Early Breakout | - |
+| 3 | 파두 | 85 | Early Breakout | - |
+| 4 | 나노 | 82 | Early Breakout | 리튬, 2차전지, 스페이스X, HBM |
+| 5 | 하나금융지주 | 80 | Super Trend | 밸류업, 은행, STO |
+| 6 | SK텔레콤 | 80 | Super Trend | 5G, 통신, 양자컴퓨팅 |
+| 7 | 인바디 | 79 | Early Breakout | 의료기기, 고령화 |
+| 8 | 아주IB투자 | 79 | Super Trend | 스페이스X, 창투사 |
+| 9 | 영원무역 | 78 | Early Breakout | 밸류업, 패션 |
+| 10 | 신한지주 | 77 | Super Trend | 밸류업, 은행, STO |
 
-### Q4: Which telecom stocks have highest network influence?
-**Answer**: 통신 테마 핵심 종목 순위
-
-| Rank | Ticker | Notes |
-|------|--------|-------|
-| 1 | LG유플러스 | Theme leader |
-| 2 | SK텔레콤 | Strong position |
-| 3 | KT | Stable player |
-| 4 | LG | Holding company exposure |
-| 5 | SK | Holding company exposure |
+**전체 현황**: 총 672개 종목 분석 중 Early Breakout 16개, Super Trend 183개
 
 ---
 
-### Q5: Which bank stocks are most influential in the sector?
-**Answer**: 은행 테마 핵심 종목 순위
+### Q3: 금융주 중 어떤 종목이 좋은가요? (Which financial stocks are strong?)
+**Answer**: 은행·증권 테마에서 Super Trend 유지 중인 핵심 금융주
 
-| Rank | Ticker | Notes |
-|------|--------|-------|
-| 1 | 우리금융지주 | Top bank holding |
-| 2 | 하나금융지주 | Major player |
-| 3 | 기업은행 | Government-backed |
-| 4 | 신한지주 | Established player |
-| 5 | iM금융지주 | Regional strength |
-| 6 | BNK금융지주 | Regional bank |
-| 7 | 제주은행 | Regional bank |
+| 순위 | 종목 | 점수 | 테마 |
+|------|------|------|------|
+| 1 | 하나금융지주 | 80 | 은행 |
+| 2 | SK텔레콤 | 80 | 통신 |
+| 3 | 신한지주 | 77 | 은행 |
+| 4 | KT | 75 | 통신 |
+| 5 | 한국금융지주 | 73 | 증권 |
+| 6 | KB금융 | 73 | 은행 |
+| 7 | JB금융지주 | 73 | 은행 |
+| 8 | 키움증권 | 70 | 증권 |
+| 9 | 대신증권 | 69 | 증권 |
 
----
-
-## Theme/Sector Analysis Questions
-
-### Q6: Which themes have strongest cohesion? (군집성이 가장 강한 테마는?)
-**Answer**: 군집성 지표 기준 순위 (높을수록 군집성 강함)
-
-| Rank | Theme | Cohesion Level | Interpretation |
-|------|-------|---------------|----------------|
-| 1 | 은행 | Very Strong | 종목들이 함께 움직임 |
-| 2 | 방위산업/전쟁 및 테러 | Very Strong | 높은 동조화 |
-| 3 | 증권 | Very Strong | 높은 동조화 |
-| 4 | 전력설비 | Strong | 강한 동조화 |
-| 5 | 통신 | Moderate | 보통 수준 |
-| 6 | 스페이스X(SpaceX) | Moderate | 다소 약한 동조화 |
-
-**군집성 해석 가이드**:
-- Very Strong: 매우 강함 (테마 내 높은 상관관계)
-- Strong: 강함
-- Moderate: 보통
-- Weak: 약함 (분산된 테마)
+은행과 증권 테마는 현재 TIER 1 테마이며 군집성도 매우 강합니다.
 
 ---
 
-### Q7: Which TIER 1 themes should I focus on? (어떤 TIER 1 테마에 집중해야 하나?)
-**Answer**: 품질 필터 통과 6개 테마
+### Q4: TIER 1 테마 내 핵심 종목은? (Key players in TIER 1 themes?)
+**Answer**: TIER 1 테마 내 중심성 상위 종목
 
-| Theme | Cohesion Level | Recommendation |
-|-------|---------------|----------------|
-| 통신 | Moderate | Focus - stable sector rotation play |
-| 방위산업/전쟁 및 테러 | Very Strong | Focus - strong cohesion |
-| 전력설비 | Strong | Focus - infrastructure theme |
-| 증권 | Very Strong | Focus - financial sector |
-| 은행 | Very Strong | Focus - highest cohesion |
-| 스페이스X(SpaceX) | Moderate | Selective - weaker cohesion |
-
----
-
-### Q8: Which themes failed quality filtering? (회피해야 할 테마는?)
-**Answer**: 품질 필터링된 4개 테마
-
-| Theme | Reason | Action |
-|-------|--------|--------|
-| 로봇 | Low signal quality | Avoid or reduce exposure |
-| 3D 낸드 | Low signal quality | Avoid or reduce exposure |
-| 우주항공산업 | Low signal quality | Avoid or reduce exposure |
-| 풍력에너지 | Low signal quality | Avoid or reduce exposure |
-
-**Note**: These themes may have momentum but historical signal quality is poor.
+| 순위 | 종목 | 테마 | 역할 |
+|------|------|------|------|
+| 1 | LG유플러스 | 통신 | 테마 리더 |
+| 2 | SK텔레콤 | 통신 | 주요 종목 |
+| 3 | KT | 통신 | 주요 종목 |
+| 4 | LG | 통신 + 스페이스X | 멀티테마 허브 |
+| 5 | SK | 통신 + 증권 | 멀티테마 허브 |
+| 6 | 우리금융지주 | 은행 | 섹터 리더 |
+| 7 | 하나금융지주 | 은행 | 주요 종목 |
+| 8 | 기업은행 | 은행 | 주요 종목 |
+| 9 | 티씨머티리얼즈 | 전력설비 | 테마 리더 |
+| 10 | 빅텍 | 방위산업 | 테마 리더 |
 
 ---
 
-### Q9: What's the current market regime?
-**Answer**: 현재 시장 레짐은 내부 분석 시스템에서 산출됩니다.
+### Q5: 통신 테마 핵심 종목은? (Telecom theme key players?)
+**Answer**: 통신 테마 중심성 순위
 
-**Note**: 대시보드 개요 페이지에서 현재 시장 상태를 확인하실 수 있습니다.
-
----
-
-## Risk Assessment Questions
-
-### Q10: Which signals are low quality? (저품질 시그널은?)
-**Answer**: 품질 필터로 26개 중 4개 제외 (15.4%)
-
-| Filtered Theme | Pass Rate |
-|----------------|-----------|
-| 로봇 | Failed |
-| 3D 낸드 | Failed |
-| 우주항공산업 | Failed |
-| 풍력에너지 | Failed |
-
-**Overall**: 22/26 passed (84.6% pass rate)
+| 순위 | 종목 | 비고 |
+|------|------|------|
+| 1 | LG유플러스 | 테마 리더 |
+| 2 | SK텔레콤 | Super Trend 유지 (점수 80) |
+| 3 | KT | Super Trend 유지 (점수 75) |
+| 4 | SK | 지주사 (통신+증권 멀티테마) |
+| 5 | LG | 지주사 (통신+스페이스X 멀티테마) |
 
 ---
 
-### Q11: How strong is momentum for top stocks? (모멘텀 종목의 강도는?)
-**Answer**: 모멘텀 강도별 종목 분류
+### Q6: 은행 테마 핵심 종목은? (Bank theme key players?)
+**Answer**: 은행 테마 중심성 순위
 
-| 모멘텀 수준 | 종목 |
-|-------------|------|
-| 높은 모멘텀 (고위험) | 에이티넘인베스트, 현우산업, 신흥에스이씨 |
-| 보통 모멘텀 | 공구우먼, 리가켐바이오, 코메론, 포스코퓨처엠 |
-| 낮은 모멘텀 (저위험) | 우정바이오, 영풍, 강원에너지 |
-
-**해석**: 모멘텀이 높을수록 강하지만 과열 가능성도 있음
-
----
-
-### Q12: Which themes have weak cohesion? (군집성이 약한 테마는?)
-**Answer**: 군집성이 보통 이하인 테마
-
-| 테마 | Cohesion Level | 리스크 |
-|------|---------------|--------|
-| 스페이스X(SpaceX) | Moderate | 종목이 함께 움직이지 않을 수 있음 |
-| 통신 | Moderate | 다소 분산됨 |
-
-**시사점**: 테마 기반 포지션은 개별 종목 리스크가 높을 수 있음
+| 순위 | 종목 | 비고 |
+|------|------|------|
+| 1 | 우리금융지주 | 섹터 리더 |
+| 2 | 하나금융지주 | Super Trend (점수 80) |
+| 3 | 기업은행 | 정부 지원 은행 |
+| 4 | 신한지주 | Super Trend (점수 77) |
+| 5 | iM금융지주 | 지방 금융 |
+| 6 | BNK금융지주 | 지방 은행 |
+| 7 | 제주은행 | 지방 은행 |
+| 8 | JB금융지주 | Super Trend (점수 73) |
+| 9 | KB금융 | Super Trend (점수 73) |
 
 ---
 
-## Historical Performance Questions
+### Q7: 방위산업 테마 핵심 종목은? (Defense theme key players?)
+**Answer**: 방위산업/전쟁 및 테러 테마 중심성 순위
 
-### Q13: What's the expected return for momentum stage? (모멘텀 단계 기대수익률은?)
+| 순위 | 종목 | 비고 |
+|------|------|------|
+| 1 | 빅텍 | 테마 리더 |
+| 2 | 한국항공우주 | 주요 방산주 |
+| 3 | 한화에어로스페이스 | 주요 방산주 |
+| 4 | LIG넥스원 | 미사일/방공 |
+| 5 | 스페코 | 방산 전자 |
+| 6 | 한화시스템 | 방산 IT |
+| 7 | 풍산 | 탄약/비철금속 |
+| 8 | 현대로템 | 전차/철도 |
+
+---
+
+### Q8: 전력설비 테마 핵심 종목은? (Power equipment theme key players?)
+**Answer**: 전력설비 테마 중심성 순위
+
+| 순위 | 종목 | 비고 |
+|------|------|------|
+| 1 | 티씨머티리얼즈 | 테마 리더 |
+| 2 | 제일일렉트릭 | 주요 종목 |
+| 3 | 제룡전기 | 주요 종목 |
+| 4 | 한전KPS | 한전 계열 |
+| 5 | 대원전선 | 전선 업체 |
+| 6 | 비츠로시스 | Super Trend (점수 73) |
+| 7 | LS ELECTRIC | Super Trend (점수 69) |
+
+---
+
+## 테마/섹터 분석
+
+### Q9: 군집성이 가장 강한 테마는? (Which themes have strongest cohesion?)
+**Answer**: 군집성 지표 기준 상위 테마 (2026-02-13 기준)
+
+| 순위 | 테마 | 군집성 값 | 등급 | 변화 |
+|------|------|-----------|------|------|
+| 1 | 전기차 | 6.27 | Very Strong | ↑ +2.32 (+59%) |
+| 2 | 2차전지 | 6.09 | Very Strong | ↑ +1.42 (+30%) |
+| 3 | 수소차 | 4.76 | Very Strong | ↑ +2.59 (+119%) |
+| 4 | 의료기기 | 4.75 | Very Strong | ↑ +1.44 (+44%) |
+| 5 | 폴더블폰 | 4.39 | Very Strong | ↑ +3.03 (+221%) |
+| 6 | 화장품 | 4.19 | Very Strong | ↑ +0.50 (+13%) |
+| 7 | OLED | 4.08 | Very Strong | ↑ +1.42 (+53%) |
+| 8 | 음식료업종 | 3.92 | Very Strong | ↑ +0.61 (+18%) |
+| 9 | HBM(고대역폭메모리) | 3.83 | Very Strong | ↑ +2.80 (+275%) |
+| 10 | 스마트폰 | 3.68 | Very Strong | ↑ +0.64 (+21%) |
+
+**시사점**: 전기차·2차전지가 가장 높은 군집성을 보여 테마 내 종목들이 함께 움직이고 있으며, HBM과 폴더블폰은 군집성이 급격히 상승 중입니다.
+
+**대시보드**: 군집성 페이지(/cohesion.html)에서 전체 테마별 군집성을 확인할 수 있습니다.
+
+---
+
+### Q10: 군집성이 급등한 테마는? (Which themes saw biggest cohesion increase?)
+**Answer**: 군집성 변화율 상위 테마
+
+| 테마 | 군집성 변화 | 변화율 |
+|------|-----------|--------|
+| 코로나19(진단/치료제) | +3.83 | +175% |
+| 폴더블폰 | +3.03 | +221% |
+| HBM(고대역폭메모리) | +2.80 | +275% |
+| 수소차 | +2.59 | +119% |
+| 마이데이터 | +2.37 | +603% |
+
+**시사점**: HBM과 폴더블폰의 군집성이 급등하고 있어 테마 내 종목들의 동조화가 빠르게 강화되고 있습니다. 새로운 섹터 로테이션 기회를 시사합니다.
+
+---
+
+### Q11: TIER 1 테마는 어떤 것이 있나요? (What are the TIER 1 themes?)
+**Answer**: 품질 필터 최상위 12개 테마 (BUY NOW)
+
+| 테마 | 종목 수 |
+|------|---------|
+| HBM(고대역폭메모리) | 31 |
+| 통신 | 5 |
+| 3D 낸드(NAND) | 20 |
+| 건설 대표주 | 9 |
+| 스페이스X(SpaceX) | 13 |
+| 반도체 재료/부품 | 65 |
+| 윤활유 | 8 |
+| STO(토큰증권 발행) | 27 |
+| 홈쇼핑 | 7 |
+| 야놀자(Yanolja) | 6 |
+| GTX(수도권 광역급행철도) | 27 |
+| 해저터널 | 15 |
+
+**TIER 기준**: Bull >60% AND Trend >0.1
+
+---
+
+### Q12: TIER 2 관심 테마는? (TIER 2 watchlist themes?)
+**Answer**: 추가 관찰 필요한 28개 테마 (WATCHLIST)
+
+주요 TIER 2 테마: 스테이블코인, 원자력발전, 5G, 2차전지, 2차전지(소재/부품), OLED, 아이폰, 블록체인, UAM, 스마트폰, 전력저장장치(ESS), 4차산업 수혜주, 2차전지(전고체)
+
+**TIER 기준**: Bull 40-60% AND Trend >-0.2
+
+---
+
+### Q13: 피해야 할 테마는? (Which themes to avoid?)
+**Answer**: TIER 4 회피 테마 (47개)
+
+주요 TIER 4 테마: AI 챗봇(챗GPT 등), 엔터테인먼트, 화장품, 의료기기, 건강기능식품, 바이오시밀러, 증강현실(AR), 리모델링/인테리어, 음식료업종
+
+**주의**: TIER 4 테마는 Bear >60% OR Trend <-0.3 조건에 해당하여 하락 추세가 우세합니다. 해당 테마 내 종목은 단기 반등에 유의하되 신규 진입을 자제하는 것이 바람직합니다.
+
+---
+
+## 단계별 분석
+
+### Q14: 현재 단계별 종목 분포는? (Current stage distribution?)
+**Answer**: 전체 672종목 단계별 분포
+
+| 단계 | 종목 수 | 비중 | 해석 |
+|------|---------|------|------|
+| Super Trend | 183 | 27.2% | 강한 상승 추세 지속 |
+| Early Breakout | 16 | 2.4% | 추세 전환 초기 (가장 높은 기대수익) |
+| Burgeoning | 227 | 33.8% | 상승 초기 형성 중 |
+| Healthy Correction | 246 | 36.6% | 건전한 조정 구간 |
+
+**우선순위 배분**:
+- HIGH 우선순위: 194종목 (Early Breakout + Super Trend 상위)
+- MEDIUM 우선순위: 478종목 (Burgeoning + Healthy Correction)
+
+---
+
+### Q15: 모멘텀 단계 기대수익률은? (Expected returns by stage?)
 **Answer**: 백테스트 기준 (2024-01-05 ~ 2025-12-16)
 
-| 지표 | 값 |
-|------|-----|
-| 평균 수익률 (20일) | +7.93% |
-| 승률 | 43.0% |
-| 표본 수 | 172 거래 |
+| 단계 | 평균 수익률 (20일) | 승률 | 표본 수 |
+|------|-------------------|------|---------|
+| Early Breakout | +7.93% | 43.0% | 172 |
+| Super Trend | +4.24% | 40.9% | 556 |
+| Burgeoning | +1.50% | 38.5% | - |
+| Bear Volatile | -7.23% | 28.6% | - |
+| Bear Quiet | -2.15% | 33.2% | - |
 
-**대시보드**: 모멘텀 탭 → 단계별 기대수익 차트 참조
+**시사점**: Early Breakout 단계가 가장 높은 기대수익을 보이며, Bear 구간 종목은 회피하는 것이 좋습니다.
 
----
-
-### Q14: How does the momentum stage perform historically?
-**Answer**: 모멘텀 단계 성과 분석
-
-| Metric | Value |
-|--------|-------|
-| Average Return (20D) | +4.24% |
-| Win Rate | 40.9% |
-| Sample Size | 556 trades |
+**대시보드**: 모멘텀 페이지(/breakout.html)에서 단계별 기대수익 차트를 확인하실 수 있습니다.
 
 ---
 
-### Q15: What stages should I avoid?
-**Answer**: 하락 구간 기대수익률
+## 스페이스X / 우주항공
 
-| Stage | Return (20D) | Win Rate | Recommendation |
-|-------|--------------|----------|----------------|
-| Bear Volatile | -7.23% | 28.6% | **Avoid** |
-| Bear Quiet | -2.15% | 33.2% | Avoid |
+### Q16: 스페이스X 테마 핵심 종목은? (SpaceX theme key players?)
+**Answer**: 스페이스X(SpaceX) 테마 중심성 순위 (TIER 1)
 
----
-
-## Portfolio Construction Questions
-
-### Q16: How to prioritize between momentum and sector rotation?
-**Answer**: Use priority tiers
-
-| Priority | Strategy | Tickers | Rationale |
-|----------|----------|---------|-----------|
-| HIGH | Early Breakout (Momentum) | 10 tickers | Higher expected return |
-| MEDIUM | Sector Rotation (Key Players) | 15 tickers | Stable, theme-driven |
-
-**Suggested Allocation**:
-- 60-70% to HIGH priority (momentum)
-- 30-40% to MEDIUM priority (sector rotation)
+| 순위 | 종목 | 비고 |
+|------|------|------|
+| 1 | 아주IB투자 | 테마 리더, Super Trend (점수 79) |
+| 2 | 미래에셋벤처투자 | 벤처캐피탈 |
+| 3 | 스피어 | 우주 관련 |
+| 4 | 켄코아에어로스페이스 | 항공우주 부품 |
+| 5 | 와이제이링크 | 전자 부품 |
+| 6 | 미래에셋증권 | 증권+스페이스X 멀티테마 |
 
 ---
 
-### Q17: Which themes overlap (diversification risk)?
-**Answer**: Multi-theme stocks to watch
+## 포트폴리오 구성
 
-| Ticker | Themes | Risk |
-|--------|--------|------|
-| LG | 통신, 스페이스X | Correlated exposure |
-| SK | 통신, 증권 | Correlated exposure |
-| 미래에셋증권 | 증권, 스페이스X | Correlated exposure |
-| 켄코아에어로스페이스 | 방위산업, 스페이스X | Correlated exposure |
+### Q17: 포트폴리오를 어떻게 구성하면 좋을까요? (Portfolio construction?)
+**Answer**: 현재 시장 국면(CAUTION)을 고려한 배분 전략
 
-**Implication**: Holding multiple overlapping stocks reduces diversification benefit
+| 우선순위 | 전략 | 종목 수 | 배분 비중 |
+|----------|------|---------|-----------|
+| HIGH | Early Breakout (초기 모멘텀) | 16 | 30-40% |
+| HIGH | Super Trend 상위 (금융·통신) | 20~30 | 30-40% |
+| MEDIUM | TIER 1 테마 핵심종목 | 15~20 | 20-30% |
 
----
-
-### Q18: How many stocks passed all quality filters? (품질 필터 통과 종목 수는?)
-**Answer**: 필터링 단계별 현황
-
-| 단계 | 수량 | 통과율 |
-|------|------|--------|
-| 초기 시그널 | 26 | 100% |
-| 품질 필터 후 | 22 | 84.6% |
-| TIER 1 (최고 품질) | 6개 테마 | 23.1% |
-
-**대시보드**: 시그널 탭 → 통과율 게이지 참조
+**주의사항**:
+- CAUTION 국면이므로 전체 레버리지를 줄이고 분산 투자 권장
+- 금융주(은행·증권)가 안정적인 Super Trend를 유지 중
+- 단일 테마 집중 비중은 전체의 20%를 넘지 않도록 관리
 
 ---
 
-## Dashboard Navigation / 대시보드 안내
+### Q18: 테마 중복 리스크가 있는 종목은? (Theme overlap / diversification risk?)
+**Answer**: 멀티테마 종목 — 분산 효과 제한
 
-| Tab | Key Feature |
-|-----|-------------|
-| 개요 (Overview) | 전체 현황 요약, 모멘텀 종목, 테마 건강도 |
-| 모멘텀 (Momentum) | 단계별 분포, 기대수익, 관심주 |
-| 시그널 (Signals) | 품질 필터 통과율, 테마별 시그널 |
-| 군집성 (Cohesion) | 테마 군집성 분석, 상승/하락 TOP 5 |
-| 네트워크 (Network) | 테마 네트워크 시각화, 부분 검색 지원 |
+| 종목 | 겹치는 테마 | 리스크 |
+|------|------------|--------|
+| LG | 통신, 스페이스X | 상관 노출 |
+| SK | 통신, 증권 | 상관 노출 |
+| 미래에셋증권 | 증권, 스페이스X | 상관 노출 |
+| 켄코아에어로스페이스 | 방위산업, 스페이스X | 상관 노출 |
+| 나노 | 리튬, 2차전지, HBM, 스페이스X | 고중복 |
+
+**시사점**: 위 종목을 동시 보유 시 테마 하락에 대한 분산 효과가 낮아지므로 주의가 필요합니다.
+
+---
+
+## 대시보드 안내
+
+### Q19: 대시보드에서 어떤 정보를 볼 수 있나요? (Dashboard navigation?)
+**Answer**: 대시보드 페이지별 기능
+
+| 탭 | 주요 기능 |
+|----|-----------|
+| 개요 (/index.html) | 시장 국면 배너, 모멘텀 종목, 테마 건강도, 리스크 게이지 |
+| 모멘텀 (/breakout.html) | 단계별 분포, 기대수익 차트, 관심주 리스트 |
+| 시그널 (/signals.html) | 품질 필터 통과율, 테마별 시그널 매트릭스 |
+| 군집성 (/cohesion.html) | 테마 군집성 분석, 상승/하락 TOP 5, 추세 분석 → 네트워크 연결 |
+| 네트워크 (/theme-graph.html) | 테마-종목 네트워크 시각화, 부분 검색 지원 |
+| AI 채팅 (/chat.html) | AI 투자 Q&A |
 
 **언어 전환**: 우측 상단 KOR/ENG 토글로 한/영 전환 가능
 
 ---
 
-*Generated: 2026-01-29 (Updated: 2026-02-09)*
+*Generated: 2026-02-13*
 *Analysis Framework: Sector-Rotation-KRX*
 *Dashboard: KOR/ENG i18n 지원*
