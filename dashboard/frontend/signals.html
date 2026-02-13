@@ -216,6 +216,7 @@
 
         .signal-card:hover {
             transform: translateY(-2px);
+            cursor: pointer;
         }
 
         .signal-card.pass {
@@ -625,7 +626,7 @@
                     ? `<div class="signal-confidence" style="color:${getUcsColor(s.ucs_score)}">UCS: ${s.ucs_score}</div>`
                     : '';
                 return `
-                <div class="signal-card pass">
+                <div class="signal-card pass" onclick="window.location.href='theme-graph.html?theme=${encodeURIComponent(s.theme)}'">
                     <div class="signal-theme">${s.theme}</div>
                     <div class="signal-status pass">
                         <span>✓</span> ${s.status}
@@ -640,7 +641,7 @@
                     ? `<div class="signal-confidence" style="color:${getUcsColor(s.ucs_score)}">UCS: ${s.ucs_score}</div>`
                     : '';
                 return `
-                <div class="signal-card fail">
+                <div class="signal-card fail" onclick="window.location.href='theme-graph.html?theme=${encodeURIComponent(s.theme)}'">
                     <div class="signal-theme">${s.theme}</div>
                     <div class="signal-status fail">
                         <span>✗</span> ${s.status}

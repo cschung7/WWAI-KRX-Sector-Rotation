@@ -620,7 +620,7 @@
             </div>
         </div>
         <nav class="nav-links">
-            <a href="https://landing-three-ecru.vercel.app" class="home-btn">🏠 Home</a>
+            <a href="https://krx.wwai.app/" class="home-btn">🏠 Home</a>
             <a href="index.html" data-i18n="nav.overview">Overview</a>
             <a href="breakout.html" data-i18n="nav.breakout">Breakout</a>
             <a href="signals.html" data-i18n="nav.signals">Signals</a>
@@ -1323,12 +1323,15 @@
                     currentStockThemes = data.themes; // Cache for refresh
                     refreshThemeList();
                 } else if (type === 'theme' && data.stocks) {
-                    list.innerHTML = data.stocks.map(s => `
+                    list.innerHTML = data.stocks.map(s => {
+                        const score = s.buy_pct || 0;
+                        const scoreColor = score >= 70 ? '#059669' : score >= 50 ? '#10b981' : score >= 30 ? '#f59e0b' : '#ef4444';
+                        return `
                         <div class="theme-item" onclick="loadStock('${s.name}')">
                             <span class="theme-name">${s.name}</span>
-                            <span class="theme-fiedler ${s.signal}">${s.total_score.toFixed(2)}</span>
-                        </div>
-                    `).join('');
+                            <span class="theme-fiedler" style="background:${scoreColor}; color:white;">${score}</span>
+                        </div>`;
+                    }).join('');
                 }
             } catch (error) {
                 console.error('Error loading connections:', error);
