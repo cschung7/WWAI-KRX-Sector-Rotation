@@ -747,5 +747,100 @@ async def get_graph_data(
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-# Build: 1770130685
-# Redeploy: 1770131429
+
+# ---------------------------------------------------------------------------
+# Theme Co-occurrence Network (InfraNodus visualization data)
+# ---------------------------------------------------------------------------
+_cooccurrence_cache = None
+
+@router.get("/theme-cooccurrence")
+async def theme_cooccurrence(
+    min_stocks: int = Query(5, description="Min stocks for a theme to be included"),
+    min_shared: int = Query(3, description="Min shared stocks for an edge"),
+    max_themes: int = Query(80, description="Max themes to include")
+):
+    """
+    Build theme-to-theme co-occurrence network.
+    Nodes = themes, Edges = shared stock count between theme pairs.
+    Used for InfraNodus-style network visualization.
+    """
+    global _cooccurrence_cache
+    _check_cache_freshness()
+
+    cache_key = f"{min_stocks}_{min_shared}_{max_themes}"
+    if _cooccurrence_cache and _cooccurrence_cache.get("key") == cache_key:
+        return _cooccurrence_cache["data"]
+
+    try:
+        df = load_theme_data()
+        fiedler_df = load_fiedler_data()
+
+        # Build theme → set of stocks mapping
+        theme_stocks_map = {}
+        for _, row in df.iterrows():
+            stock_name = row.get('name', '')
+            themes = parse_themes(row.get('naverTheme', '[]'))
+            for t in themes:
+                if t not in theme_stocks_map:
+                    theme_stocks_map[t] = set()
+                theme_stocks_map[t].add(stock_name)
+
+        # Filter themes by min stock count
+        valid_themes = {t: stocks for t, stocks in theme_stocks_map.items()
+                        if len(stocks) >= min_stocks}
+
+        # Sort by stock count (descending) and take top N
+        sorted_themes = sorted(valid_themes.keys(),
+                               key=lambda t: len(valid_themes[t]), reverse=True)
+        selected = sorted_themes[:max_themes]
+        selected_set = set(selected)
+
+        # Build node list with metadata
+        nodes = []
+        theme_idx = {}
+        for i, theme in enumerate(selected):
+            theme_idx[theme] = i
+            fiedler = 0.0
+            n_stocks = len(valid_themes[theme])
+            if fiedler_df is not None and theme in fiedler_df.index:
+                fiedler = safe_float(fiedler_df.loc[theme, 'fiedler'])
+            nodes.append({
+                "id": i,
+                "code": theme,
+                "label": theme,
+                "fiedler": safe_round(fiedler, 3),
+                "n_stocks": n_stocks
+            })
+
+        # Build edge list (co-occurrence = shared stocks)
+        edges = []
+        theme_list = list(selected)
+        for i in range(len(theme_list)):
+            for j in range(i + 1, len(theme_list)):
+                t1, t2 = theme_list[i], theme_list[j]
+                shared = len(valid_themes[t1] & valid_themes[t2])
+                if shared >= min_shared:
+                    edges.append({
+                        "source": theme_idx[t1],
+                        "target": theme_idx[t2],
+                        "weight": shared
+                    })
+
+        result = {
+            "success": True,
+            "nodes": nodes,
+            "edges": edges,
+            "stats": {
+                "node_count": len(nodes),
+                "edge_count": len(edges),
+                "total_themes": len(theme_stocks_map),
+                "min_stocks": min_stocks,
+                "min_shared": min_shared
+            }
+        }
+
+        _cooccurrence_cache = {"key": cache_key, "data": result}
+        return result
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme Network</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a12;
+  color: #e2e8f0;
+  font-family: 'Inter', 'SF Pro', -apple-system, system-ui, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 16px; height: 41px;
+  background: rgba(10,10,18,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-title { font-size: 14px; font-weight: 600; color: #94a3b8; }
+.header-title span { color: #4ecdc4; }
+.nav-links { display: flex; gap: 4px; }
+.nav-links a {
+  padding: 4px 10px; border-radius: 6px; font-size: 12px;
+  color: #64748b; text-decoration: none; transition: all 0.15s;
+}
+.nav-links a:hover { color: #e2e8f0; background: rgba(255,255,255,0.05); }
+.nav-links a.active { color: #4ecdc4; background: rgba(78,205,196,0.1); }
+.header-right { display: flex; align-items: center; gap: 8px; }
+.lang-btn {
+  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.1); background: transparent;
+  color: #64748b; cursor: pointer; transition: all 0.15s;
+}
+.lang-btn.active { color: #4ecdc4; border-color: rgba(78,205,196,0.3); }
+.stats-badge {
+  font-size: 11px; color: #64748b; padding: 3px 8px;
+  background: rgba(255,255,255,0.04); border-radius: 4px;
+}
+
+/* Main layout: graph + sidebar */
+.main { display: flex; position: fixed; top: 41px; left: 0; right: 0; bottom: 0; }
+.graph-area { flex: 1; position: relative; }
+canvas { display: block; width: 100%; height: 100%; cursor: grab; }
+canvas.dragging { cursor: grabbing; }
+
+/* Right sidebar */
+.sidebar {
+  width: 320px; flex-shrink: 0;
+  background: rgba(12,12,22,0.95);
+  border-left: 1px solid rgba(255,255,255,0.06);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.sidebar-header {
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.sidebar-title { font-size: 13px; font-weight: 700; color: #94a3b8; margin-bottom: 8px; }
+.sidebar-tabs { display: flex; gap: 4px; }
+.tab-btn {
+  padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.08); background: transparent;
+  color: #64748b; cursor: pointer; transition: all 0.15s;
+}
+.tab-btn:hover { color: #e2e8f0; background: rgba(255,255,255,0.04); }
+.tab-btn.active { color: #4ecdc4; border-color: rgba(78,205,196,0.3); background: rgba(78,205,196,0.08); }
+
+/* Search */
+.search-box {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.search-input {
+  width: 100%; padding: 7px 10px; border-radius: 6px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  color: #e2e8f0; font-size: 12px; outline: none;
+}
+.search-input::placeholder { color: #475569; }
+.search-input:focus { border-color: rgba(78,205,196,0.4); }
+
+/* Panel content */
+.panel-content {
+  flex: 1; overflow-y: auto; padding: 10px 14px;
+  scrollbar-width: thin; scrollbar-color: #1e293b transparent;
+}
+.panel-content::-webkit-scrollbar { width: 4px; }
+.panel-content::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+
+.section-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: #475569; margin: 12px 0 6px;
+}
+.section-label:first-child { margin-top: 0; }
+
+/* Cluster cards */
+.cluster-card {
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 8px; padding: 10px 12px; margin-bottom: 6px;
+  cursor: pointer; transition: all 0.15s;
+}
+.cluster-card:hover { border-color: rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); }
+.cluster-card.active { border-color: rgba(78,205,196,0.3); }
+.cluster-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.cluster-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.cluster-name { font-size: 12px; font-weight: 700; }
+.cluster-count { font-size: 11px; color: #64748b; margin-left: auto; }
+.cluster-themes { font-size: 11px; color: #64748b; line-height: 1.5; }
+
+/* Connector / gap items */
+.insight-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.insight-item:last-child { border-bottom: none; }
+.insight-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.insight-name { font-size: 12px; font-weight: 600; flex: 1; }
+.insight-val { font-size: 11px; color: #64748b; }
+
+/* Gap insight card */
+.gap-card {
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px; padding: 10px 12px; margin-bottom: 8px;
+}
+.gap-label { font-size: 11px; color: #64748b; margin-bottom: 4px; }
+.gap-clusters { display: flex; align-items: center; gap: 6px; margin: 4px 0; }
+.gap-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
+}
+.gap-and { color: #475569; font-size: 11px; }
+
+/* Loading */
+.loading-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #0a0a12;
+}
+.loading-overlay.hidden { display: none; }
+.loading-spinner {
+  width: 40px; height: 40px; border: 3px solid rgba(78,205,196,0.15);
+  border-top-color: #4ecdc4; border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { margin-top: 16px; font-size: 13px; color: #64748b; }
+.loading-phase { margin-top: 6px; font-size: 11px; color: #475569; }
+
+/* Tooltip */
+.tooltip {
+  position: fixed; z-index: 150; pointer-events: none;
+  background: rgba(15,15,30,0.95); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px; padding: 10px 14px; font-size: 12px;
+  backdrop-filter: blur(12px); opacity: 0; transition: opacity 0.12s;
+  max-width: 280px; box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.tooltip.show { opacity: 1; }
+.tooltip-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+.tooltip-row { display: flex; justify-content: space-between; gap: 12px; margin: 3px 0; color: #94a3b8; }
+.tooltip-row .val { color: #e2e8f0; font-weight: 600; }
+.tooltip-bar { height: 4px; border-radius: 2px; background: rgba(255,255,255,0.06); margin: 4px 0; }
+.tooltip-bar-fill { height: 100%; border-radius: 2px; }
+
+/* Controls */
+.controls {
+  position: absolute; bottom: 12px; left: 12px; z-index: 120;
+  display: flex; gap: 4px;
+}
+.ctrl-btn {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: rgba(15,15,30,0.85); border: 1px solid rgba(255,255,255,0.08);
+  color: #64748b; font-size: 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(8px); transition: all 0.15s;
+}
+.ctrl-btn:hover { color: #e2e8f0; background: rgba(30,30,50,0.9); }
+
+.sidebar-meta {
+  padding: 8px 14px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  font-size: 10px; color: #334155; text-align: center;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-left">
+    <div class="header-title"><span data-i18n="title">테마 네트워크</span></div>
+    <div class="nav-links">
+      <a href="/" data-i18n="nav.overview">개요</a>
+      <a href="/breakout.html" data-i18n="nav.breakout">모멘텀</a>
+      <a href="/signals.html" data-i18n="nav.signals">시그널</a>
+      <a href="/cohesion.html" data-i18n="nav.cohesion">군집성</a>
+      <a href="/theme-graph.html" data-i18n="nav.network">네트워크</a>
+      <a href="/theme-network.html" class="active" data-i18n="nav.themeNet">테마맵</a>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="stats-badge" id="stats-badge"></span>
+    <button class="lang-btn" id="btn-ko" onclick="setLang('ko')">KOR</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">ENG</button>
+  </div>
+</div>
+
+<!-- Loading -->
+<div class="loading-overlay" id="loading">
+  <div class="loading-spinner"></div>
+  <div class="loading-text" data-i18n="loading">데이터 로딩 중...</div>
+  <div class="loading-phase" id="loading-phase"></div>
+</div>
+
+<!-- Main layout -->
+<div class="main">
+  <div class="graph-area">
+    <canvas id="graph-canvas"></canvas>
+    <div class="controls">
+      <button class="ctrl-btn" onclick="zoomBy(1.25)" title="Zoom In">+</button>
+      <button class="ctrl-btn" onclick="zoomBy(0.8)" title="Zoom Out">−</button>
+      <button class="ctrl-btn" onclick="resetView()" title="Reset">⟳</button>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title" data-i18n="panel.title">테마 분석 패널</div>
+      <div class="sidebar-tabs">
+        <button class="tab-btn active" onclick="switchTab('topics')" data-i18n="tab.topics" id="tab-topics">토픽</button>
+        <button class="tab-btn" onclick="switchTab('insights')" data-i18n="tab.insights" id="tab-insights">인사이트</button>
+        <button class="tab-btn" onclick="switchTab('search')" data-i18n="tab.search" id="tab-search">검색</button>
+      </div>
+    </div>
+    <div class="search-box" id="search-box" style="display:none">
+      <input class="search-input" id="search-input" placeholder="테마 검색..." oninput="onSearch(this.value)">
+    </div>
+    <div class="panel-content" id="panel-content"></div>
+    <div class="sidebar-meta" data-i18n="meta.info">글자 크기 = 매개 중심성 · 엣지 색상 = 클러스터</div>
+  </div>
+</div>
+
+<!-- Tooltip -->
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+// =========================================================================
+// i18n
+// =========================================================================
+const T = {
+  ko: {
+    title:'테마 네트워크', loading:'데이터 로딩 중...',
+    'nav.overview':'개요','nav.breakout':'모멘텀','nav.signals':'시그널',
+    'nav.cohesion':'군집성','nav.network':'네트워크','nav.themeNet':'테마맵',
+    'panel.title':'테마 분석 패널',
+    'tab.topics':'토픽','tab.insights':'인사이트','tab.search':'검색',
+    'meta.info':'글자 크기 = 매개 중심성 · 엣지 색상 = 클러스터',
+    phase_fetch:'테마 데이터 가져오는 중...',phase_community:'커뮤니티 탐지 중...',
+    phase_layout:'레이아웃 계산 중...',phase_render:'렌더링 중...',
+    cluster:'클러스터',centrality:'중심성',connections:'연결',
+    fiedler:'군집성',stocks:'종목수',themes:'테마',
+    stats:'{n}개 테마 · {e}개 연결',
+    'sec.clusters':'클러스터 구조','sec.connectors':'핵심 연결 테마',
+    'sec.gaps':'구조적 갭','sec.results':'검색 결과',
+    'gap.desc':'연결이 약한 클러스터 쌍',
+    'conn.desc':'클러스터 간 연결에 핵심적인 테마',
+    searchPlaceholder:'테마 검색...',
+    noResults:'결과 없음',
+  },
+  en: {
+    title:'Theme Network', loading:'Loading data...',
+    'nav.overview':'Overview','nav.breakout':'Momentum','nav.signals':'Signals',
+    'nav.cohesion':'Cohesion','nav.network':'Network','nav.themeNet':'ThemeMap',
+    'panel.title':'Text Analytics Panel',
+    'tab.topics':'Topics','tab.insights':'Insights','tab.search':'Search',
+    'meta.info':'Text size = Betweenness Centrality · Edge color = Cluster',
+    phase_fetch:'Fetching theme data...',phase_community:'Detecting communities...',
+    phase_layout:'Computing layout...',phase_render:'Rendering...',
+    cluster:'Cluster',centrality:'Centrality',connections:'Connections',
+    fiedler:'Cohesion',stocks:'Stocks',themes:'themes',
+    stats:'{n} themes · {e} edges',
+    'sec.clusters':'Cluster Structure','sec.connectors':'Key Connector Themes',
+    'sec.gaps':'Structural Gaps','sec.results':'Search Results',
+    'gap.desc':'Cluster pairs with weak connections',
+    'conn.desc':'Themes bridging multiple clusters',
+    searchPlaceholder:'Search themes...',
+    noResults:'No results',
+  }
+};
+let lang = localStorage.getItem('krx-dashboard-lang') || 'ko';
+function t(k) { return (T[lang]||T.ko)[k]||k; }
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('krx-dashboard-lang', l);
+  document.getElementById('btn-ko').classList.toggle('active', l==='ko');
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (T[l][k]) el.textContent = T[l][k];
+  });
+  document.getElementById('search-input').placeholder = t('searchPlaceholder');
+  updateStatsBadge();
+  buildPanel();
+}
+function setPhase(k) { document.getElementById('loading-phase').textContent = t(k); }
+
+// =========================================================================
+// COLORS
+// =========================================================================
+const COLORS = ['#4ecdc4','#ffe66d','#ff6b6b','#a29bfe','#fd79a8','#55efc4','#fdcb6e','#e17055'];
+function hexToRGB(hex) {
+  return [parseInt(hex.slice(1,3),16), parseInt(hex.slice(3,5),16), parseInt(hex.slice(5,7),16)];
+}
+
+// =========================================================================
+// Graph algorithms
+// =========================================================================
+function louvainCommunities(adj, n) {
+  let tw=0;
+  for(let i=0;i<n;i++) for(let j=i+1;j<n;j++) tw+=adj[i][j];
+  if(tw===0) return Array.from({length:n},(_,i)=>i%4);
+  const m2=tw*2, deg=new Array(n).fill(0);
+  for(let i=0;i<n;i++) for(let j=0;j<n;j++) deg[i]+=adj[i][j];
+  const comm=Array.from({length:n},(_,i)=>i);
+  const sIn=new Array(n).fill(0), sTot=deg.slice();
+  for(let iter=0;iter<15;iter++){
+    let moved=false;
+    for(let i=0;i<n;i++){
+      const cur=comm[i]; const nc=new Map();
+      for(let j=0;j<n;j++) if(adj[i][j]>0&&i!==j) nc.set(comm[j],(nc.get(comm[j])||0)+adj[i][j]);
+      const ki=deg[i],kiIn=nc.get(cur)||0;
+      sTot[cur]-=ki; sIn[cur]-=2*kiIn;
+      let best=cur,bestD=0;
+      for(const[c,w] of nc){const d=w-sTot[c]*ki/m2; if(d>bestD){bestD=d;best=c;}}
+      comm[i]=best; sTot[best]+=ki; sIn[best]+=2*(nc.get(best)||0);
+      if(best!==cur) moved=true;
+    }
+    if(!moved) break;
+  }
+  const u=[...new Set(comm)],rm=new Map(u.map((c,i)=>[c,i]));
+  return comm.map(c=>rm.get(c));
+}
+
+function betweennessCentrality(adj, n, thr) {
+  const bc=new Array(n).fill(0);
+  for(let s=0;s<n;s++){
+    const stack=[],pred=Array.from({length:n},()=>[]);
+    const sigma=new Array(n).fill(0),dist=new Array(n).fill(-1),delta=new Array(n).fill(0);
+    sigma[s]=1;dist[s]=0;const Q=[s];
+    while(Q.length>0){const v=Q.shift();stack.push(v);
+      for(let w=0;w<n;w++){if(adj[v][w]<thr||v===w)continue;
+        if(dist[w]<0){Q.push(w);dist[w]=dist[v]+1;}
+        if(dist[w]===dist[v]+1){sigma[w]+=sigma[v];pred[w].push(v);}}}
+    while(stack.length>0){const w=stack.pop();
+      for(const v of pred[w]) delta[v]+=(sigma[v]/sigma[w])*(1+delta[w]);
+      if(w!==s) bc[w]+=delta[w];}
+  }
+  const mx=Math.max(...bc,1e-10);
+  return bc.map(v=>v/mx);
+}
+
+// =========================================================================
+// ForceAtlas2
+// =========================================================================
+function fa2Step(nds, edges, cfg, frame, total) {
+  const n=nds.length, p=frame/total;
+  const pm=p<0.15?1.5:p<0.5?1.0:0.5;
+  for(let i=0;i<n;i++){nds[i].odx=nds[i].dx;nds[i].ody=nds[i].dy;nds[i].dx=0;nds[i].dy=0;}
+  const sr=cfg.sr*pm;
+  for(let i=0;i<n;i++) for(let j=i+1;j<n;j++){
+    const dx=nds[j].x-nds[i].x,dy=nds[j].y-nds[i].y;
+    const d=Math.sqrt(dx*dx+dy*dy)||0.1;
+    const f=sr*(nds[i].m+1)*(nds[j].m+1)/(d*d);
+    nds[i].dx-=(dx/d)*f;nds[i].dy-=(dy/d)*f;nds[j].dx+=(dx/d)*f;nds[j].dy+=(dy/d)*f;
+  }
+  for(const e of edges){
+    const s=nds[e.s],tt=nds[e.t];
+    const dx=tt.x-s.x,dy=tt.y-s.y;
+    const d=Math.sqrt(dx*dx+dy*dy)||0.1;
+    const f=d*e.w*cfg.att;
+    s.dx+=(dx/d)*f;s.dy+=(dy/d)*f;tt.dx-=(dx/d)*f;tt.dy-=(dy/d)*f;
+  }
+  let gcx=0,gcy=0;
+  for(let i=0;i<n;i++){gcx+=nds[i].x;gcy+=nds[i].y;} gcx/=n;gcy/=n;
+  for(let i=0;i<n;i++){nds[i].dx-=(nds[i].x-gcx)*cfg.g*0.01;nds[i].dy-=(nds[i].y-gcy)*cfg.g*0.01;}
+  let tSw=0,tTr=0;
+  for(let i=0;i<n;i++){
+    const sw=Math.sqrt((nds[i].dx-nds[i].odx)**2+(nds[i].dy-nds[i].ody)**2);
+    const tr=Math.sqrt((nds[i].dx+nds[i].odx)**2+(nds[i].dy+nds[i].ody)**2)/2;
+    tSw+=sw;tTr+=tr;nds[i].cv=Math.min(1,tr/(sw+0.01));
+  }
+  const gs=Math.min(tTr/(tSw+0.01),5);
+  for(let i=0;i<n;i++){
+    const disp=Math.sqrt(nds[i].dx**2+nds[i].dy**2);
+    if(disp<=0)continue;
+    const lim=Math.min(gs*nds[i].cv*disp,8)/disp;
+    nds[i].x+=nds[i].dx*lim;nds[i].y+=nds[i].dy*lim;
+  }
+  const minSep=30;
+  for(let i=0;i<n;i++) for(let j=i+1;j<n;j++){
+    const dx=nds[j].x-nds[i].x,dy=nds[j].y-nds[i].y;
+    const d=Math.sqrt(dx*dx+dy*dy);
+    if(d<minSep&&d>0.01){
+      const push=(minSep-d)*0.3;
+      nds[i].x-=(dx/d)*push;nds[i].y-=(dy/d)*push;nds[j].x+=(dx/d)*push;nds[j].y+=(dy/d)*push;
+    }
+  }
+}
+
+// =========================================================================
+// State
+// =========================================================================
+let graphData=null, nodes=[], fa2Nodes=[], fa2Edges=[];
+let communities=[], centralities=[], degrees=[], adj=[];
+let cam={x:0,y:0,s:1};
+let GW=0,GH=0; // graph area size
+let dragging=false, dragNode=-1, dragStart={x:0,y:0};
+let hoveredNode=-1, selectedCluster=-1, searchHighlight=new Set();
+let canvas, ctx;
+let currentTab='topics';
+
+const API_BASE = window.location.origin;
+const TOTAL_FRAMES = 500;
+
+// =========================================================================
+// Init — PRE-COMPUTE layout before first render
+// =========================================================================
+async function init() {
+  setLang(lang);
+  setPhase('phase_fetch');
+
+  canvas = document.getElementById('graph-canvas');
+  ctx = canvas.getContext('2d');
+
+  try {
+    const r = await fetch(`${API_BASE}/api/network/theme-cooccurrence?min_stocks=5&min_shared=4&max_themes=60`);
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    graphData = await r.json();
+  } catch(e) {
+    document.getElementById('loading-phase').textContent = 'Error: '+e.message;
+    return;
+  }
+
+  nodes = graphData.nodes;
+  const rawEdges = graphData.edges;
+  const n = nodes.length;
+
+  setPhase('phase_community');
+  adj = Array.from({length:n},()=>new Array(n).fill(0));
+  let maxW=0;
+  for(const e of rawEdges){ adj[e.source][e.target]=e.weight; adj[e.target][e.source]=e.weight; maxW=Math.max(maxW,e.weight); }
+  fa2Edges = rawEdges.map(e=>({s:e.source,t:e.target,w:maxW>0?e.weight/maxW:0,raw:e.weight}));
+  communities = louvainCommunities(adj, n);
+  centralities = betweennessCentrality(adj, n, 0.5);
+  degrees = new Array(n).fill(0);
+  for(let i=0;i<n;i++) for(let j=0;j<n;j++) if(adj[i][j]>0) degrees[i]++;
+
+  // Init positions in circle
+  setPhase('phase_layout');
+  fa2Nodes = nodes.map((_,i)=>{
+    const angle=(i/n)*Math.PI*2+Math.random()*0.3;
+    const radius=50+Math.random()*100;
+    return {x:Math.cos(angle)*radius, y:Math.sin(angle)*radius, dx:0,dy:0,odx:0,ody:0, m:degrees[i]+1, cv:1};
+  });
+
+  // RUN ALL FA2 SYNCHRONOUSLY — user sees final result immediately
+  const cfg = {sr:3, g:3, att:0.1};
+  for(let f=0;f<TOTAL_FRAMES;f++) {
+    fa2Step(fa2Nodes, fa2Edges, cfg, f, TOTAL_FRAMES);
+  }
+
+  // Setup canvas and fit view
+  resize();
+  window.addEventListener('resize', ()=>{ resize(); fitView(); draw(); });
+  fitView();
+
+  updateStatsBadge();
+  buildPanel();
+  document.getElementById('loading').classList.add('hidden');
+
+  attachEvents();
+  draw();
+}
+
+function resize() {
+  const area = document.querySelector('.graph-area');
+  GW = area.clientWidth;
+  GH = area.clientHeight;
+  canvas.width = GW * devicePixelRatio;
+  canvas.height = GH * devicePixelRatio;
+  canvas.style.width = GW+'px';
+  canvas.style.height = GH+'px';
+  ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+}
+
+function fitView() {
+  if(!fa2Nodes.length) return;
+  let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
+  for(const nd of fa2Nodes){
+    if(nd.x<minX)minX=nd.x; if(nd.x>maxX)maxX=nd.x;
+    if(nd.y<minY)minY=nd.y; if(nd.y>maxY)maxY=nd.y;
+  }
+  const pad=60;
+  const bw=maxX-minX+pad*2, bh=maxY-minY+pad*2;
+  const s=Math.min(GW/bw, GH/bh, 3);
+  cam.s=s;
+  cam.x=GW/2-((minX+maxX)/2)*s;
+  cam.y=GH/2-((minY+maxY)/2)*s;
+}
+
+// =========================================================================
+// Rendering
+// =========================================================================
+function draw() {
+  ctx.clearRect(0,0,GW,GH);
+  ctx.fillStyle='#0a0a12';
+  ctx.fillRect(0,0,GW,GH);
+
+  ctx.save();
+  ctx.translate(cam.x,cam.y);
+  ctx.scale(cam.s,cam.s);
+
+  const n=fa2Nodes.length;
+  const dimOther = selectedCluster>=0 || searchHighlight.size>0;
+
+  // Edges
+  for(const e of fa2Edges){
+    const s=fa2Nodes[e.s],tt=fa2Nodes[e.t];
+    const sc=communities[e.s],tc=communities[e.t];
+    const col=sc===tc?COLORS[sc%COLORS.length]:'#3a3a5a';
+    const [r,g,b]=hexToRGB(col);
+    let alpha=0.06+e.w*0.22;
+    if(dimOther){
+      const sH=selectedCluster>=0?(sc===selectedCluster&&tc===selectedCluster):
+        (searchHighlight.has(e.s)&&searchHighlight.has(e.t));
+      alpha=sH?alpha+0.15:alpha*0.15;
+    }
+    ctx.strokeStyle=`rgba(${r},${g},${b},${alpha})`;
+    ctx.lineWidth=(0.4+e.w*1.8)/cam.s;
+    ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(tt.x,tt.y);ctx.stroke();
+  }
+
+  // Dots
+  for(let i=0;i<n;i++){
+    const pos=fa2Nodes[i],bc=centralities[i],comm=communities[i];
+    const col=COLORS[comm%COLORS.length];
+    const [r,g,b]=hexToRGB(col);
+    const dotR=(3+bc*8)/cam.s;
+    let dimmed=false;
+    if(dimOther){
+      dimmed=selectedCluster>=0?comm!==selectedCluster:!searchHighlight.has(i);
+    }
+    const glowR=dotR*3;
+    const ga=dimmed?0.08:0.45;
+    const grad=ctx.createRadialGradient(pos.x,pos.y,dotR*0.3,pos.x,pos.y,glowR);
+    grad.addColorStop(0,`rgba(${r},${g},${b},${ga})`);
+    grad.addColorStop(0.5,`rgba(${r},${g},${b},${ga*0.2})`);
+    grad.addColorStop(1,`rgba(${r},${g},${b},0)`);
+    ctx.fillStyle=grad;ctx.beginPath();ctx.arc(pos.x,pos.y,glowR,0,Math.PI*2);ctx.fill();
+    ctx.globalAlpha=dimmed?0.2:1;
+    ctx.fillStyle=col;ctx.beginPath();ctx.arc(pos.x,pos.y,dotR,0,Math.PI*2);ctx.fill();
+    ctx.globalAlpha=1;
+  }
+  ctx.restore();
+
+  // Text labels (screen-space)
+  for(let i=0;i<n;i++){
+    const pos=fa2Nodes[i],bc=centralities[i],comm=communities[i];
+    const col=COLORS[comm%COLORS.length];
+    const [r,g,b]=hexToRGB(col);
+    const sx=pos.x*cam.s+cam.x, sy=pos.y*cam.s+cam.y;
+    const fontSize=9+27*Math.pow(bc,0.5);
+    let opacity=0.3+0.7*Math.pow(bc,0.3);
+    if(dimOther){
+      const isH=selectedCluster>=0?comm===selectedCluster:searchHighlight.has(i);
+      opacity=isH?opacity:opacity*0.12;
+    }
+    const weight=bc>0.3?700:bc>0.1?600:500;
+    let label=nodes[i].code;
+    if(fontSize<14&&label.length>8) label=label.substring(0,7)+'…';
+    else if(fontSize<20&&label.length>12) label=label.substring(0,11)+'…';
+    const dotSR=3+bc*8;
+    ctx.font=`${weight} ${fontSize}px 'Inter','SF Pro',system-ui,sans-serif`;
+    ctx.textAlign='center';ctx.textBaseline='bottom';
+    ctx.fillStyle=`rgba(${r},${g},${b},${opacity})`;
+    ctx.fillText(label,sx,sy-dotSR-3);
+  }
+
+  // Hovered node
+  if(hoveredNode>=0&&hoveredNode<n){
+    const pos=fa2Nodes[hoveredNode],bc=centralities[hoveredNode],comm=communities[hoveredNode];
+    const col=COLORS[comm%COLORS.length];
+    const [r,g,b]=hexToRGB(col);
+    const sx=pos.x*cam.s+cam.x,sy=pos.y*cam.s+cam.y;
+    const dotSR=3+bc*8;
+    ctx.strokeStyle=`rgba(${r},${g},${b},0.8)`;ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(sx,sy,dotSR+5,0,Math.PI*2);ctx.stroke();
+    ctx.save();ctx.translate(cam.x,cam.y);ctx.scale(cam.s,cam.s);
+    for(const e of fa2Edges){
+      if(e.s!==hoveredNode&&e.t!==hoveredNode)continue;
+      ctx.strokeStyle=`rgba(${r},${g},${b},0.5)`;ctx.lineWidth=2/cam.s;
+      ctx.beginPath();ctx.moveTo(fa2Nodes[e.s].x,fa2Nodes[e.s].y);ctx.lineTo(fa2Nodes[e.t].x,fa2Nodes[e.t].y);ctx.stroke();
+    }
+    ctx.restore();
+    const fs=Math.max(9+27*Math.pow(bc,0.5),16);
+    ctx.font=`700 ${fs}px 'Inter','SF Pro',system-ui,sans-serif`;
+    ctx.textAlign='center';ctx.textBaseline='bottom';ctx.fillStyle=col;
+    ctx.fillText(nodes[hoveredNode].code,sx,sy-dotSR-4);
+  }
+}
+
+// =========================================================================
+// Interactions
+// =========================================================================
+function attachEvents(){
+  canvas.addEventListener('mousedown',e=>{
+    const rect=canvas.getBoundingClientRect();
+    const mx=e.clientX-rect.left,my=e.clientY-rect.top;
+    const [wx,wy]=screenToWorld(mx,my);
+    const hit=hitTest(wx,wy);
+    if(hit>=0){dragNode=hit;dragging=true;canvas.classList.add('dragging');}
+    else{dragging=true;dragNode=-1;dragStart={x:mx-cam.x,y:my-cam.y};canvas.classList.add('dragging');}
+    e.preventDefault();
+  });
+  canvas.addEventListener('mousemove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    const mx=e.clientX-rect.left,my=e.clientY-rect.top;
+    const [wx,wy]=screenToWorld(mx,my);
+    if(dragging&&dragNode>=0){fa2Nodes[dragNode].x=wx;fa2Nodes[dragNode].y=wy;draw();}
+    else if(dragging){cam.x=mx-dragStart.x;cam.y=my-dragStart.y;draw();}
+    else{
+      const hit=hitTest(wx,wy);
+      if(hit!==hoveredNode){hoveredNode=hit;draw();
+        if(hit>=0) showTooltip(hit,e.clientX,e.clientY); else hideTooltip();
+      } else if(hit>=0){
+        const tip=document.getElementById('tooltip');tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY-10)+'px';
+      }
+    }
+  });
+  canvas.addEventListener('mouseup',()=>{dragging=false;dragNode=-1;canvas.classList.remove('dragging');});
+  canvas.addEventListener('mouseleave',()=>{dragging=false;dragNode=-1;hoveredNode=-1;canvas.classList.remove('dragging');hideTooltip();draw();});
+  canvas.addEventListener('wheel',e=>{
+    e.preventDefault();
+    const rect=canvas.getBoundingClientRect();
+    const mx=e.clientX-rect.left,my=e.clientY-rect.top;
+    const factor=e.deltaY>0?0.9:1.1;
+    const newS=Math.max(0.3,Math.min(6,cam.s*factor));
+    cam.x=mx-(mx-cam.x)*(newS/cam.s);cam.y=my-(my-cam.y)*(newS/cam.s);cam.s=newS;
+    draw();
+  },{passive:false});
+}
+
+function screenToWorld(sx,sy){return[(sx-cam.x)/cam.s,(sy-cam.y)/cam.s];}
+function hitTest(wx,wy){
+  let best=-1,bestD=30/cam.s;
+  for(let i=0;i<fa2Nodes.length;i++){
+    const dx=fa2Nodes[i].x-wx,dy=fa2Nodes[i].y-wy;
+    const d=Math.sqrt(dx*dx+dy*dy);
+    const hitR=(10+centralities[i]*20)/cam.s;
+    if(d<hitR&&d<bestD){bestD=d;best=i;}
+  }
+  return best;
+}
+
+function showTooltip(idx,mx,my){
+  const tip=document.getElementById('tooltip');
+  const node=nodes[idx],bc=centralities[idx],comm=communities[idx];
+  const col=COLORS[comm%COLORS.length];
+  let conns=0; for(const e of fa2Edges) if(e.s===idx||e.t===idx) conns++;
+  tip.innerHTML=`
+    <div class="tooltip-title" style="color:${col}">${node.code}</div>
+    <div class="tooltip-row"><span>${t('cluster')}</span><span class="val" style="color:${col}">${t('cluster')} ${String.fromCharCode(65+comm)}</span></div>
+    <div class="tooltip-row"><span>${t('centrality')}</span><span class="val">${(bc*100).toFixed(1)}%</span></div>
+    <div class="tooltip-bar"><div class="tooltip-bar-fill" style="width:${bc*100}%;background:${col}"></div></div>
+    <div class="tooltip-row"><span>${t('connections')}</span><span class="val">${conns}</span></div>
+    <div class="tooltip-row"><span>${t('fiedler')}</span><span class="val">${node.fiedler}</span></div>
+    <div class="tooltip-row"><span>${t('stocks')}</span><span class="val">${node.n_stocks}</span></div>`;
+  tip.style.left=(mx+14)+'px';tip.style.top=(my-10)+'px';tip.classList.add('show');
+}
+function hideTooltip(){document.getElementById('tooltip').classList.remove('show');}
+
+function zoomBy(f){
+  const newS=Math.max(0.3,Math.min(6,cam.s*f));
+  const cx=GW/2,cy=GH/2;
+  cam.x=cx-(cx-cam.x)*(newS/cam.s);cam.y=cy-(cy-cam.y)*(newS/cam.s);cam.s=newS;draw();
+}
+function resetView(){selectedCluster=-1;searchHighlight.clear();fitView();draw();buildPanel();}
+
+function updateStatsBadge(){
+  if(!graphData)return;
+  document.getElementById('stats-badge').textContent=t('stats').replace('{n}',graphData.stats.node_count).replace('{e}',graphData.stats.edge_count);
+}
+
+// =========================================================================
+// Sidebar — Tabs & Panels
+// =========================================================================
+function switchTab(tab){
+  currentTab=tab;
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('search-box').style.display=tab==='search'?'block':'none';
+  buildPanel();
+}
+
+function buildPanel(){
+  const el=document.getElementById('panel-content');
+  if(currentTab==='topics') buildTopicsPanel(el);
+  else if(currentTab==='insights') buildInsightsPanel(el);
+  else buildSearchPanel(el);
+}
+
+function buildTopicsPanel(el){
+  const counts={}, topByComm={};
+  communities.forEach((c,i)=>{
+    counts[c]=(counts[c]||0)+1;
+    if(!topByComm[c]) topByComm[c]=[];
+    topByComm[c].push(i);
+  });
+  const ids=Object.keys(counts).map(Number).sort((a,b)=>counts[b]-counts[a]);
+  // Sort members by centrality
+  ids.forEach(c=>topByComm[c].sort((a,b)=>centralities[b]-centralities[a]));
+
+  let html=`<div class="section-label">${t('sec.clusters')}</div>`;
+  ids.forEach((c,ci)=>{
+    const col=COLORS[c%COLORS.length];
+    const label=String.fromCharCode(65+ci);
+    const members=topByComm[c];
+    const top5=members.slice(0,5).map(i=>nodes[i].code);
+    const isActive=selectedCluster===c;
+    html+=`<div class="cluster-card${isActive?' active':''}" onclick="toggleCluster(${c})" style="border-left:3px solid ${col}">
+      <div class="cluster-head">
+        <span class="cluster-name" style="color:${col}">${t('cluster')} ${label}</span>
+        <span class="cluster-count">${counts[c]} ${t('themes')}</span>
+      </div>
+      <div class="cluster-themes">${top5.join(', ')}${members.length>5?' …':''}</div>
+    </div>`;
+  });
+  el.innerHTML=html;
+}
+
+function buildInsightsPanel(el){
+  const n=nodes.length;
+  // Key connectors: top betweenness centrality nodes
+  const sorted=[...Array(n).keys()].sort((a,b)=>centralities[b]-centralities[a]);
+  let html=`<div class="section-label">${t('sec.connectors')}</div>
+    <div style="font-size:11px;color:#475569;margin-bottom:8px">${t('conn.desc')}</div>`;
+  sorted.slice(0,8).forEach(i=>{
+    const col=COLORS[communities[i]%COLORS.length];
+    let conns=0; for(const e of fa2Edges) if(e.s===i||e.t===i) conns++;
+    html+=`<div class="insight-item" style="cursor:pointer" onclick="highlightNode(${i})">
+      <div class="insight-dot" style="background:${col}"></div>
+      <div class="insight-name" style="color:${col}">${nodes[i].code}</div>
+      <div class="insight-val">${(centralities[i]*100).toFixed(0)}%</div>
+    </div>`;
+  });
+
+  // Structural gaps: cluster pairs with fewest inter-edges
+  html+=`<div class="section-label" style="margin-top:16px">${t('sec.gaps')}</div>
+    <div style="font-size:11px;color:#475569;margin-bottom:8px">${t('gap.desc')}</div>`;
+  const commIds=[...new Set(communities)].sort((a,b)=>a-b);
+  const gaps=[];
+  for(let i=0;i<commIds.length;i++) for(let j=i+1;j<commIds.length;j++){
+    let cross=0;
+    for(const e of fa2Edges){
+      const ca=communities[e.s],cb=communities[e.t];
+      if((ca===commIds[i]&&cb===commIds[j])||(ca===commIds[j]&&cb===commIds[i])) cross++;
+    }
+    gaps.push({a:commIds[i],b:commIds[j],cross});
+  }
+  gaps.sort((a,b)=>a.cross-b.cross);
+  gaps.slice(0,3).forEach(g=>{
+    const colA=COLORS[g.a%COLORS.length],colB=COLORS[g.b%COLORS.length];
+    const labA=String.fromCharCode(65+commIds.indexOf(g.a));
+    const labB=String.fromCharCode(65+commIds.indexOf(g.b));
+    html+=`<div class="gap-card">
+      <div class="gap-clusters">
+        <span class="gap-badge" style="border-color:${colA}"><span class="insight-dot" style="background:${colA}"></span>${t('cluster')} ${labA}</span>
+        <span class="gap-and">↔</span>
+        <span class="gap-badge" style="border-color:${colB}"><span class="insight-dot" style="background:${colB}"></span>${t('cluster')} ${labB}</span>
+      </div>
+      <div class="gap-label">${g.cross} ${t('connections')}</div>
+    </div>`;
+  });
+  el.innerHTML=html;
+}
+
+function buildSearchPanel(el){
+  const q=document.getElementById('search-input').value.trim().toLowerCase();
+  if(!q){
+    el.innerHTML=`<div style="color:#475569;font-size:12px;padding:20px 0;text-align:center">${t('searchPlaceholder')}</div>`;
+    return;
+  }
+  const matches=[];
+  nodes.forEach((nd,i)=>{
+    if(nd.code.toLowerCase().includes(q)||nd.label.toLowerCase().includes(q)) matches.push(i);
+  });
+  if(!matches.length){
+    el.innerHTML=`<div style="color:#475569;font-size:12px;padding:20px 0;text-align:center">${t('noResults')}</div>`;
+    return;
+  }
+  let html=`<div class="section-label">${t('sec.results')} (${matches.length})</div>`;
+  matches.sort((a,b)=>centralities[b]-centralities[a]);
+  matches.forEach(i=>{
+    const col=COLORS[communities[i]%COLORS.length];
+    let conns=0; for(const e of fa2Edges) if(e.s===i||e.t===i) conns++;
+    html+=`<div class="insight-item" style="cursor:pointer" onclick="highlightNode(${i})">
+      <div class="insight-dot" style="background:${col}"></div>
+      <div class="insight-name" style="color:${col}">${nodes[i].code}</div>
+      <div class="insight-val">${conns} ${t('connections')}</div>
+    </div>`;
+  });
+  el.innerHTML=html;
+}
+
+function onSearch(val){
+  const q=val.trim().toLowerCase();
+  searchHighlight.clear();
+  selectedCluster=-1;
+  if(q){
+    nodes.forEach((nd,i)=>{
+      if(nd.code.toLowerCase().includes(q)||nd.label.toLowerCase().includes(q)) searchHighlight.add(i);
+    });
+  }
+  buildPanel();
+  draw();
+}
+
+function toggleCluster(c){
+  searchHighlight.clear();
+  selectedCluster=selectedCluster===c?-1:c;
+  buildPanel();
+  draw();
+}
+
+function highlightNode(idx){
+  searchHighlight.clear();
+  selectedCluster=-1;
+  searchHighlight.add(idx);
+  // Also highlight connected nodes
+  for(const e of fa2Edges){
+    if(e.s===idx) searchHighlight.add(e.t);
+    if(e.t===idx) searchHighlight.add(e.s);
+  }
+  draw();
+  // Pan to node
+  const sx=fa2Nodes[idx].x*cam.s+cam.x, sy=fa2Nodes[idx].y*cam.s+cam.y;
+  const cx=GW/2,cy=GH/2;
+  cam.x+=cx-sx;cam.y+=cy-sy;
+  draw();
+}
+
+// =========================================================================
+// Boot
+// =========================================================================
+init();
+</script>
+</body>
+</html>

@@ -169,6 +169,14 @@ async def cohesion_page():
         return FileResponse(file_path)
     raise HTTPException(status_code=404, detail="Page not found")
 
+@app.get("/theme-network.html")
+async def theme_network_page():
+    """Serve InfraNodus theme network visualization"""
+    file_path = FRONTEND_DIR / "theme-network.html"
+    if file_path.exists():
+        return FileResponse(file_path)
+    raise HTTPException(status_code=404, detail="Page not found")
+
 @app.get("/chat.html")
 async def chat_page():
     """Serve AI chat page"""
