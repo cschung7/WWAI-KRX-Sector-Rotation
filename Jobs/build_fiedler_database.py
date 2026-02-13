@@ -73,20 +73,22 @@ for ticker in all_tickers:
     try:
         df = pd.read_csv(file_path)
 
-        # Handle date column
-        if 'Date' in df.columns:
-            df['Date'] = pd.to_datetime(df['Date'])
-            df = df.set_index('Date')
+        # Handle date column (case-insensitive)
+        date_col = next((c for c in df.columns if c.lower() == 'date'), None)
+        if date_col:
+            df[date_col] = pd.to_datetime(df[date_col])
+            df = df.set_index(date_col)
+            df.index.name = 'Date'
         elif 'Unnamed: 0' in df.columns:
             df['Unnamed: 0'] = pd.to_datetime(df['Unnamed: 0'])
             df = df.set_index('Unnamed: 0')
             df.index.name = 'Date'
         else:
-            df.index = pd.to_datetime(df.index)
+            continue  # Skip files without a recognizable date column
 
-        # Handle close column
-        if 'Close' in df.columns or 'close' in df.columns:
-            close_col = 'Close' if 'Close' in df.columns else 'close'
+        # Handle close column (case-insensitive)
+        close_col = next((c for c in df.columns if c.lower() == 'close'), None)
+        if close_col:
             df = df[[close_col]].rename(columns={close_col: 'Close'})
             df = df[df.index >= START_DATE - pd.Timedelta(days=LOOKBACK_DAYS*2)]
             price_data[ticker] = df.sort_index()
@@ -224,7 +226,7 @@ print(f"   Generated {len(weekly_periods)} weekly periods")
 print("\n5. Generating monthly periods (1-30)...")
 monthly_periods = []
 
-for year in range(2025, 2026):
+for year in range(2025, 2027):
     for month in range(1, 13):
         month_start = pd.Timestamp(f'{year}-{month:02d}-01')
         if month == 12:

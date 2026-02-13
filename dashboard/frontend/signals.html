@@ -376,7 +376,7 @@
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="https://landing-three-ecru.vercel.app" class="home-btn">🏠 Home</a>
+                <a href="https://krx.wwai.app/" class="home-btn">🏠 Home</a>
                 <a href="index.html" data-i18n="nav.overview">Overview</a>
                 <a href="breakout.html" data-i18n="nav.breakout">Breakout</a>
                 <a href="signals.html" class="active" data-i18n="nav.signals">Signals</a>
@@ -620,27 +620,45 @@
         function updateSignalMatrix(passed, failed) {
             const matrix = document.getElementById('signalMatrix');
 
-            const passedHtml = passed.map(s => `
+            const passedHtml = passed.map(s => {
+                const ucsHtml = s.ucs_score != null
+                    ? `<div class="signal-confidence" style="color:${getUcsColor(s.ucs_score)}">UCS: ${s.ucs_score}</div>`
+                    : '';
+                return `
                 <div class="signal-card pass">
                     <div class="signal-theme">${s.theme}</div>
                     <div class="signal-status pass">
                         <span>✓</span> ${s.status}
                     </div>
-                    <div class="signal-confidence">Confidence: ${s.confidence}%</div>
-                </div>
-            `).join('');
+                    <div class="signal-confidence">${currentLang === 'ko' ? '신뢰도' : 'Confidence'}: ${s.confidence}%</div>
+                    ${ucsHtml}
+                </div>`;
+            }).join('');
 
-            const failedHtml = failed.map(s => `
+            const failedHtml = failed.map(s => {
+                const ucsHtml = s.ucs_score != null
+                    ? `<div class="signal-confidence" style="color:${getUcsColor(s.ucs_score)}">UCS: ${s.ucs_score}</div>`
+                    : '';
+                return `
                 <div class="signal-card fail">
                     <div class="signal-theme">${s.theme}</div>
                     <div class="signal-status fail">
                         <span>✗</span> ${s.status}
                     </div>
-                    <div class="signal-confidence">${s.reason}</div>
-                </div>
-            `).join('');
+                    <div class="signal-confidence">${currentLang === 'ko' ? '신뢰도' : 'Confidence'}: ${s.confidence}%</div>
+                    ${ucsHtml}
+                </div>`;
+            }).join('');
 
             matrix.innerHTML = passedHtml + failedHtml;
+        }
+
+        function getUcsColor(score) {
+            if (score >= 60) return '#10b981';
+            if (score >= 50) return '#84cc16';
+            if (score >= 40) return '#fbbf24';
+            if (score >= 30) return '#fb923c';
+            return '#ef4444';
         }
 
         function updateModelInfo(data) {

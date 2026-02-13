@@ -198,46 +198,98 @@ async def get_signal_matrix():
     """
     Get signal quality matrix - pass/fail by theme
     Covers Q8, Q10, Q18 from investment Q&A
+    Uses meta_labeling_results CSV + theme_ucs_scores.json
     """
     import glob
+    import json as _json
     from pathlib import Path
     sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
     from config import DATA_DIR
 
     try:
+        # Load UCS scores if available
+        ucs_data = {}
+        ucs_file = DATA_DIR / "theme_ucs_scores.json"
+        if ucs_file.exists():
+            with open(ucs_file, "r", encoding="utf-8") as f:
+                ucs_raw = _json.load(f)
+                ucs_data = ucs_raw.get("themes", {})
+
         # Find latest meta-labeling results
         result_files = sorted(glob.glob(str(DATA_DIR / "meta_labeling_results_*.csv")))
 
         if result_files:
             df = pd.read_csv(result_files[-1])
 
-            passed = df[df.get('passed', df.get('prediction', 1)) == 1] if 'passed' in df.columns or 'prediction' in df.columns else df
-            failed = df[df.get('passed', df.get('prediction', 1)) == 0] if 'passed' in df.columns or 'prediction' in df.columns else pd.DataFrame()
+            # Use correct column: meta_label (1=PASS, 0=FILTERED)
+            label_col = None
+            for col in ['meta_label', 'passed', 'prediction']:
+                if col in df.columns:
+                    label_col = col
+                    break
 
-            passed_themes = passed['theme'].tolist() if 'theme' in passed.columns else []
-            failed_themes = failed['theme'].tolist() if 'theme' in failed.columns else []
+            if label_col:
+                passed_df = df[df[label_col] == 1]
+                failed_df = df[df[label_col] == 0]
+            else:
+                passed_df = df
+                failed_df = pd.DataFrame()
+
+            # Build passed list with actual confidence
+            passed_list = []
+            for _, row in passed_df.iterrows():
+                theme = row['theme']
+                conf = round(float(row.get('confidence', 0)) * 100, 1) if 'confidence' in row.index else 0
+                entry = {"theme": theme, "status": "PASS", "confidence": conf}
+                if theme in ucs_data:
+                    entry["ucs_score"] = ucs_data[theme]["avg_score"]
+                passed_list.append(entry)
+
+            # Sort by confidence descending
+            passed_list.sort(key=lambda x: x["confidence"], reverse=True)
+
+            # Build failed list with actual confidence
+            failed_list = []
+            for _, row in failed_df.iterrows():
+                theme = row['theme']
+                conf = round(float(row.get('confidence', 0)) * 100, 1) if 'confidence' in row.index else 0
+                entry = {"theme": theme, "status": "FILTERED", "confidence": conf,
+                         "reason": row.get('meta_label_status', 'Low signal quality')}
+                if theme in ucs_data:
+                    entry["ucs_score"] = ucs_data[theme]["avg_score"]
+                failed_list.append(entry)
+
+            # Sort failed by confidence descending (closest to passing first)
+            failed_list.sort(key=lambda x: x["confidence"], reverse=True)
+
+            total = len(passed_list) + len(failed_list)
+            pass_rate = len(passed_list) / total * 100 if total > 0 else 0
+
+            # Real tier counts from data
+            tier1_count = len(df[(df.get('tier', pd.Series()) == 1) & (df[label_col] == 1)]) if label_col and 'tier' in df.columns else 0
+            tier2_count = len(df[(df.get('tier', pd.Series()) == 2) & (df[label_col] == 1)]) if label_col and 'tier' in df.columns else 0
         else:
-            # Default data from Q&A document
-            passed_themes = ["통신", "방위산업/전쟁 및 테러", "전력설비", "증권", "은행", "스페이스X(SpaceX)"]
-            failed_themes = ["로봇", "3D 낸드", "우주항공산업", "풍력에너지"]
-
-        total = len(passed_themes) + len(failed_themes)
-        pass_rate = len(passed_themes) / total * 100 if total > 0 else 0
+            passed_list = []
+            failed_list = []
+            total = 0
+            pass_rate = 0
+            tier1_count = 0
+            tier2_count = 0
 
         return {
-            "passed": [{"theme": t, "status": "PASS", "confidence": 62.5} for t in passed_themes],
-            "failed": [{"theme": t, "status": "FAIL", "reason": "Low signal quality"} for t in failed_themes],
+            "passed": passed_list,
+            "failed": failed_list,
             "summary": {
                 "total_signals": total,
-                "passed_count": len(passed_themes),
-                "failed_count": len(failed_themes),
+                "passed_count": len(passed_list),
+                "failed_count": len(failed_list),
                 "pass_rate": round(pass_rate, 1),
-                "tier1_count": len([t for t in passed_themes if t in ["통신", "방위산업/전쟁 및 테러", "전력설비", "증권", "은행", "스페이스X(SpaceX)"]])
+                "tier1_count": tier1_count
             },
             "funnel": [
-                {"stage": "Initial Signals", "count": 26},
-                {"stage": "After Meta-labeling", "count": 22},
-                {"stage": "TIER 1 (Highest Quality)", "count": 6}
+                {"stage": "Initial Signals", "count": total},
+                {"stage": "After Meta-labeling", "count": len(passed_list)},
+                {"stage": "TIER 1 (Highest Quality)", "count": tier1_count}
             ],
             "model_accuracy": 80.44,
             "model_auc": 0.865
