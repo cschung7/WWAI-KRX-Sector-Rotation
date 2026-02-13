@@ -1,0 +1,76 @@
+{
+  "date": "20260213",
+  "data_source_date": "2026-02-13",
+  "total_tickers": 672,
+  "high_priority": 194,
+  "medium_priority": 478,
+  "low_priority": 0,
+  "stage_breakdown": {
+    "Healthy Correction": 246,
+    "Burgeoning": 227,
+    "Super Trend": 183,
+    "Early Breakout": 16
+  },
+  "top_10": [
+    {
+      "ticker": "아이컴포넌트",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "플레이그램",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "파두",
+      "score": 85,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "나노",
+      "score": 82,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "하나금융지주",
+      "score": 80,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "SK텔레콤",
+      "score": 80,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "인바디",
+      "score": 79,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "아주IB투자",
+      "score": 79,
+      "stage": "Super Trend",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "영원무역",
+      "score": 78,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    },
+    {
+      "ticker": "이화산업",
+      "score": 78,
+      "stage": "Early Breakout",
+      "priority": "HIGH"
+    }
+  ]
+}

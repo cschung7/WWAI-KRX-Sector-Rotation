@@ -7,9 +7,9 @@
       "count": 35,
       "analyzed": 6,
       "ratings": {
+        "POOR": 1,
         "VERY_POOR": 4,
-        "FAIR": 1,
-        "POOR": 1
+        "FAIR": 1
       },
       "top3": [
         {
@@ -21,7 +21,7 @@
           "score": 25.0
         },
         {
-          "name": "삼진",
+          "name": "뉴키즈온",
           "score": 18.8
         }
       ]
@@ -31,23 +31,23 @@
       "count": 162,
       "analyzed": 162,
       "ratings": {
+        "GOOD": 57,
         "EXCELLENT": 28,
         "FAIR": 40,
-        "GOOD": 57,
-        "POOR": 23,
-        "VERY_POOR": 14
+        "VERY_POOR": 14,
+        "POOR": 23
       },
       "top3": [
         {
-          "name": "피엔티",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "나노팀",
+          "name": "피엔티엠에스",
           "score": 87.5
         },
         {
-          "name": "케이엔솔",
+          "name": "알멕",
           "score": 87.5
         }
       ]
@@ -57,11 +57,11 @@
       "count": 14,
       "analyzed": 14,
       "ratings": {
-        "POOR": 2,
-        "FAIR": 3,
-        "GOOD": 5,
         "VERY_POOR": 1,
-        "EXCELLENT": 3
+        "FAIR": 3,
+        "EXCELLENT": 3,
+        "GOOD": 5,
+        "POOR": 2
       },
       "top3": [
         {
@@ -85,8 +85,8 @@
       "ratings": {
         "GOOD": 3,
         "FAIR": 4,
-        "EXCELLENT": 3,
-        "POOR": 1
+        "POOR": 1,
+        "EXCELLENT": 3
       },
       "top3": [
         {
@@ -108,9 +108,9 @@
       "count": 5,
       "analyzed": 5,
       "ratings": {
-        "GOOD": 2,
         "FAIR": 1,
-        "EXCELLENT": 2
+        "EXCELLENT": 2,
+        "GOOD": 2
       },
       "top3": [
         {
@@ -122,7 +122,7 @@
           "score": 87.5
         },
         {
-          "name": "삼성SDI",
+          "name": "SK이노베이션",
           "score": 68.8
         }
       ]
@@ -132,23 +132,23 @@
       "count": 89,
       "analyzed": 89,
       "ratings": {
-        "EXCELLENT": 13,
         "GOOD": 34,
+        "EXCELLENT": 13,
+        "FAIR": 20,
         "POOR": 14,
-        "VERY_POOR": 8,
-        "FAIR": 20
+        "VERY_POOR": 8
       },
       "top3": [
-        {
-          "name": "나노팀",
-          "score": 87.5
-        },
         {
           "name": "LG",
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "알멕",
+          "score": 87.5
+        },
+        {
+          "name": "나노팀",
           "score": 87.5
         }
       ]
@@ -158,19 +158,19 @@
       "count": 53,
       "analyzed": 53,
       "ratings": {
-        "EXCELLENT": 10,
         "FAIR": 19,
+        "EXCELLENT": 10,
         "POOR": 6,
-        "VERY_POOR": 4,
-        "GOOD": 14
+        "GOOD": 14,
+        "VERY_POOR": 4
       },
       "top3": [
         {
-          "name": "피엔티",
+          "name": "디아이",
           "score": 87.5
         },
         {
-          "name": "디아이",
+          "name": "피엔티",
           "score": 87.5
         },
         {
@@ -184,18 +184,18 @@
       "count": 33,
       "analyzed": 33,
       "ratings": {
-        "POOR": 6,
-        "GOOD": 12,
+        "FAIR": 6,
         "EXCELLENT": 9,
-        "FAIR": 6
+        "GOOD": 12,
+        "POOR": 6
       },
       "top3": [
         {
-          "name": "삼성전기",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "LG",
+          "name": "삼성전기",
           "score": 87.5
         },
         {
@@ -209,23 +209,23 @@
       "count": 21,
       "analyzed": 21,
       "ratings": {
+        "GOOD": 7,
         "POOR": 2,
         "EXCELLENT": 10,
         "FAIR": 1,
-        "GOOD": 7,
         "VERY_POOR": 1
       },
       "top3": [
+        {
+          "name": "피에스케이홀딩스",
+          "score": 87.5
+        },
         {
           "name": "원익IPS",
           "score": 87.5
         },
         {
           "name": "SK",
-          "score": 87.5
-        },
-        {
-          "name": "디엔에프",
           "score": 87.5
         }
       ]
@@ -235,10 +235,10 @@
       "count": 12,
       "analyzed": 12,
       "ratings": {
-        "GOOD": 2,
-        "VERY_POOR": 1,
-        "EXCELLENT": 3,
         "FAIR": 5,
+        "EXCELLENT": 3,
+        "VERY_POOR": 1,
+        "GOOD": 2,
         "POOR": 1
       },
       "top3": [
@@ -247,11 +247,11 @@
           "score": 87.5
         },
         {
-          "name": "TPC",
+          "name": "에스티아이",
           "score": 81.2
         },
         {
-          "name": "에스티아이",
+          "name": "TPC",
           "score": 81.2
         }
       ]
@@ -286,15 +286,15 @@
       "count": 45,
       "analyzed": 44,
       "ratings": {
+        "GOOD": 12,
         "EXCELLENT": 13,
         "FAIR": 8,
-        "VERY_POOR": 4,
         "POOR": 7,
-        "GOOD": 12
+        "VERY_POOR": 4
       },
       "top3": [
         {
-          "name": "우리기술",
+          "name": "KT",
           "score": 87.5
         },
         {
@@ -302,7 +302,7 @@
           "score": 87.5
         },
         {
-          "name": "SG",
+          "name": "우리기술",
           "score": 87.5
         }
       ]
@@ -313,22 +313,22 @@
       "analyzed": 59,
       "ratings": {
         "GOOD": 14,
-        "POOR": 9,
         "EXCELLENT": 23,
         "VERY_POOR": 9,
-        "FAIR": 4
+        "FAIR": 4,
+        "POOR": 9
       },
       "top3": [
         {
-          "name": "RFHIC",
+          "name": "KT",
           "score": 87.5
         },
         {
-          "name": "이노와이어리스",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "케이엠",
+          "name": "나무기술",
           "score": 87.5
         }
       ]
@@ -338,9 +338,9 @@
       "count": 30,
       "analyzed": 30,
       "ratings": {
-        "GOOD": 2,
-        "POOR": 11,
         "FAIR": 7,
+        "POOR": 11,
+        "GOOD": 2,
         "VERY_POOR": 8,
         "EXCELLENT": 2
       },
@@ -364,9 +364,9 @@
       "count": 8,
       "analyzed": 8,
       "ratings": {
-        "EXCELLENT": 3,
         "GOOD": 4,
-        "POOR": 1
+        "POOR": 1,
+        "EXCELLENT": 3
       },
       "top3": [
         {
@@ -374,11 +374,11 @@
           "score": 87.5
         },
         {
-          "name": "앤씨앤",
+          "name": "포커스에이아이",
           "score": 81.2
         },
         {
-          "name": "포커스에이아이",
+          "name": "앤씨앤",
           "score": 81.2
         }
       ]
@@ -388,11 +388,11 @@
       "count": 14,
       "analyzed": 14,
       "ratings": {
+        "EXCELLENT": 5,
+        "VERY_POOR": 2,
         "POOR": 2,
         "FAIR": 2,
-        "EXCELLENT": 5,
-        "GOOD": 3,
-        "VERY_POOR": 2
+        "GOOD": 3
       },
       "top3": [
         {
@@ -404,7 +404,7 @@
           "score": 87.5
         },
         {
-          "name": "오킨스전자",
+          "name": "네오셈",
           "score": 81.2
         }
       ]
@@ -414,11 +414,11 @@
       "count": 19,
       "analyzed": 19,
       "ratings": {
-        "GOOD": 6,
-        "POOR": 4,
         "FAIR": 6,
-        "VERY_POOR": 1,
-        "EXCELLENT": 2
+        "POOR": 4,
+        "GOOD": 6,
+        "EXCELLENT": 2,
+        "VERY_POOR": 1
       },
       "top3": [
         {
@@ -440,10 +440,10 @@
       "count": 29,
       "analyzed": 29,
       "ratings": {
-        "POOR": 3,
-        "FAIR": 7,
         "EXCELLENT": 10,
-        "GOOD": 9
+        "FAIR": 7,
+        "GOOD": 9,
+        "POOR": 3
       },
       "top3": [
         {
@@ -455,7 +455,7 @@
           "score": 87.5
         },
         {
-          "name": "유진기업",
+          "name": "비츠로시스",
           "score": 87.5
         }
       ]
@@ -465,15 +465,15 @@
       "count": 35,
       "analyzed": 35,
       "ratings": {
-        "EXCELLENT": 18,
         "GOOD": 10,
+        "EXCELLENT": 18,
         "FAIR": 4,
         "VERY_POOR": 1,
         "POOR": 2
       },
       "top3": [
         {
-          "name": "오픈엣지테크놀로지",
+          "name": "피에스케이홀딩스",
           "score": 87.5
         },
         {
@@ -481,7 +481,7 @@
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "오픈엣지테크놀로지",
           "score": 87.5
         }
       ]
@@ -491,10 +491,10 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
-        "POOR": 1,
+        "EXCELLENT": 3,
         "VERY_POOR": 2,
         "GOOD": 3,
-        "EXCELLENT": 3,
+        "POOR": 1,
         "FAIR": 1
       },
       "top3": [
@@ -517,23 +517,23 @@
       "count": 44,
       "analyzed": 44,
       "ratings": {
-        "POOR": 11,
-        "FAIR": 4,
-        "VERY_POOR": 8,
         "EXCELLENT": 12,
-        "GOOD": 9
+        "GOOD": 9,
+        "POOR": 11,
+        "VERY_POOR": 8,
+        "FAIR": 4
       },
       "top3": [
+        {
+          "name": "LG",
+          "score": 87.5
+        },
         {
           "name": "케이엠",
           "score": 87.5
         },
         {
           "name": "성호전자",
-          "score": 87.5
-        },
-        {
-          "name": "LG",
           "score": 87.5
         }
       ]
@@ -543,10 +543,10 @@
       "count": 12,
       "analyzed": 12,
       "ratings": {
-        "EXCELLENT": 5,
-        "POOR": 1,
-        "VERY_POOR": 1,
         "GOOD": 4,
+        "POOR": 1,
+        "EXCELLENT": 5,
+        "VERY_POOR": 1,
         "FAIR": 1
       },
       "top3": [
@@ -559,7 +559,7 @@
           "score": 87.5
         },
         {
-          "name": "레이저쎌",
+          "name": "이오테크닉스",
           "score": 81.2
         }
       ]
@@ -570,9 +570,9 @@
       "analyzed": 29,
       "ratings": {
         "POOR": 4,
+        "EXCELLENT": 7,
         "GOOD": 8,
         "FAIR": 4,
-        "EXCELLENT": 7,
         "VERY_POOR": 6
       },
       "top3": [
@@ -585,7 +585,7 @@
           "score": 87.5
         },
         {
-          "name": "HD현대",
+          "name": "GS",
           "score": 81.2
         }
       ]
@@ -595,8 +595,8 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
-        "EXCELLENT": 4,
         "POOR": 1,
+        "EXCELLENT": 4,
         "GOOD": 5
       },
       "top3": [
@@ -605,11 +605,11 @@
           "score": 87.5
         },
         {
-          "name": "극동유화",
+          "name": "GS",
           "score": 81.2
         },
         {
-          "name": "E1",
+          "name": "극동유화",
           "score": 81.2
         }
       ]
@@ -619,9 +619,9 @@
       "count": 11,
       "analyzed": 11,
       "ratings": {
+        "EXCELLENT": 4,
         "FAIR": 4,
-        "GOOD": 3,
-        "EXCELLENT": 4
+        "GOOD": 3
       },
       "top3": [
         {
@@ -629,11 +629,11 @@
           "score": 87.5
         },
         {
-          "name": "대주전자재료",
+          "name": "삼화콘덴서",
           "score": 81.2
         },
         {
-          "name": "삼화콘덴서",
+          "name": "대주전자재료",
           "score": 81.2
         }
       ]
@@ -643,11 +643,11 @@
       "count": 22,
       "analyzed": 22,
       "ratings": {
-        "GOOD": 9,
         "FAIR": 6,
+        "GOOD": 9,
+        "VERY_POOR": 2,
         "POOR": 4,
-        "EXCELLENT": 1,
-        "VERY_POOR": 2
+        "EXCELLENT": 1
       },
       "top3": [
         {
@@ -655,11 +655,11 @@
           "score": 87.5
         },
         {
-          "name": "서울옥션",
+          "name": "삼성전자",
           "score": 75.0
         },
         {
-          "name": "삼성전자",
+          "name": "서울옥션",
           "score": 75.0
         }
       ]
@@ -669,8 +669,8 @@
       "count": 7,
       "analyzed": 7,
       "ratings": {
-        "GOOD": 3,
         "VERY_POOR": 1,
+        "GOOD": 3,
         "POOR": 1,
         "FAIR": 2
       },
@@ -694,23 +694,23 @@
       "count": 89,
       "analyzed": 88,
       "ratings": {
+        "GOOD": 29,
         "EXCELLENT": 27,
-        "FAIR": 10,
-        "POOR": 13,
         "VERY_POOR": 9,
-        "GOOD": 29
+        "POOR": 13,
+        "FAIR": 10
       },
       "top3": [
         {
-          "name": "피엔티",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "주성엔지니어링",
+          "name": "이엘피",
           "score": 87.5
         },
         {
-          "name": "풍원정밀",
+          "name": "원익IPS",
           "score": 87.5
         }
       ]
@@ -720,11 +720,11 @@
       "count": 35,
       "analyzed": 35,
       "ratings": {
-        "VERY_POOR": 4,
-        "EXCELLENT": 9,
         "GOOD": 12,
         "POOR": 5,
-        "FAIR": 5
+        "FAIR": 5,
+        "VERY_POOR": 4,
+        "EXCELLENT": 9
       },
       "top3": [
         {
@@ -732,11 +732,11 @@
           "score": 87.5
         },
         {
-          "name": "타이거일렉",
+          "name": "뉴프렉스",
           "score": 81.2
         },
         {
-          "name": "뉴프렉스",
+          "name": "롯데에너지머티리얼즈",
           "score": 81.2
         }
       ]
@@ -746,23 +746,23 @@
       "count": 18,
       "analyzed": 17,
       "ratings": {
-        "EXCELLENT": 5,
-        "VERY_POOR": 1,
+        "FAIR": 2,
         "GOOD": 5,
+        "EXCELLENT": 5,
         "POOR": 4,
-        "FAIR": 2
+        "VERY_POOR": 1
       },
       "top3": [
+        {
+          "name": "SK",
+          "score": 87.5
+        },
         {
           "name": "SK스퀘어",
           "score": 87.5
         },
         {
-          "name": "누리플렉스",
-          "score": 87.5
-        },
-        {
-          "name": "SK",
+          "name": "KT",
           "score": 87.5
         }
       ]
@@ -772,11 +772,11 @@
       "count": 35,
       "analyzed": 34,
       "ratings": {
-        "EXCELLENT": 9,
-        "POOR": 1,
         "VERY_POOR": 10,
         "GOOD": 9,
-        "FAIR": 5
+        "FAIR": 5,
+        "EXCELLENT": 9,
+        "POOR": 1
       },
       "top3": [
         {
@@ -784,11 +784,11 @@
           "score": 87.5
         },
         {
-          "name": "신세계",
+          "name": "나무기술",
           "score": 87.5
         },
         {
-          "name": "SG",
+          "name": "신세계",
           "score": 87.5
         }
       ]
@@ -799,9 +799,9 @@
       "analyzed": 11,
       "ratings": {
         "FAIR": 3,
-        "GOOD": 5,
+        "VERY_POOR": 2,
         "POOR": 1,
-        "VERY_POOR": 2
+        "GOOD": 5
       },
       "top3": [
         {
@@ -813,7 +813,7 @@
           "score": 68.8
         },
         {
-          "name": "NHN벅스",
+          "name": "SOOP",
           "score": 68.8
         }
       ]
@@ -823,22 +823,22 @@
       "count": 29,
       "analyzed": 29,
       "ratings": {
+        "GOOD": 8,
         "EXCELLENT": 14,
-        "FAIR": 4,
         "POOR": 3,
-        "GOOD": 8
+        "FAIR": 4
       },
       "top3": [
         {
+          "name": "코리아에셋투자증권",
+          "score": 87.5
+        },
+        {
+          "name": "KB금융",
+          "score": 87.5
+        },
+        {
           "name": "우리기술",
-          "score": 87.5
-        },
-        {
-          "name": "키움증권",
-          "score": 87.5
-        },
-        {
-          "name": "교보증권",
           "score": 87.5
         }
       ]
@@ -850,17 +850,17 @@
       "ratings": {
         "GOOD": 15,
         "EXCELLENT": 8,
-        "POOR": 3,
         "FAIR": 3,
+        "POOR": 3,
         "VERY_POOR": 1
       },
       "top3": [
         {
-          "name": "LG",
+          "name": "KT",
           "score": 87.5
         },
         {
-          "name": "KT",
+          "name": "LG",
           "score": 87.5
         },
         {
@@ -874,9 +874,9 @@
       "count": 15,
       "analyzed": 15,
       "ratings": {
+        "POOR": 3,
         "EXCELLENT": 3,
         "VERY_POOR": 4,
-        "POOR": 3,
         "GOOD": 3,
         "FAIR": 2
       },
@@ -886,11 +886,11 @@
           "score": 87.5
         },
         {
-          "name": "녹십자",
+          "name": "에스티팜",
           "score": 81.2
         },
         {
-          "name": "에스티팜",
+          "name": "녹십자",
           "score": 81.2
         }
       ]
@@ -900,11 +900,11 @@
       "count": 23,
       "analyzed": 23,
       "ratings": {
-        "FAIR": 3,
         "GOOD": 10,
+        "EXCELLENT": 5,
+        "FAIR": 3,
         "POOR": 3,
-        "VERY_POOR": 2,
-        "EXCELLENT": 5
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -912,11 +912,11 @@
           "score": 87.5
         },
         {
-          "name": "에스앤에스텍",
+          "name": "율촌",
           "score": 81.2
         },
         {
-          "name": "일지테크",
+          "name": "이녹스첨단소재",
           "score": 81.2
         }
       ]
@@ -927,10 +927,10 @@
       "analyzed": 20,
       "ratings": {
         "POOR": 6,
-        "EXCELLENT": 2,
+        "GOOD": 3,
         "FAIR": 7,
         "VERY_POOR": 2,
-        "GOOD": 3
+        "EXCELLENT": 2
       },
       "top3": [
         {
@@ -954,9 +954,9 @@
       "ratings": {
         "FAIR": 10,
         "GOOD": 9,
-        "POOR": 6,
         "EXCELLENT": 6,
-        "VERY_POOR": 3
+        "VERY_POOR": 3,
+        "POOR": 6
       },
       "top3": [
         {
@@ -964,11 +964,11 @@
           "score": 87.5
         },
         {
-          "name": "칩스앤미디어",
+          "name": "하이비젼시스템",
           "score": 87.5
         },
         {
-          "name": "하이비젼시스템",
+          "name": "칩스앤미디어",
           "score": 87.5
         }
       ]
@@ -980,9 +980,9 @@
       "ratings": {
         "EXCELLENT": 4,
         "GOOD": 10,
-        "VERY_POOR": 6,
         "POOR": 5,
-        "FAIR": 5
+        "FAIR": 5,
+        "VERY_POOR": 6
       },
       "top3": [
         {
@@ -1004,10 +1004,10 @@
       "count": 13,
       "analyzed": 12,
       "ratings": {
-        "EXCELLENT": 2,
         "POOR": 3,
         "FAIR": 4,
-        "GOOD": 3
+        "GOOD": 3,
+        "EXCELLENT": 2
       },
       "top3": [
         {
@@ -1029,23 +1029,23 @@
       "count": 42,
       "analyzed": 41,
       "ratings": {
-        "FAIR": 12,
         "GOOD": 11,
+        "FAIR": 12,
         "POOR": 5,
-        "EXCELLENT": 9,
-        "VERY_POOR": 4
+        "VERY_POOR": 4,
+        "EXCELLENT": 9
       },
       "top3": [
-        {
-          "name": "삼성전기",
-          "score": 87.5
-        },
         {
           "name": "자화전자",
           "score": 87.5
         },
         {
-          "name": "드림텍",
+          "name": "파트론",
+          "score": 87.5
+        },
+        {
+          "name": "삼성전기",
           "score": 87.5
         }
       ]
@@ -1055,11 +1055,11 @@
       "count": 57,
       "analyzed": 56,
       "ratings": {
-        "POOR": 15,
+        "VERY_POOR": 5,
+        "GOOD": 11,
         "EXCELLENT": 9,
         "FAIR": 16,
-        "VERY_POOR": 5,
-        "GOOD": 11
+        "POOR": 15
       },
       "top3": [
         {
@@ -1067,7 +1067,7 @@
           "score": 87.5
         },
         {
-          "name": "케이엠",
+          "name": "KT",
           "score": 87.5
         },
         {
@@ -1081,9 +1081,9 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
-        "FAIR": 1,
         "GOOD": 6,
-        "EXCELLENT": 2
+        "EXCELLENT": 2,
+        "FAIR": 1
       },
       "top3": [
         {
@@ -1105,23 +1105,23 @@
       "count": 32,
       "analyzed": 32,
       "ratings": {
-        "VERY_POOR": 4,
-        "FAIR": 4,
         "EXCELLENT": 14,
+        "VERY_POOR": 4,
         "GOOD": 7,
+        "FAIR": 4,
         "POOR": 3
       },
       "top3": [
         {
-          "name": "SG",
+          "name": "HL D&I",
           "score": 87.5
         },
         {
-          "name": "우원개발",
+          "name": "아이에스동서",
           "score": 87.5
         },
         {
-          "name": "SGC E&C",
+          "name": "금호건설",
           "score": 87.5
         }
       ]
@@ -1131,21 +1131,21 @@
       "count": 23,
       "analyzed": 22,
       "ratings": {
-        "GOOD": 10,
+        "POOR": 1,
         "EXCELLENT": 11,
-        "POOR": 1
+        "GOOD": 10
       },
       "top3": [
         {
-          "name": "진성티이씨",
-          "score": 87.5
-        },
-        {
-          "name": "디와이파워",
+          "name": "HD현대건설기계",
           "score": 87.5
         },
         {
           "name": "디와이",
+          "score": 87.5
+        },
+        {
+          "name": "현대에버다임",
           "score": 87.5
         }
       ]
@@ -1156,22 +1156,22 @@
       "analyzed": 35,
       "ratings": {
         "FAIR": 12,
+        "EXCELLENT": 4,
         "GOOD": 6,
         "POOR": 9,
-        "EXCELLENT": 4,
         "VERY_POOR": 4
       },
       "top3": [
+        {
+          "name": "네오리진",
+          "score": 81.2
+        },
         {
           "name": "웹젠",
           "score": 81.2
         },
         {
           "name": "펄어비스",
-          "score": 81.2
-        },
-        {
-          "name": "조이시티",
           "score": 81.2
         }
       ]
@@ -1182,10 +1182,10 @@
       "analyzed": 22,
       "ratings": {
         "GOOD": 7,
+        "POOR": 2,
         "EXCELLENT": 4,
-        "VERY_POOR": 2,
         "FAIR": 7,
-        "POOR": 2
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -1193,11 +1193,11 @@
           "score": 87.5
         },
         {
-          "name": "INVENI",
+          "name": "녹십자",
           "score": 81.2
         },
         {
-          "name": "녹십자",
+          "name": "삼천리",
           "score": 81.2
         }
       ]
@@ -1208,10 +1208,10 @@
       "analyzed": 43,
       "ratings": {
         "GOOD": 9,
-        "EXCELLENT": 12,
         "POOR": 7,
-        "FAIR": 9,
-        "VERY_POOR": 6
+        "EXCELLENT": 12,
+        "VERY_POOR": 6,
+        "FAIR": 9
       },
       "top3": [
         {
@@ -1223,7 +1223,7 @@
           "score": 87.5
         },
         {
-          "name": "코오롱티슈진",
+          "name": "차바이오텍",
           "score": 81.2
         }
       ]
@@ -1233,22 +1233,22 @@
       "count": 15,
       "analyzed": 15,
       "ratings": {
-        "VERY_POOR": 1,
         "FAIR": 2,
         "EXCELLENT": 6,
-        "GOOD": 6
+        "GOOD": 6,
+        "VERY_POOR": 1
       },
       "top3": [
-        {
-          "name": "LS머트리얼즈",
-          "score": 87.5
-        },
         {
           "name": "SK",
           "score": 87.5
         },
         {
-          "name": "비에이치아이",
+          "name": "LS머트리얼즈",
+          "score": 87.5
+        },
+        {
+          "name": "엘티씨",
           "score": 81.2
         }
       ]
@@ -1259,8 +1259,8 @@
       "analyzed": 10,
       "ratings": {
         "GOOD": 5,
-        "EXCELLENT": 3,
-        "VERY_POOR": 2
+        "VERY_POOR": 2,
+        "EXCELLENT": 3
       },
       "top3": [
         {
@@ -1289,15 +1289,15 @@
       },
       "top3": [
         {
-          "name": "미스토홀딩스",
-          "score": 87.5
-        },
-        {
           "name": "와이엔텍",
           "score": 87.5
         },
         {
           "name": "베뉴지",
+          "score": 87.5
+        },
+        {
+          "name": "미스토홀딩스",
           "score": 87.5
         }
       ]
@@ -1307,10 +1307,10 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
+        "EXCELLENT": 3,
         "GOOD": 3,
-        "POOR": 2,
         "FAIR": 5,
-        "EXCELLENT": 3
+        "POOR": 2
       },
       "top3": [
         {
@@ -1332,18 +1332,18 @@
       "count": 14,
       "analyzed": 13,
       "ratings": {
-        "EXCELLENT": 3,
-        "GOOD": 3,
         "VERY_POOR": 3,
-        "FAIR": 4
+        "FAIR": 4,
+        "EXCELLENT": 3,
+        "GOOD": 3
       },
       "top3": [
         {
-          "name": "화천기공",
+          "name": "와이지-원",
           "score": 87.5
         },
         {
-          "name": "와이지-원",
+          "name": "화천기공",
           "score": 87.5
         },
         {
@@ -1357,11 +1357,11 @@
       "count": 27,
       "analyzed": 26,
       "ratings": {
-        "VERY_POOR": 2,
+        "EXCELLENT": 2,
         "GOOD": 8,
-        "POOR": 6,
         "FAIR": 8,
-        "EXCELLENT": 2
+        "POOR": 6,
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -1383,11 +1383,11 @@
       "count": 29,
       "analyzed": 28,
       "ratings": {
-        "FAIR": 7,
         "GOOD": 6,
-        "VERY_POOR": 5,
+        "EXCELLENT": 3,
+        "FAIR": 7,
         "POOR": 7,
-        "EXCELLENT": 3
+        "VERY_POOR": 5
       },
       "top3": [
         {
@@ -1395,11 +1395,11 @@
           "score": 87.5
         },
         {
-          "name": "DB",
+          "name": "골드앤에스",
           "score": 81.2
         },
         {
-          "name": "골드앤에스",
+          "name": "DB",
           "score": 81.2
         }
       ]
@@ -1412,16 +1412,16 @@
         "GOOD": 7,
         "FAIR": 8,
         "POOR": 3,
-        "VERY_POOR": 2,
-        "EXCELLENT": 2
+        "EXCELLENT": 2,
+        "VERY_POOR": 2
       },
       "top3": [
         {
-          "name": "이지홀딩스",
+          "name": "CJ",
           "score": 81.2
         },
         {
-          "name": "CJ",
+          "name": "이지홀딩스",
           "score": 81.2
         },
         {
@@ -1436,8 +1436,8 @@
       "analyzed": 11,
       "ratings": {
         "VERY_POOR": 3,
-        "FAIR": 6,
-        "GOOD": 2
+        "GOOD": 2,
+        "FAIR": 6
       },
       "top3": [
         {
@@ -1449,7 +1449,7 @@
           "score": 68.8
         },
         {
-          "name": "대성미생물",
+          "name": "체시스",
           "score": 56.2
         }
       ]
@@ -1459,11 +1459,11 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "FAIR": 5,
-        "EXCELLENT": 1,
-        "VERY_POOR": 4,
         "GOOD": 1,
-        "POOR": 2
+        "VERY_POOR": 4,
+        "FAIR": 5,
+        "POOR": 2,
+        "EXCELLENT": 1
       },
       "top3": [
         {
@@ -1475,7 +1475,7 @@
           "score": 75.0
         },
         {
-          "name": "컬러레이",
+          "name": "피델릭스",
           "score": 56.2
         }
       ]
@@ -1486,9 +1486,9 @@
       "analyzed": 14,
       "ratings": {
         "EXCELLENT": 3,
-        "FAIR": 5,
         "GOOD": 3,
         "POOR": 2,
+        "FAIR": 5,
         "VERY_POOR": 1
       },
       "top3": [
@@ -1511,11 +1511,11 @@
       "count": 62,
       "analyzed": 58,
       "ratings": {
-        "GOOD": 25,
         "EXCELLENT": 22,
+        "GOOD": 25,
         "FAIR": 6,
-        "VERY_POOR": 2,
-        "POOR": 3
+        "POOR": 3,
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -1523,11 +1523,11 @@
           "score": 87.5
         },
         {
-          "name": "에이치엠씨제7호스팩",
+          "name": "한화플러스제4호스팩",
           "score": 81.2
         },
         {
-          "name": "한화플러스제4호스팩",
+          "name": "DB금융스팩12호",
           "score": 81.2
         }
       ]
@@ -1537,10 +1537,10 @@
       "count": 7,
       "analyzed": 7,
       "ratings": {
-        "GOOD": 2,
         "FAIR": 1,
-        "VERY_POOR": 2,
+        "GOOD": 2,
         "POOR": 1,
+        "VERY_POOR": 2,
         "EXCELLENT": 1
       },
       "top3": [
@@ -1549,11 +1549,11 @@
           "score": 81.2
         },
         {
-          "name": "CJ씨푸드",
+          "name": "풀무원",
           "score": 62.5
         },
         {
-          "name": "풀무원",
+          "name": "CJ씨푸드",
           "score": 62.5
         }
       ]
@@ -1564,9 +1564,9 @@
       "analyzed": 4,
       "ratings": {
         "POOR": 1,
-        "GOOD": 1,
         "FAIR": 1,
-        "VERY_POOR": 1
+        "VERY_POOR": 1,
+        "GOOD": 1
       },
       "top3": [
         {
@@ -1589,9 +1589,9 @@
       "analyzed": 18,
       "ratings": {
         "FAIR": 9,
-        "POOR": 3,
         "GOOD": 3,
         "EXCELLENT": 2,
+        "POOR": 3,
         "VERY_POOR": 1
       },
       "top3": [
@@ -1614,11 +1614,11 @@
       "count": 29,
       "analyzed": 29,
       "ratings": {
-        "EXCELLENT": 8,
-        "POOR": 4,
         "GOOD": 11,
         "FAIR": 5,
-        "VERY_POOR": 1
+        "EXCELLENT": 8,
+        "VERY_POOR": 1,
+        "POOR": 4
       },
       "top3": [
         {
@@ -1630,7 +1630,7 @@
           "score": 87.5
         },
         {
-          "name": "인지컨트롤스",
+          "name": "녹십자",
           "score": 81.2
         }
       ]
@@ -1641,9 +1641,9 @@
       "analyzed": 13,
       "ratings": {
         "EXCELLENT": 6,
+        "GOOD": 4,
         "VERY_POOR": 1,
-        "FAIR": 2,
-        "GOOD": 4
+        "FAIR": 2
       },
       "top3": [
         {
@@ -1651,11 +1651,11 @@
           "score": 87.5
         },
         {
-          "name": "LG",
+          "name": "케이엔솔",
           "score": 87.5
         },
         {
-          "name": "케이엔솔",
+          "name": "LG",
           "score": 87.5
         }
       ]
@@ -1665,10 +1665,10 @@
       "count": 29,
       "analyzed": 29,
       "ratings": {
+        "EXCELLENT": 11,
         "GOOD": 10,
         "FAIR": 4,
         "POOR": 1,
-        "EXCELLENT": 11,
         "VERY_POOR": 3
       },
       "top3": [
@@ -1681,7 +1681,7 @@
           "score": 87.5
         },
         {
-          "name": "대모",
+          "name": "대한전선",
           "score": 81.2
         }
       ]
@@ -1691,23 +1691,23 @@
       "count": 25,
       "analyzed": 25,
       "ratings": {
-        "FAIR": 5,
         "GOOD": 9,
+        "FAIR": 5,
         "EXCELLENT": 4,
         "VERY_POOR": 5,
         "POOR": 2
       },
       "top3": [
         {
-          "name": "대동기어",
-          "score": 87.5
-        },
-        {
           "name": "TYM",
           "score": 87.5
         },
         {
-          "name": "조비",
+          "name": "대동기어",
+          "score": 87.5
+        },
+        {
+          "name": "대동",
           "score": 81.2
         }
       ]
@@ -1717,8 +1717,8 @@
       "count": 7,
       "analyzed": 7,
       "ratings": {
-        "EXCELLENT": 4,
-        "GOOD": 3
+        "GOOD": 3,
+        "EXCELLENT": 4
       },
       "top3": [
         {
@@ -1740,8 +1740,8 @@
       "count": 16,
       "analyzed": 16,
       "ratings": {
-        "GOOD": 6,
         "VERY_POOR": 4,
+        "GOOD": 6,
         "FAIR": 4,
         "EXCELLENT": 2
       },
@@ -1755,7 +1755,7 @@
           "score": 87.5
         },
         {
-          "name": "티플랙스",
+          "name": "포스코인터내셔널",
           "score": 68.8
         }
       ]
@@ -1767,8 +1767,8 @@
       "ratings": {
         "GOOD": 3,
         "EXCELLENT": 2,
-        "POOR": 1,
-        "FAIR": 3
+        "FAIR": 3,
+        "POOR": 1
       },
       "top3": [
         {
@@ -1790,11 +1790,11 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "EXCELLENT": 6,
         "FAIR": 1,
+        "EXCELLENT": 6,
+        "VERY_POOR": 1,
         "GOOD": 4,
-        "POOR": 1,
-        "VERY_POOR": 1
+        "POOR": 1
       },
       "top3": [
         {
@@ -1806,7 +1806,7 @@
           "score": 87.5
         },
         {
-          "name": "DSC인베스트먼트",
+          "name": "에이티넘인베스트",
           "score": 81.2
         }
       ]
@@ -1816,11 +1816,11 @@
       "count": 31,
       "analyzed": 30,
       "ratings": {
-        "EXCELLENT": 5,
         "GOOD": 10,
+        "EXCELLENT": 5,
         "FAIR": 7,
-        "POOR": 7,
-        "VERY_POOR": 1
+        "VERY_POOR": 1,
+        "POOR": 7
       },
       "top3": [
         {
@@ -1828,11 +1828,11 @@
           "score": 87.5
         },
         {
-          "name": "인지컨트롤스",
+          "name": "덕산하이메탈",
           "score": 81.2
         },
         {
-          "name": "덕산하이메탈",
+          "name": "인지컨트롤스",
           "score": 81.2
         }
       ]
@@ -1842,9 +1842,9 @@
       "count": 15,
       "analyzed": 15,
       "ratings": {
+        "VERY_POOR": 2,
         "POOR": 7,
         "FAIR": 4,
-        "VERY_POOR": 2,
         "GOOD": 2
       },
       "top3": [
@@ -1868,8 +1868,8 @@
       "analyzed": 4,
       "ratings": {
         "GOOD": 2,
-        "VERY_POOR": 1,
-        "EXCELLENT": 1
+        "EXCELLENT": 1,
+        "VERY_POOR": 1
       },
       "top3": [
         {
@@ -1891,19 +1891,19 @@
       "count": 67,
       "analyzed": 66,
       "ratings": {
-        "FAIR": 26,
-        "GOOD": 18,
-        "EXCELLENT": 11,
         "POOR": 7,
+        "FAIR": 26,
+        "EXCELLENT": 11,
+        "GOOD": 18,
         "VERY_POOR": 4
       },
       "top3": [
         {
-          "name": "대동기어",
+          "name": "디아이",
           "score": 87.5
         },
         {
-          "name": "디아이",
+          "name": "대동기어",
           "score": 87.5
         },
         {
@@ -1917,11 +1917,11 @@
       "count": 25,
       "analyzed": 24,
       "ratings": {
-        "GOOD": 12,
-        "EXCELLENT": 2,
-        "POOR": 4,
         "VERY_POOR": 2,
-        "FAIR": 4
+        "GOOD": 12,
+        "FAIR": 4,
+        "EXCELLENT": 2,
+        "POOR": 4
       },
       "top3": [
         {
@@ -1943,23 +1943,23 @@
       "count": 24,
       "analyzed": 24,
       "ratings": {
-        "EXCELLENT": 4,
-        "POOR": 4,
         "FAIR": 5,
-        "VERY_POOR": 3,
-        "GOOD": 8
+        "GOOD": 8,
+        "POOR": 4,
+        "EXCELLENT": 4,
+        "VERY_POOR": 3
       },
       "top3": [
-        {
-          "name": "피엔티",
-          "score": 87.5
-        },
         {
           "name": "알멕",
           "score": 87.5
         },
         {
           "name": "디와이",
+          "score": 87.5
+        },
+        {
+          "name": "피엔티",
           "score": 87.5
         }
       ]
@@ -1969,9 +1969,9 @@
       "count": 25,
       "analyzed": 24,
       "ratings": {
-        "VERY_POOR": 6,
-        "GOOD": 2,
         "FAIR": 3,
+        "GOOD": 2,
+        "VERY_POOR": 6,
         "POOR": 6,
         "EXCELLENT": 7
       },
@@ -1981,11 +1981,11 @@
           "score": 87.5
         },
         {
-          "name": "신한서부티엔디리츠",
+          "name": "SK",
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "신한서부티엔디리츠",
           "score": 87.5
         }
       ]
@@ -1995,11 +1995,11 @@
       "count": 26,
       "analyzed": 25,
       "ratings": {
-        "FAIR": 9,
-        "POOR": 4,
-        "GOOD": 6,
         "EXCELLENT": 4,
-        "VERY_POOR": 2
+        "FAIR": 9,
+        "VERY_POOR": 2,
+        "GOOD": 6,
+        "POOR": 4
       },
       "top3": [
         {
@@ -2007,7 +2007,7 @@
           "score": 87.5
         },
         {
-          "name": "에코프로",
+          "name": "나노",
           "score": 81.2
         },
         {
@@ -2021,10 +2021,10 @@
       "count": 11,
       "analyzed": 11,
       "ratings": {
-        "EXCELLENT": 1,
-        "POOR": 5,
         "VERY_POOR": 3,
         "FAIR": 1,
+        "POOR": 5,
+        "EXCELLENT": 1,
         "GOOD": 1
       },
       "top3": [
@@ -2047,11 +2047,11 @@
       "count": 24,
       "analyzed": 24,
       "ratings": {
-        "VERY_POOR": 1,
-        "POOR": 6,
-        "GOOD": 3,
+        "FAIR": 10,
         "EXCELLENT": 4,
-        "FAIR": 10
+        "POOR": 6,
+        "VERY_POOR": 1,
+        "GOOD": 3
       },
       "top3": [
         {
@@ -2059,7 +2059,7 @@
           "score": 87.5
         },
         {
-          "name": "코데즈컴바인",
+          "name": "녹십자",
           "score": 81.2
         },
         {
@@ -2074,10 +2074,10 @@
       "analyzed": 12,
       "ratings": {
         "GOOD": 4,
-        "VERY_POOR": 2,
-        "POOR": 2,
         "EXCELLENT": 1,
-        "FAIR": 3
+        "FAIR": 3,
+        "POOR": 2,
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -2085,11 +2085,11 @@
           "score": 81.2
         },
         {
-          "name": "NICE평가정보",
+          "name": "NICE",
           "score": 75.0
         },
         {
-          "name": "NICE",
+          "name": "NICE평가정보",
           "score": 75.0
         }
       ]
@@ -2099,9 +2099,9 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "GOOD": 4,
         "POOR": 3,
         "VERY_POOR": 3,
+        "GOOD": 4,
         "EXCELLENT": 1,
         "FAIR": 2
       },
@@ -2111,11 +2111,11 @@
           "score": 87.5
         },
         {
-          "name": "국제약품",
+          "name": "팜젠사이언스",
           "score": 75.0
         },
         {
-          "name": "팜젠사이언스",
+          "name": "국제약품",
           "score": 75.0
         }
       ]
@@ -2125,11 +2125,11 @@
       "count": 12,
       "analyzed": 12,
       "ratings": {
-        "GOOD": 3,
-        "FAIR": 2,
-        "VERY_POOR": 1,
         "EXCELLENT": 5,
-        "POOR": 1
+        "VERY_POOR": 1,
+        "FAIR": 2,
+        "POOR": 1,
+        "GOOD": 3
       },
       "top3": [
         {
@@ -2141,7 +2141,7 @@
           "score": 87.5
         },
         {
-          "name": "라온텍",
+          "name": "LG전자",
           "score": 81.2
         }
       ]
@@ -2153,8 +2153,8 @@
       "ratings": {
         "GOOD": 6,
         "EXCELLENT": 5,
-        "FAIR": 7,
         "POOR": 3,
+        "FAIR": 7,
         "VERY_POOR": 1
       },
       "top3": [
@@ -2178,10 +2178,10 @@
       "analyzed": 12,
       "ratings": {
         "EXCELLENT": 4,
-        "FAIR": 3,
-        "GOOD": 2,
         "VERY_POOR": 1,
-        "POOR": 2
+        "GOOD": 2,
+        "POOR": 2,
+        "FAIR": 3
       },
       "top3": [
         {
@@ -2193,7 +2193,7 @@
           "score": 87.5
         },
         {
-          "name": "DSC인베스트먼트",
+          "name": "미래에셋벤처투자",
           "score": 81.2
         }
       ]
@@ -2204,21 +2204,21 @@
       "analyzed": 10,
       "ratings": {
         "GOOD": 3,
-        "FAIR": 2,
         "EXCELLENT": 4,
+        "FAIR": 2,
         "POOR": 1
       },
       "top3": [
-        {
-          "name": "아이크래프트",
-          "score": 81.2
-        },
         {
           "name": "나노",
           "score": 81.2
         },
         {
-          "name": "아모센스",
+          "name": "경동인베스트",
+          "score": 81.2
+        },
+        {
+          "name": "아이크래프트",
           "score": 81.2
         }
       ]
@@ -2228,11 +2228,11 @@
       "count": 25,
       "analyzed": 24,
       "ratings": {
-        "EXCELLENT": 5,
-        "POOR": 3,
-        "VERY_POOR": 6,
         "FAIR": 8,
-        "GOOD": 2
+        "EXCELLENT": 5,
+        "GOOD": 2,
+        "POOR": 3,
+        "VERY_POOR": 6
       },
       "top3": [
         {
@@ -2244,7 +2244,7 @@
           "score": 87.5
         },
         {
-          "name": "우정바이오",
+          "name": "하이텍팜",
           "score": 81.2
         }
       ]
@@ -2254,11 +2254,11 @@
       "count": 54,
       "analyzed": 54,
       "ratings": {
-        "VERY_POOR": 10,
+        "GOOD": 12,
         "FAIR": 11,
+        "VERY_POOR": 10,
         "POOR": 10,
-        "EXCELLENT": 11,
-        "GOOD": 12
+        "EXCELLENT": 11
       },
       "top3": [
         {
@@ -2270,7 +2270,7 @@
           "score": 87.5
         },
         {
-          "name": "칩스앤미디어",
+          "name": "선익시스템",
           "score": 87.5
         }
       ]
@@ -2280,9 +2280,9 @@
       "count": 8,
       "analyzed": 8,
       "ratings": {
-        "GOOD": 3,
         "EXCELLENT": 2,
-        "FAIR": 3
+        "FAIR": 3,
+        "GOOD": 3
       },
       "top3": [
         {
@@ -2304,23 +2304,23 @@
       "count": 37,
       "analyzed": 37,
       "ratings": {
-        "GOOD": 5,
-        "VERY_POOR": 8,
         "FAIR": 10,
         "EXCELLENT": 7,
+        "GOOD": 5,
+        "VERY_POOR": 8,
         "POOR": 7
       },
       "top3": [
-        {
-          "name": "에스티큐브",
-          "score": 87.5
-        },
         {
           "name": "코텍",
           "score": 87.5
         },
         {
           "name": "에이프릴바이오",
+          "score": 87.5
+        },
+        {
+          "name": "에스티큐브",
           "score": 87.5
         }
       ]
@@ -2330,17 +2330,17 @@
       "count": 6,
       "analyzed": 6,
       "ratings": {
-        "EXCELLENT": 2,
         "FAIR": 1,
+        "EXCELLENT": 2,
         "GOOD": 3
       },
       "top3": [
         {
-          "name": "녹십자",
+          "name": "에스티팜",
           "score": 81.2
         },
         {
-          "name": "에스티팜",
+          "name": "녹십자",
           "score": 81.2
         },
         {
@@ -2360,7 +2360,7 @@
       },
       "top3": [
         {
-          "name": "한신공영",
+          "name": "GS",
           "score": 81.2
         },
         {
@@ -2368,7 +2368,7 @@
           "score": 81.2
         },
         {
-          "name": "GS",
+          "name": "한신공영",
           "score": 81.2
         }
       ]
@@ -2378,11 +2378,11 @@
       "count": 40,
       "analyzed": 40,
       "ratings": {
-        "FAIR": 14,
         "GOOD": 8,
-        "EXCELLENT": 4,
+        "FAIR": 14,
         "POOR": 9,
-        "VERY_POOR": 5
+        "VERY_POOR": 5,
+        "EXCELLENT": 4
       },
       "top3": [
         {
@@ -2404,9 +2404,9 @@
       "count": 24,
       "analyzed": 24,
       "ratings": {
+        "GOOD": 8,
         "FAIR": 6,
         "EXCELLENT": 4,
-        "GOOD": 8,
         "POOR": 4,
         "VERY_POOR": 2
       },
@@ -2431,22 +2431,22 @@
       "analyzed": 38,
       "ratings": {
         "POOR": 11,
-        "VERY_POOR": 4,
         "GOOD": 8,
         "FAIR": 11,
-        "EXCELLENT": 4
+        "EXCELLENT": 4,
+        "VERY_POOR": 4
       },
       "top3": [
+        {
+          "name": "SK스퀘어",
+          "score": 87.5
+        },
         {
           "name": "KT",
           "score": 87.5
         },
         {
           "name": "SK",
-          "score": 87.5
-        },
-        {
-          "name": "SK스퀘어",
           "score": 87.5
         }
       ]
@@ -2456,11 +2456,11 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "GOOD": 3,
-        "VERY_POOR": 2,
-        "POOR": 2,
+        "EXCELLENT": 5,
         "FAIR": 1,
-        "EXCELLENT": 5
+        "GOOD": 3,
+        "POOR": 2,
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -2468,7 +2468,7 @@
           "score": 87.5
         },
         {
-          "name": "아모센스",
+          "name": "LG전자",
           "score": 81.2
         },
         {
@@ -2482,9 +2482,9 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "GOOD": 5,
-        "POOR": 2,
         "FAIR": 4,
+        "POOR": 2,
+        "GOOD": 5,
         "EXCELLENT": 1,
         "VERY_POOR": 1
       },
@@ -2498,7 +2498,7 @@
           "score": 75.0
         },
         {
-          "name": "한국경제TV",
+          "name": "디지틀조선",
           "score": 62.5
         }
       ]
@@ -2509,22 +2509,22 @@
       "analyzed": 20,
       "ratings": {
         "POOR": 4,
-        "FAIR": 6,
         "VERY_POOR": 4,
-        "GOOD": 3,
-        "EXCELLENT": 3
+        "FAIR": 6,
+        "EXCELLENT": 3,
+        "GOOD": 3
       },
       "top3": [
+        {
+          "name": "대웅",
+          "score": 81.2
+        },
         {
           "name": "클래시스",
           "score": 81.2
         },
         {
           "name": "제테마",
-          "score": 81.2
-        },
-        {
-          "name": "대웅",
           "score": 81.2
         }
       ]
@@ -2534,23 +2534,23 @@
       "count": 24,
       "analyzed": 23,
       "ratings": {
-        "EXCELLENT": 9,
         "VERY_POOR": 5,
+        "EXCELLENT": 9,
+        "FAIR": 3,
         "GOOD": 3,
-        "POOR": 3,
-        "FAIR": 3
+        "POOR": 3
       },
       "top3": [
+        {
+          "name": "LG",
+          "score": 87.5
+        },
         {
           "name": "셀트리온제약",
           "score": 87.5
         },
         {
-          "name": "셀트리온",
-          "score": 87.5
-        },
-        {
-          "name": "LG",
+          "name": "보령",
           "score": 87.5
         }
       ]
@@ -2560,23 +2560,23 @@
       "count": 20,
       "analyzed": 20,
       "ratings": {
-        "FAIR": 6,
-        "GOOD": 7,
         "VERY_POOR": 2,
-        "POOR": 1,
-        "EXCELLENT": 4
+        "FAIR": 6,
+        "EXCELLENT": 4,
+        "GOOD": 7,
+        "POOR": 1
       },
       "top3": [
-        {
-          "name": "드림텍",
-          "score": 87.5
-        },
         {
           "name": "파트론",
           "score": 87.5
         },
         {
-          "name": "슈프리마",
+          "name": "드림텍",
+          "score": 87.5
+        },
+        {
+          "name": "시큐브",
           "score": 81.2
         }
       ]
@@ -2587,8 +2587,8 @@
       "analyzed": 6,
       "ratings": {
         "EXCELLENT": 2,
-        "POOR": 1,
-        "GOOD": 3
+        "GOOD": 3,
+        "POOR": 1
       },
       "top3": [
         {
@@ -2610,23 +2610,23 @@
       "count": 100,
       "analyzed": 99,
       "ratings": {
-        "EXCELLENT": 42,
         "GOOD": 30,
         "FAIR": 15,
         "POOR": 7,
-        "VERY_POOR": 5
+        "VERY_POOR": 5,
+        "EXCELLENT": 42
       },
       "top3": [
+        {
+          "name": "원익IPS",
+          "score": 87.5
+        },
         {
           "name": "프로텍",
           "score": 87.5
         },
         {
-          "name": "케이엔솔",
-          "score": 87.5
-        },
-        {
-          "name": "주성엔지니어링",
+          "name": "디아이",
           "score": 87.5
         }
       ]
@@ -2636,15 +2636,15 @@
       "count": 71,
       "analyzed": 70,
       "ratings": {
-        "FAIR": 10,
         "GOOD": 32,
         "EXCELLENT": 24,
-        "POOR": 2,
-        "VERY_POOR": 2
+        "FAIR": 10,
+        "VERY_POOR": 2,
+        "POOR": 2
       },
       "top3": [
         {
-          "name": "OCI",
+          "name": "ISC",
           "score": 87.5
         },
         {
@@ -2652,7 +2652,7 @@
           "score": 87.5
         },
         {
-          "name": "ISC",
+          "name": "디엔에프",
           "score": 87.5
         }
       ]
@@ -2662,21 +2662,21 @@
       "count": 5,
       "analyzed": 5,
       "ratings": {
-        "POOR": 1,
         "GOOD": 2,
+        "POOR": 1,
         "FAIR": 2
       },
       "top3": [
-        {
-          "name": "어보브반도체",
-          "score": 75.0
-        },
         {
           "name": "신일전자",
           "score": 75.0
         },
         {
-          "name": "PN풍년",
+          "name": "어보브반도체",
+          "score": 75.0
+        },
+        {
+          "name": "캐리",
           "score": 43.8
         }
       ]
@@ -2686,11 +2686,11 @@
       "count": 61,
       "analyzed": 60,
       "ratings": {
-        "GOOD": 20,
         "POOR": 12,
-        "EXCELLENT": 8,
+        "GOOD": 20,
         "VERY_POOR": 5,
-        "FAIR": 15
+        "FAIR": 15,
+        "EXCELLENT": 8
       },
       "top3": [
         {
@@ -2712,23 +2712,23 @@
       "count": 49,
       "analyzed": 47,
       "ratings": {
-        "GOOD": 8,
-        "VERY_POOR": 10,
         "POOR": 10,
+        "VERY_POOR": 10,
+        "GOOD": 8,
         "FAIR": 14,
         "EXCELLENT": 5
       },
       "top3": [
         {
-          "name": "코미팜",
-          "score": 87.5
-        },
-        {
           "name": "보령",
           "score": 87.5
         },
         {
-          "name": "한미약품",
+          "name": "코미팜",
+          "score": 87.5
+        },
+        {
+          "name": "SK",
           "score": 87.5
         }
       ]
@@ -2739,8 +2739,8 @@
       "analyzed": 7,
       "ratings": {
         "EXCELLENT": 5,
-        "FAIR": 1,
-        "GOOD": 1
+        "GOOD": 1,
+        "FAIR": 1
       },
       "top3": [
         {
@@ -2748,11 +2748,11 @@
           "score": 87.5
         },
         {
-          "name": "광주신세계",
+          "name": "신세계",
           "score": 87.5
         },
         {
-          "name": "신세계",
+          "name": "광주신세계",
           "score": 87.5
         }
       ]
@@ -2762,23 +2762,23 @@
       "count": 102,
       "analyzed": 101,
       "ratings": {
-        "FAIR": 13,
         "EXCELLENT": 48,
         "VERY_POOR": 8,
+        "POOR": 4,
         "GOOD": 28,
-        "POOR": 4
+        "FAIR": 13
       },
       "top3": [
         {
-          "name": "다우데이타",
+          "name": "기업은행",
           "score": 87.5
         },
         {
-          "name": "KB금융",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "하나금융지주",
+          "name": "현대엘리베이터",
           "score": 87.5
         }
       ]
@@ -2788,23 +2788,23 @@
       "count": 99,
       "analyzed": 99,
       "ratings": {
-        "EXCELLENT": 37,
-        "VERY_POOR": 2,
-        "GOOD": 37,
         "FAIR": 18,
-        "POOR": 5
+        "GOOD": 37,
+        "EXCELLENT": 37,
+        "POOR": 5,
+        "VERY_POOR": 2
       },
       "top3": [
         {
-          "name": "BGF리테일",
-          "score": 87.5
-        },
-        {
-          "name": "셀트리온",
-          "score": 87.5
-        },
-        {
           "name": "코텍",
+          "score": 87.5
+        },
+        {
+          "name": "디지털대성",
+          "score": 87.5
+        },
+        {
+          "name": "JB금융지주",
           "score": 87.5
         }
       ]
@@ -2838,15 +2838,15 @@
       "count": 20,
       "analyzed": 20,
       "ratings": {
-        "FAIR": 5,
         "GOOD": 7,
-        "EXCELLENT": 4,
+        "VERY_POOR": 2,
         "POOR": 2,
-        "VERY_POOR": 2
+        "FAIR": 5,
+        "EXCELLENT": 4
       },
       "top3": [
         {
-          "name": "포커스에이아이",
+          "name": "슈프리마",
           "score": 81.2
         },
         {
@@ -2854,7 +2854,7 @@
           "score": 81.2
         },
         {
-          "name": "슈프리마",
+          "name": "포커스에이아이",
           "score": 81.2
         }
       ]
@@ -2864,11 +2864,11 @@
       "count": 53,
       "analyzed": 50,
       "ratings": {
-        "VERY_POOR": 11,
-        "GOOD": 7,
         "FAIR": 10,
+        "EXCELLENT": 6,
+        "VERY_POOR": 11,
         "POOR": 16,
-        "EXCELLENT": 6
+        "GOOD": 7
       },
       "top3": [
         {
@@ -2880,7 +2880,7 @@
           "score": 87.5
         },
         {
-          "name": "헥토이노베이션",
+          "name": "나노",
           "score": 81.2
         }
       ]
@@ -2890,19 +2890,19 @@
       "count": 14,
       "analyzed": 14,
       "ratings": {
-        "EXCELLENT": 2,
         "POOR": 5,
-        "GOOD": 3,
         "FAIR": 3,
-        "VERY_POOR": 1
+        "GOOD": 3,
+        "VERY_POOR": 1,
+        "EXCELLENT": 2
       },
       "top3": [
         {
-          "name": "제테마",
+          "name": "대웅",
           "score": 81.2
         },
         {
-          "name": "대웅",
+          "name": "제테마",
           "score": 81.2
         },
         {
@@ -2916,23 +2916,23 @@
       "count": 25,
       "analyzed": 25,
       "ratings": {
-        "EXCELLENT": 7,
+        "FAIR": 5,
         "GOOD": 6,
         "VERY_POOR": 6,
-        "FAIR": 5,
+        "EXCELLENT": 7,
         "POOR": 1
       },
       "top3": [
+        {
+          "name": "KT",
+          "score": 87.5
+        },
         {
           "name": "LG",
           "score": 87.5
         },
         {
-          "name": "SG",
-          "score": 87.5
-        },
-        {
-          "name": "KT",
+          "name": "SK텔레콤",
           "score": 87.5
         }
       ]
@@ -2942,9 +2942,9 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
-        "FAIR": 2,
-        "EXCELLENT": 1,
         "GOOD": 6,
+        "EXCELLENT": 1,
+        "FAIR": 2,
         "POOR": 1
       },
       "top3": [
@@ -2953,11 +2953,11 @@
           "score": 81.2
         },
         {
-          "name": "KG케미칼",
+          "name": "롯데정밀화학",
           "score": 75.0
         },
         {
-          "name": "남해화학",
+          "name": "KG케미칼",
           "score": 75.0
         }
       ]
@@ -2967,11 +2967,11 @@
       "count": 40,
       "analyzed": 38,
       "ratings": {
-        "FAIR": 5,
-        "POOR": 8,
-        "EXCELLENT": 7,
+        "GOOD": 8,
         "VERY_POOR": 10,
-        "GOOD": 8
+        "EXCELLENT": 7,
+        "POOR": 8,
+        "FAIR": 5
       },
       "top3": [
         {
@@ -2979,11 +2979,11 @@
           "score": 87.5
         },
         {
-          "name": "셀트리온제약",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "셀트리온",
+          "name": "셀트리온제약",
           "score": 87.5
         }
       ]
@@ -2993,11 +2993,11 @@
       "count": 26,
       "analyzed": 26,
       "ratings": {
-        "FAIR": 4,
         "GOOD": 13,
-        "VERY_POOR": 3,
+        "FAIR": 4,
         "EXCELLENT": 2,
-        "POOR": 4
+        "POOR": 4,
+        "VERY_POOR": 3
       },
       "top3": [
         {
@@ -3020,10 +3020,10 @@
       "analyzed": 20,
       "ratings": {
         "FAIR": 9,
-        "GOOD": 4,
+        "VERY_POOR": 2,
         "POOR": 2,
-        "EXCELLENT": 3,
-        "VERY_POOR": 2
+        "GOOD": 4,
+        "EXCELLENT": 3
       },
       "top3": [
         {
@@ -3031,11 +3031,11 @@
           "score": 87.5
         },
         {
-          "name": "이지바이오",
+          "name": "이지홀딩스",
           "score": 81.2
         },
         {
-          "name": "이지홀딩스",
+          "name": "이지바이오",
           "score": 81.2
         }
       ]
@@ -3045,11 +3045,11 @@
       "count": 35,
       "analyzed": 33,
       "ratings": {
-        "EXCELLENT": 11,
-        "VERY_POOR": 5,
+        "POOR": 5,
         "GOOD": 8,
+        "EXCELLENT": 11,
         "FAIR": 4,
-        "POOR": 5
+        "VERY_POOR": 5
       },
       "top3": [
         {
@@ -3057,11 +3057,11 @@
           "score": 87.5
         },
         {
-          "name": "SG",
+          "name": "비츠로시스",
           "score": 87.5
         },
         {
-          "name": "누리플렉스",
+          "name": "유진로봇",
           "score": 87.5
         }
       ]
@@ -3071,23 +3071,23 @@
       "count": 28,
       "analyzed": 27,
       "ratings": {
-        "GOOD": 12,
-        "POOR": 4,
         "FAIR": 8,
+        "GOOD": 12,
         "EXCELLENT": 2,
+        "POOR": 4,
         "VERY_POOR": 1
       },
       "top3": [
-        {
-          "name": "삼성카드",
-          "score": 87.5
-        },
         {
           "name": "파트론",
           "score": 87.5
         },
         {
-          "name": "인포바인",
+          "name": "삼성카드",
+          "score": 87.5
+        },
+        {
+          "name": "NHN",
           "score": 75.0
         }
       ]
@@ -3097,10 +3097,10 @@
       "count": 7,
       "analyzed": 7,
       "ratings": {
-        "GOOD": 3,
-        "EXCELLENT": 2,
         "VERY_POOR": 1,
-        "FAIR": 1
+        "GOOD": 3,
+        "FAIR": 1,
+        "EXCELLENT": 2
       },
       "top3": [
         {
@@ -3122,19 +3122,19 @@
       "count": 22,
       "analyzed": 22,
       "ratings": {
-        "FAIR": 3,
-        "GOOD": 10,
+        "POOR": 1,
         "EXCELLENT": 5,
+        "GOOD": 10,
         "VERY_POOR": 3,
-        "POOR": 1
+        "FAIR": 3
       },
       "top3": [
         {
-          "name": "LG",
+          "name": "코오롱인더",
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "LG",
           "score": 87.5
         },
         {
@@ -3148,8 +3148,8 @@
       "count": 14,
       "analyzed": 14,
       "ratings": {
-        "GOOD": 6,
         "POOR": 1,
+        "GOOD": 6,
         "EXCELLENT": 3,
         "FAIR": 4
       },
@@ -3173,22 +3173,22 @@
       "count": 25,
       "analyzed": 24,
       "ratings": {
-        "EXCELLENT": 10,
         "GOOD": 8,
+        "EXCELLENT": 10,
         "POOR": 4,
         "FAIR": 2
       },
       "top3": [
         {
-          "name": "롯데쇼핑",
-          "score": 87.5
-        },
-        {
-          "name": "BGF리테일",
+          "name": "현대홈쇼핑",
           "score": 87.5
         },
         {
           "name": "신세계",
+          "score": 87.5
+        },
+        {
+          "name": "광주신세계",
           "score": 87.5
         }
       ]
@@ -3199,12 +3199,12 @@
       "analyzed": 10,
       "ratings": {
         "EXCELLENT": 4,
-        "FAIR": 1,
-        "GOOD": 5
+        "GOOD": 5,
+        "FAIR": 1
       },
       "top3": [
         {
-          "name": "DB",
+          "name": "삼성화재",
           "score": 81.2
         },
         {
@@ -3212,7 +3212,7 @@
           "score": 81.2
         },
         {
-          "name": "DB손해보험",
+          "name": "DB",
           "score": 81.2
         }
       ]
@@ -3222,9 +3222,9 @@
       "count": 11,
       "analyzed": 11,
       "ratings": {
-        "GOOD": 4,
         "FAIR": 2,
         "VERY_POOR": 2,
+        "GOOD": 4,
         "POOR": 2,
         "EXCELLENT": 1
       },
@@ -3248,23 +3248,23 @@
       "count": 85,
       "analyzed": 84,
       "ratings": {
-        "EXCELLENT": 18,
         "GOOD": 24,
-        "FAIR": 24,
         "VERY_POOR": 6,
-        "POOR": 12
+        "POOR": 12,
+        "FAIR": 24,
+        "EXCELLENT": 18
       },
       "top3": [
         {
-          "name": "코오롱인더",
+          "name": "비나텍",
           "score": 87.5
         },
         {
-          "name": "코오롱ENP",
+          "name": "디아이",
           "score": 87.5
         },
         {
-          "name": "디와이",
+          "name": "HS효성첨단소재",
           "score": 87.5
         }
       ]
@@ -3274,15 +3274,15 @@
       "count": 34,
       "analyzed": 33,
       "ratings": {
-        "GOOD": 6,
         "EXCELLENT": 12,
-        "POOR": 5,
+        "GOOD": 6,
+        "FAIR": 8,
         "VERY_POOR": 2,
-        "FAIR": 8
+        "POOR": 5
       },
       "top3": [
         {
-          "name": "우리기술",
+          "name": "와토스코리아",
           "score": 87.5
         },
         {
@@ -3300,8 +3300,8 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
-        "GOOD": 3,
         "FAIR": 6,
+        "GOOD": 3,
         "POOR": 1
       },
       "top3": [
@@ -3324,15 +3324,15 @@
       "count": 22,
       "analyzed": 22,
       "ratings": {
-        "FAIR": 3,
-        "POOR": 2,
         "GOOD": 8,
         "EXCELLENT": 8,
+        "POOR": 2,
+        "FAIR": 3,
         "VERY_POOR": 1
       },
       "top3": [
         {
-          "name": "LS ELECTRIC",
+          "name": "비츠로시스",
           "score": 87.5
         },
         {
@@ -3340,7 +3340,7 @@
           "score": 87.5
         },
         {
-          "name": "비츠로시스",
+          "name": "LS ELECTRIC",
           "score": 87.5
         }
       ]
@@ -3350,10 +3350,10 @@
       "count": 17,
       "analyzed": 17,
       "ratings": {
-        "EXCELLENT": 4,
-        "FAIR": 6,
-        "VERY_POOR": 2,
         "GOOD": 4,
+        "FAIR": 6,
+        "EXCELLENT": 4,
+        "VERY_POOR": 2,
         "POOR": 1
       },
       "top3": [
@@ -3362,11 +3362,11 @@
           "score": 87.5
         },
         {
-          "name": "DB",
+          "name": "대모",
           "score": 81.2
         },
         {
-          "name": "대모",
+          "name": "모바일어플라이언스",
           "score": 81.2
         }
       ]
@@ -3376,10 +3376,10 @@
       "count": 42,
       "analyzed": 41,
       "ratings": {
-        "POOR": 6,
+        "GOOD": 11,
         "FAIR": 11,
         "EXCELLENT": 8,
-        "GOOD": 11,
+        "POOR": 6,
         "VERY_POOR": 5
       },
       "top3": [
@@ -3388,11 +3388,11 @@
           "score": 87.5
         },
         {
-          "name": "LS ELECTRIC",
+          "name": "SK",
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "LS ELECTRIC",
           "score": 87.5
         }
       ]
@@ -3402,23 +3402,23 @@
       "count": 70,
       "analyzed": 69,
       "ratings": {
-        "GOOD": 23,
-        "EXCELLENT": 13,
-        "POOR": 10,
         "FAIR": 17,
-        "VERY_POOR": 6
+        "GOOD": 23,
+        "POOR": 10,
+        "VERY_POOR": 6,
+        "EXCELLENT": 13
       },
       "top3": [
-        {
-          "name": "이미지스",
-          "score": 87.5
-        },
         {
           "name": "LG",
           "score": 87.5
         },
         {
           "name": "자화전자",
+          "score": 87.5
+        },
+        {
+          "name": "파트론",
           "score": 87.5
         }
       ]
@@ -3428,23 +3428,23 @@
       "count": 28,
       "analyzed": 28,
       "ratings": {
-        "FAIR": 4,
+        "EXCELLENT": 8,
         "GOOD": 11,
         "VERY_POOR": 1,
-        "POOR": 4,
-        "EXCELLENT": 8
+        "FAIR": 4,
+        "POOR": 4
       },
       "top3": [
+        {
+          "name": "KT",
+          "score": 87.5
+        },
         {
           "name": "LG",
           "score": 87.5
         },
         {
-          "name": "누리플렉스",
-          "score": 87.5
-        },
-        {
-          "name": "KT",
+          "name": "SK텔레콤",
           "score": 87.5
         }
       ]
@@ -3454,10 +3454,10 @@
       "count": 24,
       "analyzed": 23,
       "ratings": {
-        "EXCELLENT": 3,
-        "GOOD": 8,
         "POOR": 3,
         "FAIR": 7,
+        "GOOD": 8,
+        "EXCELLENT": 3,
         "VERY_POOR": 2
       },
       "top3": [
@@ -3466,11 +3466,11 @@
           "score": 87.5
         },
         {
-          "name": "아이티센글로벌",
+          "name": "헥토파이낸셜",
           "score": 81.2
         },
         {
-          "name": "헥토파이낸셜",
+          "name": "아이티센글로벌",
           "score": 81.2
         }
       ]
@@ -3490,11 +3490,11 @@
           "score": 87.5
         },
         {
-          "name": "나노팀",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "LG",
+          "name": "나노팀",
           "score": 87.5
         }
       ]
@@ -3504,11 +3504,11 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
+        "GOOD": 3,
         "FAIR": 3,
         "EXCELLENT": 1,
-        "GOOD": 3,
-        "VERY_POOR": 1,
-        "POOR": 1
+        "POOR": 1,
+        "VERY_POOR": 1
       },
       "top3": [
         {
@@ -3516,11 +3516,11 @@
           "score": 81.2
         },
         {
-          "name": "하림",
+          "name": "동우팜투테이블",
           "score": 68.8
         },
         {
-          "name": "SOOP",
+          "name": "하림",
           "score": 68.8
         }
       ]
@@ -3530,9 +3530,9 @@
       "count": 16,
       "analyzed": 14,
       "ratings": {
+        "FAIR": 4,
         "GOOD": 5,
         "EXCELLENT": 3,
-        "FAIR": 4,
         "POOR": 1,
         "VERY_POOR": 1
       },
@@ -3557,10 +3557,10 @@
       "analyzed": 61,
       "ratings": {
         "FAIR": 7,
-        "EXCELLENT": 21,
-        "POOR": 6,
         "GOOD": 22,
-        "VERY_POOR": 5
+        "VERY_POOR": 5,
+        "EXCELLENT": 21,
+        "POOR": 6
       },
       "top3": [
         {
@@ -3568,11 +3568,11 @@
           "score": 87.5
         },
         {
-          "name": "오픈엣지테크놀로지",
+          "name": "디아이",
           "score": 87.5
         },
         {
-          "name": "디바이스",
+          "name": "오픈엣지테크놀로지",
           "score": 87.5
         }
       ]
@@ -3582,9 +3582,9 @@
       "count": 10,
       "analyzed": 8,
       "ratings": {
-        "EXCELLENT": 3,
         "GOOD": 3,
-        "POOR": 2
+        "POOR": 2,
+        "EXCELLENT": 3
       },
       "top3": [
         {
@@ -3606,23 +3606,23 @@
       "count": 26,
       "analyzed": 26,
       "ratings": {
-        "GOOD": 10,
-        "EXCELLENT": 7,
         "POOR": 4,
         "VERY_POOR": 3,
+        "GOOD": 10,
+        "EXCELLENT": 7,
         "FAIR": 2
       },
       "top3": [
-        {
-          "name": "삼성전기",
-          "score": 87.5
-        },
         {
           "name": "LG",
           "score": 87.5
         },
         {
           "name": "프로텍",
+          "score": 87.5
+        },
+        {
+          "name": "하이비젼시스템",
           "score": 87.5
         }
       ]
@@ -3632,23 +3632,23 @@
       "count": 33,
       "analyzed": 33,
       "ratings": {
+        "GOOD": 7,
         "POOR": 4,
         "FAIR": 13,
-        "GOOD": 7,
-        "VERY_POOR": 3,
-        "EXCELLENT": 6
+        "EXCELLENT": 6,
+        "VERY_POOR": 3
       },
       "top3": [
-        {
-          "name": "코미팜",
-          "score": 87.5
-        },
         {
           "name": "팜스코",
           "score": 87.5
         },
         {
-          "name": "이지바이오",
+          "name": "코미팜",
+          "score": 87.5
+        },
+        {
+          "name": "우리손에프앤지",
           "score": 81.2
         }
       ]
@@ -3658,13 +3658,13 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
-        "GOOD": 6,
+        "FAIR": 2,
         "POOR": 2,
-        "FAIR": 2
+        "GOOD": 6
       },
       "top3": [
         {
-          "name": "NHN KCP",
+          "name": "NICE",
           "score": 75.0
         },
         {
@@ -3672,7 +3672,7 @@
           "score": 75.0
         },
         {
-          "name": "NICE",
+          "name": "NHN KCP",
           "score": 75.0
         }
       ]
@@ -3683,20 +3683,20 @@
       "analyzed": 6,
       "ratings": {
         "EXCELLENT": 3,
-        "GOOD": 2,
-        "FAIR": 1
+        "FAIR": 1,
+        "GOOD": 2
       },
       "top3": [
-        {
-          "name": "아주IB투자",
-          "score": 81.2
-        },
         {
           "name": "SBI인베스트먼트",
           "score": 81.2
         },
         {
           "name": "한화생명",
+          "score": 81.2
+        },
+        {
+          "name": "아주IB투자",
           "score": 81.2
         }
       ]
@@ -3706,23 +3706,23 @@
       "count": 29,
       "analyzed": 28,
       "ratings": {
-        "GOOD": 5,
         "FAIR": 5,
-        "EXCELLENT": 8,
         "VERY_POOR": 6,
-        "POOR": 4
+        "EXCELLENT": 8,
+        "POOR": 4,
+        "GOOD": 5
       },
       "top3": [
-        {
-          "name": "LG",
-          "score": 87.5
-        },
         {
           "name": "KT",
           "score": 87.5
         },
         {
-          "name": "쏠리드",
+          "name": "LG",
+          "score": 87.5
+        },
+        {
+          "name": "SK텔레콤",
           "score": 87.5
         }
       ]
@@ -3732,9 +3732,9 @@
       "count": 28,
       "analyzed": 27,
       "ratings": {
+        "FAIR": 8,
         "POOR": 10,
         "GOOD": 5,
-        "FAIR": 8,
         "VERY_POOR": 4
       },
       "top3": [
@@ -3743,11 +3743,11 @@
           "score": 75.0
         },
         {
-          "name": "네오팜",
+          "name": "매일유업",
           "score": 68.8
         },
         {
-          "name": "아가방컴퍼니",
+          "name": "네오팜",
           "score": 68.8
         }
       ]
@@ -3757,11 +3757,11 @@
       "count": 33,
       "analyzed": 33,
       "ratings": {
-        "VERY_POOR": 9,
-        "POOR": 6,
         "GOOD": 9,
         "FAIR": 7,
-        "EXCELLENT": 2
+        "EXCELLENT": 2,
+        "VERY_POOR": 9,
+        "POOR": 6
       },
       "top3": [
         {
@@ -3773,7 +3773,7 @@
           "score": 81.2
         },
         {
-          "name": "하이브",
+          "name": "디오",
           "score": 75.0
         }
       ]
@@ -3784,18 +3784,18 @@
       "analyzed": 21,
       "ratings": {
         "POOR": 7,
-        "VERY_POOR": 2,
-        "FAIR": 4,
+        "EXCELLENT": 2,
         "GOOD": 6,
-        "EXCELLENT": 2
+        "FAIR": 4,
+        "VERY_POOR": 2
       },
       "top3": [
         {
-          "name": "셀레믹스",
+          "name": "녹십자",
           "score": 81.2
         },
         {
-          "name": "녹십자",
+          "name": "셀레믹스",
           "score": 81.2
         },
         {
@@ -3809,11 +3809,11 @@
       "count": 30,
       "analyzed": 30,
       "ratings": {
-        "POOR": 3,
         "GOOD": 14,
-        "EXCELLENT": 4,
         "FAIR": 7,
-        "VERY_POOR": 2
+        "EXCELLENT": 4,
+        "VERY_POOR": 2,
+        "POOR": 3
       },
       "top3": [
         {
@@ -3835,10 +3835,10 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
-        "POOR": 1,
         "GOOD": 3,
+        "FAIR": 4,
         "EXCELLENT": 1,
-        "FAIR": 4
+        "POOR": 1
       },
       "top3": [
         {
@@ -3860,10 +3860,10 @@
       "count": 38,
       "analyzed": 37,
       "ratings": {
+        "FAIR": 9,
+        "GOOD": 7,
         "VERY_POOR": 10,
         "POOR": 10,
-        "GOOD": 7,
-        "FAIR": 9,
         "EXCELLENT": 1
       },
       "top3": [
@@ -3872,11 +3872,11 @@
           "score": 81.2
         },
         {
-          "name": "CJ ENM",
+          "name": "디오",
           "score": 75.0
         },
         {
-          "name": "디오",
+          "name": "CJ ENM",
           "score": 75.0
         }
       ]
@@ -3886,11 +3886,11 @@
       "count": 14,
       "analyzed": 14,
       "ratings": {
-        "GOOD": 6,
-        "FAIR": 3,
         "EXCELLENT": 2,
-        "VERY_POOR": 2,
-        "POOR": 1
+        "FAIR": 3,
+        "GOOD": 6,
+        "POOR": 1,
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -3902,7 +3902,7 @@
           "score": 81.2
         },
         {
-          "name": "쎄니트",
+          "name": "디오",
           "score": 75.0
         }
       ]
@@ -3912,23 +3912,23 @@
       "count": 28,
       "analyzed": 27,
       "ratings": {
-        "GOOD": 9,
-        "VERY_POOR": 2,
-        "EXCELLENT": 13,
         "POOR": 2,
+        "GOOD": 9,
+        "EXCELLENT": 13,
+        "VERY_POOR": 2,
         "FAIR": 1
       },
       "top3": [
-        {
-          "name": "삼성전기",
-          "score": 87.5
-        },
         {
           "name": "오픈엣지테크놀로지",
           "score": 87.5
         },
         {
-          "name": "디바이스",
+          "name": "삼성전기",
+          "score": 87.5
+        },
+        {
+          "name": "SK",
           "score": 87.5
         }
       ]
@@ -3938,11 +3938,11 @@
       "count": 18,
       "analyzed": 18,
       "ratings": {
-        "EXCELLENT": 3,
-        "FAIR": 3,
         "POOR": 3,
         "GOOD": 7,
-        "VERY_POOR": 2
+        "EXCELLENT": 3,
+        "VERY_POOR": 2,
+        "FAIR": 3
       },
       "top3": [
         {
@@ -3964,16 +3964,16 @@
       "count": 5,
       "analyzed": 5,
       "ratings": {
-        "GOOD": 4,
-        "FAIR": 1
+        "FAIR": 1,
+        "GOOD": 4
       },
       "top3": [
         {
-          "name": "KG케미칼",
+          "name": "롯데정밀화학",
           "score": 75.0
         },
         {
-          "name": "롯데정밀화학",
+          "name": "KG케미칼",
           "score": 75.0
         },
         {
@@ -3987,9 +3987,9 @@
       "count": 36,
       "analyzed": 34,
       "ratings": {
-        "EXCELLENT": 13,
         "GOOD": 13,
         "POOR": 3,
+        "EXCELLENT": 13,
         "FAIR": 4,
         "VERY_POOR": 1
       },
@@ -4003,7 +4003,7 @@
           "score": 87.5
         },
         {
-          "name": "세아베스틸지주",
+          "name": "덕산하이메탈",
           "score": 81.2
         }
       ]
@@ -4014,22 +4014,22 @@
       "analyzed": 39,
       "ratings": {
         "FAIR": 4,
-        "EXCELLENT": 16,
         "GOOD": 15,
+        "EXCELLENT": 16,
         "POOR": 2,
         "VERY_POOR": 2
       },
       "top3": [
         {
-          "name": "대동기어",
+          "name": "TYM",
           "score": 87.5
         },
         {
-          "name": "디와이파워",
+          "name": "HD현대건설기계",
           "score": 87.5
         },
         {
-          "name": "SG",
+          "name": "디와이",
           "score": 87.5
         }
       ]
@@ -4040,9 +4040,9 @@
       "analyzed": 23,
       "ratings": {
         "GOOD": 1,
-        "FAIR": 4,
-        "EXCELLENT": 10,
         "POOR": 6,
+        "EXCELLENT": 10,
+        "FAIR": 4,
         "VERY_POOR": 2
       },
       "top3": [
@@ -4051,11 +4051,11 @@
           "score": 87.5
         },
         {
-          "name": "제이엘케이",
+          "name": "차바이오텍",
           "score": 81.2
         },
         {
-          "name": "뷰웍스",
+          "name": "나노",
           "score": 81.2
         }
       ]
@@ -4065,23 +4065,23 @@
       "count": 60,
       "analyzed": 59,
       "ratings": {
-        "GOOD": 23,
         "EXCELLENT": 20,
+        "GOOD": 23,
         "FAIR": 8,
         "POOR": 6,
         "VERY_POOR": 2
       },
       "top3": [
         {
-          "name": "우리기술",
+          "name": "대우건설",
           "score": 87.5
         },
         {
-          "name": "LS ELECTRIC",
+          "name": "태광",
           "score": 87.5
         },
         {
-          "name": "SG",
+          "name": "일진파워",
           "score": 87.5
         }
       ]
@@ -4092,10 +4092,10 @@
       "analyzed": 17,
       "ratings": {
         "GOOD": 9,
-        "EXCELLENT": 4,
-        "FAIR": 1,
         "POOR": 2,
-        "VERY_POOR": 1
+        "EXCELLENT": 4,
+        "VERY_POOR": 1,
+        "FAIR": 1
       },
       "top3": [
         {
@@ -4103,11 +4103,11 @@
           "score": 87.5
         },
         {
-          "name": "한전기술",
+          "name": "비에이치아이",
           "score": 81.2
         },
         {
-          "name": "오르비텍",
+          "name": "한전기술",
           "score": 81.2
         }
       ]
@@ -4117,11 +4117,11 @@
       "count": 18,
       "analyzed": 18,
       "ratings": {
-        "EXCELLENT": 1,
-        "POOR": 3,
-        "FAIR": 4,
         "GOOD": 4,
-        "VERY_POOR": 6
+        "VERY_POOR": 6,
+        "FAIR": 4,
+        "POOR": 3,
+        "EXCELLENT": 1
       },
       "top3": [
         {
@@ -4129,11 +4129,11 @@
           "score": 81.2
         },
         {
-          "name": "NHN",
+          "name": "디오",
           "score": 75.0
         },
         {
-          "name": "디오",
+          "name": "NHN",
           "score": 75.0
         }
       ]
@@ -4143,10 +4143,10 @@
       "count": 23,
       "analyzed": 23,
       "ratings": {
+        "FAIR": 8,
+        "GOOD": 3,
         "EXCELLENT": 8,
         "POOR": 2,
-        "GOOD": 3,
-        "FAIR": 8,
         "VERY_POOR": 2
       },
       "top3": [
@@ -4159,7 +4159,7 @@
           "score": 87.5
         },
         {
-          "name": "씨앤지하이테크",
+          "name": "기가비스",
           "score": 81.2
         }
       ]
@@ -4194,22 +4194,22 @@
       "analyzed": 44,
       "ratings": {
         "GOOD": 11,
-        "POOR": 10,
         "FAIR": 10,
+        "POOR": 10,
         "VERY_POOR": 6,
         "EXCELLENT": 7
       },
       "top3": [
         {
+          "name": "녹십자",
+          "score": 81.2
+        },
+        {
+          "name": "셀레믹스",
+          "score": 81.2
+        },
+        {
           "name": "마크로젠",
-          "score": 81.2
-        },
-        {
-          "name": "코오롱생명과학",
-          "score": 81.2
-        },
-        {
-          "name": "제이에스링크",
           "score": 81.2
         }
       ]
@@ -4219,9 +4219,9 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
+        "GOOD": 5,
         "FAIR": 2,
-        "EXCELLENT": 2,
-        "GOOD": 5
+        "EXCELLENT": 2
       },
       "top3": [
         {
@@ -4253,7 +4253,7 @@
           "score": 87.5
         },
         {
-          "name": "극동유화",
+          "name": "GS",
           "score": 81.2
         },
         {
@@ -4268,8 +4268,8 @@
       "analyzed": 11,
       "ratings": {
         "EXCELLENT": 8,
-        "GOOD": 2,
-        "VERY_POOR": 1
+        "VERY_POOR": 1,
+        "GOOD": 2
       },
       "top3": [
         {
@@ -4277,11 +4277,11 @@
           "score": 87.5
         },
         {
-          "name": "하나금융지주",
+          "name": "기업은행",
           "score": 87.5
         },
         {
-          "name": "iM금융지주",
+          "name": "JB금융지주",
           "score": 87.5
         }
       ]
@@ -4292,10 +4292,10 @@
       "analyzed": 13,
       "ratings": {
         "VERY_POOR": 2,
-        "EXCELLENT": 3,
-        "FAIR": 2,
+        "POOR": 3,
         "GOOD": 3,
-        "POOR": 3
+        "EXCELLENT": 3,
+        "FAIR": 2
       },
       "top3": [
         {
@@ -4303,11 +4303,11 @@
           "score": 87.5
         },
         {
-          "name": "브리지텍",
+          "name": "대모",
           "score": 81.2
         },
         {
-          "name": "대모",
+          "name": "브리지텍",
           "score": 81.2
         }
       ]
@@ -4317,10 +4317,10 @@
       "count": 74,
       "analyzed": 73,
       "ratings": {
-        "POOR": 17,
         "FAIR": 26,
-        "GOOD": 18,
+        "POOR": 17,
         "EXCELLENT": 6,
+        "GOOD": 18,
         "VERY_POOR": 6
       },
       "top3": [
@@ -4358,7 +4358,7 @@
           "score": 81.2
         },
         {
-          "name": "CJ ENM",
+          "name": "하이브",
           "score": 75.0
         }
       ]
@@ -4368,11 +4368,11 @@
       "count": 31,
       "analyzed": 29,
       "ratings": {
+        "FAIR": 7,
         "EXCELLENT": 6,
         "VERY_POOR": 6,
-        "FAIR": 7,
-        "POOR": 8,
-        "GOOD": 2
+        "GOOD": 2,
+        "POOR": 8
       },
       "top3": [
         {
@@ -4380,7 +4380,7 @@
           "score": 87.5
         },
         {
-          "name": "제이엘케이",
+          "name": "씨어스테크놀로지",
           "score": 81.2
         },
         {
@@ -4394,11 +4394,11 @@
       "count": 94,
       "analyzed": 89,
       "ratings": {
+        "EXCELLENT": 13,
+        "FAIR": 22,
         "GOOD": 18,
         "VERY_POOR": 10,
-        "POOR": 26,
-        "EXCELLENT": 13,
-        "FAIR": 22
+        "POOR": 26
       },
       "top3": [
         {
@@ -4406,11 +4406,11 @@
           "score": 87.5
         },
         {
-          "name": "인바디",
+          "name": "나노",
           "score": 81.2
         },
         {
-          "name": "메디아나",
+          "name": "케이바이오",
           "score": 81.2
         }
       ]
@@ -4420,8 +4420,8 @@
       "count": 2,
       "analyzed": 2,
       "ratings": {
-        "VERY_POOR": 1,
-        "FAIR": 1
+        "FAIR": 1,
+        "VERY_POOR": 1
       },
       "top3": [
         {
@@ -4439,19 +4439,19 @@
       "count": 34,
       "analyzed": 34,
       "ratings": {
-        "GOOD": 12,
         "EXCELLENT": 9,
-        "POOR": 3,
+        "GOOD": 12,
         "FAIR": 6,
-        "VERY_POOR": 4
+        "VERY_POOR": 4,
+        "POOR": 3
       },
       "top3": [
         {
-          "name": "KB금융",
+          "name": "KT",
           "score": 87.5
         },
         {
-          "name": "KT",
+          "name": "KB금융",
           "score": 87.5
         },
         {
@@ -4465,8 +4465,8 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
-        "EXCELLENT": 1,
         "GOOD": 7,
+        "EXCELLENT": 1,
         "FAIR": 1
       },
       "top3": [
@@ -4479,7 +4479,7 @@
           "score": 75.0
         },
         {
-          "name": "TS인베스트먼트",
+          "name": "메가엠디",
           "score": 68.8
         }
       ]
@@ -4490,8 +4490,8 @@
       "analyzed": 9,
       "ratings": {
         "GOOD": 5,
-        "FAIR": 2,
-        "EXCELLENT": 2
+        "EXCELLENT": 2,
+        "FAIR": 2
       },
       "top3": [
         {
@@ -4514,14 +4514,14 @@
       "analyzed": 161,
       "ratings": {
         "POOR": 34,
-        "EXCELLENT": 21,
-        "GOOD": 54,
         "FAIR": 38,
-        "VERY_POOR": 14
+        "EXCELLENT": 21,
+        "VERY_POOR": 14,
+        "GOOD": 54
       },
       "top3": [
         {
-          "name": "케이비아이동국실업",
+          "name": "LG",
           "score": 87.5
         },
         {
@@ -4529,7 +4529,7 @@
           "score": 87.5
         },
         {
-          "name": "대동기어",
+          "name": "DN오토모티브",
           "score": 87.5
         }
       ]
@@ -4539,22 +4539,22 @@
       "count": 16,
       "analyzed": 16,
       "ratings": {
-        "EXCELLENT": 4,
         "GOOD": 7,
+        "EXCELLENT": 4,
         "VERY_POOR": 2,
         "FAIR": 3
       },
       "top3": [
         {
-          "name": "LX인터내셔널",
-          "score": 87.5
-        },
-        {
           "name": "SK",
           "score": 87.5
         },
         {
-          "name": "비엘팜텍",
+          "name": "LX인터내셔널",
+          "score": 87.5
+        },
+        {
+          "name": "GS",
           "score": 81.2
         }
       ]
@@ -4564,15 +4564,15 @@
       "count": 64,
       "analyzed": 61,
       "ratings": {
-        "FAIR": 18,
         "GOOD": 15,
+        "FAIR": 18,
         "EXCELLENT": 17,
         "VERY_POOR": 6,
         "POOR": 5
       },
       "top3": [
         {
-          "name": "삼성전기",
+          "name": "KT",
           "score": 87.5
         },
         {
@@ -4580,7 +4580,7 @@
           "score": 87.5
         },
         {
-          "name": "KT",
+          "name": "유진로봇",
           "score": 87.5
         }
       ]
@@ -4609,11 +4609,11 @@
       "count": 26,
       "analyzed": 26,
       "ratings": {
-        "GOOD": 9,
-        "EXCELLENT": 5,
         "FAIR": 5,
-        "POOR": 6,
-        "VERY_POOR": 1
+        "EXCELLENT": 5,
+        "VERY_POOR": 1,
+        "GOOD": 9,
+        "POOR": 6
       },
       "top3": [
         {
@@ -4621,11 +4621,11 @@
           "score": 87.5
         },
         {
-          "name": "HDC현대EP",
+          "name": "현대에버다임",
           "score": 87.5
         },
         {
-          "name": "현대에버다임",
+          "name": "HDC현대EP",
           "score": 87.5
         }
       ]
@@ -4650,7 +4650,7 @@
           "score": 75.0
         },
         {
-          "name": "링네트",
+          "name": "효성",
           "score": 68.8
         }
       ]
@@ -4683,23 +4683,23 @@
       "count": 116,
       "analyzed": 116,
       "ratings": {
-        "EXCELLENT": 21,
         "GOOD": 37,
         "FAIR": 33,
+        "EXCELLENT": 21,
         "VERY_POOR": 6,
         "POOR": 19
       },
       "top3": [
         {
-          "name": "나노팀",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "성호전자",
+          "name": "LS머트리얼즈",
           "score": 87.5
         },
         {
-          "name": "디와이",
+          "name": "알멕",
           "score": 87.5
         }
       ]
@@ -4709,23 +4709,23 @@
       "count": 39,
       "analyzed": 38,
       "ratings": {
-        "GOOD": 13,
-        "EXCELLENT": 5,
-        "VERY_POOR": 4,
         "POOR": 7,
+        "GOOD": 13,
+        "VERY_POOR": 4,
+        "EXCELLENT": 5,
         "FAIR": 9
       },
       "top3": [
-        {
-          "name": "나노팀",
-          "score": 87.5
-        },
         {
           "name": "디와이",
           "score": 87.5
         },
         {
-          "name": "아이텍",
+          "name": "나노팀",
+          "score": 87.5
+        },
+        {
+          "name": "나노",
           "score": 81.2
         }
       ]
@@ -4735,11 +4735,11 @@
       "count": 34,
       "analyzed": 34,
       "ratings": {
-        "GOOD": 13,
+        "POOR": 2,
         "FAIR": 11,
         "EXCELLENT": 6,
-        "VERY_POOR": 2,
-        "POOR": 2
+        "GOOD": 13,
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -4747,11 +4747,11 @@
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "보성파워텍",
           "score": 87.5
         },
         {
-          "name": "보성파워텍",
+          "name": "SK",
           "score": 87.5
         }
       ]
@@ -4762,22 +4762,22 @@
       "analyzed": 37,
       "ratings": {
         "GOOD": 18,
-        "FAIR": 4,
-        "EXCELLENT": 11,
         "POOR": 3,
+        "EXCELLENT": 11,
+        "FAIR": 4,
         "VERY_POOR": 1
       },
       "top3": [
         {
-          "name": "LS ELECTRIC",
-          "score": 87.5
-        },
-        {
-          "name": "LS에코에너지",
+          "name": "비츠로시스",
           "score": 87.5
         },
         {
           "name": "보성파워텍",
+          "score": 87.5
+        },
+        {
+          "name": "LS ELECTRIC",
           "score": 87.5
         }
       ]
@@ -4787,23 +4787,23 @@
       "count": 53,
       "analyzed": 53,
       "ratings": {
-        "GOOD": 18,
-        "EXCELLENT": 20,
         "POOR": 6,
         "FAIR": 7,
+        "EXCELLENT": 20,
+        "GOOD": 18,
         "VERY_POOR": 2
       },
       "top3": [
-        {
-          "name": "피엔티",
-          "score": 87.5
-        },
         {
           "name": "LG",
           "score": 87.5
         },
         {
-          "name": "LS ELECTRIC",
+          "name": "비나텍",
+          "score": 87.5
+        },
+        {
+          "name": "디와이",
           "score": 87.5
         }
       ]
@@ -4814,9 +4814,9 @@
       "analyzed": 9,
       "ratings": {
         "POOR": 3,
-        "VERY_POOR": 1,
         "GOOD": 1,
-        "EXCELLENT": 4
+        "EXCELLENT": 4,
+        "VERY_POOR": 1
       },
       "top3": [
         {
@@ -4824,11 +4824,11 @@
           "score": 87.5
         },
         {
-          "name": "대한전선",
+          "name": "LS",
           "score": 81.2
         },
         {
-          "name": "일진전기",
+          "name": "대한전선",
           "score": 81.2
         }
       ]
@@ -4839,8 +4839,8 @@
       "analyzed": 15,
       "ratings": {
         "GOOD": 7,
-        "POOR": 1,
         "FAIR": 4,
+        "POOR": 1,
         "VERY_POOR": 2,
         "EXCELLENT": 1
       },
@@ -4850,7 +4850,7 @@
           "score": 81.2
         },
         {
-          "name": "NHN KCP",
+          "name": "인포바인",
           "score": 75.0
         },
         {
@@ -4864,8 +4864,8 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "GOOD": 3,
         "FAIR": 7,
+        "GOOD": 3,
         "POOR": 2,
         "EXCELLENT": 1
       },
@@ -4875,11 +4875,11 @@
           "score": 87.5
         },
         {
-          "name": "잉크테크",
+          "name": "한미반도체",
           "score": 75.0
         },
         {
-          "name": "한미반도체",
+          "name": "잉크테크",
           "score": 75.0
         }
       ]
@@ -4912,21 +4912,21 @@
       "count": 6,
       "analyzed": 6,
       "ratings": {
-        "EXCELLENT": 3,
         "FAIR": 2,
+        "EXCELLENT": 3,
         "GOOD": 1
       },
       "top3": [
+        {
+          "name": "차바이오텍",
+          "score": 81.2
+        },
         {
           "name": "녹십자",
           "score": 81.2
         },
         {
           "name": "메디포스트",
-          "score": 81.2
-        },
-        {
-          "name": "차바이오텍",
           "score": 81.2
         }
       ]
@@ -4936,10 +4936,10 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
+        "EXCELLENT": 2,
         "GOOD": 4,
-        "POOR": 1,
         "FAIR": 2,
-        "EXCELLENT": 2
+        "POOR": 1
       },
       "top3": [
         {
@@ -4951,7 +4951,7 @@
           "score": 81.2
         },
         {
-          "name": "삼성전자",
+          "name": "신일전자",
           "score": 75.0
         }
       ]
@@ -4961,23 +4961,23 @@
       "count": 99,
       "analyzed": 96,
       "ratings": {
-        "FAIR": 20,
         "VERY_POOR": 22,
+        "POOR": 17,
+        "FAIR": 20,
         "EXCELLENT": 17,
-        "GOOD": 20,
-        "POOR": 17
+        "GOOD": 20
       },
       "top3": [
-        {
-          "name": "셀트리온",
-          "score": 87.5
-        },
         {
           "name": "셀비온",
           "score": 87.5
         },
         {
-          "name": "보령",
+          "name": "부광약품",
+          "score": 87.5
+        },
+        {
+          "name": "한미약품",
           "score": 87.5
         }
       ]
@@ -4987,19 +4987,19 @@
       "count": 15,
       "analyzed": 15,
       "ratings": {
-        "GOOD": 3,
         "POOR": 4,
-        "EXCELLENT": 3,
+        "VERY_POOR": 2,
+        "GOOD": 3,
         "FAIR": 3,
-        "VERY_POOR": 2
+        "EXCELLENT": 3
       },
       "top3": [
         {
-          "name": "삼정펄프",
+          "name": "한국수출포장",
           "score": 81.2
         },
         {
-          "name": "한국수출포장",
+          "name": "삼정펄프",
           "score": 81.2
         },
         {
@@ -5014,10 +5014,10 @@
       "analyzed": 12,
       "ratings": {
         "FAIR": 4,
-        "POOR": 3,
         "GOOD": 3,
-        "EXCELLENT": 1,
-        "VERY_POOR": 1
+        "VERY_POOR": 1,
+        "POOR": 3,
+        "EXCELLENT": 1
       },
       "top3": [
         {
@@ -5039,11 +5039,11 @@
       "count": 8,
       "analyzed": 8,
       "ratings": {
-        "VERY_POOR": 1,
         "FAIR": 3,
-        "EXCELLENT": 1,
+        "VERY_POOR": 1,
+        "GOOD": 1,
         "POOR": 2,
-        "GOOD": 1
+        "EXCELLENT": 1
       },
       "top3": [
         {
@@ -5065,23 +5065,23 @@
       "count": 41,
       "analyzed": 40,
       "ratings": {
+        "POOR": 10,
         "FAIR": 7,
-        "GOOD": 11,
-        "VERY_POOR": 8,
         "EXCELLENT": 4,
-        "POOR": 10
+        "GOOD": 11,
+        "VERY_POOR": 8
       },
       "top3": [
-        {
-          "name": "SK",
-          "score": 87.5
-        },
         {
           "name": "태광",
           "score": 87.5
         },
         {
-          "name": "HD현대",
+          "name": "SK",
+          "score": 87.5
+        },
+        {
+          "name": "성광벤드",
           "score": 81.2
         }
       ]
@@ -5092,9 +5092,9 @@
       "analyzed": 18,
       "ratings": {
         "FAIR": 4,
-        "VERY_POOR": 1,
-        "GOOD": 5,
         "EXCELLENT": 7,
+        "GOOD": 5,
+        "VERY_POOR": 1,
         "POOR": 1
       },
       "top3": [
@@ -5103,11 +5103,11 @@
           "score": 87.5
         },
         {
-          "name": "SG",
+          "name": "선광",
           "score": 87.5
         },
         {
-          "name": "선광",
+          "name": "유성티엔에스",
           "score": 87.5
         }
       ]
@@ -5117,21 +5117,21 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "GOOD": 7,
         "EXCELLENT": 5,
+        "GOOD": 7,
         "FAIR": 1
       },
       "top3": [
-        {
-          "name": "LX인터내셔널",
-          "score": 87.5
-        },
         {
           "name": "SK",
           "score": 87.5
         },
         {
-          "name": "코오롱",
+          "name": "LX인터내셔널",
+          "score": 87.5
+        },
+        {
+          "name": "효성티앤씨",
           "score": 81.2
         }
       ]
@@ -5141,10 +5141,10 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "FAIR": 3,
-        "GOOD": 3,
-        "POOR": 3,
         "VERY_POOR": 3,
+        "POOR": 3,
+        "GOOD": 3,
+        "FAIR": 3,
         "EXCELLENT": 1
       },
       "top3": [
@@ -5153,11 +5153,11 @@
           "score": 81.2
         },
         {
-          "name": "무학",
+          "name": "나라셀라",
           "score": 75.0
         },
         {
-          "name": "나라셀라",
+          "name": "무학",
           "score": 75.0
         }
       ]
@@ -5167,23 +5167,23 @@
       "count": 22,
       "analyzed": 21,
       "ratings": {
+        "EXCELLENT": 3,
+        "VERY_POOR": 2,
         "GOOD": 6,
         "FAIR": 4,
-        "VERY_POOR": 2,
-        "POOR": 6,
-        "EXCELLENT": 3
+        "POOR": 6
       },
       "top3": [
+        {
+          "name": "차바이오텍",
+          "score": 81.2
+        },
         {
           "name": "마크로젠",
           "score": 81.2
         },
         {
           "name": "메디포스트",
-          "score": 81.2
-        },
-        {
-          "name": "차바이오텍",
           "score": 81.2
         }
       ]
@@ -5194,18 +5194,18 @@
       "analyzed": 23,
       "ratings": {
         "FAIR": 6,
-        "VERY_POOR": 3,
         "GOOD": 6,
         "EXCELLENT": 2,
+        "VERY_POOR": 3,
         "POOR": 6
       },
       "top3": [
         {
-          "name": "이랜텍",
+          "name": "라온텍",
           "score": 81.2
         },
         {
-          "name": "라온텍",
+          "name": "이랜텍",
           "score": 81.2
         },
         {
@@ -5219,21 +5219,21 @@
       "count": 26,
       "analyzed": 26,
       "ratings": {
-        "EXCELLENT": 18,
         "GOOD": 7,
+        "EXCELLENT": 18,
         "FAIR": 1
       },
       "top3": [
         {
-          "name": "키움증권",
+          "name": "코리아에셋투자증권",
           "score": 87.5
         },
         {
-          "name": "교보증권",
+          "name": "SK",
           "score": 87.5
         },
         {
-          "name": "NH투자증권",
+          "name": "DB증권",
           "score": 87.5
         }
       ]
@@ -5243,11 +5243,11 @@
       "count": 66,
       "analyzed": 63,
       "ratings": {
-        "FAIR": 21,
-        "POOR": 10,
-        "EXCELLENT": 5,
+        "GOOD": 14,
         "VERY_POOR": 13,
-        "GOOD": 14
+        "FAIR": 21,
+        "EXCELLENT": 5,
+        "POOR": 10
       },
       "top3": [
         {
@@ -5269,17 +5269,17 @@
       "count": 5,
       "analyzed": 5,
       "ratings": {
+        "POOR": 1,
         "FAIR": 2,
-        "GOOD": 2,
-        "POOR": 1
+        "GOOD": 2
       },
       "top3": [
         {
-          "name": "갤럭시아머니트리",
+          "name": "코나아이",
           "score": 62.5
         },
         {
-          "name": "코나아이",
+          "name": "갤럭시아머니트리",
           "score": 62.5
         },
         {
@@ -5293,23 +5293,23 @@
       "count": 157,
       "analyzed": 156,
       "ratings": {
+        "FAIR": 33,
         "GOOD": 57,
         "EXCELLENT": 44,
         "POOR": 13,
-        "FAIR": 33,
         "VERY_POOR": 9
       },
       "top3": [
         {
-          "name": "OCI홀딩스",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "KB금융",
+          "name": "DN오토모티브",
           "score": 87.5
         },
         {
-          "name": "하나금융지주",
+          "name": "DRB동일",
           "score": 87.5
         }
       ]
@@ -5326,11 +5326,11 @@
       },
       "top3": [
         {
-          "name": "우리기술",
+          "name": "SV인베스트먼트",
           "score": 87.5
         },
         {
-          "name": "SV인베스트먼트",
+          "name": "우리기술",
           "score": 87.5
         },
         {
@@ -5370,9 +5370,9 @@
       "analyzed": 42,
       "ratings": {
         "FAIR": 15,
-        "POOR": 12,
         "EXCELLENT": 6,
         "GOOD": 6,
+        "POOR": 12,
         "VERY_POOR": 3
       },
       "top3": [
@@ -5385,7 +5385,7 @@
           "score": 87.5
         },
         {
-          "name": "만호제강",
+          "name": "율촌",
           "score": 81.2
         }
       ]
@@ -5395,23 +5395,23 @@
       "count": 47,
       "analyzed": 47,
       "ratings": {
-        "POOR": 5,
         "GOOD": 16,
         "FAIR": 13,
         "EXCELLENT": 8,
-        "VERY_POOR": 5
+        "VERY_POOR": 5,
+        "POOR": 5
       },
       "top3": [
-        {
-          "name": "우리기술",
-          "score": 87.5
-        },
         {
           "name": "동아지질",
           "score": 87.5
         },
         {
-          "name": "우원개발",
+          "name": "비츠로시스",
+          "score": 87.5
+        },
+        {
+          "name": "우리기술",
           "score": 87.5
         }
       ]
@@ -5422,8 +5422,8 @@
       "analyzed": 18,
       "ratings": {
         "EXCELLENT": 8,
-        "FAIR": 3,
         "GOOD": 6,
+        "FAIR": 3,
         "VERY_POOR": 1
       },
       "top3": [
@@ -5436,7 +5436,7 @@
           "score": 87.5
         },
         {
-          "name": "인지컨트롤스",
+          "name": "인지디스플레",
           "score": 81.2
         }
       ]
@@ -5446,9 +5446,9 @@
       "count": 24,
       "analyzed": 23,
       "ratings": {
+        "FAIR": 9,
         "POOR": 7,
         "GOOD": 5,
-        "FAIR": 9,
         "VERY_POOR": 2
       },
       "top3": [
@@ -5457,11 +5457,11 @@
           "score": 75.0
         },
         {
-          "name": "네오팜",
+          "name": "매일유업",
           "score": 68.8
         },
         {
-          "name": "아가방컴퍼니",
+          "name": "네오팜",
           "score": 68.8
         }
       ]
@@ -5471,19 +5471,19 @@
       "count": 59,
       "analyzed": 55,
       "ratings": {
-        "GOOD": 9,
-        "FAIR": 13,
         "VERY_POOR": 15,
         "POOR": 12,
+        "FAIR": 13,
+        "GOOD": 9,
         "EXCELLENT": 6
       },
       "top3": [
         {
-          "name": "코텍",
+          "name": "보령",
           "score": 87.5
         },
         {
-          "name": "보령",
+          "name": "코텍",
           "score": 87.5
         },
         {
@@ -5497,10 +5497,10 @@
       "count": 16,
       "analyzed": 15,
       "ratings": {
-        "VERY_POOR": 1,
-        "FAIR": 7,
         "GOOD": 4,
+        "FAIR": 7,
         "POOR": 2,
+        "VERY_POOR": 1,
         "EXCELLENT": 1
       },
       "top3": [
@@ -5509,11 +5509,11 @@
           "score": 87.5
         },
         {
-          "name": "현대바이오",
+          "name": "디오",
           "score": 75.0
         },
         {
-          "name": "디오",
+          "name": "현대바이오",
           "score": 75.0
         }
       ]
@@ -5524,22 +5524,22 @@
       "analyzed": 32,
       "ratings": {
         "FAIR": 7,
-        "POOR": 7,
         "GOOD": 10,
+        "POOR": 7,
         "EXCELLENT": 7,
         "VERY_POOR": 1
       },
       "top3": [
-        {
-          "name": "삼성전기",
-          "score": 87.5
-        },
         {
           "name": "LG",
           "score": 87.5
         },
         {
           "name": "자화전자",
+          "score": 87.5
+        },
+        {
+          "name": "파트론",
           "score": 87.5
         }
       ]
@@ -5549,10 +5549,10 @@
       "count": 6,
       "analyzed": 6,
       "ratings": {
-        "FAIR": 1,
         "POOR": 1,
         "GOOD": 2,
-        "EXCELLENT": 2
+        "EXCELLENT": 2,
+        "FAIR": 1
       },
       "top3": [
         {
@@ -5574,10 +5574,10 @@
       "count": 11,
       "analyzed": 11,
       "ratings": {
+        "FAIR": 3,
+        "VERY_POOR": 4,
         "EXCELLENT": 2,
         "GOOD": 1,
-        "VERY_POOR": 4,
-        "FAIR": 3,
         "POOR": 1
       },
       "top3": [
@@ -5600,10 +5600,10 @@
       "count": 11,
       "analyzed": 10,
       "ratings": {
-        "POOR": 3,
-        "VERY_POOR": 2,
         "GOOD": 1,
-        "FAIR": 4
+        "FAIR": 4,
+        "POOR": 3,
+        "VERY_POOR": 2
       },
       "top3": [
         {
@@ -5625,10 +5625,10 @@
       "count": 7,
       "analyzed": 7,
       "ratings": {
-        "GOOD": 2,
         "EXCELLENT": 3,
         "POOR": 1,
-        "FAIR": 1
+        "FAIR": 1,
+        "GOOD": 2
       },
       "top3": [
         {
@@ -5650,11 +5650,11 @@
       "count": 83,
       "analyzed": 81,
       "ratings": {
-        "FAIR": 16,
-        "VERY_POOR": 14,
         "EXCELLENT": 15,
+        "FAIR": 16,
+        "POOR": 18,
         "GOOD": 18,
-        "POOR": 18
+        "VERY_POOR": 14
       },
       "top3": [
         {
@@ -5662,11 +5662,11 @@
           "score": 87.5
         },
         {
-          "name": "드림텍",
+          "name": "SV인베스트먼트",
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "드림텍",
           "score": 87.5
         }
       ]
@@ -5676,19 +5676,19 @@
       "count": 47,
       "analyzed": 46,
       "ratings": {
-        "GOOD": 11,
+        "EXCELLENT": 7,
         "FAIR": 9,
-        "VERY_POOR": 6,
         "POOR": 13,
-        "EXCELLENT": 7
+        "GOOD": 11,
+        "VERY_POOR": 6
       },
       "top3": [
         {
-          "name": "얼라인드",
+          "name": "드림텍",
           "score": 87.5
         },
         {
-          "name": "드림텍",
+          "name": "얼라인드",
           "score": 87.5
         },
         {
@@ -5702,11 +5702,11 @@
       "count": 33,
       "analyzed": 33,
       "ratings": {
-        "GOOD": 6,
         "FAIR": 9,
         "VERY_POOR": 8,
-        "EXCELLENT": 5,
-        "POOR": 5
+        "POOR": 5,
+        "GOOD": 6,
+        "EXCELLENT": 5
       },
       "top3": [
         {
@@ -5718,7 +5718,7 @@
           "score": 87.5
         },
         {
-          "name": "케어젠",
+          "name": "JW중외제약",
           "score": 81.2
         }
       ]
@@ -5728,23 +5728,23 @@
       "count": 118,
       "analyzed": 117,
       "ratings": {
-        "EXCELLENT": 43,
+        "POOR": 7,
         "GOOD": 48,
+        "EXCELLENT": 43,
         "FAIR": 16,
-        "VERY_POOR": 3,
-        "POOR": 7
+        "VERY_POOR": 3
       },
       "top3": [
         {
-          "name": "BGF리테일",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "KB금융",
+          "name": "현대엘리베이터",
           "score": 87.5
         },
         {
-          "name": "한미약품",
+          "name": "아모레퍼시픽",
           "score": 87.5
         }
       ]
@@ -5754,23 +5754,23 @@
       "count": 15,
       "analyzed": 15,
       "ratings": {
+        "FAIR": 2,
         "EXCELLENT": 3,
         "POOR": 5,
-        "FAIR": 2,
-        "GOOD": 1,
-        "VERY_POOR": 4
+        "VERY_POOR": 4,
+        "GOOD": 1
       },
       "top3": [
+        {
+          "name": "GS",
+          "score": 81.2
+        },
         {
           "name": "아이텍",
           "score": 81.2
         },
         {
           "name": "GST",
-          "score": 81.2
-        },
-        {
-          "name": "GS",
           "score": 81.2
         }
       ]
@@ -5780,9 +5780,9 @@
       "count": 23,
       "analyzed": 23,
       "ratings": {
+        "POOR": 3,
         "FAIR": 8,
         "GOOD": 8,
-        "POOR": 3,
         "EXCELLENT": 3,
         "VERY_POOR": 1
       },
@@ -5792,11 +5792,11 @@
           "score": 87.5
         },
         {
-          "name": "KCTC",
+          "name": "헥토파이낸셜",
           "score": 81.2
         },
         {
-          "name": "헥토파이낸셜",
+          "name": "KCTC",
           "score": 81.2
         }
       ]
@@ -5814,15 +5814,15 @@
       },
       "top3": [
         {
+          "name": "KT",
+          "score": 87.5
+        },
+        {
           "name": "LG",
           "score": 87.5
         },
         {
-          "name": "SG",
-          "score": 87.5
-        },
-        {
-          "name": "KT",
+          "name": "나무기술",
           "score": 87.5
         }
       ]
@@ -5832,9 +5832,9 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
-        "POOR": 3,
         "VERY_POOR": 6,
         "GOOD": 3,
+        "POOR": 3,
         "FAIR": 1
       },
       "top3": [
@@ -5857,21 +5857,21 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
+        "EXCELLENT": 7,
         "GOOD": 5,
-        "VERY_POOR": 1,
-        "EXCELLENT": 7
+        "VERY_POOR": 1
       },
       "top3": [
         {
-          "name": "코오롱인더",
-          "score": 87.5
-        },
-        {
-          "name": "넥센타이어",
+          "name": "HS효성첨단소재",
           "score": 87.5
         },
         {
           "name": "금호타이어",
+          "score": 87.5
+        },
+        {
+          "name": "코오롱인더",
           "score": 87.5
         }
       ]
@@ -5881,10 +5881,10 @@
       "count": 6,
       "analyzed": 6,
       "ratings": {
-        "GOOD": 3,
+        "VERY_POOR": 1,
         "FAIR": 1,
-        "EXCELLENT": 1,
-        "VERY_POOR": 1
+        "GOOD": 3,
+        "EXCELLENT": 1
       },
       "top3": [
         {
@@ -5906,9 +5906,9 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
+        "GOOD": 1,
         "POOR": 6,
-        "EXCELLENT": 3,
-        "GOOD": 1
+        "EXCELLENT": 3
       },
       "top3": [
         {
@@ -5930,11 +5930,11 @@
       "count": 29,
       "analyzed": 28,
       "ratings": {
-        "FAIR": 7,
+        "VERY_POOR": 4,
         "POOR": 7,
         "GOOD": 7,
         "EXCELLENT": 3,
-        "VERY_POOR": 4
+        "FAIR": 7
       },
       "top3": [
         {
@@ -5956,23 +5956,23 @@
       "count": 55,
       "analyzed": 55,
       "ratings": {
+        "VERY_POOR": 3,
+        "FAIR": 10,
         "GOOD": 15,
         "EXCELLENT": 25,
-        "FAIR": 10,
-        "POOR": 2,
-        "VERY_POOR": 3
+        "POOR": 2
       },
       "top3": [
-        {
-          "name": "OCI홀딩스",
-          "score": 87.5
-        },
         {
           "name": "LS ELECTRIC",
           "score": 87.5
         },
         {
-          "name": "OCI",
+          "name": "원익IPS",
+          "score": 87.5
+        },
+        {
+          "name": "SK",
           "score": 87.5
         }
       ]
@@ -5982,9 +5982,9 @@
       "count": 11,
       "analyzed": 11,
       "ratings": {
+        "FAIR": 3,
         "GOOD": 4,
         "EXCELLENT": 2,
-        "FAIR": 3,
         "POOR": 2
       },
       "top3": [
@@ -5997,7 +5997,7 @@
           "score": 81.2
         },
         {
-          "name": "남해화학",
+          "name": "롯데정밀화학",
           "score": 75.0
         }
       ]
@@ -6009,8 +6009,8 @@
       "ratings": {
         "EXCELLENT": 2,
         "GOOD": 3,
-        "VERY_POOR": 1,
         "POOR": 2,
+        "VERY_POOR": 1,
         "FAIR": 1
       },
       "top3": [
@@ -6033,8 +6033,8 @@
       "count": 6,
       "analyzed": 6,
       "ratings": {
-        "GOOD": 3,
         "FAIR": 2,
+        "GOOD": 3,
         "EXCELLENT": 1
       },
       "top3": [
@@ -6057,9 +6057,9 @@
       "count": 7,
       "analyzed": 7,
       "ratings": {
-        "EXCELLENT": 2,
         "VERY_POOR": 1,
         "GOOD": 3,
+        "EXCELLENT": 2,
         "POOR": 1
       },
       "top3": [
@@ -6072,7 +6072,7 @@
           "score": 81.2
         },
         {
-          "name": "한화투자증권",
+          "name": "한화",
           "score": 68.8
         }
       ]
@@ -6086,15 +6086,15 @@
       },
       "top3": [
         {
-          "name": "SK텔레콤",
-          "score": 87.5
-        },
-        {
           "name": "SK",
           "score": 87.5
         },
         {
           "name": "KT",
+          "score": 87.5
+        },
+        {
+          "name": "LG",
           "score": 87.5
         }
       ]
@@ -6105,10 +6105,10 @@
       "analyzed": 48,
       "ratings": {
         "GOOD": 12,
-        "POOR": 7,
         "EXCELLENT": 16,
+        "FAIR": 5,
         "VERY_POOR": 8,
-        "FAIR": 5
+        "POOR": 7
       },
       "top3": [
         {
@@ -6116,11 +6116,11 @@
           "score": 87.5
         },
         {
-          "name": "이노와이어리스",
+          "name": "인텔리안테크",
           "score": 87.5
         },
         {
-          "name": "케이엠",
+          "name": "삼지전자",
           "score": 87.5
         }
       ]
@@ -6130,23 +6130,23 @@
       "count": 64,
       "analyzed": 64,
       "ratings": {
-        "FAIR": 10,
+        "EXCELLENT": 14,
         "POOR": 14,
         "GOOD": 21,
         "VERY_POOR": 5,
-        "EXCELLENT": 14
+        "FAIR": 10
       },
       "top3": [
         {
-          "name": "BYC",
-          "score": 87.5
-        },
-        {
-          "name": "신세계",
-          "score": 87.5
-        },
-        {
           "name": "한섬",
+          "score": 87.5
+        },
+        {
+          "name": "코오롱인더",
+          "score": 87.5
+        },
+        {
+          "name": "신세계인터내셔날",
           "score": 87.5
         }
       ]
@@ -6156,19 +6156,19 @@
       "count": 16,
       "analyzed": 16,
       "ratings": {
-        "GOOD": 4,
+        "POOR": 3,
         "VERY_POOR": 3,
         "FAIR": 3,
-        "POOR": 3,
-        "EXCELLENT": 3
+        "EXCELLENT": 3,
+        "GOOD": 4
       },
       "top3": [
         {
-          "name": "삼화전기",
+          "name": "나노",
           "score": 81.2
         },
         {
-          "name": "나노",
+          "name": "삼화전기",
           "score": 81.2
         },
         {
@@ -6182,10 +6182,10 @@
       "count": 8,
       "analyzed": 8,
       "ratings": {
-        "EXCELLENT": 2,
         "GOOD": 2,
         "FAIR": 3,
-        "POOR": 1
+        "POOR": 1,
+        "EXCELLENT": 2
       },
       "top3": [
         {
@@ -6212,15 +6212,15 @@
       },
       "top3": [
         {
+          "name": "이마트",
+          "score": 87.5
+        },
+        {
           "name": "BGF리테일",
           "score": 87.5
         },
         {
           "name": "유성티엔에스",
-          "score": 87.5
-        },
-        {
-          "name": "이마트",
           "score": 87.5
         }
       ]
@@ -6280,14 +6280,14 @@
       "analyzed": 31,
       "ratings": {
         "GOOD": 11,
-        "POOR": 2,
         "EXCELLENT": 9,
-        "FAIR": 7,
-        "VERY_POOR": 2
+        "POOR": 2,
+        "VERY_POOR": 2,
+        "FAIR": 7
       },
       "top3": [
         {
-          "name": "삼성전기",
+          "name": "코오롱인더",
           "score": 87.5
         },
         {
@@ -6295,7 +6295,7 @@
           "score": 87.5
         },
         {
-          "name": "SK",
+          "name": "삼성전기",
           "score": 87.5
         }
       ]
@@ -6306,21 +6306,21 @@
       "analyzed": 41,
       "ratings": {
         "GOOD": 18,
-        "FAIR": 6,
+        "POOR": 9,
         "EXCELLENT": 8,
-        "POOR": 9
+        "FAIR": 6
       },
       "top3": [
+        {
+          "name": "LS에코에너지",
+          "score": 87.5
+        },
         {
           "name": "우리기술",
           "score": 87.5
         },
         {
-          "name": "SK",
-          "score": 87.5
-        },
-        {
-          "name": "LS에코에너지",
+          "name": "LS머트리얼즈",
           "score": 87.5
         }
       ]
@@ -6330,9 +6330,9 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
-        "EXCELLENT": 2,
+        "FAIR": 3,
         "GOOD": 5,
-        "FAIR": 3
+        "EXCELLENT": 2
       },
       "top3": [
         {
@@ -6354,19 +6354,19 @@
       "count": 29,
       "analyzed": 27,
       "ratings": {
-        "VERY_POOR": 3,
-        "EXCELLENT": 8,
         "GOOD": 9,
-        "FAIR": 5,
-        "POOR": 2
+        "EXCELLENT": 8,
+        "POOR": 2,
+        "VERY_POOR": 3,
+        "FAIR": 5
       },
       "top3": [
         {
-          "name": "LG",
+          "name": "코오롱인더",
           "score": 87.5
         },
         {
-          "name": "주성엔지니어링",
+          "name": "LG",
           "score": 87.5
         },
         {
@@ -6380,11 +6380,11 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
-        "GOOD": 4,
-        "POOR": 1,
-        "FAIR": 1,
         "EXCELLENT": 2,
-        "VERY_POOR": 1
+        "FAIR": 1,
+        "GOOD": 4,
+        "VERY_POOR": 1,
+        "POOR": 1
       },
       "top3": [
         {
@@ -6406,23 +6406,23 @@
       "count": 36,
       "analyzed": 36,
       "ratings": {
-        "GOOD": 13,
         "FAIR": 7,
-        "VERY_POOR": 5,
         "POOR": 4,
-        "EXCELLENT": 7
+        "GOOD": 13,
+        "EXCELLENT": 7,
+        "VERY_POOR": 5
       },
       "top3": [
-        {
-          "name": "SG",
-          "score": 87.5
-        },
         {
           "name": "KT",
           "score": 87.5
         },
         {
           "name": "SK",
+          "score": 87.5
+        },
+        {
+          "name": "SG",
           "score": 87.5
         }
       ]
@@ -6432,22 +6432,22 @@
       "count": 10,
       "analyzed": 10,
       "ratings": {
-        "EXCELLENT": 2,
         "GOOD": 4,
         "FAIR": 2,
-        "POOR": 2
+        "POOR": 2,
+        "EXCELLENT": 2
       },
       "top3": [
-        {
-          "name": "한진",
-          "score": 81.2
-        },
         {
           "name": "대한항공",
           "score": 81.2
         },
         {
-          "name": "한진칼",
+          "name": "한진",
+          "score": 81.2
+        },
+        {
+          "name": "제주항공",
           "score": 75.0
         }
       ]
@@ -6459,20 +6459,20 @@
       "ratings": {
         "GOOD": 8,
         "FAIR": 4,
-        "EXCELLENT": 3,
-        "POOR": 1
+        "POOR": 1,
+        "EXCELLENT": 3
       },
       "top3": [
+        {
+          "name": "대한항공",
+          "score": 81.2
+        },
         {
           "name": "아스트",
           "score": 81.2
         },
         {
           "name": "오르비텍",
-          "score": 81.2
-        },
-        {
-          "name": "대한항공",
           "score": 81.2
         }
       ]
@@ -6483,8 +6483,8 @@
       "analyzed": 6,
       "ratings": {
         "GOOD": 3,
-        "EXCELLENT": 2,
-        "FAIR": 1
+        "FAIR": 1,
+        "EXCELLENT": 2
       },
       "top3": [
         {
@@ -6506,18 +6506,18 @@
       "count": 9,
       "analyzed": 9,
       "ratings": {
-        "FAIR": 3,
         "EXCELLENT": 3,
+        "FAIR": 3,
         "POOR": 2,
         "GOOD": 1
       },
       "top3": [
         {
-          "name": "동아지질",
+          "name": "우원개발",
           "score": 87.5
         },
         {
-          "name": "우원개발",
+          "name": "동아지질",
           "score": 87.5
         },
         {
@@ -6537,15 +6537,15 @@
       },
       "top3": [
         {
-          "name": "일진파워",
-          "score": 87.5
-        },
-        {
           "name": "고려제강",
           "score": 87.5
         },
         {
-          "name": "에스에프에이",
+          "name": "일진파워",
+          "score": 87.5
+        },
+        {
+          "name": "삼화콘덴서",
           "score": 81.2
         }
       ]
@@ -6555,22 +6555,22 @@
       "count": 18,
       "analyzed": 18,
       "ratings": {
-        "FAIR": 4,
-        "GOOD": 8,
         "EXCELLENT": 5,
-        "POOR": 1
+        "POOR": 1,
+        "GOOD": 8,
+        "FAIR": 4
       },
       "top3": [
-        {
-          "name": "이마트",
-          "score": 87.5
-        },
         {
           "name": "SK",
           "score": 87.5
         },
         {
-          "name": "서부T&D",
+          "name": "이마트",
+          "score": 87.5
+        },
+        {
+          "name": "GS",
           "score": 81.2
         }
       ]
@@ -6580,8 +6580,8 @@
       "count": 8,
       "analyzed": 8,
       "ratings": {
-        "GOOD": 3,
-        "EXCELLENT": 5
+        "EXCELLENT": 5,
+        "GOOD": 3
       },
       "top3": [
         {
@@ -6589,11 +6589,11 @@
           "score": 87.5
         },
         {
-          "name": "태광",
+          "name": "현대홈쇼핑",
           "score": 87.5
         },
         {
-          "name": "현대홈쇼핑",
+          "name": "태광",
           "score": 87.5
         }
       ]
@@ -6627,23 +6627,23 @@
       "count": 104,
       "analyzed": 103,
       "ratings": {
-        "POOR": 17,
-        "FAIR": 34,
+        "VERY_POOR": 22,
         "EXCELLENT": 11,
+        "POOR": 17,
         "GOOD": 19,
-        "VERY_POOR": 22
+        "FAIR": 34
       },
       "top3": [
         {
-          "name": "케이엠",
+          "name": "LG",
           "score": 87.5
         },
         {
-          "name": "아모레퍼시픽홀딩스",
+          "name": "아모레퍼시픽",
           "score": 87.5
         },
         {
-          "name": "디와이",
+          "name": "신세계",
           "score": 87.5
         }
       ]
@@ -6653,10 +6653,10 @@
       "count": 13,
       "analyzed": 13,
       "ratings": {
+        "VERY_POOR": 4,
+        "GOOD": 4,
         "POOR": 3,
         "FAIR": 1,
-        "GOOD": 4,
-        "VERY_POOR": 4,
         "EXCELLENT": 1
       },
       "top3": [
@@ -6680,8 +6680,8 @@
       "analyzed": 10,
       "ratings": {
         "EXCELLENT": 4,
-        "FAIR": 2,
-        "GOOD": 4
+        "GOOD": 4,
+        "FAIR": 2
       },
       "top3": [
         {
@@ -6704,9 +6704,9 @@
       "analyzed": 24,
       "ratings": {
         "GOOD": 10,
-        "POOR": 3,
-        "EXCELLENT": 5,
         "FAIR": 5,
+        "EXCELLENT": 5,
+        "POOR": 3,
         "VERY_POOR": 1
       },
       "top3": [
@@ -6730,22 +6730,22 @@
       "analyzed": 28,
       "ratings": {
         "GOOD": 11,
-        "POOR": 2,
         "EXCELLENT": 9,
         "FAIR": 5,
+        "POOR": 2,
         "VERY_POOR": 1
       },
       "top3": [
-        {
-          "name": "케이엠",
-          "score": 87.5
-        },
         {
           "name": "보령",
           "score": 87.5
         },
         {
           "name": "이마트",
+          "score": 87.5
+        },
+        {
+          "name": "케이엠",
           "score": 87.5
         }
       ]
@@ -6756,10 +6756,10 @@
       "analyzed": 51,
       "ratings": {
         "FAIR": 14,
-        "GOOD": 11,
-        "POOR": 12,
         "EXCELLENT": 9,
-        "VERY_POOR": 5
+        "POOR": 12,
+        "VERY_POOR": 5,
+        "GOOD": 11
       },
       "top3": [
         {
@@ -6767,11 +6767,11 @@
           "score": 87.5
         },
         {
-          "name": "제주반도체",
+          "name": "서진시스템",
           "score": 87.5
         },
         {
-          "name": "서진시스템",
+          "name": "제주반도체",
           "score": 87.5
         }
       ]
@@ -6781,11 +6781,11 @@
       "count": 18,
       "analyzed": 18,
       "ratings": {
-        "GOOD": 9,
         "POOR": 3,
         "FAIR": 3,
-        "VERY_POOR": 1,
-        "EXCELLENT": 2
+        "GOOD": 9,
+        "EXCELLENT": 2,
+        "VERY_POOR": 1
       },
       "top3": [
         {
