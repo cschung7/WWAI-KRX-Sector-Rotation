@@ -196,12 +196,80 @@
             border-radius: 0.5rem;
             padding: 1rem;
             border-left: 4px solid #3b82f6;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .theme-card:hover {
             transform: translateX(4px);
         }
+
+        .theme-card.clickable {
+            cursor: pointer;
+        }
+
+        .theme-card.clickable:hover {
+            box-shadow: 0 0 0 1px #3b82f6;
+        }
+
+        .theme-card.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .theme-card.disabled:hover {
+            transform: none;
+        }
+
+        .theme-card .network-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.7rem;
+            color: #60a5fa;
+            margin-top: 0.5rem;
+        }
+
+        .theme-card.disabled .network-link {
+            color: #64748b;
+        }
+
+        .freshness-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            vertical-align: middle;
+            margin-left: 0.75rem;
+        }
+
+        .freshness-badge.fresh {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .freshness-badge.stale {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        .freshness-badge.missing {
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
+
+        .freshness-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .freshness-badge.fresh .dot { background: #10b981; }
+        .freshness-badge.stale .dot { background: #f59e0b; }
+        .freshness-badge.missing .dot { background: #ef4444; }
 
         .theme-card.very-strong { border-left-color: #10b981; }
         .theme-card.strong { border-left-color: #3b82f6; }
@@ -518,7 +586,10 @@
 
         <!-- Theme Cards with Trends -->
         <div class="section">
-            <h2 data-i18n="section.themeDetails">Theme Details with Trend Analysis</h2>
+            <h2>
+                <span data-i18n="section.themeDetails">Theme Details with Trend Analysis</span>
+                <span id="freshnessBadge" class="freshness-badge" style="display:none;"></span>
+            </h2>
             <div class="tabs">
                 <button class="tab active" onclick="filterCards('all')" data-i18n="tab.all">All</button>
                 <button class="tab" onclick="filterCards('increasing')" data-i18n="tab.increasingOnly">Increasing Only</button>
@@ -576,6 +647,7 @@
         let currentView = 'all';
         let currentFilter = 'all';
         let currentLang = 'ko';
+        let networkDataFresh = false;  // freshness gate for network links
 
         const translations = {
             ko: {
@@ -673,6 +745,10 @@
                 const text = t(key);
                 if (text) el.innerHTML = text;
             });
+            // Refresh badge label on language switch
+            checkFreshness();
+            // Re-render cards for localized link text
+            if (allTrends.length > 0) renderThemeCards(allTrends);
             // Update last update label
             const lastUpdateEl = document.getElementById('lastUpdate');
             if (lastUpdateEl && lastUpdateEl.textContent) {
@@ -690,9 +766,44 @@
             setLanguage(currentLang);
         }
 
+        async function checkFreshness() {
+            try {
+                const res = await fetch(`${API_BASE}/api/freshness`);
+                const data = await res.json();
+                const needed = ['network_theme_data', 'weekly_fiedler'];
+                const statuses = data.sources.filter(s => needed.includes(s.name));
+                const allFresh = statuses.length === needed.length && statuses.every(s => s.status === 'fresh');
+                const anyMissing = statuses.some(s => s.status === 'missing');
+                networkDataFresh = allFresh;
+
+                const badge = document.getElementById('freshnessBadge');
+                if (allFresh) {
+                    const label = currentLang === 'ko' ? '최신 데이터' : 'Data Fresh';
+                    badge.className = 'freshness-badge fresh';
+                    badge.innerHTML = `<span class="dot"></span>${label}`;
+                } else if (anyMissing) {
+                    const label = currentLang === 'ko' ? '데이터 없음' : 'Data Missing';
+                    badge.className = 'freshness-badge missing';
+                    badge.innerHTML = `<span class="dot"></span>${label}`;
+                } else {
+                    const label = currentLang === 'ko' ? '데이터 갱신 필요' : 'Data Stale';
+                    badge.className = 'freshness-badge stale';
+                    badge.innerHTML = `<span class="dot"></span>${label}`;
+                }
+                badge.style.display = 'inline-flex';
+                // Re-render cards now that freshness is known
+                if (allTrends.length > 0) renderThemeCards(allTrends);
+            } catch (e) {
+                console.warn('Freshness check failed:', e);
+                networkDataFresh = true;  // fallback: allow clicks
+                if (allTrends.length > 0) renderThemeCards(allTrends);
+            }
+        }
+
         async function init() {
             try {
-                // Fetch both APIs in parallel
+                // Fetch freshness + data APIs in parallel
+                checkFreshness();  // non-blocking
                 const [trendsResponse, themesResponse] = await Promise.all([
                     fetch(`${API_BASE}/api/sector-rotation/fiedler-trends?weeks=8`),
                     fetch(`${API_BASE}/api/sector-rotation/themes`)
@@ -918,15 +1029,21 @@
             filtered.sort((a, b) => (b.fiedler_change || 0) - (a.fiedler_change || 0));
 
             const grid = document.getElementById('themeGrid');
+            const linkLabel = currentLang === 'ko' ? '네트워크 그래프 보기 →' : 'View Network Graph →';
+            const staleLabel = currentLang === 'ko' ? '데이터 갱신 후 이용 가능' : 'Available after data refresh';
+
             grid.innerHTML = filtered.slice(0, 50).map(t => {
                 const change = t.fiedler_change || 0;
                 const pctChange = t.pct_change || 0;
                 const trendArrow = change > 0.1 ? '↑' : change < -0.1 ? '↓' : '→';
                 const trendClass = change > 0.1 ? 'increasing' : change < -0.1 ? 'decreasing' : 'stable';
                 const changeColor = change > 0 ? 'green' : change < 0 ? 'red' : '';
+                const cardClass = networkDataFresh ? 'clickable' : 'disabled';
+                const networkUrl = `theme-graph.html?theme=${encodeURIComponent(t.theme)}`;
 
                 return `
-                    <div class="theme-card ${t.cohesion_level}">
+                    <div class="theme-card ${t.cohesion_level} ${cardClass}"
+                         ${networkDataFresh ? `onclick="window.location.href='${networkUrl}'"` : `title="${staleLabel}"`}>
                         <div class="theme-header">
                             <div class="theme-name">${t.theme}</div>
                             <div class="trend-indicator ${trendClass}">
@@ -948,6 +1065,7 @@
                                 <div class="stat-label">Stocks</div>
                             </div>
                         </div>
+                        <div class="network-link">${networkDataFresh ? linkLabel : staleLabel}</div>
                     </div>
                 `;
             }).join('');

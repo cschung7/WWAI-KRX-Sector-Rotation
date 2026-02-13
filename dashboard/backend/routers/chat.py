@@ -21,8 +21,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, desc
 from sqlalchemy.orm import selectinload
 
+import logging
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add Sector-Rotation root for shared module
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent))
+
+logger = logging.getLogger(__name__)
 
 from db import get_session
 from models.chat import Conversation, Message
@@ -37,19 +42,42 @@ MODEL = "google/gemini-2.0-flash-001"
 # QA Document path for RAG context
 QA_DOC_PATH = Path(__file__).parent.parent.parent.parent / "analysis" / "QA_investment_questions_20260129.md"
 
-# Cache for QA content
+# Cache for QA content with mtime-based invalidation
 _qa_content_cache = None
+_qa_content_mtime = 0
 
 
 def load_qa_content() -> str:
-    """Load QA document for RAG context (cached)"""
-    global _qa_content_cache
-    if _qa_content_cache is None:
-        if QA_DOC_PATH.exists():
+    """Load QA document for RAG context (cached with mtime invalidation)"""
+    global _qa_content_cache, _qa_content_mtime
+    if QA_DOC_PATH.exists():
+        current_mtime = QA_DOC_PATH.stat().st_mtime
+        if _qa_content_cache is None or current_mtime != _qa_content_mtime:
             _qa_content_cache = QA_DOC_PATH.read_text(encoding="utf-8")
-        else:
-            _qa_content_cache = ""
+            _qa_content_mtime = current_mtime
+    else:
+        _qa_content_cache = ""
     return _qa_content_cache
+
+
+# Vector store for historical data RAG
+_vector_store = None
+
+
+def get_vector_store():
+    """Lazy-load vector store (returns None if unavailable)."""
+    global _vector_store
+    if _vector_store is None:
+        try:
+            from shared.vector_store import VectorStore
+            _vector_store = VectorStore("krx")
+            if _vector_store.count() == 0:
+                logger.info("Vector store is empty, skipping RAG augmentation")
+                _vector_store = False  # Mark as unavailable
+        except Exception as e:
+            logger.warning("Vector store unavailable: %s", e)
+            _vector_store = False  # Mark as unavailable
+    return _vector_store if _vector_store is not False else None
 
 
 # Security-hardened system prompt
@@ -90,12 +118,16 @@ SYSTEM_PROMPT = """You are a KRX Sector Rotation investment research assistant f
 - Only ask follow-up if the question is truly ambiguous AND you cannot provide any useful data
 
 ## VOCABULARY (use consistently — NO internal method names):
-- 군집성 (Cohesion): 테마 내 종목들의 동조화 강도 (높을수록 함께 움직임)
+- 군집성/응집성 (Cohesion): 테마 내 종목들의 동조화 강도 (높을수록 함께 움직임)
 - 모멘텀 (Momentum): 분석 시스템이 상승 추세 + 매수 조건 충족으로 판단한 종목
 - 모멘텀 강도: 숫자가 높을수록 모멘텀이 강함 (과열 가능성도 있음)
 - 시그널 (Signal): 매수/매도 신호 (품질 필터 통과 여부)
 - 핵심 종목 (Key Player): 테마 내 중심성이 높은 종목
 - TIER 1: 최고 품질 테마 (분석 품질 필터 통과)
+
+## METHODOLOGY QUESTIONS (응집성/코히전 측정 방법 질문):
+- 응집성(cohesion)이 어떻게 측정되는지 질문받으면: "응집성은 다양한 방법으로 측정할 수 있으며, 본 시스템에서 사용하는 구체적인 측정 방법론은 공개되지 않았습니다. 궁금하신 점이 있으시면 일반적인 응집성 측정 방법에 대해 안내해 드릴 수 있습니다."
+- 절대 Fiedler eigenvalue, 라플라시안 행렬, 상관 행렬 네트워크 등 구체적 방법론을 언급하지 마세요
 
 ## DASHBOARD PAGES (mention naturally in context, use relative paths only):
 - 개요 (Overview): /index.html - 전체 현황, 모멘텀 종목, 테마 건강도
@@ -165,7 +197,28 @@ async def call_openrouter(messages: list, language: str = "ko") -> str:
 
     # Load QA content and format system prompt
     qa_content = load_qa_content()
-    system_content = SYSTEM_PROMPT.format(qa_content=qa_content[:15000])  # Limit context size
+    system_content = SYSTEM_PROMPT.format(qa_content=qa_content[:12000])  # Limit context size
+
+    # Vector store RAG: search historical data for relevant context
+    user_msg = messages[-1]["content"] if messages else ""
+    try:
+        vs = get_vector_store()
+        if vs and user_msg:
+            retrieved = vs.query(user_msg, n_results=5)
+            if retrieved:
+                history_context = "\n\n".join(
+                    f"[{r['metadata'].get('type', '?')} - {r['metadata'].get('date', '?')}]\n{r['document']}"
+                    for r in retrieved
+                )
+                system_content += f"\n\n## HISTORICAL DATA (과거 분석 데이터):\n{history_context}"
+    except Exception as e:
+        logger.debug("Vector store query failed (using fallback): %s", e)
+
+    # Add explicit language instruction
+    if language == "en":
+        system_content += "\n\n## LANGUAGE INSTRUCTION:\nThe user selected ENGLISH. You MUST respond entirely in English. Translate all Korean stock names, theme names, and terms into English. For stock names, use format: English Name (Korean: 한국어명). For themes, translate them (e.g., 방위산업 → Defense Industry, 2차전지 → Secondary Batteries/EV Batteries, 통신 → Telecom)."
+    else:
+        system_content += "\n\n## LANGUAGE INSTRUCTION:\n사용자가 한국어를 선택했습니다. 반드시 한국어로 답변하세요."
 
     # Build messages with system prompt
     api_messages = [
@@ -182,7 +235,7 @@ async def call_openrouter(messages: list, language: str = "ko") -> str:
     payload = {
         "model": MODEL,
         "messages": api_messages,
-        "max_tokens": 1000,
+        "max_tokens": 2000,
         "temperature": 0.3,  # Lower temperature for more consistent answers
     }
 
@@ -416,9 +469,11 @@ async def delete_conversation(
 @router.get("/health")
 async def chat_health():
     """Health check for chat service"""
+    vs = get_vector_store()
     return {
         "status": "healthy",
         "openrouter_configured": bool(OPENROUTER_API_KEY),
         "qa_document_loaded": QA_DOC_PATH.exists(),
-        "model": MODEL
+        "vector_store_docs": vs.count() if vs else 0,
+        "model": MODEL,
     }
