@@ -12,7 +12,9 @@ Outputs:
 
 import json
 import ast
+import os
 import sys
+import tempfile
 from pathlib import Path
 from collections import defaultdict
 from datetime import date
@@ -110,8 +112,19 @@ def main():
         "themes": themes_result,
     }
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+    # Atomic write: write to temp file first, then rename to prevent corruption
+    tmp_fd, tmp_path = tempfile.mkstemp(
+        dir=OUTPUT_FILE.parent, suffix=".tmp", prefix="theme_ucs_"
+    )
+    try:
+        with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
+            json.dump(output, f, ensure_ascii=False, indent=2)
+        os.replace(tmp_path, OUTPUT_FILE)
+    except Exception:
+        # Clean up temp file on failure
+        if os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+        raise
 
     print(f"[DONE] Wrote {len(themes_result)} themes to {OUTPUT_FILE}")
     print(f"  Date: {ucs_date}")
