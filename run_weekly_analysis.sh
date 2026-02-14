@@ -71,7 +71,7 @@ echo -e "${YELLOW}[1/13]${NC} Generating Naver theme cohesion analysis..."
 echo -e "  ${BLUE}→${NC}  Using optimized Fiedler calculation (sparse solver + incremental updates)"
 DATE_FORMATTED=$(echo "${DATE}" | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1-\2-\3/')
 START_TIME=$(date +%s)
-if python3 analyze_naver_theme_cohesion.py --date "${DATE_FORMATTED}" 2>&1 | tee /tmp/cohesion_analysis.log | grep -E "(Progress:|Themes with|Target Date:|Using date)" || true; then
+if python3 scripts/analyze_naver_theme_cohesion.py --date "${DATE_FORMATTED}" 2>&1 | tee /tmp/cohesion_analysis.log | grep -E "(Progress:|Themes with|Target Date:|Using date)" || true; then
     END_TIME=$(date +%s)
     ELAPSED=$((END_TIME - START_TIME))
     MINUTES=$((ELAPSED / 60))
@@ -120,7 +120,7 @@ fi
 
 # Convert DATE from YYYYMMDD to YYYY-MM-DD for the script
 DATE_FORMATTED_TIER=$(echo "${DATE}" | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1-\2-\3/')
-if python3 analyze_4_tier_themes.py --cohesion-file "${COHESION_FILE}" --date "${DATE_FORMATTED_TIER}"; then
+if python3 scripts/analyze_4_tier_themes.py --cohesion-file "${COHESION_FILE}" --date "${DATE_FORMATTED_TIER}"; then
     echo -e "  ${GREEN}✓${NC}  4-tier classification complete"
     echo -e "      - ${DATA_DIR}/tier1_buy_now_${DATE}.csv"
     echo -e "      - ${DATA_DIR}/tier2_accumulate_${DATE}.csv"
@@ -135,7 +135,7 @@ echo ""
 
 # Step 3: Generate timing predictions
 echo -e "${YELLOW}[3/13]${NC} Calculating TIER 3 timing predictions..."
-if python3 predict_timing.py > /dev/null 2>&1; then
+if python3 scripts/predict_timing.py > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Timing predictions complete"
     echo -e "      - ${DATA_DIR}/tier3_timing_predictions_${DATE}.json"
 else
@@ -163,7 +163,7 @@ else
     echo -e "  Found ${GREEN}$(echo "$TIER1_THEMES" | wc -l)${NC} TIER 1 themes"
     while IFS= read -r theme; do
         echo -e "  ${BLUE}→${NC}  Analyzing: $theme"
-        python3 generate_sector_rankings.py --sector "$theme" --date "${DATE}" > /dev/null 2>&1 || true
+        python3 scripts/generate_sector_rankings.py --sector "$theme" --date "${DATE}" > /dev/null 2>&1 || true
     done <<< "$TIER1_THEMES"
     echo -e "  ${GREEN}✓${NC}  Sector rankings complete"
 fi
@@ -173,7 +173,7 @@ echo ""
 echo -e "${YELLOW}[5/14]${NC} Generating weekly synthesis report..."
 REPORT_FILE="${REPORT_DIR}/weekly_synthesis_${DATE}.md"
 
-if python3 generate_weekly_synthesis.py --date "${DATE}" > "${REPORT_FILE}"; then
+if python3 scripts/generate_weekly_synthesis.py --date "${DATE}" > "${REPORT_FILE}"; then
     echo -e "  ${GREEN}✓${NC}  Weekly synthesis report generated"
     echo -e "      ${GREEN}→${NC}  ${REPORT_FILE}"
 else
@@ -185,7 +185,7 @@ echo ""
 # Step 5.5: Fundamental Validation (Layer 4)
 echo -e "${YELLOW}[5.5/14]${NC} Running Fundamental Validation..."
 echo -e "  ${BLUE}→${NC}  Reconciling quantitative signals with fundamental indicators"
-if python3 validate_fundamentals.py --date "${DATE}" --top-themes 10 2>&1 | grep -E "(DIVERGENCE|CONFIRMED|Validation report saved)" || true; then
+if python3 scripts/validate_fundamentals.py --date "${DATE}" --top-themes 10 2>&1 | grep -E "(DIVERGENCE|CONFIRMED|Validation report saved)" || true; then
     echo -e "  ${GREEN}✓${NC}  Fundamental validation complete"
     echo -e "      - ${REPORT_DIR}/FUNDAMENTAL_VALIDATION_${DATE}.md"
 else
@@ -198,7 +198,7 @@ echo -e "${YELLOW}[6/13]${NC} Generating additional investment reports..."
 
 # Generate Within-Theme Leadership Report
 DATE_FORMATTED=$(echo "${DATE}" | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1-\2-\3/')
-if python3 analyze_within_theme_leadership.py --date "${DATE_FORMATTED}" > /dev/null 2>&1; then
+if python3 scripts/analyze_within_theme_leadership.py --date "${DATE_FORMATTED}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Within-theme leadership analysis complete"
     echo -e "      - ${REPORT_DIR}/WITHIN_THEME_LEADERSHIP_${DATE}.md"
 else
@@ -207,7 +207,7 @@ fi
 
 # Step 7: Generate Investment Implications Report
 echo -e "${YELLOW}[7/13]${NC} Generating Investment Implications Report..."
-if python3 generate_investment_implications.py --date "${DATE}" > /dev/null 2>&1; then
+if python3 scripts/generate_investment_implications.py --date "${DATE}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Investment Implications report complete"
     echo -e "      - ${REPORT_DIR}/INVESTMENT_IMPLICATIONS_${DATE}.md"
 else
@@ -216,7 +216,7 @@ fi
 
 # Step 8: Generate Executive Summary
 echo -e "${YELLOW}[8/13]${NC} Generating Executive Summary..."
-if python3 generate_executive_summary.py --date "${DATE}" > /dev/null 2>&1; then
+if python3 scripts/generate_executive_summary.py --date "${DATE}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Executive Summary complete"
     echo -e "      - ${REPORT_DIR}/EXECUTIVE_SUMMARY_${DATE}.md"
 else
@@ -225,7 +225,7 @@ fi
 
 # Step 9: Generate Top Investment Themes
 echo -e "${YELLOW}[9/13]${NC} Generating Top Investment Themes Report..."
-if python3 generate_top_themes_report.py --date "${DATE}" > /dev/null 2>&1; then
+if python3 scripts/generate_top_themes_report.py --date "${DATE}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Top Investment Themes report complete"
     echo -e "      - ${REPORT_DIR}/TOP_THEMES_INVESTMENT_READY_${DATE}.md"
 else
@@ -234,7 +234,7 @@ fi
 
 # Step 10: Generate Executive Dashboard
 echo -e "${YELLOW}[10/13]${NC} Generating Executive Dashboard..."
-if python3 generate_executive_dashboard.py --date "${DATE}" > /dev/null 2>&1; then
+if python3 scripts/generate_executive_dashboard.py --date "${DATE}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Executive Dashboard complete"
     echo -e "      - ${REPORT_DIR}/EXECUTIVE_DASHBOARD_${DATE}.md"
 else
@@ -243,7 +243,7 @@ fi
 
 # Step 11: Generate Investment Memo
 echo -e "${YELLOW}[11/13]${NC} Generating Investment Memo..."
-if python3 generate_investment_memo.py --date "${DATE}" > /dev/null 2>&1; then
+if python3 scripts/generate_investment_memo.py --date "${DATE}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Investment Memo complete"
     echo -e "      - ${REPORT_DIR}/INVESTMENT_MEMO_${DATE}.md"
 else
@@ -252,7 +252,7 @@ fi
 
 # Step 12: Generate Email Template
 echo -e "${YELLOW}[12/13]${NC} Generating Email Template..."
-if python3 generate_email_template.py --date "${DATE}" > /dev/null 2>&1; then
+if python3 scripts/generate_email_template.py --date "${DATE}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Email template complete"
     echo -e "      - ${REPORT_DIR}/EMAIL_TEMPLATE_${DATE}.html"
 else
@@ -261,7 +261,7 @@ fi
 
 # Step 13: Generate Visualizations
 echo -e "${YELLOW}[13/13]${NC} Generating Visualizations..."
-if python3 generate_visualizations.py --date "${DATE}" > /dev/null 2>&1; then
+if python3 scripts/generate_visualizations.py --date "${DATE}" > /dev/null 2>&1; then
     echo -e "  ${GREEN}✓${NC}  Visualizations complete"
     echo -e "      - ${REPORT_DIR}/*_${DATE}.png"
 else

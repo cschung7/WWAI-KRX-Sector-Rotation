@@ -85,12 +85,14 @@ app.add_middleware(
 )
 
 # Include routers
-from routers import meta_labeling, sector_rotation, portfolio, breakout, network, chat, freshness
+from routers import meta_labeling, sector_rotation, portfolio, breakout, network, signals, chat, freshness
 app.include_router(meta_labeling.router, prefix="/api/meta-labeling", tags=["Meta-Labeling"])
 app.include_router(sector_rotation.router, prefix="/api/sector-rotation", tags=["Sector-Rotation"])
+app.include_router(sector_rotation.router, prefix="/api/overview", tags=["Overview"])
 app.include_router(portfolio.router, prefix="/api/portfolio", tags=["Portfolio"])
 app.include_router(breakout.router, prefix="/api/breakout", tags=["Breakout"])
 app.include_router(network.router, prefix="/api/network", tags=["Network"])
+app.include_router(signals.router, prefix="/api/signals", tags=["Signals"])
 app.include_router(chat.router, prefix="/api/chat", tags=["Chat"])
 app.include_router(freshness.router, prefix="/api/freshness", tags=["Freshness"])
 
@@ -139,6 +141,21 @@ async def theme_graph():
             "Expires": "0"
         }
     )
+
+@app.get("/network.html")
+async def network_page():
+    """Serve network graph page with no-cache headers"""
+    file_path = FRONTEND_DIR / "network.html"
+    if file_path.exists():
+        return FileResponse(
+            file_path,
+            headers={
+                "Cache-Control": "no-cache, no-store, must-revalidate",
+                "Pragma": "no-cache",
+                "Expires": "0"
+            }
+        )
+    raise HTTPException(status_code=404, detail="Page not found")
 
 @app.get("/breakout.html")
 async def breakout_page():
