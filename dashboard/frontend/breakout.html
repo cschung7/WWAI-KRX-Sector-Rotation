@@ -697,7 +697,7 @@
                 const response = await fetch(`${API_BASE}/api/breakout/ranking-dates`);
                 const data = await response.json();
                 if (data.dates && data.dates.length > 0) {
-                    const selectors = ['dailySummaryDateFilter', 'supertrendDateFilter', 'bbCrossoverDateFilter'];
+                    const selectors = ['dailySummaryDateFilter', 'supertrendDateFilter'];
                     selectors.forEach(id => {
                         const select = document.getElementById(id);
                         if (select) {
@@ -972,6 +972,24 @@
                 const response = await fetch(`${API_BASE}/api/breakout/bb-crossover${dateParam}`);
                 const data = await response.json();
                 console.log('[BBCrossover] got response, date:', data.date, 'count:', data.count);
+
+                // Populate BB crossover dropdown with its own available dates
+                if (data.available_dates && data.available_dates.length > 0) {
+                    const bbSelect = document.getElementById('bbCrossoverDateFilter');
+                    if (bbSelect) {
+                        const currentVal = bbSelect.value;
+                        bbSelect.innerHTML = '<option value="">Latest</option>';
+                        data.available_dates.forEach(d => {
+                            const opt = document.createElement('option');
+                            opt.value = d;
+                            opt.textContent = d;
+                            bbSelect.appendChild(opt);
+                        });
+                        if (currentVal && data.available_dates.includes(currentVal)) {
+                            bbSelect.value = currentVal;
+                        }
+                    }
+                }
 
                 document.getElementById('bbCrossoverDate').textContent = data.date || '';
                 document.getElementById('bbCrossoverCount').textContent = data.count ? `(${data.count} ${t('table.tickers')})` : '';

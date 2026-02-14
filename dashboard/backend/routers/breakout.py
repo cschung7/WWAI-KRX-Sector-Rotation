@@ -482,10 +482,13 @@ async def get_bb_crossover_tickers(
                 "deviation_pct": deviation_pct
             })
 
+        available_dates = sorted(bb_data.keys(), reverse=True)
+
         return {
             "date": target_date,
             "tickers": enriched_tickers,
             "count": len(enriched_tickers),
+            "available_dates": available_dates,
             "description": "Tickers that crossed above BB(220, 2.0) upper band",
             "note": "Yesterday: below or at upper BB → Today: above upper BB"
         }
